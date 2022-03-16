@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.eventImage {
+  border-radius: 14px;
+}
+
+.bannerImage {
+  border-radius: 14px;
+}
+
+.profileImage {
+  border-radius: 100%;
+}
