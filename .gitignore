@@ -36,9 +36,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-/unused
+unused/
 
-/functions
+functions/
 
 *.firebaserc
 
