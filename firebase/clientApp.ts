@@ -5,12 +5,12 @@ import { initializeFirestore } from "firebase/firestore"
 // import { getAuth } from "firebase/auth"
 
 const clientCredentials = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  apiKey: "AIzaSyDeeFrgP8pk9TqQGsAfPfvoji7jYnJWBMY",
+  authDomain: "italia-in-tour.firebaseapp.com",
+  projectId: "italia-in-tour",
+  storageBucket: "italia-in-tour.appspot.com",
+  messagingSenderId: "129421627529",
+  appId: "1:129421627529:web:937ad13583b8f1d5ec3658",
 }
 
 const firebaseApp = initializeApp(clientCredentials)
