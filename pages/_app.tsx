@@ -11,6 +11,7 @@ import WishContext, {
 } from "../components/context/WishContext"
 import _ from "lodash"
 import { useState } from "react"
+import Script from "next/script"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [items, setItems] = useState<EventProps[]>([])
@@ -39,6 +40,21 @@ function MyApp({ Component, pageProps }: AppProps) {
         title="Italia in Tour - Trova Eventi"
         description="Trova eventi meravigliosi in tutta Italia alla portata di un click."
       />
+
+      <Script
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-E97YRH4TWE"
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+  
+          gtag('config', 'G-E97YRH4TWE');
+          `}
+      </Script>
 
       <NextNProgress
         color="#f87171"
