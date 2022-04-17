@@ -34,7 +34,7 @@ export const SearchBar = () => {
   useOutsideAlerter(inputRef, setFocused)
 
   return (
-    <div ref={inputRef} className="relative z-50">
+    <div ref={inputRef} className="relative z-40">
       <div className="group flex w-full items-center rounded-full bg-gray-100">
         <input
           type="text"

@@ -7,6 +7,7 @@ import React, { useEffect } from "react"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import { firestore } from "../firebase/clientApp"
+import Contatti from "../components/Contatti"
 
 const Home: NextPage = () => {
   const [listaEventi, listaEventiLoading, listaEventiError] = useCollection(
@@ -35,8 +36,8 @@ const Home: NextPage = () => {
   return (
     <>
       <div className="mx-auto mt-8 max-w-6xl">
-        <main className="grid w-full grid-cols-1 space-y-12 space-x-4 xl:grid-cols-12">
-          <div className="col-span-6 flex flex-col px-4">
+        <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
+          <div className="col-span-12 flex flex-col px-4 xl:col-span-6">
             <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
               Ultimi Eventi
             </h4>
@@ -59,7 +60,7 @@ const Home: NextPage = () => {
             ))}
           </div>
 
-          <div className="col-span-6 space-y-10">
+          <div className="col-span-12 space-y-10 xl:col-span-6">
             <ul className="list-disc px-10">
               <li className="text-sm text-gray-500">
                 Sposta il mouse sulle regioni per <strong>ingrandirle</strong>
@@ -69,6 +70,16 @@ const Home: NextPage = () => {
               </li>
             </ul>
             <div id="map" className="w-full" />
+          </div>
+
+          <div className="col-span-12">
+            <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
+              Contatti
+            </h4>
+
+            <br />
+
+            <Contatti />
           </div>
         </main>
       </div>

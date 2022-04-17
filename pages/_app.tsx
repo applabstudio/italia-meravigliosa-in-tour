@@ -5,10 +5,36 @@ import Navbar from "../components/Navbar"
 import NextNProgress from "nextjs-progressbar"
 import Footer from "../components/Footer"
 import { NextSeo } from "next-seo"
+import WishContext, {
+  WishContextProps,
+  EventProps,
+} from "../components/context/WishContext"
+import _ from "lodash"
+import { useState } from "react"
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [items, setItems] = useState<EventProps[]>([])
+
+  const remove = (id: string) => {
+    let i = _.reject(items, (item) => {
+      return item.id === id
+    })
+    setItems(i)
+  }
+
+  const add = (event: EventProps) => {
+    let i = _.union(items, [event])
+    setItems(i)
+  }
+
+  const wishContext: WishContextProps = {
+    items: items,
+    add: add,
+    remove: remove,
+  }
+
   return (
-    <>
+    <WishContext.Provider value={wishContext}>
       <NextSeo
         title="Italia in Tour - Trova Eventi"
         description="Trova eventi meravigliosi in tutta Italia alla portata di un click."
@@ -28,12 +54,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen selection:bg-primary-400 selection:text-white">
-        <Navbar />
-        <Component {...pageProps} />
-        <Footer />
+      <div className="selection:bg-primary-400 selection:text-white">
+        <div className="min-h-screen">
+          <Navbar />
+          <Component {...pageProps} />
+          <Footer />
+        </div>
       </div>
-    </>
+    </WishContext.Provider>
   )
 }
 

@@ -2,8 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
 
-import { FaBars, FaTimes } from "react-icons/fa"
+import { FaBars, FaTimes, FaHeart } from "react-icons/fa"
 import { SearchBar } from "./common/SearchBar"
+import WishModal from "./WishModal"
 
 const NavLink = ({ text, to }: { text: string; to: string }) => (
   <Link href={to} passHref>
@@ -13,24 +14,38 @@ const NavLink = ({ text, to }: { text: string; to: string }) => (
   </Link>
 )
 
-const MobileMenu = ({ isOpen }: { isOpen: boolean }) => (
-  <div
-    className={`relative z-10 flex w-full transform flex-col items-center space-y-4 p-4 transition-all ease-in-out ${
-      isOpen ? "translate-y-0" : "-mb-28 -translate-y-full"
-    }`}
-  >
-    <SearchBar />
-    <div className="flex space-x-6">
-      <NavLink text="link1" to="/" />
-      <NavLink text="link2" to="/" />
-      <NavLink text="link3" to="/" />
-      <NavLink text="link4" to="/" />
+const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
+  const [modalOpen, setModalOpen] = useState(false)
+
+  return (
+    <div
+      className={`relative z-10 flex w-full transform flex-col items-center space-y-4 p-4 transition-all ease-in-out ${
+        isOpen ? "translate-y-0" : "-mb-56 -translate-y-full"
+      }`}
+    >
+      <SearchBar />
+      <div className="flex space-x-6">
+        <button
+          type="button"
+          onClick={() => setModalOpen(true)}
+          className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 ring-offset-4 transition duration-200 hover:bg-secondary-100 focus:ring-2"
+        >
+          <FaHeart className="text-secondary-500" size={20} />
+        </button>
+      </div>
+
+      <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+
+      <NavLink text="Contatti" to="/contatti" />
+      <NavLink text="Lavora con noi" to="/lavora-con-noi" />
+      <NavLink text="Categorie" to="/categorie" />
     </div>
-  </div>
-)
+  )
+}
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false)
 
   useEffect(() => {
     window.onresize = () => setIsOpen(false)
@@ -39,7 +54,7 @@ const Navbar = () => {
   return (
     <>
       <header className="relative z-50 flex h-20 flex-col items-center border-b-[1px] bg-white">
-        <nav className="flex h-full w-full max-w-7xl items-center justify-between px-6 md:space-x-10">
+        <nav className="flex h-full w-full max-w-[90rem] items-center justify-between px-6 md:space-x-10">
           <button
             className="absolute rounded-sm outline-none ring-primary-200 ring-offset-4 transition duration-200 focus:ring-2 md:hidden"
             onClick={() => setIsOpen(!isOpen)}
@@ -65,17 +80,26 @@ const Navbar = () => {
               </a>
             </Link>
 
-            <div className="hidden space-x-6 md:flex">
-              <NavLink text="link1" to="/" />
-              <NavLink text="link2" to="/" />
-              <NavLink text="link3" to="/" />
-              <NavLink text="link4" to="/" />
+            <div className="min-w-lg hidden w-full space-x-6 md:flex">
+              <NavLink text="Contatti" to="/contatti" />
+              <NavLink text="Lavora con noi" to="/lavora-con-noi" />
+              <NavLink text="Categorie" to="/categorie" />
             </div>
           </div>
 
-          <div className="hidden w-full max-w-md lg:inline">
+          <div className="hidden w-[35%] items-center space-x-6 xl:flex">
             <SearchBar />
+
+            <button
+              type="button"
+              onClick={() => setModalOpen(true)}
+              className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 ring-offset-4 transition duration-200 hover:bg-secondary-100 focus:ring-2"
+            >
+              <FaHeart className="text-secondary-500" size={20} />
+            </button>
           </div>
+
+          <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
         </nav>
       </header>
 
