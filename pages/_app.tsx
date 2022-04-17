@@ -42,8 +42,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
 
       <Script
+        strategy="beforeInteractive"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1708355893696705"
+      />
+
+      <Script
         strategy="lazyOnload"
-        src="https://www.googletagmanager.com/gtag/js?id=G-E97YRH4TWE"
+        src={"https://www.googletagmanager.com/gtag/js?id=G-E97YRH4TWE"}
       />
 
       <Script strategy="lazyOnload">
