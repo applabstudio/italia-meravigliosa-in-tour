@@ -84,6 +84,7 @@ export const SearchBar = () => {
           {categorie.length > 0 &&
             categorie.map((cat) => (
               <button
+                key={cat}
                 onClick={() => setCategoria(cat)}
                 className="w-full rounded-md bg-primary-100 px-2 text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
               >
