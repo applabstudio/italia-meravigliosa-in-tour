@@ -33,10 +33,10 @@ const Categorie = () => {
         </h4>
 
         <br />
-        <div className="flex flex-row space-x-2">
+        <div className="grid grid-cols-3 gap-4 xl:grid-cols-6">
           {categorie.length > 0 &&
             categorie.map((categoria) => (
-              <p className="w-fit rounded-md bg-primary-100 px-2 text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200">
+              <p className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200">
                 <Link href={`/categoria/${categoria}`}>{categoria}</Link>
               </p>
             ))}

@@ -12,6 +12,7 @@ import WishContext, {
 import _ from "lodash"
 import { useState } from "react"
 import Script from "next/script"
+import PopupOptin from "../components/PopupOptin"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [items, setItems] = useState<EventProps[]>([])
@@ -42,8 +43,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
 
       <Script
+        id="Adsense-id"
+        data-ad-client="ca-pub-1708355893696705"
+        async
         strategy="beforeInteractive"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1708355893696705"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       />
 
       <Script
@@ -77,10 +81,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <div className="selection:bg-primary-400 selection:text-white">
         <div className="min-h-screen">
+          <PopupOptin />
           <Navbar />
           <Component {...pageProps} />
-          <Footer />
         </div>
+        <Footer />
       </div>
     </WishContext.Provider>
   )

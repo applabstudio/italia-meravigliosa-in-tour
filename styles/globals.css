@@ -13,3 +13,8 @@
 .profileImage {
   border-radius: 100%;
 }
+
+.swiper-pagination-bullet-active {
+  color: #fff !important;
+  background: #10b981 !important;
+}

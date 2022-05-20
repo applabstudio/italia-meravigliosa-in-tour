@@ -5,14 +5,25 @@ interface InputProps {
   label: string
   type: string
   placeholder: string
+  showLabel?: boolean
+  className?: string
 }
 
-const Input = ({ id, label, type, placeholder }: InputProps) => {
+const Input = ({
+  id,
+  label,
+  type,
+  placeholder,
+  showLabel = true,
+  className,
+}: InputProps) => {
   return (
-    <div className="flex flex-col">
-      <label htmlFor={id} className="text-md mb-1 font-medium text-gray-500">
-        {label}
-      </label>
+    <div className={`flex flex-col ${className}`}>
+      {showLabel && (
+        <label htmlFor={id} className="text-md mb-1 font-medium text-gray-500">
+          {label}
+        </label>
+      )}
       <input
         required
         type={type}

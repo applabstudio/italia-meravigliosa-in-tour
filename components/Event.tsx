@@ -12,8 +12,8 @@ interface EventProps {
 
 const Event = ({ image, heading, location, btnText, to }: EventProps) => {
   return (
-    <div className="flex space-x-6 py-3">
-      <div className="relative h-40 w-40">
+    <div className={`flex space-x-6 py-3`}>
+      <div className={`relative h-44 w-40`}>
         <img
           src={image}
           className="eventImage h-full w-full object-cover"
