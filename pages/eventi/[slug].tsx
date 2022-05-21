@@ -5,15 +5,26 @@ import Comment from "../../components/common/Comment"
 import { firestore } from "../../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { addDoc, collection } from "firebase/firestore"
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import WishContext, { EventProps } from "../../components/context/WishContext"
 import DOMPurify from "isomorphic-dompurify"
 
 const Evento = ({ slug }: { slug: string }) => {
-  const [eventi, eventiLoading, eventiError] = useCollection(
+  const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}
   )
+
+  const [eventi, setEventi] = useState<any[]>([])
+  const [categorie, setCategorie] = useState<any[]>([])
+
+  useEffect(() => {
+    data?.docs.forEach((d) => {
+      d.data()._fl_meta_.schema === "evento"
+        ? setEventi((eventi) => [...eventi, d.data()])
+        : setCategorie((categorie) => [...categorie, d.data()])
+    })
+  }, [data])
 
   const [listaCommenti, listaCommentiLoading, listaCommentiError] =
     useCollection(collection(firestore, "commenti"), {})
@@ -21,7 +32,12 @@ const Evento = ({ slug }: { slug: string }) => {
   const [nome, setNome] = useState("")
   const [commento, setCommento] = useState("")
 
-  const evento = eventi?.docs?.filter((doc) => doc.data().slug === slug)[0]
+  const evento = eventi?.filter((doc) => doc.slug === slug)[0]
+
+  const listaCategorie = categorie?.filter((el) =>
+    evento?.categorie.some((p) => p.id === el.id)
+  )
+
   const commenti = listaCommenti?.docs?.filter(
     (doc) => doc.data().slug === slug
   )
@@ -50,14 +66,15 @@ const Evento = ({ slug }: { slug: string }) => {
   }
 
   return (
-    <div className="mx-auto mt-8 max-w-6xl">
+    <div className="mx-auto my-8 max-w-6xl">
+      {console.log(listaCategorie)}
       <main className="flex w-full flex-col xl:flex-row">
         <div className="flex w-full flex-col px-4">
           <div className="relative h-40 w-full">
             <img
-              src={evento?.data()?.copertina}
+              src={evento?.copertina}
               className="bannerImage h-full w-full object-cover"
-              alt={evento?.data()?.titolo}
+              alt={evento?.titolo}
             />
           </div>
           <br />
@@ -65,17 +82,17 @@ const Evento = ({ slug }: { slug: string }) => {
 
           <div className="flex flex-col items-center lg:flex-row lg:space-x-12">
             <h4 className="mb-3 text-center text-5xl font-bold text-secondary-500 md:text-left">
-              {evento?.data()?.titolo}
+              {evento?.titolo}
             </h4>
 
             <button
               onClick={() =>
                 addToWish({
-                  id: evento?.data().id,
-                  image: evento?.data().copertina,
-                  heading: evento?.data().titolo,
-                  location: evento?.data().luogo,
-                  to: `/eventi/${evento?.data()?.slug}`,
+                  id: evento?.id,
+                  image: evento?.copertina,
+                  heading: evento?.titolo,
+                  location: evento?.luogo,
+                  to: `/eventi/${evento?.slug}`,
                 })
               }
               className="flex items-center space-x-1 rounded-md bg-secondary-100 px-4 py-2 font-semibold text-secondary-500 outline-none ring-secondary-200 ring-offset-2 transition duration-200 hover:bg-secondary-200 focus:ring-2"
@@ -85,22 +102,19 @@ const Evento = ({ slug }: { slug: string }) => {
           </div>
 
           <p className="mb-2 flex items-center space-x-1 text-sm text-gray-500">
-            <FaMapMarkerAlt /> <span>{evento?.data()?.luogo}</span>
+            <FaMapMarkerAlt /> <span>{evento?.luogo}</span>
           </p>
 
           <p className="text-center text-lg font-semibold text-gray-800 md:text-left">
-            {evento?.data().data}
+            {evento?.data}
           </p>
 
           <div className="mt-2 flex justify-center space-x-2 md:justify-start">
-            {evento
-              ?.data()
-              .categorie.split(",")
-              .map((categoria) => (
-                <p className="rounded-sm bg-primary-100 px-2 font-medium text-primary-600">
-                  {categoria.toLowerCase()}
-                </p>
-              ))}
+            {listaCategorie.map((categoria) => (
+              <p className="rounded-sm bg-primary-100 px-2 font-medium text-primary-600">
+                {categoria?.titolo.toLowerCase()}
+              </p>
+            ))}
           </div>
 
           <br />
@@ -112,7 +126,7 @@ const Evento = ({ slug }: { slug: string }) => {
               <p
                 className="prose prose-red"
                 dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(evento?.data()?.descrizione),
+                  __html: DOMPurify.sanitize(evento?.descrizione),
                 }}
               />
             </div>

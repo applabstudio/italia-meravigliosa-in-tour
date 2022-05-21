@@ -1,18 +1,27 @@
 // @ts-nocheck
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Event from "../../components/Event"
 import { firestore } from "../../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 
 const Provincia = ({ slug }: { slug: string }) => {
-  const [listaEventi, listaEventiLoading, listaEventiError] = useCollection(
+  const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}
   )
 
-  const eventi = listaEventi?.docs?.filter((doc) => doc?.data()?.luogo === slug)
+  const [listaEventi, setListaEventi] = useState<any[]>([])
+
+  useEffect(() => {
+    data?.docs.forEach((d) => {
+      d.data()._fl_meta_.schema === "evento" &&
+        setListaEventi((listaEventi) => [...listaEventi, d.data()])
+    })
+  }, [data])
+
+  const eventi = listaEventi.filter((doc) => doc?.luogo === slug)
 
   return (
     <div className="mx-auto mt-8 max-w-6xl">
@@ -26,13 +35,13 @@ const Provincia = ({ slug }: { slug: string }) => {
         {eventi?.length > 0 ? (
           <div className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             {eventi?.map((evento) => (
-              <React.Fragment key={evento?.data()?.id}>
+              <React.Fragment key={evento?.id}>
                 <Event
-                  image={evento?.data()?.copertina}
-                  heading={evento?.data()?.titolo}
-                  location={evento?.data()?.luogo}
+                  image={evento?.copertina}
+                  heading={evento?.titolo}
+                  location={evento?.luogo}
                   btnText="Scopri di più"
-                  to={`/eventi/${evento?.data()?.slug}`}
+                  to={`/eventi/${evento?.slug}`}
                 />
               </React.Fragment>
             ))}

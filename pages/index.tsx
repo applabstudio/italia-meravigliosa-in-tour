@@ -3,7 +3,7 @@
 import type { NextPage } from "next"
 import { SearchBar } from "../components/common/SearchBar"
 import Event from "../components/Event"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import { firestore } from "../firebase/clientApp"
@@ -47,16 +47,16 @@ const Section = ({
       modules={[Pagination]}
       className="mySwiper"
     >
-      {eventi?.docs
-        ?.filter((doc) => doc?.data()?.luogo === slug)
+      {eventi
+        ?.filter((doc) => doc?.luogo === slug)
         ?.map((doc) => (
           <SwiperSlide key={doc?.id} className="mb-8">
             <Event
-              image={doc?.data()?.copertina}
-              heading={doc?.data()?.titolo}
-              location={doc?.data()?.luogo}
+              image={doc?.copertina}
+              heading={doc?.titolo}
+              location={doc?.luogo}
               btnText="Scopri di più"
-              to={`/eventi/${doc?.data()?.slug}`}
+              to={`/eventi/${doc?.slug}`}
             />
           </SwiperSlide>
         ))}
@@ -65,23 +65,21 @@ const Section = ({
 )
 
 const Home: NextPage = () => {
-  const [listaEventi, listaEventiLoading, listaEventiError] = useCollection(
+  const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}
   )
 
-  const categorie = []
+  const [listaEventi, setListaEventi] = useState<any[]>([])
+  const [categorie, setCategorie] = useState<any[]>([])
 
-  listaEventi?.docs?.map((doc) =>
-    doc
-      ?.data()
-      ?.categorie?.split(",")
-      .map((el) => {
-        if (!categorie.includes(el.replace(/\s/g, "").toLowerCase())) {
-          categorie.push(el.replace(/\s/g, "").toLowerCase())
-        }
-      })
-  )
+  useEffect(() => {
+    data?.docs.forEach((d) => {
+      d.data()._fl_meta_.schema === "evento"
+        ? setListaEventi((listaEventi) => [...listaEventi, d.data()])
+        : setCategorie((categorie) => [...categorie, d.data()])
+    })
+  }, [data])
 
   useEffect(() => {
     ;(window.adsbygoogle = window.adsbygoogle || []).push({})
@@ -160,14 +158,14 @@ const Home: NextPage = () => {
                 <h4 className="mb-4 text-center text-4xl font-bold text-gray-800 md:text-left">
                   Ultimi Eventi
                 </h4>
-                {listaEventi?.docs?.slice(0, 6)?.map((doc) => (
+                {listaEventi?.slice(0, 6)?.map((doc) => (
                   <React.Fragment key={doc?.id}>
                     <Event
-                      image={doc?.data()?.copertina}
-                      heading={doc?.data()?.titolo}
-                      location={doc?.data()?.luogo}
+                      image={doc?.copertina}
+                      heading={doc?.titolo}
+                      location={doc?.luogo}
                       btnText="Scopri di più"
-                      to={`/eventi/${doc?.data()?.slug}`}
+                      to={`/eventi/${doc?.slug}`}
                     />
                   </React.Fragment>
                 ))}
@@ -215,13 +213,15 @@ const Home: NextPage = () => {
 
             <br />
             <div className="grid grid-cols-3 gap-4 xl:grid-cols-6">
-              {categorie.length > 0 &&
-                categorie.map((categoria) => (
+              {categorie?.length > 0 &&
+                categorie?.map((categoria) => (
                   <p
-                    key={categoria}
+                    key={categoria?.titolo}
                     className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
                   >
-                    <Link href={`/categoria/${categoria}`}>{categoria}</Link>
+                    <Link href={`/categoria/${categoria?.titolo}`}>
+                      {categoria?.titolo}
+                    </Link>
                   </p>
                 ))}
             </div>

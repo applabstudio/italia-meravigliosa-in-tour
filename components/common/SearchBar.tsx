@@ -23,23 +23,21 @@ const useOutsideAlerter = (ref: any, setFocused: Function) => {
 }
 
 export const SearchBar = () => {
-  const [listaEventi, listaEventiLoading, listaEventiError] = useCollection(
+  const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}
   )
 
-  const categorie = []
+  const [listaEventi, setListaEventi] = useState<any[]>([])
+  const [categorie, setCategorie] = useState<any[]>([])
 
-  listaEventi?.docs?.map((doc) =>
-    doc
-      ?.data()
-      ?.categorie?.split(",")
-      .map((el) => {
-        if (!categorie.includes(el.replace(/\s/g, "").toLowerCase())) {
-          categorie.push(el.replace(/\s/g, "").toLowerCase())
-        }
-      })
-  )
+  useEffect(() => {
+    data?.docs.forEach((d) => {
+      d.data()._fl_meta_.schema === "evento"
+        ? setListaEventi((listaEventi) => [...listaEventi, d.data()])
+        : setCategorie((categorie) => [...categorie, d.data()])
+    })
+  }, [data])
 
   const [searchValue, setSearchValue] = useState("")
   const [focused, setFocused] = useState(false)
@@ -49,7 +47,7 @@ export const SearchBar = () => {
   useOutsideAlerter(inputRef, setFocused)
 
   return (
-    <div ref={inputRef} className="relative z-40">
+    <div ref={inputRef} className="relative z-40 w-full">
       <div className="group flex w-full items-center rounded-full bg-gray-100 pl-4">
         {categoria !== "" && (
           <button
@@ -81,42 +79,30 @@ export const SearchBar = () => {
         } absolute top-16 left-0 z-50 max-h-96 w-full overflow-y-scroll rounded-md bg-white py-4 px-4 shadow-md transition-all`}
       >
         <div className="grid grid-cols-2 gap-2">
-          {categorie.length > 0 &&
-            categorie.map((cat) => (
+          {categorie?.length > 0 &&
+            categorie?.map((cat) => (
               <button
-                key={cat}
-                onClick={() => setCategoria(cat)}
+                key={cat?.titolo}
+                onClick={() => setCategoria(cat?.data().titolo)}
                 className="w-full rounded-md bg-primary-100 px-2 text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
               >
-                {cat}
+                {cat?.titolo}
               </button>
             ))}
         </div>
 
-        {listaEventi &&
-        listaEventi?.docs?.filter((doc) =>
-          doc?.data()?.titolo?.match(new RegExp(searchValue, "i")) &&
-          categoria === ""
-            ? true
-            : doc
-                ?.data()
-                ?.categorie?.split(",")
-                .map((el) => el.replace(/\s/g, "").toLowerCase())
-                .includes(categoria)
-        )?.length > 0 ? (
-          listaEventi?.docs
-            ?.filter((doc) =>
-              doc?.data()?.titolo?.match(new RegExp(searchValue, "i"))
-            )
+        {listaEventi && true ? (
+          listaEventi
+            ?.filter((doc) => doc?.titolo?.match(new RegExp(searchValue, "i")))
             .map((evento) => {
               return (
-                <React.Fragment key={evento?.data()?.titolo}>
+                <React.Fragment key={evento?.titolo}>
                   <Event
-                    image={evento?.data()?.copertina}
-                    heading={evento?.data()?.titolo}
-                    location={evento?.data()?.luogo}
+                    image={evento?.copertina}
+                    heading={evento?.titolo}
+                    location={evento?.luogo}
                     btnText="Scopri di più"
-                    to={`/eventi/${evento?.data()?.slug}`}
+                    to={`/eventi/${evento?.slug}`}
                   />
                 </React.Fragment>
               )
