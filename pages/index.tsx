@@ -84,6 +84,8 @@ const Home: NextPage = () => {
   )
 
   useEffect(() => {
+    ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+
     const mapScript = document.createElement("script")
     const countryScript = document.createElement("script")
 
@@ -126,6 +128,19 @@ const Home: NextPage = () => {
                 <FaAngleDown className="absolute bottom-10 text-2xl text-white" />
               </div>
             </div>
+          </div>
+
+          <div className="col-span-12 bg-gray-100">
+            <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
+
+            <ins
+              className="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-1708355893696705"
+              data-ad-slot="9487119343"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
           </div>
 
           <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-6">
@@ -179,6 +194,19 @@ const Home: NextPage = () => {
             eventi={listaEventi}
           />
           <Section titolo="Eventi a Roma" slug="roma" eventi={listaEventi} />
+
+          <div className="col-span-12 bg-gray-100">
+            <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
+
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-1708355893696705"
+              data-ad-slot="3464636478"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
+          </div>
 
           <div className="col-span-12 flex flex-col px-4">
             <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
