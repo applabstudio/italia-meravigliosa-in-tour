@@ -48,7 +48,6 @@ const Categoria = ({ slug }: { slug: string }) => {
         </div>
 
         <br />
-        <br />
 
         <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
           Eventi con categoria:{" "}
