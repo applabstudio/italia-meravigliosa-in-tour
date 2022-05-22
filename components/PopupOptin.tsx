@@ -3,7 +3,7 @@ import { Fragment, useState } from "react"
 import Input from "./common/Input"
 
 export default function PopupOptin() {
-  let [isOpen, setIsOpen] = useState(true)
+  let [isOpen, setIsOpen] = useState(Math.random() < 0.5)
 
   function closeModal() {
     setIsOpen(false)

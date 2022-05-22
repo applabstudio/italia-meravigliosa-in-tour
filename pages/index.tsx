@@ -18,6 +18,7 @@ import "swiper/css/pagination"
 import "react-perfect-scrollbar/dist/css/styles.css"
 import Link from "next/link"
 import Input from "../components/common/Input"
+import PopupOptin from "../components/PopupOptin"
 
 const Section = ({
   titolo,
@@ -103,6 +104,7 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <PopupOptin />
       <div className="mx-auto mt-8 max-w-6xl">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="col-span-12 box-border flex flex-col px-8">
@@ -197,7 +199,7 @@ const Home: NextPage = () => {
             <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
 
             <ins
-              class="adsbygoogle"
+              className="adsbygoogle"
               style={{ display: "block" }}
               data-ad-client="ca-pub-1708355893696705"
               data-ad-slot="3464636478"
@@ -220,7 +222,14 @@ const Home: NextPage = () => {
                     className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
                   >
                     <Link href={`/categoria/${categoria?.titolo}`}>
-                      {categoria?.titolo}
+                      <span className="flex cursor-pointer items-center justify-center space-x-2">
+                        <img
+                          className="h-4 w-4"
+                          src={categoria?.icona}
+                          alt=""
+                        />
+                        <p>{categoria?.titolo}</p>
+                      </span>
                     </Link>
                   </p>
                 ))}

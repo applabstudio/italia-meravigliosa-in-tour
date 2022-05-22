@@ -26,6 +26,22 @@ const Provincia = ({ slug }: { slug: string }) => {
   return (
     <div className="mx-auto mt-8 max-w-6xl">
       <main className="flex w-full flex-col px-4">
+        <div className="w-full bg-gray-100">
+          <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
+
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-1708355893696705"
+            data-ad-slot="9487119343"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </div>
+
+        <br />
+        <br />
+
         <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
           Eventi a {slug}
         </h4>
@@ -51,6 +67,22 @@ const Provincia = ({ slug }: { slug: string }) => {
             Al momento non sono presenti eventi in questa provincia
           </p>
         )}
+
+        <br />
+        <br />
+
+        <div className="w-full bg-gray-100">
+          <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
+
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-1708355893696705"
+            data-ad-slot="9487119343"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </div>
       </main>
     </div>
   )

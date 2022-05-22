@@ -81,7 +81,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <div className="selection:bg-primary-400 selection:text-white">
         <div className="min-h-screen">
-          <PopupOptin />
           <Navbar />
           <Component {...pageProps} />
         </div>

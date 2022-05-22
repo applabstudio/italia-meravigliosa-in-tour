@@ -79,7 +79,20 @@ const Evento = ({ slug }: { slug: string }) => {
           </div>
           <br />
           <br />
+          <div className="w-full bg-gray-100">
+            <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
 
+            <ins
+              className="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-1708355893696705"
+              data-ad-slot="9487119343"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
+          </div>
+          <br />
+          <br />
           <div className="flex flex-col items-center lg:flex-row lg:space-x-12">
             <h4 className="mb-3 text-center text-5xl font-bold text-secondary-500 md:text-left">
               {evento?.titolo}
@@ -100,15 +113,12 @@ const Evento = ({ slug }: { slug: string }) => {
               <FaHeart /> <span>Wishlist</span>
             </button>
           </div>
-
           <p className="mb-2 flex items-center space-x-1 text-sm text-gray-500">
             <FaMapMarkerAlt /> <span>{evento?.luogo}</span>
           </p>
-
           <p className="text-center text-lg font-semibold text-gray-800 md:text-left">
             {evento?.data}
           </p>
-
           <div className="mt-2 flex justify-center space-x-2 md:justify-start">
             {listaCategorie.map((categoria) => (
               <p className="rounded-sm bg-primary-100 px-2 font-medium text-primary-600">
@@ -116,11 +126,9 @@ const Evento = ({ slug }: { slug: string }) => {
               </p>
             ))}
           </div>
-
           <br />
           <hr />
           <br />
-
           <div className="grid grid-cols-1 space-y-20 lg:grid-cols-12 lg:space-y-0">
             <div className="col-span-6 flex w-full flex-col">
               <p
@@ -183,6 +191,21 @@ const Evento = ({ slug }: { slug: string }) => {
                     </span>
                   </button>
                 </form>
+              </div>
+
+              <br />
+
+              <div className="w-full bg-gray-100">
+                <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
+
+                <ins
+                  className="adsbygoogle"
+                  style={{ display: "block" }}
+                  data-ad-client="ca-pub-1708355893696705"
+                  data-ad-slot="9487119343"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
+                ></ins>
               </div>
             </div>
           </div>

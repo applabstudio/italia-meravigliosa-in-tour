@@ -4,15 +4,20 @@ import { collection } from "firebase/firestore"
 import Link from "next/link"
 import React, { useEffect, useRef, useState } from "react"
 import { useCollection } from "react-firebase-hooks/firestore"
-import { FaSearch, FaTimes } from "react-icons/fa"
+import { FaFilter, FaSearch, FaTimes } from "react-icons/fa"
 import { firestore } from "../../firebase/clientApp"
 import Event from "../Event"
 
-const useOutsideAlerter = (ref: any, setFocused: Function) => {
+const useOutsideAlerter = (
+  ref: any,
+  setFocused: Function,
+  setFiltered: Function
+) => {
   useEffect(() => {
     const handleClickOutside = (event: any) => {
       if (ref.current && !ref.current.contains(event.target)) {
         setFocused(false)
+        setFiltered(false)
       }
     }
     document.addEventListener("mousedown", handleClickOutside)
@@ -41,14 +46,24 @@ export const SearchBar = () => {
 
   const [searchValue, setSearchValue] = useState("")
   const [focused, setFocused] = useState(false)
+  const [filtered, setFiltered] = useState(false)
   const [categoria, setCategoria] = useState("")
 
   const inputRef = useRef(null)
-  useOutsideAlerter(inputRef, setFocused)
+  useOutsideAlerter(inputRef, setFocused, setFiltered)
 
   return (
     <div ref={inputRef} className="relative z-40 w-full">
-      <div className="group flex w-full items-center rounded-full bg-gray-100 pl-4">
+      <div className="group flex w-full items-center rounded-full bg-gray-100">
+        <button
+          onClick={() => focused && setFiltered(!filtered)}
+          className={`flex h-12 w-16 items-center justify-center ${
+            filtered ? "text-primary-400" : "text-gray-400"
+          }`}
+        >
+          <FaFilter />
+        </button>
+
         {categoria !== "" && (
           <button
             onClick={() => setCategoria("")}
@@ -80,10 +95,11 @@ export const SearchBar = () => {
       >
         <div className="grid grid-cols-2 gap-2">
           {categorie?.length > 0 &&
+            filtered &&
             categorie?.map((cat) => (
               <button
                 key={cat?.titolo}
-                onClick={() => setCategoria(cat?.data().titolo)}
+                onClick={() => setCategoria(cat?.titolo)}
                 className="w-full rounded-md bg-primary-100 px-2 text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
               >
                 {cat?.titolo}
@@ -91,9 +107,35 @@ export const SearchBar = () => {
             ))}
         </div>
 
-        {listaEventi && true ? (
+        {listaEventi &&
+        listaEventi?.filter((doc) => {
+          let cats = []
+
+          doc?.categorie?.forEach((c) => {
+            cats.push(categorie?.filter((l) => l?.id === c?.id)[0]?.titolo)
+          })
+
+          return doc?.titolo?.match(new RegExp(searchValue, "i")) &&
+            categoria === ""
+            ? true
+            : cats
+                .map((el) => el.replace(/\s/g, "").toLowerCase())
+                .includes(categoria)
+        })?.length > 0 ? (
           listaEventi
-            ?.filter((doc) => doc?.titolo?.match(new RegExp(searchValue, "i")))
+            ?.filter((doc) => {
+              let cats = []
+
+              doc?.categorie?.forEach((c) => {
+                cats.push(categorie?.filter((l) => l?.id === c?.id)[0]?.titolo)
+              })
+
+              return categoria !== ""
+                ? doc?.titolo?.match(new RegExp(searchValue, "i")) &&
+                    cats.includes(categoria)
+                : doc?.titolo?.match(new RegExp(searchValue, "i")) ||
+                    cats.includes(categoria)
+            })
             .map((evento) => {
               return (
                 <React.Fragment key={evento?.titolo}>

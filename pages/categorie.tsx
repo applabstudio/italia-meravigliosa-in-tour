@@ -32,12 +32,34 @@ const Categorie = () => {
         <div className="grid grid-cols-3 gap-4 xl:grid-cols-6">
           {categorie.length > 0 &&
             categorie.map((categoria) => (
-              <p className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200">
+              <p
+                key={categoria?.titolo}
+                className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
+              >
                 <Link href={`/categoria/${categoria?.titolo}`}>
-                  {categoria?.titolo}
+                  <span className="flex cursor-pointer items-center justify-center space-x-2">
+                    <img className="h-4 w-4" src={categoria?.icona} alt="" />
+                    <p>{categoria?.titolo}</p>
+                  </span>
                 </Link>
               </p>
             ))}
+        </div>
+
+        <br />
+        <br />
+
+        <div className="w-full bg-gray-100">
+          <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
+
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-1708355893696705"
+            data-ad-slot="9487119343"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
         </div>
       </main>
     </div>
