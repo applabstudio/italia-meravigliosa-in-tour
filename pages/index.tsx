@@ -19,6 +19,7 @@ import "react-perfect-scrollbar/dist/css/styles.css"
 import Link from "next/link"
 import Input from "../components/common/Input"
 import PopupOptin from "../components/PopupOptin"
+import Script from "next/script"
 
 const Section = ({
   titolo,
@@ -87,18 +88,26 @@ const Home: NextPage = () => {
 
     const mapScript = document.createElement("script")
     const countryScript = document.createElement("script")
+    // const clickScript = document.createElement("script")
 
     mapScript.src = "/scripts/mapdata.js"
     countryScript.src = "/scripts/countrymap.js"
     mapScript.async = true
     countryScript.async = true
 
+    // clickScript.type = "text/javascript"
+    // clickScript.innerHTML = `simplemaps_worldmap.hooks.zoomable_click_region = function(id){
+    //       alert(simplemaps_worldmap_mapdata.state_specific[id].name);
+    //     }`
+
     document.body.appendChild(mapScript)
     document.body.appendChild(countryScript)
+    // document.body.appendChild(clickScript);
 
     return () => {
       document.body.removeChild(mapScript)
       document.body.removeChild(countryScript)
+      // document.body.removeChild(clickScript);
     }
   }, [])
 
@@ -107,42 +116,6 @@ const Home: NextPage = () => {
       <PopupOptin />
       <div className="mx-auto mt-8 max-w-6xl">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
-          <div className="col-span-12 box-border flex flex-col px-8">
-            <div className="h-52 w-full overflow-hidden rounded-lg bg-black shadow-lg shadow-gray-100 xl:h-80">
-              <div
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)) , url('https://siviaggia.it/wp-content/uploads/sites/2/2021/04/malcesine-passeggiate-italia.jpg')",
-                }}
-                className="relative flex h-full w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
-              >
-                <h1 className="mb-2 text-2xl font-extrabold text-white xl:text-5xl">
-                  Italia Meravigliosa in Tour
-                </h1>
-
-                <p className="px-4 text-center text-gray-200 xl:text-lg">
-                  Dove vuoi andare oggi? Scorri in Basso per scoprire nuovi
-                  eventi!
-                </p>
-
-                <FaAngleDown className="absolute bottom-10 text-2xl text-white" />
-              </div>
-            </div>
-          </div>
-
-          <div className="col-span-12 bg-gray-100">
-            <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
-
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-1708355893696705"
-              data-ad-slot="9487119343"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            ></ins>
-          </div>
-
           <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-6">
             <div className="rounded-lg border-2 border-gray-100 bg-secondary-500 p-6 shadow-lg shadow-gray-100">
               <h4 className="text-center text-4xl font-bold text-white md:text-left">
@@ -185,6 +158,42 @@ const Home: NextPage = () => {
               </li>
             </ul>
             <div id="map" className="w-full" />
+          </div>
+
+          <div className="col-span-12 box-border flex flex-col px-8">
+            <div className="h-52 w-full overflow-hidden rounded-lg bg-black shadow-lg shadow-gray-100 xl:h-80">
+              <div
+                style={{
+                  backgroundImage:
+                    "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)) , url('https://siviaggia.it/wp-content/uploads/sites/2/2021/04/malcesine-passeggiate-italia.jpg')",
+                }}
+                className="relative flex h-full w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
+              >
+                <h1 className="mb-2 text-2xl font-extrabold text-white xl:text-5xl">
+                  Italia Meravigliosa in Tour
+                </h1>
+
+                <p className="px-4 text-center text-gray-200 xl:text-lg">
+                  Dove vuoi andare oggi? Scorri in Basso per scoprire nuovi
+                  eventi!
+                </p>
+
+                <FaAngleDown className="absolute bottom-10 text-2xl text-white" />
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-12 bg-gray-100">
+            <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
+
+            <ins
+              className="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-1708355893696705"
+              data-ad-slot="9487119343"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
           </div>
 
           <Section titolo="Eventi a Siena" slug="siena" eventi={listaEventi} />
