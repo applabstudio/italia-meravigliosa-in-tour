@@ -128,36 +128,37 @@ const Home: NextPage = () => {
             <hr />
             <br />
 
-            <div className="h-[37rem] rounded-lg border-2 border-gray-100 shadow-lg shadow-gray-100">
-              <PerfectScrollbar className="p-6">
-                <h4 className="mb-4 text-center text-4xl font-bold text-gray-800 md:text-left">
-                  Ultimi Eventi
-                </h4>
-                {listaEventi?.slice(0, 6)?.map((doc) => (
-                  <React.Fragment key={doc?.id}>
-                    <Event
-                      image={doc?.copertina}
-                      heading={doc?.titolo}
-                      location={doc?.luogo}
-                      btnText="Scopri di più"
-                      to={`/eventi/${doc?.slug}`}
-                    />
-                  </React.Fragment>
-                ))}
-              </PerfectScrollbar>
+            <div className="col-span-12 space-y-10 xl:col-span-6">
+              <ul className="list-disc px-10">
+                <li className="text-sm text-gray-500">
+                  Sposta il mouse sulle regioni per <strong>ingrandirle</strong>
+                </li>
+                <li className="text-sm text-gray-500">
+                  <strong>Clicca sulle province</strong> per maggiori
+                  informazioni
+                </li>
+              </ul>
+              <div id="map" className="w-full" />
             </div>
           </div>
 
-          <div className="col-span-12 space-y-10 xl:col-span-6">
-            <ul className="list-disc px-10">
-              <li className="text-sm text-gray-500">
-                Sposta il mouse sulle regioni per <strong>ingrandirle</strong>
-              </li>
-              <li className="text-sm text-gray-500">
-                <strong>Clicca sulle province</strong> per maggiori informazioni
-              </li>
-            </ul>
-            <div id="map" className="w-full" />
+          <div className="col-span-12 h-[52rem] rounded-lg border-2 border-gray-100 shadow-lg shadow-gray-100 xl:col-span-6">
+            <PerfectScrollbar className="p-6">
+              <h4 className="mb-4 text-center text-4xl font-bold text-gray-800 md:text-left">
+                Ultimi Eventi
+              </h4>
+              {listaEventi?.slice(0, 6)?.map((doc) => (
+                <React.Fragment key={doc?.id}>
+                  <Event
+                    image={doc?.copertina}
+                    heading={doc?.titolo}
+                    location={doc?.luogo}
+                    btnText="Scopri di più"
+                    to={`/eventi/${doc?.slug}`}
+                  />
+                </React.Fragment>
+              ))}
+            </PerfectScrollbar>
           </div>
 
           <div className="col-span-12 box-border flex flex-col px-8">
@@ -169,7 +170,7 @@ const Home: NextPage = () => {
                 }}
                 className="relative flex h-full w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
               >
-                <h1 className="mb-2 text-2xl font-extrabold text-white xl:text-5xl">
+                <h1 className="mb-2 text-xl font-extrabold text-white xl:text-5xl">
                   Italia Meravigliosa in Tour
                 </h1>
 
@@ -223,7 +224,7 @@ const Home: NextPage = () => {
             </h4>
 
             <br />
-            <div className="grid grid-cols-3 gap-4 xl:grid-cols-6">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
               {categorie?.length > 0 &&
                 categorie?.map((categoria) => (
                   <p
@@ -256,7 +257,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="col-span-12 rounded-lg bg-secondary-500 p-6">
-            <h4 className="text-center text-3xl font-bold text-white md:text-left">
+            <h4 className="text-center text-xl font-bold text-white md:text-left lg:text-3xl">
               Vuoi ricevere più informazioni?
               <br />
               Iscriviti alla Newsletter:
