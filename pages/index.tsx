@@ -111,13 +111,16 @@ const Home: NextPage = () => {
     }
   }, [])
 
+  console.log("These are the events ",listaEventi)
+
   return (
     <>
       <PopupOptin />
-      <div className="mx-auto mt-8 max-w-6xl">
+      <div className="mx-auto max-w-6xl">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
+          <div className="xl:col-span-3"></div>
           <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-6">
-            <div className="rounded-lg border-2 border-gray-100 bg-secondary-500 p-6 shadow-lg shadow-gray-100">
+            {/* <div className="rounded-lg border-2 border-gray-100 bg-secondary-500 p-6 shadow-lg shadow-gray-100">
               <h4 className="text-center text-4xl font-bold text-white md:text-left">
                 Cerca un Evento
               </h4>
@@ -126,10 +129,13 @@ const Home: NextPage = () => {
             </div>
             <br />
             <hr />
+            <br /> */}
+            <h2 className="text-center text-4xl font-bold">Il portale delle meraviglie</h2>
             <br />
-
+            <br />
+            <br />
             <div className="col-span-12 space-y-10 xl:col-span-6">
-              <ul className="list-disc px-10">
+              {/* <ul className="list-disc px-10">
                 <li className="text-sm text-gray-500">
                   Sposta il mouse sulle regioni per <strong>ingrandirle</strong>
                 </li>
@@ -137,12 +143,13 @@ const Home: NextPage = () => {
                   <strong>Clicca sulle province</strong> per maggiori
                   informazioni
                 </li>
-              </ul>
+              </ul> */}
               <div id="map" className="w-full" />
             </div>
           </div>
+          <div className="xl:col-span-3"></div>
 
-          <div className="col-span-12 h-[52rem] rounded-lg border-2 border-gray-100 shadow-lg shadow-gray-100 xl:col-span-6">
+          <div className="col-span-12 h-[52rem] rounded-lg border-2 border-gray-100 shadow-lg shadow-gray-100 xl:col-span-12">
             <PerfectScrollbar className="p-6">
               <h4 className="mb-4 text-center text-4xl font-bold text-gray-800 md:text-left">
                 Ultimi Eventi
