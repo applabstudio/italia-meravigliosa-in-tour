@@ -1,5 +1,6 @@
 // @ts-nocheck
 
+import Image from "next/image"
 import type { NextPage } from "next"
 import { SearchBar } from "../components/common/SearchBar"
 import Event from "../components/Event"
@@ -41,7 +42,7 @@ const Section = ({
       slidesPerView={1}
       breakpoints={{
         968: {
-          slidesPerView: 2,
+          slidesPerView: 3,
         },
       }}
       spaceBetween={30}
@@ -111,7 +112,7 @@ const Home: NextPage = () => {
     }
   }, [])
 
-  console.log("These are the events ",listaEventi)
+  console.log("These are the events ", listaEventi)
 
   return (
     <>
@@ -120,53 +121,68 @@ const Home: NextPage = () => {
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="xl:col-span-3"></div>
           <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-6">
-            {/* <div className="rounded-lg border-2 border-gray-100 bg-secondary-500 p-6 shadow-lg shadow-gray-100">
-              <h4 className="text-center text-4xl font-bold text-white md:text-left">
-                Cerca un Evento
-              </h4>
-              <br />
-              <SearchBar />
-            </div>
-            <br />
-            <hr />
-            <br /> */}
-            <h2 className="text-center text-4xl font-bold">Il portale delle meraviglie</h2>
+            <h2 className="text-center text-4xl font-bold">
+              Il portale delle meraviglie
+            </h2>
             <br />
             <br />
             <br />
             <div className="col-span-12 space-y-10 xl:col-span-6">
-              {/* <ul className="list-disc px-10">
-                <li className="text-sm text-gray-500">
-                  Sposta il mouse sulle regioni per <strong>ingrandirle</strong>
-                </li>
-                <li className="text-sm text-gray-500">
-                  <strong>Clicca sulle province</strong> per maggiori
-                  informazioni
-                </li>
-              </ul> */}
               <div id="map" className="w-full" />
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginTop: -30,
+                }}
+              >
+                <Image
+                  src="/images/hand1.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={100}
+                  height={100}
+                  alt="hand"
+                />
+              </div>
             </div>
           </div>
           <div className="xl:col-span-3"></div>
-
-          <div className="col-span-12 h-[52rem] rounded-lg border-2 border-gray-100 shadow-lg shadow-gray-100 xl:col-span-12">
-            <PerfectScrollbar className="p-6">
-              <h4 className="mb-4 text-center text-4xl font-bold text-gray-800 md:text-left">
-                Ultimi Eventi
-              </h4>
-              {listaEventi?.slice(0, 6)?.map((doc) => (
-                <React.Fragment key={doc?.id}>
-                  <Event
-                    image={doc?.copertina}
-                    heading={doc?.titolo}
-                    location={doc?.luogo}
-                    btnText="Scopri di più"
-                    to={`/eventi/${doc?.slug}`}
-                  />
-                </React.Fragment>
-              ))}
-            </PerfectScrollbar>
+          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+            <p
+              className="text-center"
+              style={{ fontWeight: "700", fontSize: 18 }}
+            >
+              Clicca su una <span style={{ color: "red" }}>regione</span> che
+              vuoi esplorare
+            </p>
+            <p
+              className="text-center"
+              style={{ fontWeight: "600", fontSize: 36 }}
+            >
+              Guida alla scoperta del Bel Paese
+            </p>
+            <p
+              className="text-center"
+              style={{ fontWeight: "700", fontSize: 80 }}
+            >
+              ITALIA MERAVIGLIOSA
+            </p>
+            <p className="text-center" style={{ textAlign: "center" ,fontSize:22 , fontFamily:'roboto' }}>
+              Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020, con
+              l’intenzione di mostrarvi le meraviglie nascoste del nostro paese
+            </p>
+            <p className="text-center" style={{ textAlign: "center", fontSize:22  , fontFamily:'roboto' }}>
+              Oggi con oltre 250 mila follower e tante foto di località
+              pubblicate e milioni di visualizzazioni, abbiamo deciso di creare
+              una redazione di “Italia Meravigliosa” e di creare questo portale,
+              perchè possa guidarvi in luoghi meravigliosi da esplorare, buon
+              viaggio a tutti voi.
+            </p>
           </div>
+
+          <Section titolo="Eventi a Siena" slug="siena" eventi={listaEventi} />
 
           <div className="col-span-12 box-border flex flex-col px-8">
             <div className="h-52 w-full overflow-hidden rounded-lg bg-black shadow-lg shadow-gray-100 xl:h-80">
