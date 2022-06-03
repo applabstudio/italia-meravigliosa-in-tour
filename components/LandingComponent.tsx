@@ -149,38 +149,41 @@ const LandingComponent = ({slug}:{slug:any}) => {
             </div>
           </div>
           <div className="xl:col-span-3"></div>
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
-            <p
-              className="text-center"
-              style={{ fontWeight: "700", fontSize: 18 }}
-            >
-              Clicca su una <span style={{ color: "red" }}>regione</span> che
-              vuoi esplorare
-            </p>
-            <p
-              className="text-center"
-              style={{ fontWeight: "600", fontSize: 36 }}
-            >
-              Guida alla scoperta del Bel Paese
-            </p>
-            <p
-              className="text-center"
-              style={{ fontWeight: "700", fontSize: 80 }}
-            >
-              ITALIA MERAVIGLIOSA
-            </p>
-            <p className="text-center" style={{ textAlign: "center" ,fontSize:22 , fontFamily:'roboto' }}>
-              Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020, con
-              l’intenzione di mostrarvi le meraviglie nascoste del nostro paese
-            </p>
-            <p className="text-center" style={{ textAlign: "center", fontSize:22  , fontFamily:'roboto' }}>
-              Oggi con oltre 250 mila follower e tante foto di località
-              pubblicate e milioni di visualizzazioni, abbiamo deciso di creare
-              una redazione di “Italia Meravigliosa” e di creare questo portale,
-              perchè possa guidarvi in luoghi meravigliosi da esplorare, buon
-              viaggio a tutti voi.
-            </p>
-          </div>
+          {
+               listaEventi.filter((doc) => doc?.luogo === slug).length==0 && <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+               <p
+                 className="text-center"
+                 style={{ fontWeight: "700", fontSize: 18 }}
+               >
+                 Clicca su una <span style={{ color: "red" }}>regione</span> che
+                 vuoi esplorare
+               </p>
+               <p
+                 className="text-center"
+                 style={{ fontWeight: "600", fontSize: 36 }}
+               >
+                 Guida alla scoperta del Bel Paese
+               </p>
+               <p
+                 className="text-center"
+                 style={{ fontWeight: "700", fontSize: 80 }}
+               >
+                 ITALIA MERAVIGLIOSA
+               </p>
+               <p className="text-center" style={{ textAlign: "center" ,fontSize:22 , fontFamily:'roboto' }}>
+                 Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020, con
+                 l’intenzione di mostrarvi le meraviglie nascoste del nostro paese
+               </p>
+               <p className="text-center" style={{ textAlign: "center", fontSize:22  , fontFamily:'roboto' }}>
+                 Oggi con oltre 250 mila follower e tante foto di località
+                 pubblicate e milioni di visualizzazioni, abbiamo deciso di creare
+                 una redazione di “Italia Meravigliosa” e di creare questo portale,
+                 perchè possa guidarvi in luoghi meravigliosi da esplorare, buon
+                 viaggio a tutti voi.
+               </p>
+             </div>
+          }
+          
           {
               listaEventi.filter((doc) => doc?.luogo === slug).length>0 &&    <Section titolo={`Eventi a ${slug}`} slug={slug} eventi={listaEventi} />
           }
