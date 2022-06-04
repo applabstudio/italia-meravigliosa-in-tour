@@ -67,7 +67,7 @@ const Section = ({
   </div>
 )
 
-const LandingComponent = ({slug}:{slug:any}) => {
+const LandingComponent = ({ slug }: { slug: any }) => {
   const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}
@@ -149,46 +149,144 @@ const LandingComponent = ({slug}:{slug:any}) => {
             </div>
           </div>
           <div className="xl:col-span-3"></div>
-          {
-               listaEventi.filter((doc) => doc?.luogo === slug).length==0 && <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
-               <p
-                 className="text-center"
-                 style={{ fontWeight: "700", fontSize: 18 }}
-               >
-                 Clicca su una <span style={{ color: "red" }}>regione</span> che
-                 vuoi esplorare
-               </p>
-               <p
-                 className="text-center"
-                 style={{ fontWeight: "600", fontSize: 36 }}
-               >
-                 Guida alla scoperta del Bel Paese
-               </p>
-               <p
-                 className="text-center"
-                 style={{ fontWeight: "700", fontSize: 80 }}
-               >
-                 ITALIA MERAVIGLIOSA
-               </p>
-               <p className="text-center" style={{ textAlign: "center" ,fontSize:22 , fontFamily:'roboto' }}>
-                 Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020, con
-                 l’intenzione di mostrarvi le meraviglie nascoste del nostro paese
-               </p>
-               <p className="text-center" style={{ textAlign: "center", fontSize:22  , fontFamily:'roboto' }}>
-                 Oggi con oltre 250 mila follower e tante foto di località
-                 pubblicate e milioni di visualizzazioni, abbiamo deciso di creare
-                 una redazione di “Italia Meravigliosa” e di creare questo portale,
-                 perchè possa guidarvi in luoghi meravigliosi da esplorare, buon
-                 viaggio a tutti voi.
-               </p>
-             </div>
-          }
-          
-          {
-              listaEventi.filter((doc) => doc?.luogo === slug).length>0 &&    <Section titolo={`Eventi a ${slug}`} slug={slug} eventi={listaEventi} />
-          }
+          {listaEventi.filter((doc) => doc?.luogo === slug).length == 0 && (
+            <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+              <p
+                className="text-center"
+                style={{ fontWeight: "700", fontSize: 18 }}
+              >
+                Clicca su una <span style={{ color: "red" }}>regione</span> che
+                vuoi esplorare
+              </p>
+              <p
+                className="text-center"
+                style={{ fontWeight: "600", fontSize: 36 }}
+              >
+                Guida alla scoperta del Bel Paese
+              </p>
+              <p
+                className="text-center"
+                style={{ fontWeight: "700", fontSize: 80 }}
+              >
+                ITALIA MERAVIGLIOSA
+              </p>
+              <p
+                className="text-center"
+                style={{
+                  textAlign: "center",
+                  fontSize: 22,
+                  fontFamily: "roboto",
+                }}
+              >
+                Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020,
+                con l’intenzione di mostrarvi le meraviglie nascoste del nostro
+                paese
+              </p>
+              <p
+                className="text-center"
+                style={{
+                  textAlign: "center",
+                  fontSize: 22,
+                  fontFamily: "roboto",
+                }}
+              >
+                Oggi con oltre 250 mila follower e tante foto di località
+                pubblicate e milioni di visualizzazioni, abbiamo deciso di
+                creare una redazione di “Italia Meravigliosa” e di creare questo
+                portale, perchè possa guidarvi in luoghi meravigliosi da
+                esplorare, buon viaggio a tutti voi.
+              </p>
+            </div>
+          )}
+          <div className="xl:col-span-5" style={{ alignSelf: "center" }}>
+            <p
+              className="text"
+              style={{ fontWeight: "600", fontSize: 33, width: "66%" }}
+            >
+              SEGUICI SU FACEBOOK, SIAMO OLTRE 250 MILA
+            </p>
+            <div style={{ display: "flex" }}>
+              <Image
+                src="/images/fb.png"
+                objectFit="contain"
+                layout="intrinsic"
+                width={25}
+                height={25}
+                alt="hand"
+              />
+              <p style={{ fontSize: 16, color: "#656464", marginLeft: 10 }}>
+                https://www.facebook.com/istagram.paoloartista1/
+              </p>
+            </div>
+          </div>
+          <div className="xl:col-span-1"></div>
+          <div className="xl:col-span-6">
+            <div className="grid w-full grid-cols-12 space-x-4">
+              <div
+                className="xl:col-span-7 text-right"
+                style={{ alignSelf: "center" }}
+              >
+                <Image
+                  src="/images/image1.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={250}
+                  height={300}
+                  alt="hand"
+                />
+              </div>
+              <div className="xl:col-span-5">
+                <Image
+                  src="/images/image2.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={300}
+                  height={300}
+                  alt="hand"
+                />
+                <Image
+                  src="/images/image3.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={300}
+                  height={300}
+                  alt="hand"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+            <p
+              className="text-center"
+              style={{ fontWeight: "700", fontSize: 80 }}
+            >
+              1M+ Utenti Giornalieri
+            </p>
+          </div>
+          <div className="xl:col-span-3 infoBox" style={{borderLeft:"none"}}>
+            <p className="text-center infoGray" >FOTO</p>
+            <p className="text-center">+50K</p>
+          </div>
+          <div className="xl:col-span-3 infoBox">
+            <p className="text-center infoGray">INTERAZIONI</p>
+            <p className="text-center">+15M</p>
+          </div>
+          <div className="xl:col-span-3 infoBox">
+            <p className="text-center infoGray" style={{width:'50%'}}>LUOGHI MERAVIGLIOSI</p>
+            <p className="text-center">+1000</p>
+          </div>
+          <div className="xl:col-span-3 infoBox" style={{borderRight:"none"}}>
+            <p className="text-center infoGray" >COLLABORAZIONI</p>
+            <p className="text-center">+50</p>
+          </div>
 
-       
+          {listaEventi.filter((doc) => doc?.luogo === slug).length > 0 && (
+            <Section
+              titolo={`Eventi a ${slug}`}
+              slug={slug}
+              eventi={listaEventi}
+            />
+          )}
 
           <div className="col-span-12 box-border flex flex-col px-8">
             <div className="h-52 w-full overflow-hidden rounded-lg bg-black shadow-lg shadow-gray-100 xl:h-80">

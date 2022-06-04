@@ -18,3 +18,17 @@
   color: #fff !important;
   background: #10b981 !important;
 }
+
+.infoBox{
+  width:100%;
+  height: 200px;
+  border: 1px solid #BCC3BD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.infoGray{
+  color: #718176;
+}
