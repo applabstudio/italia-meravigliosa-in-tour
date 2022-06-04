@@ -198,6 +198,40 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               </p>
             </div>
           )}
+          {listaEventi.filter((doc) => doc?.luogo === slug).length > 0 && (
+            <Section
+              titolo={`Eventi a ${slug}`}
+              slug={slug}
+              eventi={listaEventi}
+            />
+          )}
+          <div className="col-span-12 flex flex-col px-4">
+            <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
+              Categorie
+            </h4>
+
+            <br />
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
+              {categorie?.length > 0 &&
+                categorie?.map((categoria) => (
+                  <p
+                    key={categoria?.titolo}
+                    className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
+                  >
+                    <Link href={`/categoria/${categoria?.titolo}`}>
+                      <span className="flex cursor-pointer items-center justify-center space-x-2">
+                        <img
+                          className="h-4 w-4"
+                          src={categoria?.icona}
+                          alt=""
+                        />
+                        <p>{categoria?.titolo}</p>
+                      </span>
+                    </Link>
+                  </p>
+                ))}
+            </div>
+          </div>
           <div className="xl:col-span-5" style={{ alignSelf: "center" }}>
             <p
               className="text"
@@ -263,8 +297,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               1M+ Utenti Giornalieri
             </p>
           </div>
-          <div className="xl:col-span-3 infoBox" style={{borderLeft:"none"}}>
-            <p className="text-center infoGray" >FOTO</p>
+          <div className="xl:col-span-3 infoBox" style={{ borderLeft: "none" }}>
+            <p className="text-center infoGray">FOTO</p>
             <p className="text-center">+50K</p>
           </div>
           <div className="xl:col-span-3 infoBox">
@@ -272,23 +306,81 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             <p className="text-center">+15M</p>
           </div>
           <div className="xl:col-span-3 infoBox">
-            <p className="text-center infoGray" style={{width:'50%'}}>LUOGHI MERAVIGLIOSI</p>
+            <p className="text-center infoGray" style={{ width: "50%" }}>
+              LUOGHI MERAVIGLIOSI
+            </p>
             <p className="text-center">+1000</p>
           </div>
-          <div className="xl:col-span-3 infoBox" style={{borderRight:"none"}}>
-            <p className="text-center infoGray" >COLLABORAZIONI</p>
+          <div
+            className="xl:col-span-3 infoBox"
+            style={{ borderRight: "none" }}
+          >
+            <p className="text-center infoGray">COLLABORAZIONI</p>
             <p className="text-center">+50</p>
           </div>
-
-          {listaEventi.filter((doc) => doc?.luogo === slug).length > 0 && (
-            <Section
-              titolo={`Eventi a ${slug}`}
-              slug={slug}
-              eventi={listaEventi}
-            />
-          )}
-
-          <div className="col-span-12 box-border flex flex-col px-8">
+        </main>
+      </div>
+      <div
+        className="mx-auto max-w-7xl"
+        style={{
+          width: "100%",
+          background: "black",
+          height: 350,
+          maxWidth: "85rem",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+        className="text-center"
+      >
+        <p
+          style={{
+            color: "white",
+            fontSize: 40,
+            paddingTop: 50,
+            paddingBottom: 10,
+          }}
+        >
+          MISSION
+        </p>
+        <p
+          className="infoGray"
+          style={{
+            width: "80%",
+            textAlign: "justify",
+            fontFamily: "Inter",
+            fontSize: 22,
+            fontStyle: "italic",
+          }}
+        >
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.”
+        </p>
+        <p
+          style={{
+            color: "white",
+            fontSize: 20,
+            fontWeight: "700",
+            fontFamily: "Lato",
+          }}
+        >
+          Paolo Artista
+        </p>
+        <p
+          className="infoGray"
+          style={{ fontSize: 16, fontWeight: "500", fontFamily: "Inter" }}
+        >
+          CEO & Founder Italia Meravigliosa
+        </p>
+      </div>
+      <div className="mx-auto max-w-7xl">
+        <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
+          {/* <div className="col-span-12 box-border flex flex-col px-8">
             <div className="h-52 w-full overflow-hidden rounded-lg bg-black shadow-lg shadow-gray-100 xl:h-80">
               <div
                 style={{
@@ -309,9 +401,9 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 <FaAngleDown className="absolute bottom-10 text-2xl text-white" />
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="col-span-12 bg-gray-100">
+          {/* <div className="col-span-12 bg-gray-100">
             <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
 
             <ins
@@ -322,9 +414,9 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               data-ad-format="auto"
               data-full-width-responsive="true"
             ></ins>
-          </div>
+          </div> */}
 
-          <Section titolo="Eventi a Siena" slug="siena" eventi={listaEventi} />
+          {/* <Section titolo="Eventi a Siena" slug="siena" eventi={listaEventi} />
           <Section
             titolo="Eventi a Venezia"
             slug="venezia"
@@ -343,38 +435,13 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               data-ad-format="auto"
               data-full-width-responsive="true"
             ></ins>
-          </div>
-
-          <div className="col-span-12 flex flex-col px-4">
-            <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
-              Categorie
-            </h4>
-
-            <br />
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
-              {categorie?.length > 0 &&
-                categorie?.map((categoria) => (
-                  <p
-                    key={categoria?.titolo}
-                    className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
-                  >
-                    <Link href={`/categoria/${categoria?.titolo}`}>
-                      <span className="flex cursor-pointer items-center justify-center space-x-2">
-                        <img
-                          className="h-4 w-4"
-                          src={categoria?.icona}
-                          alt=""
-                        />
-                        <p>{categoria?.titolo}</p>
-                      </span>
-                    </Link>
-                  </p>
-                ))}
-            </div>
-          </div>
+          </div> */}
 
           <div className="col-span-12 px-4">
-            <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
+            <h4
+              className="text-center text-4xl font-bold text-gray-800 md:text-left"
+              style={{color:'black', fontStyle: "normal" }}
+            >
               Contatti
             </h4>
 
