@@ -84,7 +84,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Navbar />
           <Component {...pageProps} />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </WishContext.Provider>
   )

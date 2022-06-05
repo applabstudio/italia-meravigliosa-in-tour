@@ -9,7 +9,7 @@ import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import { firestore } from "../firebase/clientApp"
 import Contatti from "./Contatti"
-import { FaArrowCircleRight, FaEnvelope } from "react-icons/fa"
+import { FaArrowCircleRight, FaEnvelope, FaHome } from "react-icons/fa"
 import PerfectScrollbar from "react-perfect-scrollbar"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
@@ -85,7 +85,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
   }, [data])
 
   useEffect(() => {
-    ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+    // ;(window.adsbygoogle = window.adsbygoogle || []).push({})
 
     const mapScript = document.createElement("script")
     const countryScript = document.createElement("script")
@@ -257,7 +257,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           <div className="xl:col-span-6">
             <div className="grid w-full grid-cols-12 space-x-4">
               <div
-                className="xl:col-span-7 text-right"
+                className="text-right xl:col-span-7"
                 style={{ alignSelf: "center" }}
               >
                 <Image
@@ -297,35 +297,36 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               1M+ Utenti Giornalieri
             </p>
           </div>
-          <div className="xl:col-span-3 infoBox" style={{ borderLeft: "none" }}>
-            <p className="text-center infoGray">FOTO</p>
+          <div className="infoBox xl:col-span-3" style={{ borderLeft: "none" }}>
+            <p className="infoGray text-center">FOTO</p>
             <p className="text-center">+50K</p>
           </div>
-          <div className="xl:col-span-3 infoBox">
-            <p className="text-center infoGray">INTERAZIONI</p>
+          <div className="infoBox xl:col-span-3">
+            <p className="infoGray text-center">INTERAZIONI</p>
             <p className="text-center">+15M</p>
           </div>
-          <div className="xl:col-span-3 infoBox">
-            <p className="text-center infoGray" style={{ width: "50%" }}>
+          <div className="infoBox xl:col-span-3">
+            <p className="infoGray text-center" style={{ width: "50%" }}>
               LUOGHI MERAVIGLIOSI
             </p>
             <p className="text-center">+1000</p>
           </div>
           <div
-            className="xl:col-span-3 infoBox"
+            className="infoBox xl:col-span-3"
             style={{ borderRight: "none" }}
           >
-            <p className="text-center infoGray">COLLABORAZIONI</p>
+            <p className="infoGray text-center">COLLABORAZIONI</p>
             <p className="text-center">+50</p>
           </div>
         </main>
       </div>
+      <div style={{display:'flex', justifyContent:'center'}}>
       <div
         className="mx-auto max-w-7xl"
         style={{
           width: "100%",
           background: "black",
-          height: 350,
+          height: 380,
           maxWidth: "85rem",
           display: "flex",
           flexDirection: "column",
@@ -378,6 +379,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           CEO & Founder Italia Meravigliosa
         </p>
       </div>
+      </div>
+
       <div className="mx-auto max-w-7xl">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           {/* <div className="col-span-12 box-border flex flex-col px-8">
@@ -457,7 +460,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 VUOI COLLABORARE CON NOI?
               </p>
               <p
-                className="text-center infoGray"
+                className="infoGray text-center"
                 style={{
                   width: "80%",
                   textAlign: "justify",
@@ -539,18 +542,23 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                     background: "white",
                     borderRadius: 50,
                     height: 40,
-                    paddingLeft:15
+                    paddingLeft: 15,
                   }}
                 >
                   <FaEnvelope color="gray" />{" "}
                   <input
                     placeholder="La tua email"
-                    style={{ border: "none", width: "80%", marginLeft:5 }}
+                    style={{ border: "none", width: "80%", marginLeft: 5 }}
                   ></input>
                 </div>
                 <button
-                  style={{ display: "flex", alignItems: "center" , marginTop:20,background:'#231A36'}}
-                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginTop: 20,
+                    background: "#231A36",
+                  }}
+                  className="rounded-full bg-red-500 py-2 px-6 font-bold text-white hover:bg-red-700"
                 >
                   <span style={{ marginRight: 5 }}>Iscriviti</span>{" "}
                   <FaArrowCircleRight />
@@ -558,56 +566,166 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               </div>
             </div>
           </div>
-
-          <div className="col-span-12 rounded-lg bg-secondary-500 p-6">
-            <h4 className="text-center text-xl font-bold text-white md:text-left lg:text-3xl">
-              Vuoi ricevere più informazioni?
-              <br />
-              Iscriviti alla Newsletter:
-            </h4>
-
-            <br />
-
-            <div className="flex w-full flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-2">
-              <Input
-                id="newsletter"
-                label="Newsletter"
-                type="text"
-                placeholder="La tua email..."
-                showLabel={false}
-                className="w-full lg:w-1/3"
-              />
-
-              <button
-                type="submit"
-                className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full border-2 border-white p-4 px-6 py-3 font-medium text-white shadow-md outline-none ring-secondary-500 ring-offset-4 transition duration-300 ease-out focus:ring-2 lg:w-fit"
-              >
-                <span className="ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-white text-secondary-500 duration-300 group-hover:translate-x-0">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    ></path>
-                  </svg>
-                </span>
-                <span className="ease absolute flex h-full w-full transform items-center justify-center text-white transition-all duration-300 group-hover:translate-x-full">
-                  Iscriviti
-                </span>
-                <span className="invisible relative">Iscriviti</span>
-              </button>
+          <div className="col-span-12 rounded-lg p-6" style={{marginBottom:20}}>
+            <div className="grid w-full grid-cols-12 space-x-4">
+              <div className="xl:col-span-2">
+                <Image
+                  src="/images/chase.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={100}
+                  height={100}
+                  alt="hand"
+                />
+              </div>
+              <div className="xl:col-span-2">
+                <Image
+                  src="/images/asana.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={100}
+                  height={100}
+                  alt="hand"
+                />
+              </div>
+              <div className="xl:col-span-2">
+                <Image
+                  src="/images/google.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={100}
+                  height={100}
+                  alt="hand"
+                />
+              </div>
+              <div className="xl:col-span-2">
+                <Image
+                  src="/images/buzzfeed.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={100}
+                  height={100}
+                  alt="hand"
+                />
+              </div>
+              <div className="xl:col-span-2">
+                <Image
+                  src="/images/toggl.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={100}
+                  height={100}
+                  alt="hand"
+                />
+              </div>
+              <div className="xl:col-span-2">
+                <Image
+                  src="/images/walmart.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={100}
+                  height={100}
+                  alt="hand"
+                />
+              </div>
             </div>
           </div>
 
-          <br />
-          <br />
+          <div
+            className="mx-auto max-w-7xl"
+            style={{
+              width: "80rem",
+              background: "#F3F4F6",
+              height: 300,
+              maxWidth: "85rem",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+            className="text-center"
+          >
+            <div style={{display:"flex", alignItems:"center"}}>
+              <Image
+              src="/images/logo.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+                     <Image
+              src="/images/fblog.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={170}
+              height={170}
+              alt="hand"
+            />
+            </div>
+            <p style={{width:"60%", textAlign:'center'}}>Copyright © 2022 Italia Meravigliosa in Tour, Tutti i diritti sono riservati. | Powered by:
+p.Iva000000000000 </p>
+          </div>
+          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+          </div>
+          <div className="footer-grid xl:col-span-2"
+            style={{ borderLeft: "none" }}
+          >
+            <Image
+              src="/images/home.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+            <p className="text-center" style={{ color: "#F56606" }}>
+              Home
+            </p>
+          </div>
+          <div className="footer-grid xl:col-span-3">
+            <Image
+              src="/images/info.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+            <p className="text-center">Chi siamo</p>
+          </div>
+          <div className="footer-grid xl:col-span-3">
+            <Image
+              src="/images/work.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+            <p className="text-center">Lavora con noi</p>
+          </div>
+          <div className="footer-grid xl:col-span-2">
+            <Image
+              src="/images/heart.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+            <p className="text-center">Wishlist</p>
+          </div>
+          <div className="footer-grid xl:col-span-2">
+            <Image
+              src="/images/search.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+            <p className="text-center">Cerca</p>
+          </div>
         </main>
       </div>
     </>

@@ -37,3 +37,10 @@
 .max-w-8xl {
   max-width: 85rem;
 }
+
+.footer-grid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
