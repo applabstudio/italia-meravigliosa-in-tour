@@ -320,65 +320,65 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           </div>
         </main>
       </div>
-      <div style={{display:'flex', justifyContent:'center'}}>
-      <div
-        className="mx-auto max-w-7xl"
-        style={{
-          width: "100%",
-          background: "black",
-          height: 380,
-          maxWidth: "85rem",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-        className="text-center"
-      >
-        <p
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          className="mx-auto max-w-7xl"
           style={{
-            color: "white",
-            fontSize: 40,
-            paddingTop: 50,
-            paddingBottom: 10,
+            width: "100%",
+            background: "black",
+            height: 380,
+            maxWidth: "85rem",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
+          className="text-center"
         >
-          MISSION
-        </p>
-        <p
-          className="infoGray"
-          style={{
-            width: "80%",
-            textAlign: "justify",
-            fontFamily: "Inter",
-            fontSize: 22,
-            fontStyle: "italic",
-          }}
-        >
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.”
-        </p>
-        <p
-          style={{
-            color: "white",
-            fontSize: 20,
-            fontWeight: "700",
-            fontFamily: "Lato",
-          }}
-        >
-          Paolo Artista
-        </p>
-        <p
-          className="infoGray"
-          style={{ fontSize: 16, fontWeight: "500", fontFamily: "Inter" }}
-        >
-          CEO & Founder Italia Meravigliosa
-        </p>
-      </div>
+          <p
+            style={{
+              color: "white",
+              fontSize: 40,
+              paddingTop: 50,
+              paddingBottom: 10,
+            }}
+          >
+            MISSION
+          </p>
+          <p
+            className="infoGray"
+            style={{
+              width: "80%",
+              textAlign: "justify",
+              fontFamily: "Inter",
+              fontSize: 22,
+              fontStyle: "italic",
+            }}
+          >
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.”
+          </p>
+          <p
+            style={{
+              color: "white",
+              fontSize: 20,
+              fontWeight: "700",
+              fontFamily: "Lato",
+            }}
+          >
+            Paolo Artista
+          </p>
+          <p
+            className="infoGray"
+            style={{ fontSize: 16, fontWeight: "500", fontFamily: "Inter" }}
+          >
+            CEO & Founder Italia Meravigliosa
+          </p>
+        </div>
       </div>
 
       <div className="mx-auto max-w-7xl">
@@ -566,7 +566,10 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               </div>
             </div>
           </div>
-          <div className="col-span-12 rounded-lg p-6" style={{marginBottom:20}}>
+          <div
+            className="col-span-12 rounded-lg p-6"
+            style={{ marginBottom: 20 }}
+          >
             <div className="grid w-full grid-cols-12 space-x-4">
               <div className="xl:col-span-2">
                 <Image
@@ -644,30 +647,55 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             }}
             className="text-center"
           >
-            <div style={{display:"flex", alignItems:"center"}}>
+            <div style={{ display: "flex", alignItems: "center" }}>
               <Image
-              src="/images/logo.png"
-              objectFit="contain"
-              layout="intrinsic"
-              width={80}
-              height={80}
-              alt="hand"
-            />
-                     <Image
-              src="/images/fblog.png"
-              objectFit="contain"
-              layout="intrinsic"
-              width={170}
-              height={170}
-              alt="hand"
-            />
+                src="/images/logo.png"
+                objectFit="contain"
+                layout="intrinsic"
+                width={80}
+                height={80}
+                alt="hand"
+              />
+              <Image
+                src="/images/fblog.png"
+                objectFit="contain"
+                layout="intrinsic"
+                width={170}
+                height={170}
+                alt="hand"
+              />
             </div>
-            <p style={{width:"60%", textAlign:'center'}}>Copyright © 2022 Italia Meravigliosa in Tour, Tutti i diritti sono riservati. | Powered by:
-p.Iva000000000000 </p>
+            <div style={{ display: "flex", height: 50, width: "85%" }}>
+              <div style={{ height: 50, width: "80%" }}>
+                <p style={{ width: "100%", textAlign: "center" }}>
+                  Copyright © 2022 Italia Meravigliosa in Tour, Tutti i diritti
+                  sono riservati. | Powered by:{" "}
+                  <Image
+                    src="/images/applab.png"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={80}
+                    height={20}
+                    alt="hand"
+                  />
+                  p.Iva000000000000{" "}
+                </p>
+              </div>
+              <div style={{ height: 50, width: "20%", }}>
+                <Image
+                  src="/images/privacy.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={80}
+                  height={80}
+                  alt="hand"
+                />
+              </div>
+            </div>
           </div>
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
-          </div>
-          <div className="footer-grid xl:col-span-2"
+          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12"></div>
+          <div
+            className="footer-grid xl:col-span-2"
             style={{ borderLeft: "none" }}
           >
             <Image

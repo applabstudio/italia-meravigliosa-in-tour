@@ -7,6 +7,7 @@ import { useCollection } from "react-firebase-hooks/firestore"
 import { FaFilter, FaSearch, FaTimes } from "react-icons/fa"
 import { firestore } from "../../firebase/clientApp"
 import Event from "../Event"
+import { GoSettings } from "react-icons/go";
 
 const useOutsideAlerter = (
   ref: any,
@@ -61,7 +62,7 @@ export const SearchBar = () => {
             filtered ? "text-primary-400" : "text-gray-400"
           }`}
         >
-          <FaFilter />
+          <GoSettings size={20} style={{transform:"rotate(90deg)"}} />
         </button>
 
         {categoria !== "" && (
@@ -70,14 +71,14 @@ export const SearchBar = () => {
             className="flex w-fit items-center space-x-1 rounded-md bg-primary-100 px-2 text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
           >
             <span>{categoria}</span>
-            <FaTimes />
+            <FaTimes size={20} />
           </button>
         )}
 
         <input
           type="text"
           className="form-input h-full w-full border-0 bg-transparent px-4 py-3 text-gray-800 caret-primary-500 outline-none placeholder:text-gray-400 focus:border-0 focus:ring-0"
-          placeholder="Cerca un Evento..."
+          placeholder="Cerca un luogo meraviglioso...."
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           onFocus={() => setFocused(true)}

@@ -69,34 +69,54 @@ const Navbar = () => {
           <div className="flex w-full items-center justify-center space-x-14 md:justify-between lg:w-fit lg:justify-start">
             <Link href="/" passHref>
               <a className="outline-none ring-primary-200 transition duration-200 focus:ring-2 ">
-                <div className="relative h-20 w-64">
+                <div  style={{ display:'flex' }}>
                   <Image
-                    src="/images/logo.svg"
+                    src="/images/logo.png"
                     objectFit="contain"
-                    layout="fill"
-                    alt="Italia Meravigliosa Logo"
+                    layout="intrinsic"
+                    width={50}
+                    height={50}
+                    alt="hand"
+                  />
+                  <p style={{width:20}}></p>
+                  <Image
+                    src="/images/textlogo.png"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={200}
+                    height={50}
+                    alt="hand"
+                  />
+                  <p style={{width:20}}></p>
+                  <Image
+                    src="/images/textlogo2.jpg"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={80}
+                    height={50}
+                    alt="hand"
                   />
                 </div>
               </a>
             </Link>
 
-            <div className="min-w-lg hidden w-full space-x-6 md:flex">
+            {/* <div className="min-w-lg hidden w-full space-x-6 md:flex">
               <NavLink text="Contatti" to="/contatti" />
               <NavLink text="Lavora con noi" to="/lavora-con-noi" />
               <NavLink text="Categorie" to="/categorie" />
-            </div>
+            </div> */}
           </div>
 
           <div className="hidden w-[35%] items-center space-x-6 xl:flex">
             <SearchBar />
 
-            <button
+            {/* <button
               type="button"
               onClick={() => setModalOpen(true)}
               className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 ring-offset-4 transition duration-200 hover:bg-secondary-100 focus:ring-2"
             >
               <FaHeart className="text-secondary-500" size={20} />
-            </button>
+            </button> */}
           </div>
 
           <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
