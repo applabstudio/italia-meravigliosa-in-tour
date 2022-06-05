@@ -9,7 +9,7 @@ import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import { firestore } from "../firebase/clientApp"
 import Contatti from "./Contatti"
-import { FaAngleDown } from "react-icons/fa"
+import { FaArrowCircleRight, FaEnvelope } from "react-icons/fa"
 import PerfectScrollbar from "react-perfect-scrollbar"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
@@ -501,18 +501,61 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 backgroundSize: "cover",
               }}
             >
-              <p className="text-center"   style={{
+              <p
+                className="text-center"
+                style={{
                   fontSize: 40,
                   paddingTop: 50,
                   paddingBottom: 10,
                   fontWeight: "600",
-                  color:'white',
-                }}>Vuoi ricevere piu’ informazioni?</p>
-                <p  className="text-center"   style={{
+                  color: "white",
+                }}
+              >
+                Vuoi ricevere piu’ informazioni?
+              </p>
+              <p
+                className="text-center"
+                style={{
                   fontSize: 16,
                   fontWeight: "400",
-                  color:'white',
-                }}>Iscriviti alla newsletter di italia meravigliosa</p>
+                  color: "white",
+                }}
+              >
+                Iscriviti alla newsletter di italia meravigliosa
+              </p>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginTop: 10,
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    background: "white",
+                    borderRadius: 50,
+                    height: 40,
+                    paddingLeft:15
+                  }}
+                >
+                  <FaEnvelope color="gray" />{" "}
+                  <input
+                    placeholder="La tua email"
+                    style={{ border: "none", width: "80%", marginLeft:5 }}
+                  ></input>
+                </div>
+                <button
+                  style={{ display: "flex", alignItems: "center" , marginTop:20,background:'#231A36'}}
+                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full"
+                >
+                  <span style={{ marginRight: 5 }}>Iscriviti</span>{" "}
+                  <FaArrowCircleRight />
+                </button>
+              </div>
             </div>
           </div>
 
