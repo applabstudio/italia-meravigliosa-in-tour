@@ -438,9 +438,45 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           </div> */}
 
           <div className="col-span-12 px-4">
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <p
+                className="text-center"
+                style={{
+                  fontSize: 55,
+                  paddingTop: 50,
+                  paddingBottom: 10,
+                  fontWeight: "700",
+                }}
+              >
+                VUOI COLLABORARE CON NOI?
+              </p>
+              <p
+                className="text-center infoGray"
+                style={{
+                  width: "80%",
+                  textAlign: "justify",
+                  fontFamily: "Inter",
+                  fontSize: 22,
+                  fontStyle: "italic",
+                }}
+              >
+                Italia Meravigliosa offre l’opportunità di collaborare con la
+                nostra redazione, se sei un fotografo, un videomaker oppure un
+                blogger di viaggio, contattaci ed entra a far parte del nostro
+                team, fai conoscere il tuo lavoro attraverso la nostra grande e
+                coesa community
+              </p>
+            </div>
+
             <h4
               className="text-center text-4xl font-bold text-gray-800 md:text-left"
-              style={{color:'black', fontStyle: "normal" }}
+              style={{ color: "black", fontStyle: "normal", marginTop: 20 }}
             >
               Contatti
             </h4>
@@ -448,6 +484,36 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             <br />
 
             <Contatti />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "80rem",
+            }}
+          >
+            <div
+              style={{
+                width: "75%",
+                height: 300,
+                backgroundImage: 'url("/images/gradient.png")',
+                backgroundSize: "cover",
+              }}
+            >
+              <p className="text-center"   style={{
+                  fontSize: 40,
+                  paddingTop: 50,
+                  paddingBottom: 10,
+                  fontWeight: "600",
+                  color:'white',
+                }}>Vuoi ricevere piu’ informazioni?</p>
+                <p  className="text-center"   style={{
+                  fontSize: 16,
+                  fontWeight: "400",
+                  color:'white',
+                }}>Iscriviti alla newsletter di italia meravigliosa</p>
+            </div>
           </div>
 
           <div className="col-span-12 rounded-lg bg-secondary-500 p-6">
