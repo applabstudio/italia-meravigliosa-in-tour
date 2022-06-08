@@ -22,6 +22,260 @@ import Input from "./common/Input"
 import PopupOptin from "./PopupOptin"
 import Script from "next/script"
 
+
+const regions = {
+  "0": {
+    states: [
+      "ITA5418",
+      "ITA5419",
+      "ITA5420",
+      "ITA5421"
+    ],
+    name: "Abruzzo",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "1": {
+    states: [
+      "ITA5389",
+      "ITA5390"
+    ],
+    name: "Basilicata",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "2": {
+    states: [
+      "ITA5391",
+      "ITA5392",
+      "ITA5393",
+      "ITA5394",
+      "ITA5395"
+    ],
+    name: "Calabria",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "3": {
+    states: [
+      "ITA5396",
+      "ITA5397",
+      "ITA5398",
+      "ITA5399",
+      "ITA5400"
+    ],
+    name: "Campania",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "4": {
+    states: [
+      "ITA5358",
+      "ITA5359",
+      "ITA5360",
+      "ITA5361",
+      "ITA5362",
+      "ITA5363",
+      "ITA5364",
+      "ITA5365",
+      "ITA5366"
+    ],
+    name: "Emilia-Romagna",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "5": {
+    states: [
+      "ITA5455",
+      "ITA5456",
+      "ITA5457",
+      "ITA5458"
+    ],
+    name: "Friuli-Venezia Giulia",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "6": {
+    states: [
+      "ITA5422",
+      "ITA5423",
+      "ITA5424",
+      "ITA5425",
+      "ITA5426"
+    ],
+    name: "Lazio",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "7": {
+    states: [
+      "ITA5367",
+      "ITA5368",
+      "ITA5369",
+      "ITA5370"
+    ],
+    name: "Liguria",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "8": {
+    states: [
+      "ITA5443",
+      "ITA5444",
+      "ITA5445",
+      "ITA5446",
+      "ITA5447",
+      "ITA5448",
+      "ITA5449",
+      "ITA5450",
+      "ITA5451",
+      "ITA5452",
+      "ITA5453",
+      "ITA5454"
+    ],
+    name: "Lombardia",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "9": {
+    states: [
+      "ITA5427",
+      "ITA5428",
+      "ITA5429",
+      "ITA5430",
+      "ITA5431"
+    ],
+    name: "Marche",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "10": {
+    states: [
+      "ITA5401",
+      "ITA5402"
+    ],
+    name: "Molise",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "11": {
+    states: [
+      "ITA5434",
+      "ITA5435",
+      "ITA5436",
+      "ITA5437",
+      "ITA5438",
+      "ITA5439",
+      "ITA5440",
+      "ITA5441"
+    ],
+    name: "Piemonte",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "12": {
+    states: [
+      "ITA5403",
+      "ITA5404",
+      "ITA5405",
+      "ITA5406",
+      "ITA5407",
+      "ITA5408"
+    ],
+    name: "Puglia",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "13": {
+    states: [
+      "ITA5371",
+      "ITA5372",
+      "ITA5373",
+      "ITA5374",
+      "ITA5375",
+      "ITA5376",
+      "ITA5377",
+      "ITA5378"
+    ],
+    name: "Sardegna",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "14": {
+    states: [
+      "ITA5409",
+      "ITA5410",
+      "ITA5411",
+      "ITA5412",
+      "ITA5413",
+      "ITA5414",
+      "ITA5415",
+      "ITA5416",
+      "ITA5417"
+    ],
+    name: "Sicilia",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "15": {
+    states: [
+      "ITA5379",
+      "ITA5380",
+      "ITA5381",
+      "ITA5382",
+      "ITA5383",
+      "ITA5384",
+      "ITA5385",
+      "ITA5386",
+      "ITA5387",
+      "ITA5388"
+    ],
+    name: "Toscana",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "16": {
+    states: [
+      "ITA5459",
+      "ITA5460"
+    ],
+    name: "Trentino-Alto Adige",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "17": {
+    states: [
+      "ITA5432",
+      "ITA5433"
+    ],
+    name: "Umbria",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "18": {
+    states: [
+      "ITA5442"
+    ],
+    name: "Valle d'Aosta",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  },
+  "19": {
+    states: [
+      "ITA5461",
+      "ITA5462",
+      "ITA5463",
+      "ITA5464",
+      "ITA5465",
+      "ITA5466",
+      "ITA5467"
+    ],
+    name: "Veneto",
+    color: "#d1d5db",
+    hover_color: "#6ee7b7"
+  }
+}
+
 const Section = ({
   titolo,
   slug,
@@ -128,7 +382,16 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             <br />
             <br />
             <div className="col-span-12 space-y-10 xl:col-span-6">
-              <div id="map" className="w-full" />
+              <div id="map" onClick={(e)=>{
+                console.log("THis was clilcked", e.target.className.baseVal.split("_")[2] ,regions)
+                for (const key in regions) {
+                  if(regions[key].states.includes(e.target.className.baseVal.split("_")[2]))
+                  {
+                    console.log(`${key}: ${regions[key].states} :${regions[key].name}`);
+                  }
+                  
+              }
+              }} className="w-full" />
               <div
                 style={{
                   display: "flex",
