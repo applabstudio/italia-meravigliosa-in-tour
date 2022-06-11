@@ -388,8 +388,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   if(regions[key].states.includes(e.target.className.baseVal.split("_")[2]))
                   {
                     console.log(`${key}: ${regions[key].states} :${regions[key].name}`);
-                  }
-                  
+                  }  
               }
               }} className="w-full" />
               <div
@@ -828,7 +827,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             className="col-span-12 rounded-lg p-6"
             style={{ marginBottom: 20 }}
           >
-            <div className="grid w-full grid-cols-12 space-x-4">
+            {/* <div className="grid w-full grid-cols-12 space-x-4">
               <div className="xl:col-span-2">
                 <Image
                   src="/images/chase.png"
@@ -889,7 +888,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   alt="hand"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div
@@ -951,67 +950,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               </div>
             </div>
           </div>
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12"></div>
-          <div
-            className="footer-grid xl:col-span-2"
-            style={{ borderLeft: "none" }}
-          >
-            <Image
-              src="/images/home.png"
-              objectFit="contain"
-              layout="intrinsic"
-              width={80}
-              height={80}
-              alt="hand"
-            />
-            <p className="text-center" style={{ color: "#F56606" }}>
-              Home
-            </p>
-          </div>
-          <div className="footer-grid xl:col-span-3">
-            <Image
-              src="/images/info.png"
-              objectFit="contain"
-              layout="intrinsic"
-              width={80}
-              height={80}
-              alt="hand"
-            />
-            <p className="text-center">Chi siamo</p>
-          </div>
-          <div className="footer-grid xl:col-span-3">
-            <Image
-              src="/images/work.png"
-              objectFit="contain"
-              layout="intrinsic"
-              width={80}
-              height={80}
-              alt="hand"
-            />
-            <p className="text-center">Lavora con noi</p>
-          </div>
-          <div className="footer-grid xl:col-span-2">
-            <Image
-              src="/images/heart.png"
-              objectFit="contain"
-              layout="intrinsic"
-              width={80}
-              height={80}
-              alt="hand"
-            />
-            <p className="text-center">Wishlist</p>
-          </div>
-          <div className="footer-grid xl:col-span-2">
-            <Image
-              src="/images/search.png"
-              objectFit="contain"
-              layout="intrinsic"
-              width={80}
-              height={80}
-              alt="hand"
-            />
-            <p className="text-center">Cerca</p>
-          </div>
+
         </main>
       </div>
     </>

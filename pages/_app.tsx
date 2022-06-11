@@ -1,6 +1,7 @@
 import "../styles/globals.css"
 import type { AppProps } from "next/app"
 import Head from "next/head"
+import Image from "next/image"
 import Navbar from "../components/Navbar"
 import NextNProgress from "nextjs-progressbar"
 import Footer from "../components/Footer"
@@ -83,8 +84,72 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="min-h-screen">
           <Navbar />
           <Component {...pageProps} />
+          <div style={{flexDirection:'row', justifyContent:'space-between'}} className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+          <div
+            className="footer-grid xl:col-span-2"
+            style={{ borderLeft: "none" }}
+          >
+            <Image
+              src="/images/home.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+            <p className="text-center" style={{ color: "#F56606" }}>
+              Home
+            </p>
+          </div>
+          <div className="footer-grid xl:col-span-3">
+            <Image
+              src="/images/info.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+            <p className="text-center">Chi siamo</p>
+          </div>
+          <div className="footer-grid xl:col-span-3">
+            <Image
+              src="/images/work.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+            <p className="text-center">Lavora con noi</p>
+          </div>
+          <div className="footer-grid xl:col-span-2">
+            <Image
+              src="/images/heart.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+            <p className="text-center">Wishlist</p>
+          </div>
+          <div className="footer-grid xl:col-span-2">
+            <Image
+              src="/images/search.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={80}
+              height={80}
+              alt="hand"
+            />
+            <p className="text-center">Cerca</p>
+          </div>
+          </div>
         </div>
         {/* <Footer /> */}
+    
+ 
       </div>
     </WishContext.Provider>
   )
