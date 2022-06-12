@@ -77,6 +77,7 @@ const Home: NextPage = () => {
   const [listaEventi, setListaEventi] = useState<any[]>([])
   const [categorie, setCategorie] = useState<any[]>([])
 
+
   useEffect(() => {
     data?.docs.forEach((d) => {
       d.data()._fl_meta_.schema === "evento"
