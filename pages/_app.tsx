@@ -93,8 +93,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/home.png"
               objectFit="contain"
               layout="intrinsic"
-              width={80}
-              height={80}
+              width={60}
+              height={60}
               alt="hand"
             />
             <p className="text-center" style={{ color: "#F56606" }}>
@@ -106,8 +106,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/info.png"
               objectFit="contain"
               layout="intrinsic"
-              width={80}
-              height={80}
+              width={60}
+              height={60}
               alt="hand"
             />
             <p className="text-center">Chi siamo</p>
@@ -117,8 +117,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/work.png"
               objectFit="contain"
               layout="intrinsic"
-              width={80}
-              height={80}
+              width={60}
+              height={60}
               alt="hand"
             />
             <p className="text-center">Lavora con noi</p>
@@ -128,8 +128,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/heart.png"
               objectFit="contain"
               layout="intrinsic"
-              width={80}
-              height={80}
+              width={60}
+              height={60}
               alt="hand"
             />
             <p className="text-center">Wishlist</p>
@@ -139,8 +139,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/search.png"
               objectFit="contain"
               layout="intrinsic"
-              width={80}
-              height={80}
+              width={60}
+              height={60}
               alt="hand"
             />
             <p className="text-center">Cerca</p>

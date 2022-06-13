@@ -425,7 +425,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             (doc) => doc?.luogo === slug || doc?.region === region
           ).length > 0 && (
             <Section
-              titolo={`Eventi a ${slug||region}`}
+              titolo={`Eventi a ${slug || region}`}
               slug={slug}
               region={region}
               eventi={listaEventi}
@@ -523,26 +523,33 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               1M+ Utenti Giornalieri
             </p>
           </div>
-          <div className="infoBox xl:col-span-3" style={{ borderLeft: "none" }}>
-            <p className="infoGray text-center">FOTO</p>
-            <p className="text-center">+50K</p>
-          </div>
-          <div className="infoBox xl:col-span-3">
-            <p className="infoGray text-center">INTERAZIONI</p>
-            <p className="text-center">+15M</p>
-          </div>
-          <div className="infoBox xl:col-span-3">
-            <p className="infoGray text-center" style={{ width: "50%" }}>
-              LUOGHI MERAVIGLIOSI
-            </p>
-            <p className="text-center">+1000</p>
-          </div>
-          <div
-            className="infoBox xl:col-span-3"
-            style={{ borderRight: "none" }}
-          >
-            <p className="infoGray text-center">COLLABORAZIONI</p>
-            <p className="text-center">+50</p>
+          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+            <div className="grid grid-cols-2  md:grid-cols-3 xl:grid-cols-12">
+              <div
+                className="infoBox xl:col-span-3"
+                style={{ borderLeft: "none" }}
+              >
+                <p className="infoGray text-center">FOTO</p>
+                <p className="text-center">+50K</p>
+              </div>
+              <div className="infoBox xl:col-span-3">
+                <p className="infoGray text-center">INTERAZIONI</p>
+                <p className="text-center">+15M</p>
+              </div>
+              <div className="infoBox xl:col-span-3">
+                <p className="infoGray text-center" style={{ width: "50%" }}>
+                  LUOGHI MERAVIGLIOSI
+                </p>
+                <p className="text-center">+1000</p>
+              </div>
+              <div
+                className="infoBox xl:col-span-3"
+                style={{ borderRight: "none" }}
+              >
+                <p className="infoGray text-center">COLLABORAZIONI</p>
+                <p className="text-center">+50</p>
+              </div>
+            </div>
           </div>
         </main>
       </div>
