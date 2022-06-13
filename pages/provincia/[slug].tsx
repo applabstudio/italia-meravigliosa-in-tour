@@ -1,6 +1,7 @@
 // @ts-nocheck
 
 import React, { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 import Event from "../../components/Event"
 import { firestore } from "../../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
@@ -8,7 +9,9 @@ import { collection } from "firebase/firestore"
 import LandingComponent from "../../components/LandingComponent"
 
 const Provincia = ({ slug }: { slug: string }) => {
-
+  const router = useRouter();
+  slug = router.query.slug;
+  console.log("This is props", router.query);
   
   const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
@@ -31,14 +34,14 @@ const Provincia = ({ slug }: { slug: string }) => {
   )
 }
 
-export async function getServerSideProps(context: any) {
-  const { slug } = context.params
+// export async function getInitialProps(context: any) {
+//   const { slug } = context.params
 
-  return {
-    props: {
-      slug,
-    },
-  }
-}
+//   return {
+//     props: {
+//       slug,
+//     },
+//   }
+// }
 
 export default Provincia

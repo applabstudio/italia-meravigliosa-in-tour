@@ -1,6 +1,7 @@
 //@ts-nocheck
 
 import { FaHeart, FaMapMarkerAlt, FaPlus } from "react-icons/fa"
+import { useRouter } from "next/router";
 import Comment from "../../components/common/Comment"
 import { firestore } from "../../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
@@ -64,7 +65,9 @@ const Evento = ({ slug }: { slug: string }) => {
       add(event)
     }
   }
-
+  const router = useRouter();
+  slug = router.query.slug;
+  console.log("This is props", router.query);
   return (
     <div className="mx-auto my-8 max-w-6xl">
       {console.log(listaCategorie)}
@@ -213,16 +216,6 @@ const Evento = ({ slug }: { slug: string }) => {
       </main>
     </div>
   )
-}
-
-export async function getServerSideProps(context: any) {
-  const { slug } = context.params
-
-  return {
-    props: {
-      slug,
-    },
-  }
 }
 
 export default Evento
