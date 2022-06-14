@@ -36,9 +36,7 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
 
       <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
-      <NavLink text="Contatti" to="/contatti" />
-      <NavLink text="Lavora con noi" to="/lavora-con-noi" />
-      <NavLink text="Categorie" to="/categorie" />
+
     </div>
   )
 }
