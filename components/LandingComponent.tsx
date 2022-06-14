@@ -321,7 +321,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
       <div className="mx-auto max-w-6xl">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="xl:col-span-3"></div>
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-6">
+          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-6 welcome-map">
             <h2 className="text-center text-4xl font-bold">
               Il portale delle meraviglie
             </h2>

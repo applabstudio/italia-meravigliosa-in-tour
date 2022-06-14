@@ -33,10 +33,7 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
           <FaHeart className="text-secondary-500" size={20} />
         </button>
       </div>
-
       <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
-
-
     </div>
   )
 }

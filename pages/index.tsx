@@ -118,7 +118,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-    <div style={{minHeight:'calc(100vh - 200px)',maxHeight:'calc(100vh - 200px)', overflow:'scroll'}}>
+    <div style={{minHeight:'calc(100vh - 60px)',maxHeight:'calc(100vh - 200px)', overflow:'scroll'}}>
     <LandingComponent eventi={listaEventi} categorie={categorie}></LandingComponent>
     </div>
   

@@ -84,7 +84,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="min-h-screen">
           <Navbar />
           <Component {...pageProps} />
-          <div style={{flexDirection:'row', justifyContent:'space-between'}} className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+          <div style={{flexDirection:'row', justifyContent:'space-between'}} className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar">
           <div
             className="footer-grid xl:col-span-2"
             style={{ borderLeft: "none" }}
@@ -93,8 +93,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/home.png"
               objectFit="contain"
               layout="intrinsic"
-              width={60}
-              height={60}
+              width={40}
+              height={40}
               alt="hand"
               className={"homeIcon"}
             />
@@ -107,8 +107,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/info.png"
               objectFit="contain"
               layout="intrinsic"
-              width={60}
-              height={60}
+              width={40}
+              height={40}
               alt="hand"
               className={"infoIcon"}
             />
@@ -119,8 +119,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/work.png"
               objectFit="contain"
               layout="intrinsic"
-              width={60}
-              height={60}
+              width={40}
+              height={40}
               alt="hand"
               className={"workIcon"}
             />
@@ -131,8 +131,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/heart.png"
               objectFit="contain"
               layout="intrinsic"
-              width={60}
-              height={60}
+              width={40}
+              height={40}
               alt="hand"
               className={"heartIcon"}
             />
@@ -143,8 +143,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/search.png"
               objectFit="contain"
               layout="intrinsic"
-              width={60}
-              height={60}
+              width={40}
+              height={40}
               alt="hand"
               className={"searchIcon"}
             />

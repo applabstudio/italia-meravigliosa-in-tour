@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.botton_navbar {
+padding-top: 10px;
+}
 
+.welcome-map {
+  padding-top: 62px;
+}
 
 .eventImage {
   border-radius: 14px;
@@ -61,6 +67,9 @@
     font-size: 29px !important;
   }
   .workwithus {
+    font-size: 29px !important;
+  }
+  .welcome-map {
     font-size: 29px !important;
   }
 }
