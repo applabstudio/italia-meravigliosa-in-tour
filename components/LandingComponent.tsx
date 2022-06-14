@@ -460,7 +460,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             </div>
           </div>
           {/* TODO Fix responsive sections */}
-          <div className="xl:col-span-5" style={{ alignSelf: "center" }}>
+          <div className="xl:col-span-5 md:grid-cols-12" style={{ alignSelf: "center" }}>
             <p
               className="text"
               style={{ fontWeight: "600", fontSize: 33, width: "66%" }}
@@ -614,62 +614,6 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
       <div className="mx-auto max-w-7xl">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
-          {/* <div className="col-span-12 box-border flex flex-col px-8">
-            <div className="h-52 w-full overflow-hidden rounded-lg bg-black shadow-lg shadow-gray-100 xl:h-80">
-              <div
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)) , url('https://siviaggia.it/wp-content/uploads/sites/2/2021/04/malcesine-passeggiate-italia.jpg')",
-                }}
-                className="relative flex h-full w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
-              >
-                <h1 className="mb-2 text-xl font-extrabold text-white xl:text-5xl">
-                  Italia Meravigliosa in Tour
-                </h1>
-
-                <p className="px-4 text-center text-gray-200 xl:text-lg">
-                  Dove vuoi andare oggi? Scorri in Basso per scoprire nuovi
-                  eventi!
-                </p>
-
-                <FaAngleDown className="absolute bottom-10 text-2xl text-white" />
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="col-span-12 bg-gray-100">
-            <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
-
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-1708355893696705"
-              data-ad-slot="9487119343"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            ></ins>
-          </div> */}
-
-          {/* <Section titolo="Eventi a Siena" slug="siena" eventi={listaEventi} />
-          <Section
-            titolo="Eventi a Venezia"
-            slug="venezia"
-            eventi={listaEventi}
-          />
-          <Section titolo="Eventi a Roma" slug="roma" eventi={listaEventi} />
-
-          <div className="col-span-12 bg-gray-100">
-            <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
-
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-1708355893696705"
-              data-ad-slot="3464636478"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            ></ins>
-          </div> */}
 
           <div className="col-span-12 px-4">
             <div
@@ -721,17 +665,20 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           </div>
           {/* TODO Fix responsive sections */}
           <div
+      className="col-span-12 px-4"
             style={{
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              width: "80rem",
+              // maxWidth: "80rem",
             }}
           >
             <div
               style={{
                 width: "75%",
-                height: 300,
+                // height: 300,
+                padding:5,
+                borderRadius:40,
                 backgroundImage: 'url("/images/gradient.png")',
                 backgroundSize: "cover",
               }}
