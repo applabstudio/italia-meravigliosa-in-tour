@@ -9,6 +9,8 @@ import { firestore } from "../../firebase/clientApp"
 import Event from "../Event"
 import { GoSettings } from "react-icons/go";
 
+// TODO finish modal button picker filter
+
 const useOutsideAlerter = (
   ref: any,
   setFocused: Function,

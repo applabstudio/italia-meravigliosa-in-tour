@@ -1,5 +1,4 @@
 // @ts-nocheck
-
 import Image from "next/image"
 import type { NextPage } from "next"
 import { SearchBar } from "../components/common/SearchBar"
@@ -379,6 +378,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 className="text-center"
                 style={{ fontWeight: "700", fontSize: 18 }}
               >
+                {/* TODO insert tooltip inside span region with this label: Divertiti a trovare luoghi meravigliosi */}
                 Clicca su una <span style={{ color: "red" }}>regione</span> che
                 vuoi esplorare
               </p>
@@ -459,6 +459,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 ))}
             </div>
           </div>
+          {/* TODO Fix responsive sections */}
           <div className="xl:col-span-5" style={{ alignSelf: "center" }}>
             <p
               className="text"
@@ -718,6 +719,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
             <Contatti />
           </div>
+          {/* TODO Fix responsive sections */}
           <div
             style={{
               display: "flex",

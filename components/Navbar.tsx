@@ -83,6 +83,7 @@ const Navbar = () => {
                     alt="hand"
                   />
                   <p style={{width:20}}></p>
+                  {/* TODO Insert beta label */}
                   <Image
                     src="/images/textlogo2.jpg"
                     objectFit="contain"

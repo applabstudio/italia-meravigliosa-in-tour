@@ -39,17 +39,19 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WishContext.Provider value={wishContext}>
       <NextSeo
-        title="Italia in Tour - Trova Eventi"
+        title="Italia Meravigliosa in tour"
         description="Trova eventi meravigliosi in tutta Italia alla portata di un click."
       />
 
-      <Script
+      {/* <Script
         id="Adsense-id"
         data-ad-client="ca-pub-1708355893696705"
         async
         strategy="beforeInteractive"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      />
+      /> */}
+
+      {/* TODO Scroll section iside landing when click tab icon bottom navbar */}
 
       <Script
         strategy="lazyOnload"

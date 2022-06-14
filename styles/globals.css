@@ -3,13 +3,20 @@
 @tailwind utilities;
 
 .hand1:hover {
+  cursor: pointer;
   transition: 0.4s;
-  transform: rotate(20deg); 
+  transform: scale(0.6);
 }
 
 .botton_navbar {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+/* TODO  Export icons in svg from figma and insert inside project */
+.homeIcon:hover, .infoIcon:hover, .heartIcon:hover, .workIcon:hover, .heartIcon:hover, .searchIcon:hover {
+  transition: 0.2s;
+  color: #1F2937;
 }
 
 .welcome-map {

@@ -76,7 +76,7 @@ const Footer = () => {
       <div className="mx-auto flex max-w-[90rem] flex-col items-center justify-between space-y-4 bg-gray-100 pb-6 md:flex-row">
         <div>
           <span>
-            &copy; 2020 Italia Meravigliosa in Tour, Tutti i diritti sono
+            &copy; 2022 Italia Meravigliosa in Tour, Tutti i diritti sono
             riservati.
           </span>
         </div>
