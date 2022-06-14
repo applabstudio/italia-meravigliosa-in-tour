@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 .botton_navbar {
-padding-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .welcome-map {
@@ -40,7 +41,6 @@ padding-top: 10px;
 .infoGray{
   color: #718176;
 }
-
 
 .max-w-8xl {
   max-width: 85rem;
