@@ -55,6 +55,10 @@ padding-top: 10px;
 
 /* Media Query */
 @media only screen and (min-width: 329px) and (max-width: 1281px) { 
+  .homeIcon, .heartIcon, .infoIcon, .workIcon, .searchIcon {
+    width: 22px !important;
+    height: 22px !important;
+  }
   .welcome-section{
     font-size: 29px !important;
   }

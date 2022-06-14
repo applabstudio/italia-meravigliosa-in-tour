@@ -93,10 +93,10 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/home.png"
               objectFit="contain"
               layout="intrinsic"
-              width={40}
-              height={40}
+              width={37}
+              height={37}
               alt="hand"
-              className={"homeIcon"}
+              className="homeIcon"
             />
             <p className="text-center" style={{ color: "#F56606" }}>
               Home
@@ -107,10 +107,10 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/info.png"
               objectFit="contain"
               layout="intrinsic"
-              width={40}
-              height={40}
+              width={34}
+              height={34}
               alt="hand"
-              className={"infoIcon"}
+              className="infoIcon"
             />
             <p className="text-center">Chi siamo</p>
           </div>
@@ -119,10 +119,10 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/work.png"
               objectFit="contain"
               layout="intrinsic"
-              width={40}
-              height={40}
+              width={34}
+              height={34}
               alt="hand"
-              className={"workIcon"}
+              className="workIcon"
             />
             <p className="text-center">Lavora con noi</p>
           </div>
@@ -131,10 +131,10 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/heart.png"
               objectFit="contain"
               layout="intrinsic"
-              width={40}
-              height={40}
+              width={37}
+              height={37}
               alt="hand"
-              className={"heartIcon"}
+              className="heartIcon"
             />
             <p className="text-center">Wishlist</p>
           </div>
@@ -143,10 +143,10 @@ function MyApp({ Component, pageProps }: AppProps) {
               src="/images/search.png"
               objectFit="contain"
               layout="intrinsic"
-              width={40}
-              height={40}
+              width={37}
+              height={37}
               alt="hand"
-              className={"searchIcon"}
+              className="searchIcon"
             />
             <p className="text-center">Cerca</p>
           </div>
