@@ -367,6 +367,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   width={100}
                   height={100}
                   alt="hand"
+                  className="hand1"
                 />
               </div>
             </div>

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.hand1::hover {
+  transition: 0.4s;
+  transform: rotate(20deg); 
+}
+
 .botton_navbar {
   padding-top: 10px;
   padding-bottom: 10px;
