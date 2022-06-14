@@ -382,13 +382,13 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 vuoi esplorare
               </p>
               <p
-                className="text-center"
+                className="text-center welcome-subtitle"
                 style={{ fontWeight: "600", fontSize: 36 }}
               >
                 Guida alla scoperta del Bel Paese
               </p>
               <p
-                className="text-center"
+                className="text-center welcome-section"
                 style={{ fontWeight: "700", fontSize: 80 }}
               >
                 ITALIA MERAVIGLIOSA
@@ -517,7 +517,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           </div>
           <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
             <p
-              className="text-center"
+              className="text-center user-active"
               style={{ fontWeight: "700", fontSize: 80 }}
             >
               1M+ Utenti Giornalieri
@@ -678,7 +678,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               }}
             >
               <p
-                className="text-center"
+                className="text-center workwithus"
                 style={{
                   fontSize: 55,
                   paddingTop: 50,

@@ -46,3 +46,21 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Media Query */
+@media only screen and (min-width: 329px) and (max-width: 1281px) { 
+  .welcome-section{
+    font-size: 29px !important;
+  }
+  
+  .welcome-subtitle {
+    font-size: 18px !important;
+    padding: 33px !important;
+  }
+  .user-active {
+    font-size: 29px !important;
+  }
+  .workwithus {
+    font-size: 29px !important;
+  }
+}
