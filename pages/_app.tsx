@@ -96,6 +96,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               width={60}
               height={60}
               alt="hand"
+              className={"homeIcon"}
             />
             <p className="text-center" style={{ color: "#F56606" }}>
               Home
@@ -109,6 +110,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               width={60}
               height={60}
               alt="hand"
+              className={"infoIcon"}
             />
             <p className="text-center">Chi siamo</p>
           </div>
@@ -120,6 +122,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               width={60}
               height={60}
               alt="hand"
+              className={"workIcon"}
             />
             <p className="text-center">Lavora con noi</p>
           </div>
@@ -131,6 +134,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               width={60}
               height={60}
               alt="hand"
+              className={"heartIcon"}
             />
             <p className="text-center">Wishlist</p>
           </div>
@@ -142,6 +146,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               width={60}
               height={60}
               alt="hand"
+              className={"searchIcon"}
             />
             <p className="text-center">Cerca</p>
           </div>

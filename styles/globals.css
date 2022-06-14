@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .eventImage {
   border-radius: 14px;
 }

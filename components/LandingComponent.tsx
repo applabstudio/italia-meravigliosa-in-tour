@@ -910,16 +910,6 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   p.Iva000000000000{" "}
                 </p>
               </div>
-              <div style={{ height: 50, width: "20%" }}>
-                <Image
-                  src="/images/privacy.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={80}
-                  height={80}
-                  alt="hand"
-                />
-              </div>
             </div>
           </div>
         </main>
