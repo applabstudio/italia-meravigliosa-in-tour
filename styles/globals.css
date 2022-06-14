@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.hand1::hover {
+.hand1:hover {
   transition: 0.4s;
   transform: rotate(20deg); 
 }
