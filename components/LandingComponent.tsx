@@ -274,7 +274,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
   const [listaEventi, setListaEventi] = useState<any[]>([])
   const [categorie, setCategorie] = useState<any[]>([])
-  const [region, setRegion] = useState<string>("")
+  const [region, setRegion] = useState<string>(null)
 
   useEffect(() => {
     data?.docs.forEach((d) => {
