@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.hand1 {
+  border-radius: 20% !important;
+}
+
 .hand1:hover {
   cursor: pointer;
   transition: 0.4s;
