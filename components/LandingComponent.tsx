@@ -683,7 +683,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           >
             <div
               style={{
-                width: "85%",
+                width: "95%",
                 // height: 300,
                 padding: 5,
                 borderRadius: 40,
@@ -758,7 +758,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             style={{ marginBottom: 20 }}
           ></div>
           <div     className="col-span-12"
-            style={{ width: "100%",}}>
+            style={{ width: "100%",background: "rgb(243, 244, 246) none repeat scroll 0% 0%"}}>
      <div
             className="mx-auto max-w-7xl"
             style={{
