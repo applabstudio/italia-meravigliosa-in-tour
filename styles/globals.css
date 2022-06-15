@@ -89,3 +89,26 @@
     font-size: 29px !important;
   }
 }
+
+.facebook_text{
+  font-weight: 600; 
+  font-size: 33px;
+  width: 60% 
+}
+
+@media only screen and (min-width: 0px) and (max-width: 700px) {
+  .facebook_text{
+    font-weight: 600; 
+    font-size: 33px;
+    width: 100% 
+  }
+}
+
+.facebook_text_grid_width{
+  width: 50%
+}
+@media only screen and (min-width: 0px) and (max-width: 700px) {
+  .facebook_text_grid_width{
+    width: 100%
+  }
+}

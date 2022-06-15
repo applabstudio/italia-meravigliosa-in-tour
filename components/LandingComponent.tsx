@@ -320,7 +320,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
       <div className="mx-auto max-w-6xl">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="xl:col-span-3"></div>
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-6 welcome-map">
+          <div className="welcome-map col-span-12 box-border flex flex-col px-4 xl:col-span-6">
             <h2 className="text-center text-4xl font-bold">
               Il portale delle meraviglie
             </h2>
@@ -383,13 +383,13 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 vuoi esplorare
               </p>
               <p
-                className="text-center welcome-subtitle"
+                className="welcome-subtitle text-center"
                 style={{ fontWeight: "600", fontSize: 36 }}
               >
                 Guida alla scoperta del Bel Paese
               </p>
               <p
-                className="text-center welcome-section"
+                className="welcome-section text-center"
                 style={{ fontWeight: "700", fontSize: 80 }}
               >
                 ITALIA MERAVIGLIOSA
@@ -460,66 +460,75 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             </div>
           </div>
           {/* TODO Fix responsive sections */}
-          <div className="xl:col-span-5 md:grid-cols-12" style={{ alignSelf: "center" }}>
-            <p
-              className="text"
-              style={{ fontWeight: "600", fontSize: 33, width: "66%" }}
-            >
-              SEGUICI SU FACEBOOK, SIAMO OLTRE 250 MILA
-            </p>
-            <div style={{ display: "flex" }}>
-              <Image
-                src="/images/fb.png"
-                objectFit="contain"
-                layout="intrinsic"
-                width={25}
-                height={25}
-                alt="hand"
-              />
-              <p style={{ fontSize: 16, color: "#656464", marginLeft: 10 }}>
-                https://www.facebook.com/istagram.paoloartista1/
+          <div
+            className="col-span-12"
+            style={{ width: "100%", display: "flex", flexWrap:'wrap' }}
+          >
+            <div className="facebook_text_grid_width" style={{alignSelf: "center" }}>
+              <p className="text facebook_text">
+                SEGUICI SU FACEBOOK, SIAMO OLTRE 250 MILA
               </p>
-            </div>
-          </div>
-          <div className="xl:col-span-1"></div>
-          <div className="xl:col-span-6">
-            <div className="grid w-full grid-cols-12 space-x-4">
-              <div
-                className="text-right xl:col-span-7"
-                style={{ alignSelf: "center" }}
-              >
+              <div style={{ display: "flex" }}>
                 <Image
-                  src="/images/image1.png"
+                  src="/images/fb.png"
                   objectFit="contain"
                   layout="intrinsic"
-                  width={250}
-                  height={300}
+                  width={25}
+                  height={25}
                   alt="hand"
                 />
-              </div>
-              <div className="xl:col-span-5">
-                <Image
-                  src="/images/image2.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={300}
-                  height={300}
-                  alt="hand"
-                />
-                <Image
-                  src="/images/image3.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={300}
-                  height={300}
-                  alt="hand"
-                />
+                <p style={{ fontSize: 16, color: "#656464", marginLeft: 10 }}>
+                  https://www.facebook.com/istagram.paoloartista1/
+                </p>
               </div>
             </div>
+            <div className="facebook_text_grid_width">
+              <div className="grid grid-cols-12">
+                <div
+                  className="text-right col-span-7"
+                  style={{ alignSelf: "center",}}
+                >
+                  <Image
+                    src="/images/image1.png"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={250}
+                    height={300}
+                    alt="hand"
+                  />
+                </div>
+                <div className="col-span-5">
+                  <Image
+                    src="/images/image2.png"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={300}
+                    height={300}
+                    alt="hand"
+                  />
+                  <Image
+                    src="/images/image3.png"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={300}
+                    height={300}
+                    alt="hand"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
+          <div className="col-span-12 box-border flex flex-col xl:col-span-12">
+            <div
+              className="xl:col-span-5"
+              style={{ alignSelf: "center", background: "red" }}
+            ></div>
+            <div className="xl:col-span-6"></div>
+          </div>
+
           <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
             <p
-              className="text-center user-active"
+              className="user-active text-center"
               style={{ fontWeight: "700", fontSize: 80 }}
             >
               1M+ Utenti Giornalieri
@@ -614,7 +623,6 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
       <div className="mx-auto max-w-7xl">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
-
           <div className="col-span-12 px-4">
             <div
               style={{
@@ -624,7 +632,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               }}
             >
               <p
-                className="text-center workwithus"
+                className="workwithus text-center"
                 style={{
                   fontSize: 55,
                   paddingTop: 50,
@@ -665,7 +673,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           </div>
           {/* TODO Fix responsive sections */}
           <div
-      className="col-span-12 px-4"
+            className="col-span-12 px-4"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -675,10 +683,10 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           >
             <div
               style={{
-                width: "75%",
+                width: "85%",
                 // height: 300,
-                padding:5,
-                borderRadius:40,
+                padding: 5,
+                borderRadius: 40,
                 backgroundImage: 'url("/images/gradient.png")',
                 backgroundSize: "cover",
               }}
@@ -748,75 +756,13 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           <div
             className="col-span-12 rounded-lg p-6"
             style={{ marginBottom: 20 }}
-          >
-            {/* <div className="grid w-full grid-cols-12 space-x-4">
-              <div className="xl:col-span-2">
-                <Image
-                  src="/images/chase.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={100}
-                  height={100}
-                  alt="hand"
-                />
-              </div>
-              <div className="xl:col-span-2">
-                <Image
-                  src="/images/asana.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={100}
-                  height={100}
-                  alt="hand"
-                />
-              </div>
-              <div className="xl:col-span-2">
-                <Image
-                  src="/images/google.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={100}
-                  height={100}
-                  alt="hand"
-                />
-              </div>
-              <div className="xl:col-span-2">
-                <Image
-                  src="/images/buzzfeed.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={100}
-                  height={100}
-                  alt="hand"
-                />
-              </div>
-              <div className="xl:col-span-2">
-                <Image
-                  src="/images/toggl.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={100}
-                  height={100}
-                  alt="hand"
-                />
-              </div>
-              <div className="xl:col-span-2">
-                <Image
-                  src="/images/walmart.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={100}
-                  height={100}
-                  alt="hand"
-                />
-              </div>
-            </div> */}
-          </div>
-
-          <div
+          ></div>
+          <div     className="col-span-12"
+            style={{ width: "100%",}}>
+     <div
             className="mx-auto max-w-7xl"
             style={{
-              width: "80rem",
+              width: "85%",
               background: "#F3F4F6",
               height: 300,
               maxWidth: "85rem",
@@ -862,6 +808,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               </div>
             </div>
           </div>
+            </div>
+     
         </main>
       </div>
     </>
