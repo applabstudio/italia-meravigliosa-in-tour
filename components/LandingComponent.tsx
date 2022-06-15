@@ -363,8 +363,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   src="/images/hand1.png"
                   objectFit="contain"
                   layout="intrinsic"
-                  width={100}
-                  height={100}
+                  width={35}
+                  height={35}
                   alt="hand"
                   className="hand1"
                 />
@@ -401,12 +401,12 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               />
             )}
           <div className="col-span-12 flex flex-col px-4">
-            <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
+            <h4 className="text-center text-4xl font-bold text-gray-800 md:text-center">
               Categorie
             </h4>
 
             <br />
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
               {categorie?.length > 0 &&
                 categorie?.map((categoria) => (
                   <p
@@ -753,6 +753,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   alignItems: "center",
                   justifyContent: "center",
                   marginTop: 10,
+                  paddingBottom: 40,
                 }}
               >
                 <div

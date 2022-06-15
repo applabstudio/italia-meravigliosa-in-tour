@@ -100,7 +100,7 @@ const Evento = ({ slug }: { slug: string }) => {
             <div
               className="mt-2 flex justify-center space-x-2 md:justify-start"
               style={{
-                border: "1px solid gray",
+                border: "1px solid #3360FF",
                 marginBottom: 20,
                 padding: 5,
                 borderRadius: 10,
@@ -110,7 +110,7 @@ const Evento = ({ slug }: { slug: string }) => {
                 className="rounded-sm  px-2 font-medium"
                 style={{ width: "33%" }}
               >
-                <span style={{ fontWeight: "bold", color: "blue" }}>
+                <span style={{ fontWeight: "bold", color: "#3360FF" }}>
                   Credit :
                 </span>{" "}
                 {" " + evento?.credit}
