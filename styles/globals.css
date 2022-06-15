@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.containerCredits {
+  box-shadow: 0px 3px 3px #e5e5e5;
+}
+
+.creditsEvents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.creditsEvents span {
+  padding-right: 4px;
+}
+
 .hand1 {
   border-radius: 20% !important;
 }
@@ -106,6 +120,13 @@
     font-size: 33px;
     width: 100% 
   }
+  .luogoSpan {
+    margin: 0 auto;
+  }
+  .creditsEvents {
+    display: flex;
+    flex-flow: column;
+}
 }
 
 .facebook_text_grid_width{

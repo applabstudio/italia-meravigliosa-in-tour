@@ -99,7 +99,7 @@ const Evento = ({ slug }: { slug: string }) => {
               />
             </div>
             <div
-              className="mt-2 flex justify-center space-x-2 md:justify-start"
+              className="mt-2 flex justify-center space-x-2 md:justify-start containerCredits"
               style={{
                 border: "1px solid #3360FF",
                 marginBottom: 20,
@@ -108,7 +108,7 @@ const Evento = ({ slug }: { slug: string }) => {
               }}
             >
               <p
-                className="rounded-sm  px-2 font-medium"
+                className="rounded-sm  px-2 font-medium creditsEvents"
                 style={{ width: "33%" }}
               >
                 <Image
@@ -126,7 +126,7 @@ const Evento = ({ slug }: { slug: string }) => {
                 {" " + evento?.credit}
               </p>
               <p
-                className="rounded-sm  px-2 font-medium"
+                className="rounded-sm  px-2 font-medium creditsEvents"
                 style={{ width: "33%", textAlign: "center" }}
               >
                 <Image
@@ -145,11 +145,11 @@ const Evento = ({ slug }: { slug: string }) => {
                 {" " + evento?.views}
               </p>
               <p
-                className="rounded-sm  px-2 font-medium"
+                className="rounded-sm  px-2 font-medium creditsEvents"
                 style={{ width: "33%", textAlign: "center" }}
               >
                 <Image
-                  src="/images/events/like.jpeg"
+                  src="/images/events/like.png"
                   objectFit="contain"
                   layout="intrinsic"
                   width={27}
@@ -201,7 +201,7 @@ const Evento = ({ slug }: { slug: string }) => {
                 <FaHeart /> <span>Wishlist</span>
               </button>
             </div>
-            <p className="mb-2 flex items-center space-x-1 text-sm text-gray-500">
+            <p className="mb-2 flex items-center space-x-1 text-sm text-gray-500 luogoSpan">
               <FaMapMarkerAlt /> <span>{evento?.luogo}</span>
             </p>
             <p className="text-center text-lg font-semibold text-gray-800 md:text-left">
