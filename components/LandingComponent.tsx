@@ -317,7 +317,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
   return (
     <>
       <PopupOptin />
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl" id="top-section">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="xl:col-span-3"></div>
           <div className="welcome-map col-span-12 box-border flex flex-col px-4 xl:col-span-6">
@@ -393,13 +393,13 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           {listaEventi.filter(
             (doc) => doc?.luogo === slug || doc?.region === region
           ).length > 0 && (
-            <Section
-              titolo={`Eventi a ${slug || region}`}
-              slug={slug}
-              region={region}
-              eventi={listaEventi}
-            />
-          )}
+              <Section
+                titolo={`Eventi a ${slug || region}`}
+                slug={slug}
+                region={region}
+                eventi={listaEventi}
+              />
+            )}
           <div className="col-span-12 flex flex-col px-4">
             <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
               Categorie
@@ -427,7 +427,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 ))}
             </div>
           </div>
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12" id="who-we-are-section">
             <h1
               className="welcome-section text-center"
               style={{ fontWeight: "700", fontSize: 80 }}
@@ -523,31 +523,31 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               </div>
             </div>
             <div className="facebook_text_grid_width view_mobile">
-                <Image
-                  src="/images/image1.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={300}
-                  height={300}
-                  alt="hand"
-                />
+              <Image
+                src="/images/image1.png"
+                objectFit="contain"
+                layout="intrinsic"
+                width={300}
+                height={300}
+                alt="hand"
+              />
 
-                <Image
-                  src="/images/image2.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={300}
-                  height={300}
-                  alt="hand"
-                />
-                <Image
-                  src="/images/image3.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={300}
-                  height={300}
-                  alt="hand"
-                />
+              <Image
+                src="/images/image2.png"
+                objectFit="contain"
+                layout="intrinsic"
+                width={300}
+                height={300}
+                alt="hand"
+              />
+              <Image
+                src="/images/image3.png"
+                objectFit="contain"
+                layout="intrinsic"
+                width={300}
+                height={300}
+                alt="hand"
+              />
             </div>
           </div>
           <div className="col-span-12 box-border flex flex-col xl:col-span-12">
@@ -653,7 +653,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl" id="work-with-us-section" >
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="col-span-12 px-4">
             <div
@@ -705,6 +705,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           </div>
           {/* TODO Fix responsive sections */}
           <div
+            id="wish-list-section"
             className="col-span-12 px-4"
             style={{
               display: "flex",

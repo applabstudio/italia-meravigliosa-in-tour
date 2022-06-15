@@ -14,6 +14,7 @@ import _ from "lodash"
 import { useState } from "react"
 import Script from "next/script"
 import PopupOptin from "../components/PopupOptin"
+import Link from "next/link"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [items, setItems] = useState<EventProps[]>([])
@@ -88,26 +89,27 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className="selection:bg-primary-400 selection:text-white">
-        <div className="min-h-screen" style={{minHeight:'calc(100vh - 90px)',maxHeight:'calc(100vh - 220px)', overflow:'scroll'}}>
+        <div className="min-h-screen" style={{ minHeight: 'calc(100vh - 90px)', maxHeight: 'calc(100vh - 220px)', overflow: 'scroll' }}>
           <Navbar />
           <Component {...pageProps} />
-       
+
         </div>
-        <div style={{flexDirection:'row', justifyContent:'space-between'}} className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar">
+        <div style={{ flexDirection: 'row', justifyContent: 'space-between' }} className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar">
           <div
             className="footer-grid xl:col-span-2"
             style={{ borderLeft: "none" }}
             onMouseEnter={
-              ()=>{
+              () => {
                 setHomeHover("home_hover")
               }
             }
             onMouseLeave={
-              ()=>{
+              () => {
                 setHomeHover("home")
               }
             }
           >
+
             <Image
               src={`/images/${homeHover}.png`}
               objectFit="contain"
@@ -121,102 +123,126 @@ function MyApp({ Component, pageProps }: AppProps) {
               Home
             </p>
           </div>
-          <div className="footer-grid xl:col-span-3" 
-              onMouseEnter={
-                ()=>{
-                  setInfoHover("info_hover")
+
+          <Link href="#who-we-are-section">
+            <a>
+              <div className="footer-grid xl:col-span-3"
+                onMouseEnter={
+                  () => {
+                    setInfoHover("info_hover")
+                  }
                 }
-              }
-              onMouseLeave={
-                ()=>{
-                  setInfoHover("info")
+                onMouseLeave={
+                  () => {
+                    setInfoHover("info")
+                  }
                 }
-              }
-          >
-            <Image
-              src={`/images/${infoHover}.png`}
-              objectFit="contain"
-              layout="intrinsic"
-              width={34}
-              height={34}
-              alt="info"
-              className="infoIcon"
-            />
-            <p className="text-center">Chi siamo</p>
-          </div>
-          <div className="footer-grid xl:col-span-3"
-               onMouseEnter={
-                ()=>{
-                  setWorkHover("work_hover")
+              >
+                <Image
+                  src={`/images/${infoHover}.png`}
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={34}
+                  height={34}
+                  alt="info"
+                  className="infoIcon"
+                />
+                <p className="text-center">Chi siamo</p>
+              </div>
+            </a>
+          </Link>
+
+
+          <Link href="#work-with-us-section">
+            <a>
+              <div className="footer-grid xl:col-span-3"
+                onMouseEnter={
+                  () => {
+                    setWorkHover("work_hover")
+                  }
                 }
-              }
-              onMouseLeave={
-                ()=>{
-                  setWorkHover("work")
+                onMouseLeave={
+                  () => {
+                    setWorkHover("work")
+                  }
                 }
-              }
-          >
-            <Image
-              src={`/images/${workHover}.png`}
-              objectFit="contain"
-              layout="intrinsic"
-              width={34}
-              height={34}
-              alt="work"
-              className="workIcon"
-            />
-            <p className="text-center">Lavora con noi</p>
-          </div>
-          <div className="footer-grid xl:col-span-2" 
-              onMouseEnter={
-                ()=>{
-                  setHeartHover("heart_hover")
+              >
+                <Image
+                  src={`/images/${workHover}.png`}
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={34}
+                  height={34}
+                  alt="work"
+                  className="workIcon"
+                />
+                <p className="text-center">Lavora con noi</p>
+              </div>
+            </a>
+          </Link>
+
+          <Link href="#wish-list-section" >
+            <a>
+
+              <div className="footer-grid xl:col-span-2"
+                onMouseEnter={
+                  () => {
+                    setHeartHover("heart_hover")
+                  }
                 }
-              }
-              onMouseLeave={
-                ()=>{
-                  setHeartHover("heart")
+                onMouseLeave={
+                  () => {
+                    setHeartHover("heart")
+                  }
                 }
-              }
-          >
-            <Image
-              src={`/images/${heartHover}.png`}
-              objectFit="contain"
-              layout="intrinsic"
-              width={37}
-              height={37}
-              alt="heart"
-              className="heartIcon"
-            />
-            <p className="text-center">Wishlist</p>
-          </div>
-          <div className="footer-grid xl:col-span-2"
-           onMouseEnter={
-            ()=>{
-              setSearchHover("search_hover")
-            }
-          }
-          onMouseLeave={
-            ()=>{
-              setSearchHover("search")
-            }
-          }
-          >
-            <Image
-               src={`/images/${searchHover}.png`}
-              objectFit="contain"
-              layout="intrinsic"
-              width={37}
-              height={37}
-              alt="search"
-              className="searchIcon"
-            />
-            <p className="text-center">Cerca</p>
-          </div>
-          </div>
+              >
+                <Image
+                  src={`/images/${heartHover}.png`}
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={37}
+                  height={37}
+                  alt="heart"
+                  className="heartIcon"
+                />
+                <p className="text-center">Wishlist</p>
+              </div>
+
+            </a>
+          </Link>
+
+          <Link href={"#top-section"}>
+            <a>
+              <div className="footer-grid xl:col-span-2"
+                onMouseEnter={
+                  () => {
+                    setSearchHover("search_hover")
+                  }
+                }
+                onMouseLeave={
+                  () => {
+                    setSearchHover("search")
+                  }
+                }
+              >
+                <Image
+                  src={`/images/${searchHover}.png`}
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={37}
+                  height={37}
+                  alt="search"
+                  className="searchIcon"
+                />
+                <p className="text-center">Cerca</p>
+              </div>
+
+            </a>
+          </Link>
+        </div>
         {/* <Footer /> */}
-    
- 
+
+
       </div>
     </WishContext.Provider>
   )

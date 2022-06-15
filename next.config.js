@@ -13,6 +13,6 @@ module.exports = withPWA({
 module.exports = {
   images: {
     loader: 'akamai',
-    path: '',
+    path: '/'
   },
 }
