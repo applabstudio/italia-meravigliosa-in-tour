@@ -180,8 +180,18 @@ const Evento = ({ slug }: { slug: string }) => {
             <div className="mt-2 flex justify-center space-x-2 md:justify-start">
               {listaCategorie.map((categoria) => (
                 <p className="rounded-sm bg-primary-100 px-2 font-medium text-primary-600">
-                  {categoria?.titolo.toLowerCase()}
+                  <span className="flex cursor-pointer items-center justify-center space-x-2">
+                  <img
+                    className="h-4 w-4"
+                    src={categoria?.icona}
+                    alt=""
+                  />
+                  <p>{categoria?.titolo}</p>
+                </span>
                 </p>
+
+               
+            
               ))}
             </div>
             <br />
