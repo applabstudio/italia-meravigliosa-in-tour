@@ -1,6 +1,7 @@
 //@ts-nocheck
 
 import { FaHeart, FaMapMarkerAlt, FaPlus, FaEye } from "react-icons/fa"
+import Image from "next/image"
 import { useRouter } from "next/router"
 import Comment from "../../components/common/Comment"
 import { firestore } from "../../firebase/clientApp"
@@ -110,7 +111,16 @@ const Evento = ({ slug }: { slug: string }) => {
                 className="rounded-sm  px-2 font-medium"
                 style={{ width: "33%" }}
               >
-                <span style={{ fontWeight: "bold", color: "#3360FF" }}>
+                <Image
+                  src="/images/events/credit.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={27}
+                  height={27}
+                  alt="hand"
+                  style={{ marginTop: 3 }}
+                />
+                <span style={{ fontWeight: "bold", color: "blue", marginLeft: 8 }}>
                   Credit :
                 </span>{" "}
                 {" " + evento?.credit}
@@ -119,7 +129,17 @@ const Evento = ({ slug }: { slug: string }) => {
                 className="rounded-sm  px-2 font-medium"
                 style={{ width: "33%", textAlign: "center" }}
               >
-                <span style={{ fontWeight: "bold", color: "blue" }}>
+                <Image
+                  src="/images/events/views.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={27}
+                  height={27}
+                  alt="hand"
+                  style={{ marginTop: 4, }}
+                />
+                <span style={{ fontWeight: "bold", color: "blue", marginLeft: 8 }}>
+
                   Views :
                 </span>{" "}
                 {" " + evento?.views}
@@ -128,7 +148,17 @@ const Evento = ({ slug }: { slug: string }) => {
                 className="rounded-sm  px-2 font-medium"
                 style={{ width: "33%", textAlign: "center" }}
               >
-                <span style={{ fontWeight: "bold", color: "blue" }}>
+                <Image
+                  src="/images/events/like.jpeg"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={27}
+                  height={27}
+                  alt="hand"
+                  style={{ marginTop: 3 }}
+                />
+                <span style={{ fontWeight: "bold", color: "blue", marginLeft: 8 }}>
+
                   Likes :
                 </span>{" "}
                 {" " + evento?.likes}
@@ -181,17 +211,17 @@ const Evento = ({ slug }: { slug: string }) => {
               {listaCategorie.map((categoria) => (
                 <p className="rounded-sm bg-primary-100 px-2 font-medium text-primary-600">
                   <span className="flex cursor-pointer items-center justify-center space-x-2">
-                  <img
-                    className="h-4 w-4"
-                    src={categoria?.icona}
-                    alt=""
-                  />
-                  <p>{categoria?.titolo}</p>
-                </span>
+                    <img
+                      className="h-4 w-4"
+                      src={categoria?.icona}
+                      alt=""
+                    />
+                    <p>{categoria?.titolo}</p>
+                  </span>
                 </p>
 
-               
-            
+
+
               ))}
             </div>
             <br />
@@ -221,8 +251,8 @@ const Evento = ({ slug }: { slug: string }) => {
                   {commenti?.length < 2
                     ? `${commenti?.length} commento`
                     : commenti?.length < 1 || commenti?.length === undefined
-                    ? `0 commenti`
-                    : `${commenti?.length} commenti`}
+                      ? `0 commenti`
+                      : `${commenti?.length} commenti`}
                 </h4>
 
                 {commenti?.map((commento, i: number) => (

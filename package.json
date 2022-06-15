@@ -2,9 +2,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
     "@emailjs/browser": "^3.6.0",
