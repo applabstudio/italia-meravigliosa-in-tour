@@ -94,14 +94,14 @@
   }
 }
 
-.facebook_text{
+.facebook_text {
   font-weight: 600; 
   font-size: 33px;
   width: 60% 
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
-  .facebook_text{
+  .facebook_text {
     font-weight: 600; 
     font-size: 33px;
     width: 100% 
@@ -134,5 +134,7 @@
   }
 }
 
-
-
+/* Footer */
+.fbicon {
+  cursor: pointer;
+}

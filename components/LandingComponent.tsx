@@ -795,13 +795,13 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             className="col-span-12"
             style={{
               width: "100%",
-              background: "rgb(243, 244, 246) none repeat scroll 0% 0%",
+              background: "white",
             }}
           >
             <div
               className="mx-auto max-w-7xl"
               style={{
-                width: "85%",
+                width: "100%",
                 background: "#F3F4F6",
                 height: 300,
                 maxWidth: "85rem",
@@ -827,6 +827,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   width={170}
                   height={170}
                   alt="hand"
+                  className="fbicon"
                 />
               </div>
               <div style={{ display: "flex", height: 50, width: "85%" }}>
