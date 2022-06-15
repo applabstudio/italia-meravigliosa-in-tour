@@ -138,7 +138,7 @@ const Evento = ({ slug }: { slug: string }) => {
             <br />
             <br />
             <div className="w-full bg-gray-100">
-              <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
+              {/* <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p> */}
 
               <ins
                 className="adsbygoogle"
