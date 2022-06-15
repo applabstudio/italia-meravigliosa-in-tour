@@ -15,16 +15,27 @@ const Evento = ({ slug }: { slug: string }) => {
     collection(firestore, "fl_content"),
     {}
   )
+  console.log("This is the date",data)
 
   const [eventi, setEventi] = useState<any[]>([])
+  const [evento, setEvento] = useState<any>()
   const [categorie, setCategorie] = useState<any[]>([])
 
   useEffect(() => {
+    const allEvents = []
     data?.docs.forEach((d) => {
-      d.data()._fl_meta_.schema === "evento"
-        ? setEventi((eventi) => [...eventi, d.data()])
-        : setCategorie((categorie) => [...categorie, d.data()])
+      console.log("This is the fl scemal", d.data()._fl_meta_.schema)
+      if( d.data()._fl_meta_.schema === "evento")
+      {
+        setEventi((eventi) => [...eventi, d.data()])
+        allEvents.push(d.data())
+      }
+      else{
+        setCategorie((categorie) => [...categorie, d.data()])
+      }
     })
+    // console.log("All events inside use efefec",)
+    setEvento(allEvents?.filter((doc) => doc.slug === slug)[0])
   }, [data])
 
   const [listaCommenti, listaCommentiLoading, listaCommentiError] =
@@ -33,7 +44,7 @@ const Evento = ({ slug }: { slug: string }) => {
   const [nome, setNome] = useState("")
   const [commento, setCommento] = useState("")
 
-  const evento = eventi?.filter((doc) => doc.slug === slug)[0]
+  // const evento = eventi?.filter((doc) => doc.slug === slug)[0]
 
   const listaCategorie = categorie?.filter((el) =>
     evento?.categorie.some((p) => p.id === el.id)
@@ -68,6 +79,7 @@ const Evento = ({ slug }: { slug: string }) => {
   const router = useRouter();
   slug = router.query.slug;
   console.log("This is props", router.query);
+  console.log("THis is the events",eventi,"This is evento",eventi?.filter((doc) => doc.slug === slug)[0])
   return (
     <div style={{marginTop:100}}>
       <div className="mx-auto my-8 max-w-6xl">
@@ -77,10 +89,12 @@ const Evento = ({ slug }: { slug: string }) => {
           <div className="relative h-40 w-full">
             <img
               src={evento?.copertina}
+              // style={{height:200}}
               className="bannerImage h-full w-full object-cover"
               alt={evento?.titolo}
             />
           </div>
+         
           <br />
           <br />
           <div className="w-full bg-gray-100">
@@ -141,7 +155,18 @@ const Evento = ({ slug }: { slug: string }) => {
                   __html: DOMPurify.sanitize(evento?.descrizione),
                 }}
               />
+                  <button
+              onClick={() =>{
+                window.location.href= evento.googleMap
+              }
+              }
+              style={{width:200}}
+              className="flex items-center space-x-1 rounded-md bg-primary-100 px-4 py-2 font-semibold text-primary-500 outline-none ring-primary-200 ring-offset-2 transition duration-200 hover:bg-secondary-200 focus:ring-2"
+            >
+              <FaMapMarkerAlt /> <span>Google Maps</span>
+            </button>
             </div>
+        
 
             <div className="col-span-5 w-full lg:ml-20">
               <h4 className="mb-4 text-xl font-semibold text-gray-800">
