@@ -88,7 +88,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className="selection:bg-primary-400 selection:text-white">
-        <div className="min-h-screen" style={{minHeight:'calc(100vh - 80px)',maxHeight:'calc(100vh - 220px)', overflow:'scroll'}}>
+        <div className="min-h-screen" style={{minHeight:'calc(100vh - 90px)',maxHeight:'calc(100vh - 220px)', overflow:'scroll'}}>
           <Navbar />
           <Component {...pageProps} />
        

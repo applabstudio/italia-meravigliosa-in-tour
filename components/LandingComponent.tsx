@@ -388,38 +388,6 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               >
                 Guida alla scoperta del Bel Paese
               </p>
-              <p
-                className="welcome-section text-center"
-                style={{ fontWeight: "700", fontSize: 80 }}
-              >
-                ITALIA MERAVIGLIOSA
-              </p>
-              <p
-                className="text-center"
-                style={{
-                  textAlign: "center",
-                  fontSize: 22,
-                  fontFamily: "roboto",
-                }}
-              >
-                Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020,
-                con l’intenzione di mostrarvi le meraviglie nascoste del nostro
-                paese
-              </p>
-              <p
-                className="text-center"
-                style={{
-                  textAlign: "center",
-                  fontSize: 22,
-                  fontFamily: "roboto",
-                }}
-              >
-                Oggi con oltre 250 mila follower e tante foto di località
-                pubblicate e milioni di visualizzazioni, abbiamo deciso di
-                creare una redazione di “Italia Meravigliosa” e di creare questo
-                portale, perchè possa guidarvi in luoghi meravigliosi da
-                esplorare, buon viaggio a tutti voi.
-              </p>
             </div>
           )}
           {listaEventi.filter(
@@ -459,12 +427,49 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 ))}
             </div>
           </div>
+          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+            <h1
+              className="welcome-section text-center"
+              style={{ fontWeight: "700", fontSize: 80 }}
+            >
+              ITALIA MERAVIGLIOSA
+            </h1>
+            <p
+              className="text-center"
+              style={{
+                textAlign: "center",
+                fontSize: 22,
+                fontFamily: "roboto",
+              }}
+            >
+              Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020, con
+              l’intenzione di mostrarvi le meraviglie nascoste del nostro paese
+            </p>
+            <p
+              className="text-center"
+              style={{
+                textAlign: "center",
+                fontSize: 22,
+                fontFamily: "roboto",
+              }}
+            >
+              Oggi con oltre 250 mila follower e tante foto di località
+              pubblicate e milioni di visualizzazioni, abbiamo deciso di creare
+              una redazione di “Italia Meravigliosa” e di creare questo portale,
+              perchè possa guidarvi in luoghi meravigliosi da esplorare, buon
+              viaggio a tutti voi.
+            </p>
+          </div>
+
           {/* TODO Fix responsive sections */}
           <div
             className="col-span-12"
-            style={{ width: "100%", display: "flex", flexWrap:'wrap' }}
+            style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
           >
-            <div className="facebook_text_grid_width" style={{alignSelf: "center" }}>
+            <div
+              className="facebook_text_grid_width"
+              style={{ alignSelf: "center" }}
+            >
               <p className="text facebook_text">
                 SEGUICI SU FACEBOOK, SIAMO OLTRE 250 MILA
               </p>
@@ -482,11 +487,11 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 </p>
               </div>
             </div>
-            <div className="facebook_text_grid_width">
+            <div className="facebook_text_grid_width hide_mobile">
               <div className="grid grid-cols-12">
                 <div
-                  className="text-right col-span-7"
-                  style={{ alignSelf: "center",}}
+                  className="col-span-7 text-right"
+                  style={{ alignSelf: "center" }}
                 >
                   <Image
                     src="/images/image1.png"
@@ -516,6 +521,33 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   />
                 </div>
               </div>
+            </div>
+            <div className="facebook_text_grid_width view_mobile">
+                <Image
+                  src="/images/image1.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={300}
+                  height={300}
+                  alt="hand"
+                />
+
+                <Image
+                  src="/images/image2.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={300}
+                  height={300}
+                  alt="hand"
+                />
+                <Image
+                  src="/images/image3.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={300}
+                  height={300}
+                  alt="hand"
+                />
             </div>
           </div>
           <div className="col-span-12 box-border flex flex-col xl:col-span-12">
@@ -757,59 +789,63 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             className="col-span-12 rounded-lg p-6"
             style={{ marginBottom: 20 }}
           ></div>
-          <div     className="col-span-12"
-            style={{ width: "100%",background: "rgb(243, 244, 246) none repeat scroll 0% 0%"}}>
-     <div
-            className="mx-auto max-w-7xl"
+          <div
+            className="col-span-12"
             style={{
-              width: "85%",
-              background: "#F3F4F6",
-              height: 300,
-              maxWidth: "85rem",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
+              width: "100%",
+              background: "rgb(243, 244, 246) none repeat scroll 0% 0%",
             }}
-            className="text-center"
           >
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Image
-                src="/images/logo.png"
-                objectFit="contain"
-                layout="intrinsic"
-                width={80}
-                height={80}
-                alt="hand"
-              />
-              <Image
-                src="/images/fblog.png"
-                objectFit="contain"
-                layout="intrinsic"
-                width={170}
-                height={170}
-                alt="hand"
-              />
-            </div>
-            <div style={{ display: "flex", height: 50, width: "85%" }}>
-              <div style={{ height: 50, width: "80%" }}>
-                <p style={{ width: "100%", textAlign: "center" }}>
-                  Copyright © 2022 Italia Meravigliosa in Tour, Tutti i diritti
-                  sono riservati. | Powered by:{" "}
-                  <Image
-                    src="/images/applab.png"
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={80}
-                    height={20}
-                    alt="hand"
-                  />
-                  p.Iva000000000000{" "}
-                </p>
+            <div
+              className="mx-auto max-w-7xl"
+              style={{
+                width: "85%",
+                background: "#F3F4F6",
+                height: 300,
+                maxWidth: "85rem",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+              className="text-center"
+            >
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <Image
+                  src="/images/logo.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={80}
+                  height={80}
+                  alt="hand"
+                />
+                <Image
+                  src="/images/fblog.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={170}
+                  height={170}
+                  alt="hand"
+                />
+              </div>
+              <div style={{ display: "flex", height: 50, width: "85%" }}>
+                <div style={{ height: 50, width: "80%" }}>
+                  <p style={{ width: "100%", textAlign: "center" }}>
+                    Copyright © 2022 Italia Meravigliosa in Tour, Tutti i
+                    diritti sono riservati. | Powered by:{" "}
+                    <Image
+                      src="/images/applab.png"
+                      objectFit="contain"
+                      layout="intrinsic"
+                      width={80}
+                      height={20}
+                      alt="hand"
+                    />
+                    p.Iva000000000000{" "}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-            </div>
-     
         </main>
       </div>
     </>

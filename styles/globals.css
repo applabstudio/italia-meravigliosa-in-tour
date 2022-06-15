@@ -112,3 +112,23 @@
     width: 100%
   }
 }
+
+@media only screen and (min-width: 0px) and (max-width: 700px) {
+  .hide_mobile{
+    display: none;
+  }
+}
+.view_mobile{
+  display: none;
+}
+@media only screen and (min-width: 0px) and (max-width: 700px) {
+  .view_mobile{
+    display: block;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
