@@ -17,6 +17,11 @@ import PopupOptin from "../components/PopupOptin"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [items, setItems] = useState<EventProps[]>([])
+  const [homeHover, setHomeHover] = useState<any>("home")
+  const [infoHover, setInfoHover] = useState<any>("info")
+  const [workHover, setWorkHover] = useState<any>("work")
+  const [heartHover, setHeartHover] = useState<any>("heart")
+  const [searchHover, setSearchHover] = useState<any>("search")
 
   const remove = (id: string) => {
     let i = _.reject(items, (item) => {
@@ -83,77 +88,132 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className="selection:bg-primary-400 selection:text-white">
-        <div className="min-h-screen">
+        <div className="min-h-screen" style={{minHeight:'calc(100vh - 80px)',maxHeight:'calc(100vh - 220px)', overflow:'scroll'}}>
           <Navbar />
           <Component {...pageProps} />
-          <div style={{flexDirection:'row', justifyContent:'space-between'}} className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar">
+       
+        </div>
+        <div style={{flexDirection:'row', justifyContent:'space-between'}} className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar">
           <div
             className="footer-grid xl:col-span-2"
             style={{ borderLeft: "none" }}
+            onMouseEnter={
+              ()=>{
+                setHomeHover("home_hover")
+              }
+            }
+            onMouseLeave={
+              ()=>{
+                setHomeHover("home")
+              }
+            }
           >
             <Image
-              src="/images/home.png"
+              src={`/images/${homeHover}.png`}
               objectFit="contain"
               layout="intrinsic"
               width={37}
               height={37}
-              alt="hand"
+              alt="home"
               className="homeIcon"
             />
             <p className="text-center" style={{ color: "#F56606" }}>
               Home
             </p>
           </div>
-          <div className="footer-grid xl:col-span-3">
+          <div className="footer-grid xl:col-span-3" 
+              onMouseEnter={
+                ()=>{
+                  setInfoHover("info_hover")
+                }
+              }
+              onMouseLeave={
+                ()=>{
+                  setInfoHover("info")
+                }
+              }
+          >
             <Image
-              src="/images/info.png"
+              src={`/images/${infoHover}.png`}
               objectFit="contain"
               layout="intrinsic"
               width={34}
               height={34}
-              alt="hand"
+              alt="info"
               className="infoIcon"
             />
             <p className="text-center">Chi siamo</p>
           </div>
-          <div className="footer-grid xl:col-span-3">
+          <div className="footer-grid xl:col-span-3"
+               onMouseEnter={
+                ()=>{
+                  setWorkHover("work_hover")
+                }
+              }
+              onMouseLeave={
+                ()=>{
+                  setWorkHover("work")
+                }
+              }
+          >
             <Image
-              src="/images/work.png"
+              src={`/images/${workHover}.png`}
               objectFit="contain"
               layout="intrinsic"
               width={34}
               height={34}
-              alt="hand"
+              alt="work"
               className="workIcon"
             />
             <p className="text-center">Lavora con noi</p>
           </div>
-          <div className="footer-grid xl:col-span-2">
+          <div className="footer-grid xl:col-span-2" 
+              onMouseEnter={
+                ()=>{
+                  setHeartHover("heart_hover")
+                }
+              }
+              onMouseLeave={
+                ()=>{
+                  setHeartHover("heart")
+                }
+              }
+          >
             <Image
-              src="/images/heart.png"
+              src={`/images/${heartHover}.png`}
               objectFit="contain"
               layout="intrinsic"
               width={37}
               height={37}
-              alt="hand"
+              alt="heart"
               className="heartIcon"
             />
             <p className="text-center">Wishlist</p>
           </div>
-          <div className="footer-grid xl:col-span-2">
+          <div className="footer-grid xl:col-span-2"
+           onMouseEnter={
+            ()=>{
+              setSearchHover("search_hover")
+            }
+          }
+          onMouseLeave={
+            ()=>{
+              setSearchHover("search")
+            }
+          }
+          >
             <Image
-              src="/images/search.png"
+               src={`/images/${searchHover}.png`}
               objectFit="contain"
               layout="intrinsic"
               width={37}
               height={37}
-              alt="hand"
+              alt="search"
               className="searchIcon"
             />
             <p className="text-center">Cerca</p>
           </div>
           </div>
-        </div>
         {/* <Footer /> */}
     
  

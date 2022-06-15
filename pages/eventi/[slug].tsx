@@ -69,7 +69,8 @@ const Evento = ({ slug }: { slug: string }) => {
   slug = router.query.slug;
   console.log("This is props", router.query);
   return (
-    <div className="mx-auto my-8 max-w-6xl">
+    <div style={{marginTop:100}}>
+      <div className="mx-auto my-8 max-w-6xl">
       {console.log(listaCategorie)}
       <main className="flex w-full flex-col xl:flex-row">
         <div className="flex w-full flex-col px-4">
@@ -200,6 +201,8 @@ const Evento = ({ slug }: { slug: string }) => {
         </div>
       </main>
     </div>
+    </div>
+    
   )
 }
 
