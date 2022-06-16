@@ -486,7 +486,13 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 <p style={{ fontSize: 16, color: "#217BF4", marginLeft: 10,   }}>
                   https://www.facebook.com/istagram.paoloartista1/
                 </p>
+
               </div>
+              <ul style={{listStyleType: "circle", color: "#217BF4", paddingLeft: 18, paddingBottom: 40}} className="facebook_list">
+                  <li>Post spettacolari e unici</li>
+                  <li>Community</li>
+                  <li>Share</li>
+                </ul>
             </div>
             <div className="facebook_text_grid_width hide_mobile">
               <div className="grid grid-cols-12">
