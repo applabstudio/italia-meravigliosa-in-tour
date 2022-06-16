@@ -277,6 +277,20 @@ const LandingComponent = ({ slug }: { slug: any }) => {
   const [categorie, setCategorie] = useState<any[]>([])
   const [region, setRegion] = useState<string>(null)
 
+  const isMounted = useIsMounted();
+
+
+  useEffect(() => {
+
+    if (isMounted) {
+      const e = document.getElementById("map_inner");
+      if (e) {
+        e.getElementsByTagName("div")[0].remove()
+      }
+    }
+  }, [isMounted])
+
+
   useEffect(() => {
     data?.docs.forEach((d) => {
       d.data()._fl_meta_.schema === "evento"
@@ -870,3 +884,19 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 }
 
 export default LandingComponent
+
+
+
+const useIsMounted = () => {
+  const isMounted = React.useRef(false);
+
+  useEffect(() => {
+    isMounted.current = true
+
+    return () => {
+      isMounted.current = false
+    }
+  }, [])
+
+  return isMounted.current;
+}
