@@ -159,3 +159,13 @@
 .fbicon {
   cursor: pointer;
 }
+
+/* Event Detail */
+.categoryContainer img {
+  width: 40px;
+  height: 40px;
+}
+
+.categoryContainer {
+  padding: 5px 20px;
+}

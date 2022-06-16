@@ -170,14 +170,14 @@ const Evento = ({ slug }: { slug: string }) => {
             <div className="w-full bg-gray-100">
               {/* <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p> */}
 
-              <ins
+              {/* <ins
                 className="adsbygoogle"
                 style={{ display: "block" }}
                 data-ad-client="ca-pub-1708355893696705"
                 data-ad-slot="9487119343"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
-              ></ins>
+              ></ins> */}
             </div>
             <br />
             <br />
@@ -209,7 +209,7 @@ const Evento = ({ slug }: { slug: string }) => {
             </p>
             <div className="mt-2 flex justify-center space-x-2 md:justify-start">
               {listaCategorie.map((categoria) => (
-                <p className="rounded-sm bg-primary-100 px-2 font-medium text-primary-600">
+                <p className="rounded-sm bg-primary-100 px-2 font-medium text-primary-600 categoryContainer">
                   <span className="flex cursor-pointer items-center justify-center space-x-2">
                     <img
                       className="h-4 w-4"
