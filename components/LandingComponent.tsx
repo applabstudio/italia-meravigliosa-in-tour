@@ -483,16 +483,16 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   height={25}
                   alt="hand"
                 />
-                <p style={{ fontSize: 16, color: "#217BF4", marginLeft: 10,   }}>
+                <p style={{ fontSize: 16, color: "#217BF4", }}>
                   https://www.facebook.com/istagram.paoloartista1/
                 </p>
 
               </div>
-              <ul style={{listStyleType: "circle", color: "#217BF4", paddingLeft: 18, paddingBottom: 40}} className="facebook_list">
-                  <li>Post spettacolari e unici</li>
-                  <li>Community</li>
-                  <li>Share</li>
-                </ul>
+              <ul style={{ listStyleType: "circle", color: "#217BF4", paddingLeft: 18, paddingBottom: 40 }} className="facebook_list">
+                <li>Post spettacolari e unici</li>
+                <li>Community</li>
+                <li>Share</li>
+              </ul>
             </div>
             <div className="facebook_text_grid_width hide_mobile">
               <div className="grid grid-cols-12">
@@ -604,7 +604,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           </div>
         </main>
       </div>
-      <div style={{ display: "flex", justifyContent: "center", paddingTop: 60}}>
+      <div style={{ display: "flex", justifyContent: "center", paddingTop: 60 }}>
         <div
           className="mx-auto max-w-7xl"
           style={{
@@ -837,15 +837,15 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                       width={170}
                       height={170}
                       alt="hand"
-                      className="fbicon"/>
+                      className="fbicon" />
                   </a>
                 </Link>
               </div>
               <div style={{ display: "flex", height: 50, width: "100%", justifyContent: "center" }}>
                 <div style={{ height: 50, width: "80%" }}>
-                  <p style={{ width: "100%", textAlign: "center" }}>
+                  <p style={{ width: "100%", textAlign: "center" }} >
                     Copyright © 2022 Italia Meravigliosa in Tour, Tutti i
-                    diritti sono riservati. | Powered by: 
+                    diritti sono riservati. | Powered by:
                     <Link href="https://applabstudio.com/">
                       <a>
                         <Image
@@ -854,7 +854,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                           layout="intrinsic"
                           width={80}
                           height={20}
-                          alt="hand"/>
+                          alt="hand" />
                         AppLab Studio
                       </a>
                     </Link>

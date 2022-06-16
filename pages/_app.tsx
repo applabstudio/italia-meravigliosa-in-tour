@@ -89,12 +89,31 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className="selection:bg-primary-400 selection:text-white">
-        <div className="min-h-screen" style={{ minHeight: 'calc(100vh - 90px)', maxHeight: 'calc(100vh - 220px)', overflow: 'auto' }}>
+        <div className="min-h-screen"
+          style={{
+            minHeight: 'calc(100vh - 90px)',
+            maxHeight: 'calc(100vh - 220px)',
+            overflow: 'auto',
+            paddingBottom: 90
+
+          }}>
           <Navbar />
           <Component {...pageProps} />
 
         </div>
-        <div style={{ flexDirection: 'row', justifyContent: 'space-between' }} className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar">
+        <div
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            position: "fixed",
+            bottom: 0,
+            left: 0,
+            right: 0,
+
+            backgroundColor: "#fff"
+          }}
+          className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar"
+        >
           <div
             className="footer-grid xl:col-span-2"
             style={{ borderLeft: "none" }}

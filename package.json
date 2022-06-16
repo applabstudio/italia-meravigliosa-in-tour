@@ -3,9 +3,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "buildP": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "firebase deploy --only hosting"
+    "deploy": "next build && next export && firebase deploy --only hosting"
   },
   "dependencies": {
     "@emailjs/browser": "^3.6.0",
