@@ -13,6 +13,7 @@ import PerfectScrollbar from "react-perfect-scrollbar"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
 
+
 import "swiper/css"
 import "swiper/css/pagination"
 import "react-perfect-scrollbar/dist/css/styles.css"
@@ -802,7 +803,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               className="mx-auto max-w-7xl"
               style={{
                 width: "100%",
-                background: "#F3F4F6",
+                background: "white",
                 height: 300,
                 maxWidth: "85rem",
                 display: "flex",
@@ -811,7 +812,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               }}
               className="text-center"
             >
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div style={{ display: "flex", alignItems: "center", flexFlow: "column" }}>
                 <Image
                   src="/images/logo.png"
                   objectFit="contain"
@@ -830,20 +831,20 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   className="fbicon"
                 />
               </div>
-              <div style={{ display: "flex", height: 50, width: "85%" }}>
+              <div style={{ display: "flex", height: 50, width: "100%", justifyContent: "center" }}>
                 <div style={{ height: 50, width: "80%" }}>
                   <p style={{ width: "100%", textAlign: "center" }}>
                     Copyright © 2022 Italia Meravigliosa in Tour, Tutti i
-                    diritti sono riservati. | Powered by:{" "}
+                    diritti sono riservati. | Powered by: 
                     <Image
-                      src="/images/applab.png"
+                      src="/images/applab_logo.png"
                       objectFit="contain"
                       layout="intrinsic"
                       width={80}
                       height={20}
                       alt="hand"
                     />
-                    p.Iva000000000000{" "}
+                    AppLab Studio
                   </p>
                 </div>
               </div>

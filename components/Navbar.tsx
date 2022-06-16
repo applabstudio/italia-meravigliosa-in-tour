@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="relative z-50 flex h-20 flex-col items-center border-b-[1px] bg-white">
+      <header className="relative z-50 flex h-20 flex-col items-center border-b-[1px] bg-white header">
         <nav className="flex h-full w-full max-w-[90rem] items-center justify-between px-6 md:space-x-10">
           <button
             className="absolute rounded-sm outline-none ring-primary-200 ring-offset-4 transition duration-200 focus:ring-2 md:hidden"

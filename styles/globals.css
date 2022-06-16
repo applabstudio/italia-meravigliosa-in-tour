@@ -169,3 +169,8 @@
 .categoryContainer {
   padding: 5px 20px;
 }
+
+/* Header */
+.header {
+  box-shadow: 0 6px 5px #0000001a;
+}
