@@ -212,7 +212,6 @@ const Evento = ({ slug }: { slug: string }) => {
                 <p className="rounded-sm bg-primary-100 px-2 font-medium text-primary-600 categoryContainer">
                   <span className="flex cursor-pointer items-center justify-center space-x-2">
                     <img
-                      className="h-4 w-4"
                       src={categoria?.icona}
                       alt=""
                     />
