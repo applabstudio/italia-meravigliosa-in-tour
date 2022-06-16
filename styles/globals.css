@@ -224,3 +224,11 @@ img.betaLabel {
   justify-content: center;
 }
 
+.col-span-12.box-border.flex.flex-col.px-4.xl\:col-span-12 {
+  margin: 0;
+}
+
+.buttonNewsletter:hover {
+  transition: 0.3s;
+  transform:scale(0.92)
+}
