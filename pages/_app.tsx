@@ -93,9 +93,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           style={{
             minHeight: 'calc(100vh - 90px)',
             maxHeight: 'calc(100vh - 220px)',
-            overflow: 'auto',
             paddingBottom: 90
-
           }}>
           <Navbar />
           <Component {...pageProps} />
