@@ -474,7 +474,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               <p className="text facebook_text">
                 SEGUICI SU FACEBOOK, SIAMO OLTRE 250 MILA
               </p>
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", paddingBottom: 40, paddingTop: 40 }}>
                 <Image
                   src="/images/fb.png"
                   objectFit="contain"
@@ -483,7 +483,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   height={25}
                   alt="hand"
                 />
-                <p style={{ fontSize: 16, color: "#656464", marginLeft: 10 }}>
+                <p style={{ fontSize: 16, color: "#217BF4", marginLeft: 10,   }}>
                   https://www.facebook.com/istagram.paoloartista1/
                 </p>
               </div>
@@ -552,7 +552,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               />
             </div>
           </div>
-          <div className="col-span-12 box-border flex flex-col xl:col-span-12">
+          <div className="col-span-12 box-border flex flex-col xl:col-span-12" >
             <div
               className="xl:col-span-5"
               style={{ alignSelf: "center", background: "red" }}
@@ -598,7 +598,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           </div>
         </main>
       </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center", paddingTop: 60}}>
         <div
           className="mx-auto max-w-7xl"
           style={{
@@ -696,7 +696,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
             <h4
               className="text-center text-4xl font-bold text-gray-800 md:text-left"
-              style={{ color: "black", fontStyle: "normal", marginTop: 20 }}
+              style={{ color: "black", fontStyle: "normal", marginTop: 20, paddingTop: 48 }}
             >
               Contatti
             </h4>
