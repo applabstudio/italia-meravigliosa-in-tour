@@ -412,12 +412,12 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 categorie?.map((categoria) => (
                   <p
                     key={categoria?.titolo}
-                    className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
+                    className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200 iconWrapper"
                   >
                     <Link href={`/categoria/${categoria?.titolo}`}>
                       <span className="flex cursor-pointer items-center justify-center space-x-2">
                         <img
-                          className="h-4 w-4"
+                          className="iconCategory"
                           src={categoria?.icona}
                           alt=""
                         />
