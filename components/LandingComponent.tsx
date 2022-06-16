@@ -495,12 +495,13 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   style={{ alignSelf: "center" }}
                 >
                   <Image
-                    src="/images/image1.png"
+                    src="/images/card1.jpg"
                     objectFit="contain"
                     layout="intrinsic"
                     width={250}
                     height={300}
                     alt="hand"
+                    className="cards"
                   />
                 </div>
                 <div className="col-span-5">

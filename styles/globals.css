@@ -178,3 +178,7 @@ img.betaLabel {
  padding-left: 5px !important;
  padding-top: 10px !important;
 }
+
+.cards {
+  border-radius: 8%;
+}
