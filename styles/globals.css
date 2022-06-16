@@ -172,6 +172,22 @@
   padding: 5px 20px;
 }
 
+.buttonMaps {
+  margin-top: 16px;
+  background: #10B981;
+  width: 200px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonMaps:hover {
+  transition: 0.2s;
+  background: #C7FDE5;
+  color: #10B981;
+  transform: scale(0.95);
+}
+
 /* Header */
 .header {
   box-shadow: 0 6px 5px #0000001a;

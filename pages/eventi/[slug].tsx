@@ -239,7 +239,7 @@ const Evento = ({ slug }: { slug: string }) => {
                     window.location.href = evento.googleMap
                   }}
                   style={{ width: 200 }}
-                  className="flex items-center space-x-1 rounded-md bg-primary-100 px-4 py-2 font-semibold text-primary-500 outline-none ring-primary-200 ring-offset-2 transition duration-200 hover:bg-secondary-200 focus:ring-2"
+                  className="flex items-center space-x-1 rounded-md  px-4 py-2 font-semibold text-primary-500 outline-none ring-primary-200 ring-offset-2 transition duration-200 focus:ring-2 buttonMaps"
                 >
                   <FaMapMarkerAlt /> <span>Google Maps</span>
                 </button>
