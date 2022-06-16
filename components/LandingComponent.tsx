@@ -821,30 +821,36 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   height={80}
                   alt="hand"
                 />
-                <Image
-                  src="/images/fblog.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={170}
-                  height={170}
-                  alt="hand"
-                  className="fbicon"
-                />
+                <Link href="https://www.facebook.com/istagram.paoloartista1/">
+                  <a>
+                    <Image
+                      src="/images/fblog.png"
+                      objectFit="contain"
+                      layout="intrinsic"
+                      width={170}
+                      height={170}
+                      alt="hand"
+                      className="fbicon"/>
+                  </a>
+                </Link>
               </div>
               <div style={{ display: "flex", height: 50, width: "100%", justifyContent: "center" }}>
                 <div style={{ height: 50, width: "80%" }}>
                   <p style={{ width: "100%", textAlign: "center" }}>
                     Copyright © 2022 Italia Meravigliosa in Tour, Tutti i
                     diritti sono riservati. | Powered by: 
-                    <Image
-                      src="/images/applab_logo.png"
-                      objectFit="contain"
-                      layout="intrinsic"
-                      width={80}
-                      height={20}
-                      alt="hand"
-                    />
-                    AppLab Studio
+                    <Link href="https://applabstudio.com/">
+                      <a>
+                        <Image
+                          src="/images/applab_logo.png"
+                          objectFit="contain"
+                          layout="intrinsic"
+                          width={80}
+                          height={20}
+                          alt="hand"/>
+                        AppLab Studio
+                      </a>
+                    </Link>
                   </p>
                 </div>
               </div>

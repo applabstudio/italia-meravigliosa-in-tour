@@ -92,6 +92,15 @@ const Navbar = () => {
                     height={50}
                     alt="hand"
                   />
+                  <Image
+                    src="/images/Beta.png"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={30}
+                    height={30}
+                    alt="hand"
+                    className="betaLabel"
+                  />
                 </div>
               </a>
             </Link>

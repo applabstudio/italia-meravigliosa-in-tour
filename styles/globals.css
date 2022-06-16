@@ -174,3 +174,8 @@
 .header {
   box-shadow: 0 6px 5px #0000001a;
 }
+
+img.betaLabel {
+ padding-left: 5px !important;
+ padding-top: 10px !important;
+}
