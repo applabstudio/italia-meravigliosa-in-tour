@@ -153,6 +153,9 @@
     display: flex;
     flex-direction: column;
   }
+  .tabText {
+    font-size: 12px;
+  }
 }
 
 /* Footer */
@@ -182,3 +185,4 @@ img.betaLabel {
 .cards {
   border-radius: 8%;
 }
+

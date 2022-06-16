@@ -114,12 +114,12 @@ function MyApp({ Component, pageProps }: AppProps) {
               src={`/images/${homeHover}.png`}
               objectFit="contain"
               layout="intrinsic"
-              width={37}
-              height={37}
+              width={34}
+              height={34}
               alt="home"
               className="homeIcon"
             />
-            <p className="text-center" style={{ color: "#F56606" }}>
+            <p className="text-center tabText" style={{ color: "#F56606" }}>
               Home
             </p>
           </div>
@@ -147,7 +147,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   alt="info"
                   className="infoIcon"
                 />
-                <p className="text-center">Chi siamo</p>
+                <p className="text-center tabText">Chi siamo</p>
               </div>
             </a>
           </Link>
@@ -176,7 +176,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   alt="work"
                   className="workIcon"
                 />
-                <p className="text-center">Lavora con noi</p>
+                <p className="text-center tabText">Lavora con noi</p>
               </div>
             </a>
           </Link>
@@ -200,12 +200,12 @@ function MyApp({ Component, pageProps }: AppProps) {
                   src={`/images/${heartHover}.png`}
                   objectFit="contain"
                   layout="intrinsic"
-                  width={37}
-                  height={37}
+                  width={34}
+                  height={34}
                   alt="heart"
                   className="heartIcon"
                 />
-                <p className="text-center">Wishlist</p>
+                <p className="text-center tabText">Wishlist</p>
               </div>
 
             </a>
@@ -229,12 +229,12 @@ function MyApp({ Component, pageProps }: AppProps) {
                   src={`/images/${searchHover}.png`}
                   objectFit="contain"
                   layout="intrinsic"
-                  width={37}
-                  height={37}
+                  width={34}
+                  height={34}
                   alt="search"
                   className="searchIcon"
                 />
-                <p className="text-center">Cerca</p>
+                <p className="text-center tabText">Cerca</p>
               </div>
 
             </a>

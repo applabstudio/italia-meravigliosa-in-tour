@@ -526,7 +526,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             </div>
             <div className="facebook_text_grid_width view_mobile">
               <Image
-                src="/images/image1.png"
+                src="/images/card1.jpg"
                 objectFit="contain"
                 layout="intrinsic"
                 width={300}
