@@ -12,25 +12,30 @@ const Provincia = ({ slug }: { slug: string }) => {
   const router = useRouter();
   slug = router.query.slug;
   console.log("This is props", router.query);
-  
-  const [data, dataLoading, dataError] = useCollection(
-    collection(firestore, "fl_content"),
-    {}
-  )
 
-  const [listaEventi, setListaEventi] = useState<any[]>([])
+  // const [data, dataLoading, dataError] = useCollection(
+  //   collection(firestore, "fl_content"),
+  //   {}
+  // )
 
-  useEffect(() => {
-    data?.docs.forEach((d) => {
-      d.data()._fl_meta_.schema === "evento" &&
-        setListaEventi((listaEventi) => [...listaEventi, d.data()])
-    })
-  }, [data])
+  // const [listaEventi, setListaEventi] = useState<any[]>([])
 
-  const eventi = listaEventi.filter((doc) => doc?.luogo === slug)
+  // useEffect(() => {
+  //   data?.docs.forEach((d) => {
+  //     d.data()._fl_meta_.schema === "evento" &&
+  //       setListaEventi((listaEventi) => [...listaEventi, d.data()])
+  //   })
+  // }, [data])
+
+  // const eventi = listaEventi.filter((doc) => doc?.luogo === slug)
+
 
   return (
-    <LandingComponent  eventi={eventi} slug={slug}></LandingComponent>
+    <div>{"Provincia component"}</div>
+  )
+
+  return (
+    <LandingComponent eventi={eventi} slug={slug}></LandingComponent>
   )
 }
 
