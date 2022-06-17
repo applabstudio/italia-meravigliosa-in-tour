@@ -2,11 +2,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "buildX": "next build && next export",
     "buildP": "next build",
-    "start": "next start",
+    "startX": "next start",
     "export": "next export",
-    "deploy": "next build && next export && firebase deploy --only hosting"
+    "deploy": "next build && next export && firebase deploy --only hosting",
+    "build": "next build",
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "@emailjs/browser": "^3.6.0",
