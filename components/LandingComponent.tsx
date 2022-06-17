@@ -785,12 +785,14 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                     borderRadius: 50,
                     height: 40,
                     paddingLeft: 15,
+                    border: "1px solid white"
                   }}
+                  className="input-newsletter"
                 >
                   <FaEnvelope color="gray" />{" "}
                   <input
                     placeholder="La tua email"
-                    style={{ border: "none", width: "80%", marginLeft: 5 }}
+                    style={{ border: "none", width: "80%", marginLeft: 5, }}
                   ></input>
                 </div>
                 <button
@@ -841,23 +843,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   height={80}
                   alt="hand"
                 />
-                <Link href="https://www.facebook.com/istagram.paoloartista1/">
-                  <a>
-                    <Image
-                      src="/images/fblog.png"
-                      objectFit="contain"
-                      layout="intrinsic"
-                      width={170}
-                      height={170}
-                      alt="hand"
-                      className="fbicon" />
-                  </a>
-                </Link>
-              </div>
-              <div style={{ display: "flex", height: 50, width: "100%", justifyContent: "center" }}>
-                <div style={{ height: 50, width: "80%" }}>
-                  <p style={{ width: "100%", textAlign: "center" }} >
-                    Copyright © 2022 Italia Meravigliosa in Tour, Tutti i
+             <div className="copyright-wrapper">
+                Copyright © 2022 Italia Meravigliosa in Tour, Tutti i
                     diritti sono riservati. | Powered by:
                     <Link href="https://applabstudio.com/">
                       <a>
@@ -871,8 +858,21 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                         AppLab Studio
                       </a>
                     </Link>
-                  </p>
                 </div>
+              
+                <Link href="https://www.facebook.com/istagram.paoloartista1/">
+                  <a>
+                    <Image
+                      src="/images/fblog.png"
+                      objectFit="contain"
+                      layout="intrinsic"
+                      width={170}
+                      height={170}
+                      alt="hand"
+                      className="fbicon" />
+                  </a>
+                </Link>
+
               </div>
             </div>
           </div>
