@@ -476,7 +476,6 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             </p>
           </div>
 
-          {/* TODO Fix responsive sections */}
           <div
             className="col-span-12"
             style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
@@ -801,7 +800,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                     marginTop: 20,
                     background: "#231A36",
                   }}
-                  className="rounded-full bg-red-500 py-2 px-6 font-bold text-white hover:bg-red-700"
+                  className="rounded-full bg-red-500 py-2 px-6 font-bold text-white hover:bg-red-700 buttonNewsletter"
                 >
                   <span style={{ marginRight: 5 }}>Iscriviti</span>{" "}
                   <FaArrowCircleRight />

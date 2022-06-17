@@ -33,6 +33,7 @@ div {
 .botton_navbar {
   padding-top: 10px;
   padding-bottom: 10px;
+  box-shadow: 0 -3px 5px #0000001a;
 }
 
 .homeIcon:hover, .infoIcon:hover, .heartIcon:hover, .workIcon:hover, .heartIcon:hover, .searchIcon:hover {
@@ -223,3 +224,11 @@ img.betaLabel {
   justify-content: center;
 }
 
+.col-span-12.box-border.flex.flex-col.px-4.xl\:col-span-12 {
+  margin: 0;
+}
+
+.buttonNewsletter:hover {
+  transition: 0.3s;
+  transform:scale(0.92)
+}

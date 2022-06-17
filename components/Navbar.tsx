@@ -27,6 +27,7 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
       <div className="flex space-x-6">
         <button
           type="button"
+          aria-hidden="true"
           onClick={() => setModalOpen(true)}
           className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 ring-offset-4 transition duration-200 hover:bg-secondary-100 focus:ring-2"
         >
