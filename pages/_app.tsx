@@ -59,21 +59,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       {/* TODO Scroll section iside landing when click tab icon bottom navbar */}
 
-      {/* <Script
-        strategy="lazyOnload"
-        src={"https://www.googletagmanager.com/gtag/js?id=G-BZ2LLF0XHC"}
-      />
-
-      <Script strategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-  
-          gtag('config', 'G-BZ2LLF0XHC');
-          `}
-      </Script> */}
-
       <NextNProgress
         color="#f87171"
         startPosition={0.3}
