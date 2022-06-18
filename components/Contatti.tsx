@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import Input from "./common/Input"
 import emailjs from "@emailjs/browser"
 
@@ -7,7 +7,9 @@ import Dropdown from "./UI/Dropdown"
 
 const Contatti = () => {
   const form = useRef(null)
-  
+
+  const [, setProfession] = useState("Photographer");
+
   return (
     <form
       className="space-y-4"
@@ -27,7 +29,8 @@ const Contatti = () => {
               console.log(result.text)
             },
             (error) => {
-              console.log(error.text)
+              alert(error.text)
+              // console.log(error.text)
             }
           )
       }}
@@ -54,7 +57,14 @@ const Contatti = () => {
           placeholder="La tua email..."
         />
 
-          <Dropdown />
+
+        <Dropdown
+          selectedProfession={(_profession: string) => {
+            console.clear()
+            console.log("first", _profession);
+            setProfession(_profession)
+          }}
+        />
 
       </div>
 
