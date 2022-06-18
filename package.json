@@ -8,7 +8,8 @@
     "export": "next export",
     "deploy": "next build && next export && firebase deploy --only hosting",
     "build": "next build",
-    "start": "next start -p $PORT"
+    "start": "next start -p $PORT",
+    "sim": "open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/"
   },
   "dependencies": {
     "@emailjs/browser": "^3.6.0",
