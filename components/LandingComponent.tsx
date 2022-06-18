@@ -21,6 +21,8 @@ import Link from "next/link"
 import Input from "./common/Input"
 import PopupOptin from "./PopupOptin"
 import Script from "next/script"
+import Footer from './Footer'
+import WelcomeSection from "./WelcomeSection"
 
 const regions = {
   "0": {
@@ -442,40 +444,9 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 ))}
             </div>
           </div>
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12" id="who-we-are-section">
-            <h1
-              className="welcome-section text-center"
-              style={{ fontWeight: "700", fontSize: 80 }}
-            >
-              ITALIA MERAVIGLIOSA
-            </h1>
-            <p
-              className="text-center"
-              style={{
-                textAlign: "center",
-                fontSize: 22,
-                fontFamily: "roboto",
-              }}
-            >
-              Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020, con
-              l’intenzione di mostrarvi le meraviglie nascoste del nostro paese
-            </p>
-            <p
-              className="text-center"
-              style={{
-                textAlign: "center",
-                fontSize: 22,
-                fontFamily: "roboto",
-              }}
-            >
-              Oggi con oltre 250 mila follower e tante foto di località
-              pubblicate e milioni di visualizzazioni, abbiamo deciso di creare
-              una redazione di “Italia Meravigliosa” e di creare questo portale,
-              perchè possa guidarvi in luoghi meravigliosi da esplorare, buon
-              viaggio a tutti voi.
-            </p>
-          </div>
-
+         
+         {/* Welcome Section Component */}
+         <WelcomeSection/>
           <div
             className="col-span-12"
             style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
@@ -724,7 +695,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
             <Contatti />
           </div>
-          {/* TODO Fix responsive sections */}
+        
           <div
             id="wish-list-section"
             className="col-span-12 px-4"
@@ -732,19 +703,15 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              // maxWidth: "80rem",
-            }}
-          >
+            }}>
             <div
               style={{
                 width: "95%",
-                // height: 300,
                 padding: 5,
                 borderRadius: 40,
                 backgroundImage: 'url("/images/gradient.png")',
                 backgroundSize: "cover",
-              }}
-            >
+              }}>
               <p
                 className="text-center"
                 style={{
@@ -753,8 +720,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   paddingBottom: 10,
                   fontWeight: "600",
                   color: "white",
-                }}
-              >
+                }}>
                 Vuoi ricevere piu’ informazioni?
               </p>
               <p
@@ -763,8 +729,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   fontSize: 16,
                   fontWeight: "400",
                   color: "white",
-                }}
-              >
+                }}>
                 Iscriviti alla newsletter di italia meravigliosa
               </p>
               <div
@@ -775,8 +740,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   justifyContent: "center",
                   marginTop: 10,
                   paddingBottom: 40,
-                }}
-              >
+                }}>
                 <div
                   style={{
                     display: "flex",
@@ -787,8 +751,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                     paddingLeft: 15,
                     border: "1px solid white"
                   }}
-                  className="input-newsletter"
-                >
+                  className="input-newsletter">
                   <FaEnvelope color="gray" />{" "}
                   <input
                     placeholder="La tua email"
@@ -819,8 +782,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             style={{
               width: "100%",
               background: "white",
-            }}
-          >
+            }}>
             <div
               className="mx-auto max-w-7xl"
               style={{
@@ -832,48 +794,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 flexDirection: "column",
                 alignItems: "center",
               }}
-              className="text-center"
-            >
-              <div style={{ display: "flex", alignItems: "center", flexFlow: "column" }}>
-                <Image
-                  src="/images/logo.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={80}
-                  height={80}
-                  alt="hand"
-                />
-             <div className="copyright-wrapper">
-                Copyright © 2022 Italia Meravigliosa in Tour, Tutti i
-                    diritti sono riservati. | Powered by:
-                    <Link href="https://applabstudio.com/">
-                      <a>
-                        <Image
-                          src="/images/applab_logo.png"
-                          objectFit="contain"
-                          layout="intrinsic"
-                          width={80}
-                          height={20}
-                          alt="hand" />
-                        AppLab Studio
-                      </a>
-                    </Link>
-                </div>
-              
-                <Link href="https://www.facebook.com/istagram.paoloartista1/">
-                  <a>
-                    <Image
-                      src="/images/fblog.png"
-                      objectFit="contain"
-                      layout="intrinsic"
-                      width={170}
-                      height={170}
-                      alt="hand"
-                      className="fbicon" />
-                  </a>
-                </Link>
-
-              </div>
+              className="text-center">
+              <Footer/>
             </div>
           </div>
         </main>

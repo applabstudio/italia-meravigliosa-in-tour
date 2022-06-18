@@ -23,6 +23,11 @@ img.betaLabel {
  padding-top: 10px !important;
 }
 
+/* Welcome Section */
+.welcome-section {
+  padding-top: 40px;
+}
+
 .cards {
   border-radius: 8%;
 }
@@ -135,8 +140,11 @@ img.betaLabel {
 
 /* Footer */
 .copyright-wrapper {
-  margin-top: 32px;
+  position: relative;
+  bottom: 85px;
+  padding-top: 20px;
 }
+
 .copyright-wrapper a {
   display: flex;
   justify-content: center;
@@ -163,7 +171,7 @@ img.betaLabel {
     width: 22px !important;
     height: 22px !important;
   }
-  .welcome-section{
+  .welcome-section {
     font-size: 29px !important;
   }
   
@@ -224,6 +232,11 @@ img.betaLabel {
 /* Footer */
 .fbicon {
   cursor: pointer;
+  margin-top: -20px;
+  width: 156px !important;
+  min-width: unset !important;
+  max-width: unset !important;
+  left: 9px !important;
 }
 
 /* Event Detail */
@@ -271,4 +284,8 @@ img.betaLabel {
     margin: 10px;
     font-size: 14px;
 }
+}
+
+.wrapperDropdown button {
+  background-color: #F3F4F6;
 }

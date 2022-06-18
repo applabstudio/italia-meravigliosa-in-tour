@@ -2,9 +2,12 @@ import React, { useRef } from "react"
 import Input from "./common/Input"
 import emailjs from "@emailjs/browser"
 
+
+import Dropdown from "./UI/Dropdown"
+
 const Contatti = () => {
   const form = useRef(null)
-
+  
   return (
     <form
       className="space-y-4"
@@ -38,11 +41,21 @@ const Contatti = () => {
         />
 
         <Input
+          id="cv"
+          label="cv"
+          type="file"
+          placeholder="File"
+        />
+
+        <Input
           id="email"
           label="Email"
           type="email"
           placeholder="La tua email..."
         />
+
+          <Dropdown />
+
       </div>
 
       <div className="grid grid-cols-1 gap-4">

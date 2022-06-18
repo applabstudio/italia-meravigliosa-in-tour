@@ -33,6 +33,7 @@
     "react-icons": "^4.3.1",
     "react-perfect-scrollbar": "^1.5.8",
     "react-responsive": "^9.0.0-beta.6",
+    "styled-components": "^5.3.5",
     "swiper": "^8.1.4"
   },
   "devDependencies": {
@@ -41,6 +42,7 @@
     "@types/node": "17.0.4",
     "@types/nprogress": "^0.2.0",
     "@types/react": "17.0.38",
+    "@types/styled-components": "^5.1.25",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",

@@ -57,8 +57,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       /> */}
 
-      {/* TODO Scroll section iside landing when click tab icon bottom navbar */}
-
       <NextNProgress
         color="#f87171"
         startPosition={0.3}
@@ -92,11 +90,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             bottom: 0,
             left: 0,
             right: 0,
-
             backgroundColor: "#fff"
           }}
-          className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar"
-        >
+          className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar">
           <div
             className="footer-grid xl:col-span-2"
             style={{ borderLeft: "none" }}
@@ -154,7 +150,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             </a>
           </Link>
 
-
           <Link href="#work-with-us-section">
             <a>
               <div className="footer-grid xl:col-span-3"
@@ -209,7 +204,6 @@ function MyApp({ Component, pageProps }: AppProps) {
                 />
                 <p className="text-center tabText">Wishlist</p>
               </div>
-
             </a>
           </Link>
 
@@ -242,9 +236,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             </a>
           </Link>
         </div>
-        {/* <Footer /> */}
-
-
       </div>
     </WishContext.Provider>
   )
