@@ -34,7 +34,7 @@ const FacebookSection = () => {
                         </Link>
                         
                     </div>
-                    <ul style={{ listStyleType: "circle", color: "#217BF4", paddingLeft: 18, paddingBottom: 40 }} className="facebook_list">
+                    <ul style={{color: "#217BF4", paddingLeft: 18, paddingBottom: 40 }} className="facebook_list">
                        <LiFb><li>Post spettacolari e unici</li></LiFb>
                        <LiFb><li>Community</li></LiFb>
                        <LiFb><li>Share</li></LiFb>
