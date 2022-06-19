@@ -22,7 +22,7 @@ import Input from "./common/Input"
 import PopupOptin from "./PopupOptin"
 import Script from "next/script"
 import Footer from './Footer'
-import WelcomeSection from "./WelcomeSection"
+import WelcomeSection from "./sections/WelcomeSection"
 import Newsletter from "./Newsletter"
 import FacebookSection from "./sections/FacebookSection"
 

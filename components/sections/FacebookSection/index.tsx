@@ -1,6 +1,6 @@
-import React from "react";
+import * as React from 'react'
 import Image from "next/image"
-import {liFb} from "./styles";
+import {LiFb} from "./styles";
 import Link from "next/link"
 
 
@@ -35,9 +35,9 @@ const FacebookSection = () => {
                         
                     </div>
                     <ul style={{ listStyleType: "circle", color: "#217BF4", paddingLeft: 18, paddingBottom: 40 }} className="facebook_list">
-                       <liFb><li>Post spettacolari e unici</li></liFb>
-                       <liFb><li>Community</li></liFb>
-                       <liFb><li>Share</li></liFb>
+                       <LiFb><li>Post spettacolari e unici</li></LiFb>
+                       <LiFb><li>Community</li></LiFb>
+                       <LiFb><li>Share</li></LiFb>
                     </ul>
                     </div>
 
