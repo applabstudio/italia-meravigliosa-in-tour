@@ -49,4 +49,15 @@ export const DropdownList = styled.ul<{ active: boolean }>`
       }
     }
   }
+  
+`;
+
+
+export const SelectSkills = styled.select`
+     height: 48px;
+     border: 1px solid rgb(250, 250, 250);
+     border-radius: 100px !important;
+      &:hover {
+        border: 1px solid #C7FDE5
+      }
 `;

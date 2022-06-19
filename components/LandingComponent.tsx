@@ -23,6 +23,8 @@ import PopupOptin from "./PopupOptin"
 import Script from "next/script"
 import Footer from './Footer'
 import WelcomeSection from "./WelcomeSection"
+import Newsletter from "./Newsletter"
+import FacebookSection from "./sections/FacebookSection"
 
 const regions = {
   "0": {
@@ -306,26 +308,18 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
     const mapScript = document.createElement("script")
     const countryScript = document.createElement("script")
-    // const clickScript = document.createElement("script")
 
     mapScript.src = "/scripts/mapdata.js"
     countryScript.src = "/scripts/countrymap.js"
     mapScript.async = true
     countryScript.async = true
 
-    // clickScript.type = "text/javascript"
-    // clickScript.innerHTML = `simplemaps_worldmap.hooks.zoomable_click_region = function(id){
-    //       alert(simplemaps_worldmap_mapdata.state_specific[id].name);
-    //     }`
-
     document.body.appendChild(mapScript)
     document.body.appendChild(countryScript)
-    // document.body.appendChild(clickScript);
 
     return () => {
       document.body.removeChild(mapScript)
       document.body.removeChild(countryScript)
-      // document.body.removeChild(clickScript);
     }
   }, [])
 
@@ -366,16 +360,14 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                     }
                   }
                 }}
-                className="w-full"
-              />
+                className="w-full"/>
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   marginTop: -30,
-                }}
-              >
+                }}>
                 <Image
                   src="/images/hand1.png"
                   objectFit="contain"
@@ -447,145 +439,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
          
          {/* Welcome Section Component */}
          <WelcomeSection/>
-          <div
-            className="col-span-12"
-            style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
-          >
-            <div
-              className="facebook_text_grid_width"
-              style={{ alignSelf: "center" }}
-            >
-              <p className="text facebook_text">
-                SEGUICI SU FACEBOOK, SIAMO OLTRE 250 MILA
-              </p>
-              <div style={{ display: "flex", paddingBottom: 40, paddingTop: 40 }}>
-                <Image
-                  src="/images/fb.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={25}
-                  height={25}
-                  alt="hand"
-                />
-                <p style={{ fontSize: 16, color: "#217BF4", }}>
-                  https://www.facebook.com/istagram.paoloartista1/
-                </p>
-
-              </div>
-              <ul style={{ listStyleType: "circle", color: "#217BF4", paddingLeft: 18, paddingBottom: 40 }} className="facebook_list">
-                <li>Post spettacolari e unici</li>
-                <li>Community</li>
-                <li>Share</li>
-              </ul>
-            </div>
-            <div className="facebook_text_grid_width hide_mobile">
-              <div className="grid grid-cols-12">
-                <div
-                  className="col-span-7 text-right"
-                  style={{ alignSelf: "center" }}
-                >
-                  <Image
-                    src="/images/card1.jpg"
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={250}
-                    height={300}
-                    alt="hand"
-                    className="cards"
-                  />
-                </div>
-                <div className="col-span-5">
-                  <Image
-                    src="/images/image2.png"
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={300}
-                    height={300}
-                    alt="hand"
-                  />
-                  <Image
-                    src="/images/image3.png"
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={300}
-                    height={300}
-                    alt="hand"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="facebook_text_grid_width view_mobile">
-              <Image
-                src="/images/card1.jpg"
-                objectFit="contain"
-                layout="intrinsic"
-                width={300}
-                height={300}
-                alt="hand"
-              />
-
-              <Image
-                src="/images/image2.png"
-                objectFit="contain"
-                layout="intrinsic"
-                width={300}
-                height={300}
-                alt="hand"
-              />
-              <Image
-                src="/images/image3.png"
-                objectFit="contain"
-                layout="intrinsic"
-                width={300}
-                height={300}
-                alt="hand"
-              />
-            </div>
-          </div>
-          <div className="col-span-12 box-border flex flex-col xl:col-span-12" >
-            <div
-              className="xl:col-span-5"
-              style={{ alignSelf: "center", background: "red" }}
-            ></div>
-            <div className="xl:col-span-6"></div>
-          </div>
-
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
-            <p
-              className="user-active text-center"
-              style={{ fontWeight: "700", fontSize: 80 }}
-            >
-              1M+ Utenti Giornalieri
-            </p>
-          </div>
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
-            <div className="grid grid-cols-2  md:grid-cols-3 xl:grid-cols-12">
-              <div
-                className="infoBox xl:col-span-3"
-                style={{ borderLeft: "none" }}
-              >
-                <p className="infoGray text-center">FOTO</p>
-                <p className="text-center">+50K</p>
-              </div>
-              <div className="infoBox xl:col-span-3">
-                <p className="infoGray text-center">INTERAZIONI</p>
-                <p className="text-center">+15M</p>
-              </div>
-              <div className="infoBox xl:col-span-3">
-                <p className="infoGray text-center" style={{ width: "50%" }}>
-                  LUOGHI MERAVIGLIOSI
-                </p>
-                <p className="text-center">+1000</p>
-              </div>
-              <div
-                className="infoBox xl:col-span-3"
-                style={{ borderRight: "none" }}
-              >
-                <p className="infoGray text-center">COLLABORAZIONI</p>
-                <p className="text-center">+50</p>
-              </div>
-            </div>
-          </div>
+          <FacebookSection/>
         </main>
       </div>
       <div style={{ display: "flex", justifyContent: "center", paddingTop: 60 }}>
@@ -600,16 +454,14 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             flexDirection: "column",
             alignItems: "center",
           }}
-          className="text-center"
-        >
+          className="text-center">
           <p
             style={{
               color: "white",
               fontSize: 40,
               paddingTop: 50,
               paddingBottom: 10,
-            }}
-          >
+            }}>
             MISSION
           </p>
           <p
@@ -620,8 +472,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               fontFamily: "Inter",
               fontSize: 22,
               fontStyle: "italic",
-            }}
-          >
+            }}>
             “Guardare l'Italia con gli occhi dell'Artista, e trovare in ogni
             angolo del Bel Paese un luogo Meraviglioso. Guarda l'Italia con
             occhi nuovi con Italia Meravigliosa in Tour. ”
@@ -632,14 +483,12 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               fontSize: 20,
               fontWeight: "700",
               fontFamily: "Lato",
-            }}
-          >
+            }}>
             Paolo Artista
           </p>
           <p
             className="infoGray"
-            style={{ fontSize: 16, fontWeight: "500", fontFamily: "Inter" }}
-          >
+            style={{ fontSize: 16, fontWeight: "500", fontFamily: "Inter" }}>
             CEO & Founder Italia Meravigliosa
           </p>
         </div>
@@ -653,8 +502,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-              }}
-            >
+              }}>
               <p
                 className="workwithus text-center"
                 style={{
@@ -662,8 +510,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   paddingTop: 50,
                   paddingBottom: 10,
                   fontWeight: "700",
-                }}
-              >
+                }}>
                 VUOI COLLABORARE CON NOI?
               </p>
               <p
@@ -674,8 +521,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   fontFamily: "Inter",
                   fontSize: 22,
                   fontStyle: "italic",
-                }}
-              >
+                }}>
                 Italia Meravigliosa offre l’opportunità di collaborare con la
                 nostra redazione, se sei un fotografo, un videomaker oppure un
                 blogger di viaggio, contattaci ed entra a far parte del nostro
@@ -683,101 +529,18 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 coesa community
               </p>
             </div>
-
             <h4
               className="text-center text-4xl font-bold text-gray-800 md:text-left"
-              style={{ color: "black", fontStyle: "normal", marginTop: 20, paddingTop: 48 }}
-            >
+              style={{ color: "black", fontStyle: "normal", marginTop: 20, paddingTop: 48 }}>
               Contatti
             </h4>
-
-            <br />
-
             <Contatti />
           </div>
-        
-          <div
-            id="wish-list-section"
-            className="col-span-12 px-4"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}>
-            <div
-              style={{
-                width: "95%",
-                padding: 5,
-                borderRadius: 40,
-                backgroundImage: 'url("/images/gradient.png")',
-                backgroundSize: "cover",
-              }}>
-              <p
-                className="text-center"
-                style={{
-                  fontSize: 40,
-                  paddingTop: 50,
-                  paddingBottom: 10,
-                  fontWeight: "600",
-                  color: "white",
-                }}>
-                Vuoi ricevere piu’ informazioni?
-              </p>
-              <p
-                className="text-center"
-                style={{
-                  fontSize: 16,
-                  fontWeight: "400",
-                  color: "white",
-                }}>
-                Iscriviti alla newsletter di italia meravigliosa
-              </p>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginTop: 10,
-                  paddingBottom: 40,
-                }}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    background: "white",
-                    borderRadius: 50,
-                    height: 40,
-                    paddingLeft: 15,
-                    border: "1px solid white"
-                  }}
-                  className="input-newsletter">
-                  <FaEnvelope color="gray" />{" "}
-                  <input
-                    placeholder="La tua email"
-                    style={{ border: "none", width: "80%", marginLeft: 5, }}
-                  ></input>
-                </div>
-                <button
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginTop: 20,
-                    background: "#231A36",
-                  }}
-                  className="rounded-full bg-red-500 py-2 px-6 font-bold text-white hover:bg-red-700 buttonNewsletter"
-                >
-                  <span style={{ marginRight: 5 }}>Iscriviti</span>{" "}
-                  <FaArrowCircleRight />
-                </button>
-              </div>
-            </div>
-          </div>
+            <Newsletter/>
           <div
             className="col-span-12 rounded-lg p-6"
-            style={{ marginBottom: 20 }}
-          ></div>
-          <div
+            style={{ marginBottom: 20 }}></div>
+            <div
             className="col-span-12"
             style={{
               width: "100%",

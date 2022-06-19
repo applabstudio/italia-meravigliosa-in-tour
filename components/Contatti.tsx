@@ -41,6 +41,7 @@ const Contatti = () => {
           label="Nome"
           type="text"
           placeholder="Il tuo nome..."
+          className="input-contactForm"
         />
 
         <Input
@@ -48,6 +49,7 @@ const Contatti = () => {
           label="cv"
           type="file"
           placeholder="File"
+          className="input-contactForm"
         />
 
         <Input
@@ -55,16 +57,21 @@ const Contatti = () => {
           label="Email"
           type="email"
           placeholder="La tua email..."
+          className="input-contactForm"
         />
 
+        <div className="skillsWrapper">
+        <span>Professione</span>
+          <Dropdown
+            selectedProfession={(_profession: string) => {
+              console.clear()
+              console.log("first", _profession);
+              setProfession(_profession)
+            }}
+            className="input-contactForm"
+          />
+        </div>
 
-        <Dropdown
-          selectedProfession={(_profession: string) => {
-            console.clear()
-            console.log("first", _profession);
-            setProfession(_profession)
-          }}
-        />
 
       </div>
 
