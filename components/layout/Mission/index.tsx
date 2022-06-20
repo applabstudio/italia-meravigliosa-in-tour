@@ -47,41 +47,10 @@ const Mission = () => {
     }
 
     return (
-<<<<<<< HEAD
         <div style={{ }}>
           <div className="mx-auto max-w-7xl" style={style_MissionWrapper} className="text-center">
               <p style={style_headingMission}> MISSION </p>
               <p className="infoGray" style={style_ParagraphMission}>“Guardare l'Italia con gli occhi dell'Artista, e trovare in ogni
-=======
-        <div style={{ display: "flex", justifyContent: "center", paddingTop: 60 }}>
-          <div
-            className="mx-auto max-w-7xl text-center"
-            style={{
-              width: "100%",
-              background: "black",
-              height: 380,
-              maxWidth: "85rem",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}>
-              <p
-                style={{
-                  color: "white",
-                  fontSize: 40,
-                  paddingTop: 50,
-                  paddingBottom: 10,
-                }}> MISSION </p>
-              <p
-                className="infoGray"
-                style={{
-                  width: "80%",
-                  textAlign: "justify",
-                  fontFamily: "Inter",
-                  fontSize: 22,
-                  fontStyle: "italic",
-                }}>“Guardare l'Italia con gli occhi dell'Artista, e trovare in ogni
->>>>>>> 4167d37e01d17eb7ebdbf7c0499330794b7321db
                 angolo del Bel Paese un luogo Meraviglioso. Guarda l'Italia con
                 occhi nuovi con Italia Meravigliosa in Tour. ”</p>
               <p style={style_CeoParagraph}>Paolo Artista</p>
