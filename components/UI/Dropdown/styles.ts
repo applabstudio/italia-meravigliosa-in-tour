@@ -35,7 +35,6 @@ export const DropdownList = styled.ul<{ active: boolean }>`
   min-width: 180px;
   padding: 0;
   li {
-    list-style: none;
     margin: 0;
     a,
     a:link {

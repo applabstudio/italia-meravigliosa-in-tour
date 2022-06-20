@@ -324,7 +324,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
     }
   }, [])
 
-  console.log("These are the events ", listaEventi)
+  // console.log("These are the events ", listaEventi)
 
   return (
     <>
