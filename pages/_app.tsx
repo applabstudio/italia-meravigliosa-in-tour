@@ -15,6 +15,10 @@ import { useState } from "react"
 import Script from "next/script"
 import PopupOptin from "../components/PopupOptin"
 import Link from "next/link"
+import './app.css'
+
+
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [items, setItems] = useState<EventProps[]>([])
@@ -90,11 +94,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <div className="selection:bg-primary-400 selection:text-white">
         <div className="min-h-screen"
-          style={{
-            minHeight: 'calc(100vh - 90px)',
-            maxHeight: 'calc(100vh - 220px)',
-            paddingBottom: 90
-          }}>
+          // style={{
+          //   minHeight: 'calc(100vh - 90px)',
+          //   maxHeight: 'calc(100vh - 220px)',
+          //   paddingBottom: 90
+          // }}
+          
+          >
           <Navbar />
           <Component {...pageProps} />
 
@@ -110,7 +116,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
             backgroundColor: "#fff"
           }}
-          className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar"
+          className="col-span-12 box-border flex flex-col px-4 md:px-10 lg:px-14 xl:col-span-12 botton_navbar"
         >
           <div
             className="footer-grid xl:col-span-2"

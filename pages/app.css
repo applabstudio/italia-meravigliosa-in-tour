@@ -1,0 +1,62 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: BaiJamjuree-Bold;
+    src: url("../public/fontFamily/BaiJamjuree-Bold.ttf");
+}
+@font-face {
+    font-family: Inter-Regular;
+    src: url("../public/fontFamily/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: Inter-SemiBold;
+    src: url("../public/fontFamily/Inter-SemiBold.ttf");
+}
+@font-face {
+    font-family: Inter-Bold;
+    src: url("../public/fontFamily/Inter-Bold.ttf");
+}
+@font-face {
+    font-family: Lato-Regular;
+    src: url("../public/fontFamily/Lato-Regular.ttf");
+}
+@font-face {
+    font-family: Poppins-Medium;
+    src: url("../public/fontFamily/Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("../public/fontFamily/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: Poppins-Regular;
+    src: url("../public/fontFamily/Poppins-Regular.ttf");
+}
+.f-bailjum-b{
+    font-family: BaiJamjuree-Bold;
+}
+.f-inter-r{
+    font-family: Inter-Regular;
+}
+.f-inter-sm{
+    font-family: Inter-SemiBold;
+}
+.f-inter-b{
+    font-family:Inter-Bold;
+}
+.f-lato-r{
+    font-family: Lato-Regular;
+}
+.f-popins-m{
+    font-family: Poppins-Medium;
+}
+.f-popins-r{
+    font-family: Poppins-Regular;
+}
+.f-rboto-r{
+    font-family: Roboto-Regular;
+}

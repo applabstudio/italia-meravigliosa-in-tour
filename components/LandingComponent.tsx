@@ -13,7 +13,6 @@ import PerfectScrollbar from "react-perfect-scrollbar"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
 
-
 import "swiper/css"
 import "swiper/css/pagination"
 import "react-perfect-scrollbar/dist/css/styles.css"
@@ -21,6 +20,7 @@ import Link from "next/link"
 import Input from "./common/Input"
 import PopupOptin from "./PopupOptin"
 import Script from "next/script"
+import Dilogbox from "./Dilogbox"
 
 const regions = {
   "0": {
@@ -277,19 +277,16 @@ const LandingComponent = ({ slug }: { slug: any }) => {
   const [categorie, setCategorie] = useState<any[]>([])
   const [region, setRegion] = useState<string>(null)
 
-  const isMounted = useIsMounted();
-
+  const isMounted = useIsMounted()
 
   useEffect(() => {
-
     if (isMounted) {
-      const e = document.getElementById("map_inner");
+      const e = document.getElementById("map_inner")
       if (e) {
         e.getElementsByTagName("div")[0].remove()
       }
     }
   }, [isMounted])
-
 
   useEffect(() => {
     data?.docs.forEach((d) => {
@@ -332,11 +329,11 @@ const LandingComponent = ({ slug }: { slug: any }) => {
   return (
     <>
       <PopupOptin />
-      <div className="mx-auto max-w-6xl" id="top-section">
+      <div className=" ml-auto mr-auto w-11/12 " id="top-section">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="xl:col-span-3"></div>
           <div className="welcome-map col-span-12 box-border flex flex-col px-4 xl:col-span-6">
-            <h2 className="text-center text-4xl font-bold">
+            <h2 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl">
               Il portale delle meraviglie
             </h2>
             <br />
@@ -398,7 +395,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 vuoi esplorare
               </p>
               <p
-                className="welcome-subtitle text-center"
+                className="welcome-subtitle text-center  text-primary-light "
                 style={{ fontWeight: "600", fontSize: 36 }}
               >
                 Guida alla scoperta del Bel Paese
@@ -408,66 +405,53 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           {listaEventi.filter(
             (doc) => doc?.luogo === slug || doc?.region === region
           ).length > 0 && (
-              <Section
-                titolo={`Eventi a ${slug || region}`}
-                slug={slug}
-                region={region}
-                eventi={listaEventi}
-              />
-            )}
+            <Section
+              titolo={`Eventi a ${slug || region}`}
+              slug={slug}
+              region={region}
+              eventi={listaEventi}
+            />
+          )}
           <div className="col-span-12 flex flex-col px-4">
-            <h4 className="text-center text-4xl font-bold text-gray-800 md:text-center">
+            <h4 className="f-bailjum-b mb-8    text-center text-5xl uppercase  text-primary-main md:text-center md:text-6xl lg:mb-12  lg:text-7xl">
               Categorie
             </h4>
 
-            <br />
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
-              {categorie?.length > 0 &&
-                categorie?.map((categoria) => (
-                  <p
-                    key={categoria?.titolo}
-                    className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200 iconWrapper"
-                  >
-                    <Link href={`/categoria/${categoria?.titolo}`}>
-                      <span className="flex cursor-pointer items-center justify-center space-x-2">
-                        <img
-                          className="iconCategory"
-                          src={categoria?.icona}
-                          alt=""
-                        />
-                        <p>{categoria?.titolo}</p>
-                      </span>
-                    </Link>
-                  </p>
-                ))}
+            <div className="ml-auto mr-auto  w-11/12 md:w-10/12 lg:w-9/12">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
+                {categorie?.length > 0 &&
+                  categorie?.map((categoria) => (
+                    <p
+                      key={categoria?.titolo}
+                      className="bg-primary-100 text-primary-600 hover:bg-primary-200 iconWrapper w-full rounded-md px-2 text-center text-lg font-medium transition duration-200"
+                    >
+                      <Link href={`/categoria/${categoria?.titolo}`}>
+                        <span className="flex cursor-pointer items-center justify-center space-x-2 rounded-xl bg-green-main py-3 px-6  text-sm ">
+                          <img
+                            className="iconCategory"
+                            src={categoria?.icona}
+                            alt=""
+                          />
+                          <p>{categoria?.titolo}</p>
+                        </span>
+                      </Link>
+                    </p>
+                  ))}
+              </div>
             </div>
           </div>
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12" id="who-we-are-section">
-            <h1
-              className="welcome-section text-center"
-              style={{ fontWeight: "700", fontSize: 80 }}
-            >
+          <div
+            className="col-span-12 box-border flex flex-col px-4 xl:col-span-12"
+            id="who-we-are-section"
+          >
+            <h1 className=" f-bailjum-b  my-6 text-center text-4xl  md:text-5xl  lg:text-7xl">
               ITALIA MERAVIGLIOSA
             </h1>
-            <p
-              className="text-center"
-              style={{
-                textAlign: "center",
-                fontSize: 22,
-                fontFamily: "roboto",
-              }}
-            >
+            <p className="f-rboto-r text-center  text-lg  text-primary-accent md:text-2xl ">
               Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020, con
               l’intenzione di mostrarvi le meraviglie nascoste del nostro paese
             </p>
-            <p
-              className="text-center"
-              style={{
-                textAlign: "center",
-                fontSize: 22,
-                fontFamily: "roboto",
-              }}
-            >
+            <p className="f-rboto-r     text-center  text-lg  text-primary-accent md:text-2xl ">
               Oggi con oltre 250 mila follower e tante foto di località
               pubblicate e milioni di visualizzazioni, abbiamo deciso di creare
               una redazione di “Italia Meravigliosa” e di creare questo portale,
@@ -475,206 +459,137 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               viaggio a tutti voi.
             </p>
           </div>
-
-          <div
-            className="col-span-12"
-            style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
-          >
-            <div
-              className="facebook_text_grid_width"
-              style={{ alignSelf: "center" }}
-            >
-              <p className="text facebook_text">
+        </main>
+        <div className="grid-row mt-8 grid  grid-cols-12  content-center  gap-4 md:mt-16  ">
+          <div className="col-span-12  md:col-span-10  lg:col-span-6    ">
+            <div className="   overflow-y-hidden  lg:w-8/12 ">
+              <p className="   f-inter-b md:mt-18  mt-0 text-center text-xl text-3xl text-primary-dark  md:text-4xl lg:mt-24 lg:text-left  ">
                 SEGUICI SU FACEBOOK, SIAMO OLTRE 250 MILA
               </p>
-              <div style={{ display: "flex", paddingBottom: 40, paddingTop: 40 }}>
-                <Image
+            </div>
+            <ul className="   my-5 md:flex ">
+              <li>
+                {" "}
+                <img
                   src="/images/fb.png"
                   objectFit="contain"
                   layout="intrinsic"
-                  width={25}
-                  height={25}
+                  className="ml-auto mr-auto h-auto w-11  "
                   alt="hand"
-                />
-                <p style={{ fontSize: 16, color: "#217BF4", }}>
+                />{" "}
+              </li>
+              <li className="pl-4 pt-3 ">
+                <p className="text-center text-grey-main md:text-left ">
                   https://www.facebook.com/istagram.paoloartista1/
                 </p>
+              </li>
+            </ul>
 
-              </div>
-              <ul style={{ listStyleType: "circle", color: "#217BF4", paddingLeft: 18, paddingBottom: 40 }} className="facebook_list">
-                <li>Post spettacolari e unici</li>
-                <li>Community</li>
-                <li>Share</li>
-              </ul>
-            </div>
-            <div className="facebook_text_grid_width hide_mobile">
-              <div className="grid grid-cols-12">
-                <div
-                  className="col-span-7 text-right"
-                  style={{ alignSelf: "center" }}
-                >
-                  <Image
-                    src="/images/card1.jpg"
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={250}
-                    height={300}
-                    alt="hand"
-                    className="cards"
-                  />
-                </div>
-                <div className="col-span-5">
-                  <Image
-                    src="/images/image2.png"
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={300}
-                    height={300}
-                    alt="hand"
-                  />
-                  <Image
-                    src="/images/image3.png"
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={300}
-                    height={300}
-                    alt="hand"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="facebook_text_grid_width view_mobile">
-              <Image
-                src="/images/card1.jpg"
-                objectFit="contain"
-                layout="intrinsic"
-                width={300}
-                height={300}
-                alt="hand"
-              />
-
-              <Image
-                src="/images/image2.png"
-                objectFit="contain"
-                layout="intrinsic"
-                width={300}
-                height={300}
-                alt="hand"
-              />
-              <Image
-                src="/images/image3.png"
-                objectFit="contain"
-                layout="intrinsic"
-                width={300}
-                height={300}
-                alt="hand"
-              />
-            </div>
+            <ul className="f-inter-r flex  list-disc pl-8     text-blue-main   md:inline md:space-x-0   ">
+              <li>Post spettacolari e unici</li>
+              <li className="ml-8 md:ml-0 ">Community</li>
+              <li className="ml-8 md:ml-0 ">Share</li>
+            </ul>
           </div>
-          <div className="col-span-12 box-border flex flex-col xl:col-span-12" >
+          <div className="col-span-12 md:col-span-6  lg:col-span-3  ">
+            <img
+              src="/images/card1.jpg"
+              objectFit="contain"
+              layout="intrinsic"
+              alt="hand"
+              className="mt-20 h-auto w-full rounded-xl "
+            />
+          </div>
+          <div className="col-span-12 mb-8   md:col-span-5  lg:col-span-3 lg:mb-0  ">
+            <img
+              src="/images/image2.png"
+              objectFit="contain"
+              layout="intrinsic"
+              alt="hand"
+              className="h-auto w-full rounded-xl "
+            />
+            <img
+              src="/images/image3.png"
+              objectFit="contain"
+              layout="intrinsic"
+              alt="hand"
+              className="mt-5 h-auto w-full rounded-xl "
+            />
+          </div>
+        </div>
+
+        <div className="col-span-12 box-border flex flex-col xl:col-span-12">
+          <div
+            className="xl:col-span-5"
+            style={{ alignSelf: "center", background: "red" }}
+          ></div>
+          <div className="xl:col-span-6"></div>
+        </div>
+
+        <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+          <p className=" f-bailjum-b my-10 text-center  text-3xl  sm:my-20 md:text-5xl lg:text-7xl ">
+            1M+ Utenti Giornalieri
+          </p>
+        </div>
+        <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
+          <div className="grid grid-cols-2  md:grid-cols-3 xl:grid-cols-12">
             <div
-              className="xl:col-span-5"
-              style={{ alignSelf: "center", background: "red" }}
-            ></div>
-            <div className="xl:col-span-6"></div>
-          </div>
-
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
-            <p
-              className="user-active text-center"
-              style={{ fontWeight: "700", fontSize: 80 }}
+              className="infoBox xl:col-span-3"
+              style={{ borderLeft: "none" }}
             >
-              1M+ Utenti Giornalieri
-            </p>
-          </div>
-          <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
-            <div className="grid grid-cols-2  md:grid-cols-3 xl:grid-cols-12">
-              <div
-                className="infoBox xl:col-span-3"
-                style={{ borderLeft: "none" }}
-              >
-                <p className="infoGray text-center">FOTO</p>
-                <p className="text-center">+50K</p>
-              </div>
-              <div className="infoBox xl:col-span-3">
-                <p className="infoGray text-center">INTERAZIONI</p>
-                <p className="text-center">+15M</p>
-              </div>
-              <div className="infoBox xl:col-span-3">
-                <p className="infoGray text-center" style={{ width: "50%" }}>
-                  LUOGHI MERAVIGLIOSI
-                </p>
-                <p className="text-center">+1000</p>
-              </div>
-              <div
-                className="infoBox xl:col-span-3"
-                style={{ borderRight: "none" }}
-              >
-                <p className="infoGray text-center">COLLABORAZIONI</p>
-                <p className="text-center">+50</p>
-              </div>
+              <p className="infoGray text-center">FOTO</p>
+              <p className="text-center">+50K</p>
+            </div>
+            <div className="infoBox xl:col-span-3">
+              <p className="infoGray text-center">INTERAZIONI</p>
+              <p className="text-center">+15M</p>
+            </div>
+            <div className="infoBox xl:col-span-3">
+              <p className="infoGray text-center" style={{ width: "50%" }}>
+                LUOGHI MERAVIGLIOSI
+              </p>
+              <p className="text-center">+1000</p>
+            </div>
+            <div
+              className="infoBox xl:col-span-3"
+              style={{ borderRight: "none" }}
+            >
+              <p className="infoGray text-center">COLLABORAZIONI</p>
+              <p className="text-center">+50</p>
             </div>
           </div>
-        </main>
+        </div>
       </div>
-      <div style={{ display: "flex", justifyContent: "center", paddingTop: 60 }}>
-        <div
-          className="mx-auto max-w-7xl"
-          style={{
-            width: "100%",
-            background: "black",
-            height: 380,
-            maxWidth: "85rem",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-          className="text-center"
-        >
-          <p
-            style={{
-              color: "white",
-              fontSize: 40,
-              paddingTop: 50,
-              paddingBottom: 10,
-            }}
-          >
+      <div   className=" bg-black  py-20    " >
+        <div className="ml-auto mr-auto w-10/12 lg:w-8/12  " >
+
+        
+          <p  className="text-white  f-popins-m text-4xl text-center " >
             MISSION
           </p>
           <p
-            className="infoGray"
+            className="infoGray  my-10  "
             style={{
-              width: "80%",
-              textAlign: "justify",
-              fontFamily: "Inter",
-              fontSize: 22,
               fontStyle: "italic",
             }}
+          
           >
             “Guardare l'Italia con gli occhi dell'Artista, e trovare in ogni
             angolo del Bel Paese un luogo Meraviglioso. Guarda l'Italia con
             occhi nuovi con Italia Meravigliosa in Tour. ”
           </p>
-          <p
-            style={{
-              color: "white",
-              fontSize: 20,
-              fontWeight: "700",
-              fontFamily: "Lato",
-            }}
-          >
+          <p  className=" f-lato-r text-2xl mt-8 mb-2 text-white  text-center " >
             Paolo Artista
           </p>
           <p
-            className="infoGray"
-            style={{ fontSize: 16, fontWeight: "500", fontFamily: "Inter" }}
+            className="infoGray  text-center "  
           >
             CEO & Founder Italia Meravigliosa
           </p>
-        </div>
+          </div>
       </div>
 
-      <div className="mx-auto max-w-7xl" id="work-with-us-section" >
+      <div className="mx-auto max-w-7xl" id="work-with-us-section">
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="col-span-12 px-4">
             <div
@@ -685,37 +600,30 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               }}
             >
               <p
-                className="workwithus text-center"
-                style={{
-                  fontSize: 55,
-                  paddingTop: 50,
-                  paddingBottom: 10,
-                  fontWeight: "700",
-                }}
-              >
+                className=" text-center f-bailjum-b text-3xl  sm:text-4xl lg:text-6xl text-black  mt-10 lg:mt-20 mb-8 lg:mb-10  ">
                 VUOI COLLABORARE CON NOI?
               </p>
+              <div className="  w-11/12 sm:w-10/12 lg:w-7/12 ml-auto mr-auto " >
               <p
-                className="infoGray text-center"
-                style={{
-                  width: "80%",
-                  textAlign: "justify",
-                  fontFamily: "Inter",
-                  fontSize: 22,
-                  fontStyle: "italic",
-                }}
-              >
+                className="text-center text-grey-light   Roboto-Regular ">
                 Italia Meravigliosa offre l’opportunità di collaborare con la
                 nostra redazione, se sei un fotografo, un videomaker oppure un
                 blogger di viaggio, contattaci ed entra a far parte del nostro
                 team, fai conoscere il tuo lavoro attraverso la nostra grande e
                 coesa community
               </p>
+              <p className="text-center my-4 underline " >info@italiameravigliosaintour.it </p>
+              </div>
             </div>
 
             <h4
               className="text-center text-4xl font-bold text-gray-800 md:text-left"
-              style={{ color: "black", fontStyle: "normal", marginTop: 20, paddingTop: 48 }}
+              style={{
+                color: "black",
+                fontStyle: "normal",
+                marginTop: 20,
+                paddingTop: 48,
+              }}
             >
               Contatti
             </h4>
@@ -746,7 +654,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               }}
             >
               <p
-                className="text-center"
+                className="text-center  "
                 style={{
                   fontSize: 40,
                   paddingTop: 50,
@@ -758,7 +666,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 Vuoi ricevere piu’ informazioni?
               </p>
               <p
-                className="text-center"
+                className="text-center  f-inter-r"
                 style={{
                   fontSize: 16,
                   fontWeight: "400",
@@ -767,45 +675,43 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               >
                 Iscriviti alla newsletter di italia meravigliosa
               </p>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginTop: 10,
-                  paddingBottom: 40,
-                }}
-              >
                 <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    background: "white",
-                    borderRadius: 50,
-                    height: 40,
-                    paddingLeft: 15,
-                  }}
+                  // style={{
+                  //   display: "flex",
+                  //   alignItems: "center",
+                  //   background: "white",
+                  //   borderRadius: 50,
+                  //   height: 40,
+                  //   paddingLeft: 15,
+                  // }}
                 >
-                  <FaEnvelope color="gray" />{" "}
-                  <input
-                    placeholder="La tua email"
-                    style={{ border: "none", width: "80%", marginLeft: 5 }}
-                  ></input>
-                </div>
-                <button
+                  <form className="w-6/12 ml-auto mr-auto my-4 text-center " >   
+    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+    <div class="relative">
+        <div class="flex absolute inset-y-0 left-0 items-center pl-4 pointer-events-none">
+        <FaEnvelope color="gray" />{" "}
+        </div>
+        <input type="search" id="default-search"  placeholder="La tua email" class="block p-4 pl-10 w-full text-sm  text-gray-900 bg-gray-50 rounded-3xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500  "  required />
+    </div>
+    <button
                   style={{
                     display: "flex",
                     alignItems: "center",
                     marginTop: 20,
                     background: "#231A36",
                   }}
-                  className="rounded-full bg-red-500 py-2 px-6 font-bold text-white hover:bg-red-700 buttonNewsletter"
+                  className="buttonNewsletter rounded-full  py-3 ml-auto mr-auto px-10 font-bold text-white hover:bg-red-700"
                 >
-                  <span style={{ marginRight: 5 }}>Iscriviti</span>{" "}
+                  <span style={{ marginRight: 5 }}  className=" f-inter-r text-sm" >Iscriviti</span>{" "}
                   <FaArrowCircleRight />
                 </button>
-              </div>
+</form>
+
+                  
+               
+                </div>
+             
+           
             </div>
           </div>
           <div
@@ -832,7 +738,13 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               }}
               className="text-center"
             >
-              <div style={{ display: "flex", alignItems: "center", flexFlow: "column" }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexFlow: "column",
+                }}
+              >
                 <Image
                   src="/images/logo.png"
                   objectFit="contain"
@@ -850,13 +762,21 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                       width={170}
                       height={170}
                       alt="hand"
-                      className="fbicon" />
+                      className="fbicon"
+                    />
                   </a>
                 </Link>
               </div>
-              <div style={{ display: "flex", height: 50, width: "100%", justifyContent: "center" }}>
+              <div
+                style={{
+                  display: "flex",
+                  height: 50,
+                  width: "100%",
+                  justifyContent: "center",
+                }}
+              >
                 <div style={{ height: 50, width: "80%" }}>
-                  <p style={{ width: "100%", textAlign: "center" }} >
+                  <p style={{ width: "100%", textAlign: "center" }}>
                     Copyright © 2022 Italia Meravigliosa in Tour, Tutti i
                     diritti sono riservati. | Powered by:
                     <Link href="https://applabstudio.com/">
@@ -867,7 +787,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                           layout="intrinsic"
                           width={80}
                           height={20}
-                          alt="hand" />
+                          alt="hand"
+                        />
                         AppLab Studio
                       </a>
                     </Link>
@@ -875,6 +796,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 </div>
               </div>
             </div>
+            {/* <Dilogbox/> */}
           </div>
         </main>
       </div>
@@ -884,10 +806,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
 export default LandingComponent
 
-
-
 const useIsMounted = () => {
-  const isMounted = React.useRef(false);
+  const isMounted = React.useRef(false)
 
   useEffect(() => {
     isMounted.current = true
@@ -897,5 +817,5 @@ const useIsMounted = () => {
     }
   }, [])
 
-  return isMounted.current;
+  return isMounted.current
 }

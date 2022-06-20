@@ -23,6 +23,9 @@ import PopupOptin from "../components/PopupOptin"
 import Script from "next/script"
 import LandingComponent from "../components/LandingComponent"
 
+
+
+
 const Section = ({
   titolo,
   slug,
