@@ -47,7 +47,7 @@ const Mission = () => {
     }
 
     return (
-        <div style={{ }}>
+        <div style={style_MissionContainer}>
           <div className="mx-auto max-w-7xl" style={style_MissionWrapper} className="text-center">
               <p style={style_headingMission}> MISSION </p>
               <p className="infoGray" style={style_ParagraphMission}>“Guardare l'Italia con gli occhi dell'Artista, e trovare in ogni
