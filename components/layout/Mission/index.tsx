@@ -5,7 +5,7 @@ const Mission = () => {
     return (
         <div style={{ display: "flex", justifyContent: "center", paddingTop: 60 }}>
           <div
-            className="mx-auto max-w-7xl"
+            className="mx-auto max-w-7xl text-center"
             style={{
               width: "100%",
               background: "black",
@@ -14,7 +14,7 @@ const Mission = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-            }} className="text-center">
+            }}>
               <p
                 style={{
                   color: "white",
