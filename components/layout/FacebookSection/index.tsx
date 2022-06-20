@@ -3,8 +3,11 @@ import Image from "next/image"
 import {LiFb} from "./styles";
 import Link from "next/link"
 
-
 const FacebookSection = () => {
+
+    const alignSelf = {
+        alignSelf: "center"
+    }
 
     return (
               <>
@@ -14,8 +17,7 @@ const FacebookSection = () => {
         
                     <div
                     className="facebook_text_grid_width"
-                    style={{ alignSelf: "center" }}
-                    >
+                    style={alignSelf}>
                     <p className="text facebook_text">
                         SEGUICI SU FACEBOOK, SIAMO OLTRE 250 MILA
                     </p>

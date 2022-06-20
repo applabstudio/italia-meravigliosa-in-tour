@@ -46,7 +46,7 @@ img.betaLabel {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 .col-span-12.box-border.flex.flex-col.px-4.xl\:col-span-12 {
