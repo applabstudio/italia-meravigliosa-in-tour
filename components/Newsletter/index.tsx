@@ -15,6 +15,8 @@ const Newsletter = () => {
             }}>
             <div
               style={{
+                position: "relative",
+                top: 50,
                 width: "95%",
                 padding: 5,
                 borderRadius: 40,
