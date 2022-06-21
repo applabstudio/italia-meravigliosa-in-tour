@@ -4,6 +4,7 @@ import { LiFb } from "./styles";
 import Link from "next/link"
 import { CursorClickIcon, PhotographIcon, StarIcon, ThumbUpIcon, TicketIcon } from '@heroicons/react/outline'
 
+
 const FacebookSection = () => {
 
     const alignSelf = {
@@ -119,24 +120,24 @@ const FacebookSection = () => {
             <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
                 <div className="grid grid-cols-2  md:grid-cols-3 xl:grid-cols-12">
                     <div className="infoBox xl:col-span-3" style={{ borderLeft: "none" }}>
-                            <PhotographIcon  width={30} height={30}/>
+                        <PhotographIcon className='text-blue-500' width={30} height={30}/>
                         <p className="infoGray text-center">FOTO</p>
-                        <p className="text-center">+50K</p>
+                        <p className="text-center text-blue-500">+50K</p>
                     </div>
                     <div className="infoBox xl:col-span-3">
-                        <ThumbUpIcon width={30} height={30}/>
+                        <ThumbUpIcon className='text-blue-500' width={30} height={30}/>
                         <p className="infoGray text-center">INTERAZIONI</p>
-                        <p className="text-center">+15M</p>
+                        <p className="text-center text-blue-500">+15M</p>
                     </div>
                     <div className="infoBox xl:col-span-3">
-                        <TicketIcon width={30} height={30}/>
+                        <TicketIcon className='text-blue-500' width={30} height={30}/>
                         <p className="infoGray text-center" style={{ width: "50%" }}>LUOGHI MERAVIGLIOSI</p>
-                        <p className="text-center">+1000</p>
+                        <p className="text-center text-blue-500">+1000</p>
                     </div>
                     <div className="infoBox xl:col-span-3" style={{ borderRight: "none" }}>
-                        <StarIcon width={30} height={30}/>
+                        <StarIcon className='text-blue-500' width={30} height={30}/>
                         <p className="infoGray text-center">COLLABORAZIONI</p>
-                        <p className="text-center">+50</p>
+                        <p className="text-center text-blue-500">+50</p>
                     </div>
                 </div>
             </div>
