@@ -115,7 +115,7 @@ function MyApp({ Component, pageProps }: { Component: any, pageProps: any }) {
               alt="home"
               className="homeIcon"
             />
-            <p className="text-center tabText" style={{ color: "#F56606" }}>
+            <p className="text-center tabText">
               Home
             </p>
           </div>

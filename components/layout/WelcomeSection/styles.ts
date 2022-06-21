@@ -10,8 +10,8 @@ export const ParagraphWelcome = styled.p`
 `;
 
 export const HeadingWelcome = styled.h1`
-    font-weight: "700";
     font-size: 80px; 
+    font-weight: 600;
 `;
 
 

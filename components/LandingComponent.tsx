@@ -335,9 +335,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="xl:col-span-3"></div>
           <div className="welcome-map col-span-12 box-border flex flex-col px-4 xl:col-span-6">
-            <h2 className="text-center text-4xl font-bold">
-              Il portale delle meraviglie
-            </h2>
+            <h2 className="text-center text-4xl font-bold text-gray-800">Il portale delle meraviglie</h2>
             <br />
             <br />
             <br />
@@ -408,7 +406,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             )}
           <div className="col-span-12 flex flex-col px-4">
             <h4 className="text-center text-4xl font-bold text-gray-800 md:text-center">
-              Categorie
+              CATEGORIE
             </h4>
 
             <br />
