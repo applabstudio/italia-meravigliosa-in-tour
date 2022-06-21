@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   overflow-x: hidden !important;
 }
 
@@ -12,8 +13,8 @@ html, body {
 }
 
 img.betaLabel {
- padding-left: 5px !important;
- padding-top: 10px !important;
+  padding-left: 5px !important;
+  padding-top: 10px !important;
 }
 
 /* Map Section */
@@ -46,7 +47,7 @@ img.betaLabel {
   align-items: center;
   justify-content: center;
   padding: 10px;
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .col-span-12.box-border.flex.flex-col.px-4.xl\:col-span-12 {
@@ -59,32 +60,29 @@ input#newsletter {
 }
 
 input#newsletter:hover {
-  border: 1px solid #C7FDE5;
+  border: 1px solid #c7fde5;
 }
-
-
 
 /* Facebook Section */
 .facebook_text {
-  font-weight: 600; 
+  font-weight: 600;
   font-size: 33px;
-  width: 60% 
+  width: 60%;
 }
 
 .facebook_text_grid_width {
-  width: 50%
+  width: 50%;
 }
-
 
 /* Newsletter */
 .input-newsletter:hover {
   transition: 0.2s;
-  border: 1px solid rgb(33, 255, 255) !important
+  border: 1px solid rgb(33, 255, 255) !important;
 }
 
 .buttonNewsletter:hover {
   transition: 0.3s;
-  transform:scale(0.92)
+  transform: scale(0.92);
 }
 
 /* Footer */
@@ -103,17 +101,20 @@ input#newsletter:hover {
   padding-right: 4px;
 }
 
-
 /* Contact Form */
-form input[type="text"], input[type="email"],  input[type="file"], textarea  {
+form input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea {
   border: 1px solid rgb(250, 250, 250);
 }
 
-
-form input[type="text"]:hover, input[type="email"]:hover,  input[type="file"]:hover, textarea:hover  {
-  border: 1px solid #C7FDE5;
+form input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="file"]:hover,
+textarea:hover {
+  border: 1px solid #c7fde5;
 }
-
 
 /* Bottom NavBar */
 
@@ -123,7 +124,12 @@ form input[type="text"]:hover, input[type="email"]:hover,  input[type="file"]:ho
   box-shadow: 0 -3px 5px #0000001a;
 }
 
-.homeIcon:hover, .infoIcon:hover, .heartIcon:hover, .workIcon:hover, .heartIcon:hover, .searchIcon:hover {
+.homeIcon:hover,
+.infoIcon:hover,
+.heartIcon:hover,
+.workIcon:hover,
+.heartIcon:hover,
+.searchIcon:hover {
   transition: 0.2s;
 }
 
@@ -151,7 +157,7 @@ form input[type="text"]:hover, input[type="email"]:hover,  input[type="file"]:ho
 .infoBox {
   width: 100%;
   height: 200px;
-  border: 1px solid #BCC3BD;
+  border: 1px solid #bcc3bd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,7 +205,6 @@ form input[type="text"]:hover, input[type="email"]:hover,  input[type="file"]:ho
   left: 9px !important;
 }
 
-
 /* Event Detail */
 .categoryContainer img {
   width: 22px;
@@ -211,7 +216,7 @@ form input[type="text"]:hover, input[type="email"]:hover,  input[type="file"]:ho
 
 .buttonMaps {
   margin-top: 16px;
-  background: #10B981;
+  background: #10b981;
   width: 200px;
   color: white;
   display: flex;
@@ -220,25 +225,34 @@ form input[type="text"]:hover, input[type="email"]:hover,  input[type="file"]:ho
 
 .buttonMaps:hover {
   transition: 0.2s;
-  background: #C7FDE5;
-  color: #10B981;
+  background: #c7fde5;
+  color: #10b981;
   transform: scale(0.95);
 }
 
 .wrapperDropdown button {
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
+}
+
+.facebook-mobile-icon {
+  display: flex;
+  padding: 40px 0px
 }
 
 /* Media Query */
-@media only screen and (min-width: 329px) and (max-width: 1281px) { 
-  .homeIcon, .heartIcon, .infoIcon, .workIcon, .searchIcon {
+@media only screen and (min-width: 329px) and (max-width: 1281px) {
+  .homeIcon,
+  .heartIcon,
+  .infoIcon,
+  .workIcon,
+  .searchIcon {
     width: 22px !important;
     height: 22px !important;
   }
   .welcome-section {
     font-size: 29px !important;
   }
-  
+
   .welcome-subtitle {
     font-size: 18px !important;
     padding: 33px !important;
@@ -257,14 +271,13 @@ form input[type="text"]:hover, input[type="email"]:hover,  input[type="file"]:ho
     border-left: none;
     border-right: none;
   }
-  
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
   .facebook_text {
-    font-weight: 600; 
+    font-weight: 600;
     font-size: 33px;
-    width: 100% 
+    width: 100%;
   }
   .luogoSpan {
     margin: 0 auto;
@@ -272,18 +285,26 @@ form input[type="text"]:hover, input[type="email"]:hover,  input[type="file"]:ho
   .creditsEvents {
     display: flex;
     flex-flow: column;
-}
-}
-
-@media only screen and (min-width: 0px) and (max-width: 700px) {
-  .facebook_text_grid_width{
-    width: 100%;
-    text-align: center;
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
-  .hide_mobile{
+  .facebook_text_grid_width {
+    width: 100%;
+    text-align: center;
+  }
+
+  .facebook-mobile {
+    margin-left: 0px !important;
+  }
+
+  .facebook-mobile-icon {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 700px) {
+  .hide_mobile {
     display: none;
   }
 }
@@ -292,12 +313,9 @@ form input[type="text"]:hover, input[type="email"]:hover,  input[type="file"]:ho
   display: none;
 }
 
-
-
-
 /* Media Query */
 @media only screen and (min-width: 0px) and (max-width: 700px) {
-  .view_mobile{
+  .view_mobile {
     display: block;
     align-items: center;
     display: flex;
@@ -313,5 +331,5 @@ form input[type="text"]:hover, input[type="email"]:hover,  input[type="file"]:ho
   .facebook_list li {
     margin: 10px;
     font-size: 14px;
-}
+  }
 }
