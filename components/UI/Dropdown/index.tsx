@@ -1,5 +1,5 @@
 import React from "react"
-import { Wrapper, ActivatorButton, DropdownList } from "./styles";
+import { Wrapper, ActivatorButton, DropdownList, SelectSkills} from "./styles";
 
 interface IDropdownItem {
   id: number;
@@ -43,24 +43,26 @@ const Dropdown = ({
 
 
 
-  return <select
-    id="dropdown1"
-    name="role"
-    placeholder="Select your role"
-    className="form-input rounded-2xl border-0 bg-gray-100 px-4 py-3 text-gray-800 caret-primary-500 outline-none placeholder:text-gray-400 focus:border-0 focus:ring-0"
-    onChange={(e) => {
-      selectedProfession(e.target.value)
-    }}
-  >
-    {dropdownItems.map((item) => {
-      return (
-        <option key={item.id}>
-          {item.text}
-        </option>
-      )
-    }
+  return <div>
+    <SelectSkills 
+      id="dropdown1"
+      name="role"
+      placeholder="Select your role"
+      className="form-input rounded-2xl border-0 bg-gray-100 px-4 py-3 text-gray-800 caret-primary-500 outline-none placeholder:text-gray-400 focus:border-0 focus:ring-0"
+      onChange={(e) => {
+        selectedProfession(e.target.value)
+      }}>
+        {dropdownItems.map((item) => {
+          return (
+            <option key={item.id}>
+              {item.text}
+            </option>
+          )
+        }
     )}
-  </select>
+  </SelectSkills>
+  </div>
+   
 };
 
 export default Dropdown;

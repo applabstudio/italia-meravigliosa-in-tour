@@ -114,7 +114,7 @@ const Home: NextPage = () => {
     }
   }, [])
 
-  console.log("These are the events ", listaEventi)
+  // console.log("These are the events ", listaEventi)
 
   return (
     <>

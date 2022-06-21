@@ -6,6 +6,7 @@ import React from "react"
 const Footer = () => {
   return (
     <footer>
+
      <div style={{ display: "flex", alignItems: "center", flexFlow: "column" }}>
                 <Image
                   src="/images/logo.png"

@@ -57,14 +57,17 @@ const Contatti = () => {
           placeholder="La tua email..."
         />
 
+        <div className="skillsWrapper">
+        <span>Professione</span>
+          <Dropdown
+            selectedProfession={(_profession: string) => {
+              console.clear()
+              console.log("first", _profession);
+              setProfession(_profession)
+            }}
+          />
+        </div>
 
-        <Dropdown
-          selectedProfession={(_profession: string) => {
-            console.clear()
-            console.log("first", _profession);
-            setProfession(_profession)
-          }}
-        />
 
       </div>
 
