@@ -2,6 +2,7 @@ import * as React from 'react'
 import Image from "next/image"
 import { LiFb } from "./styles";
 import Link from "next/link"
+import { CursorClickIcon, PhotographIcon, StarIcon, ThumbUpIcon, TicketIcon } from '@heroicons/react/outline'
 
 const FacebookSection = () => {
 
@@ -105,42 +106,35 @@ const FacebookSection = () => {
                         alt="hand"
                     />
                 </div>
-            </div>.
+            </div>
             <div className="col-span-12 box-border flex flex-col xl:col-span-12" >
-                <div
-                    className="xl:col-span-5"
-                    style={{ alignSelf: "center", background: "red" }}
-                ></div>
+                <div className="xl:col-span-5" style={{ alignSelf: "center", background: "red" }}></div>
                 <div className="xl:col-span-6"></div>
             </div>
             <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
-                <p
-                    className="user-active text-center"
-                    style={{ fontWeight: "700", fontSize: 80 }}>
+                <p className="user-active text-center" style={{ fontWeight: "700", fontSize: 80 }}>
                     1M+ Utenti Giornalieri
                 </p>
             </div>
             <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
                 <div className="grid grid-cols-2  md:grid-cols-3 xl:grid-cols-12">
-                    <div
-                        className="infoBox xl:col-span-3"
-                        style={{ borderLeft: "none" }}>
+                    <div className="infoBox xl:col-span-3" style={{ borderLeft: "none" }}>
+                            <PhotographIcon  width={30} height={30}/>
                         <p className="infoGray text-center">FOTO</p>
                         <p className="text-center">+50K</p>
                     </div>
                     <div className="infoBox xl:col-span-3">
+                        <ThumbUpIcon width={30} height={30}/>
                         <p className="infoGray text-center">INTERAZIONI</p>
                         <p className="text-center">+15M</p>
                     </div>
                     <div className="infoBox xl:col-span-3">
-                        <p className="infoGray text-center" style={{ width: "50%" }}>
-                            LUOGHI MERAVIGLIOSI
-                        </p>
+                        <TicketIcon width={30} height={30}/>
+                        <p className="infoGray text-center" style={{ width: "50%" }}>LUOGHI MERAVIGLIOSI</p>
                         <p className="text-center">+1000</p>
                     </div>
-                    <div
-                        className="infoBox xl:col-span-3"
-                        style={{ borderRight: "none" }}>
+                    <div className="infoBox xl:col-span-3" style={{ borderRight: "none" }}>
+                        <StarIcon width={30} height={30}/>
                         <p className="infoGray text-center">COLLABORAZIONI</p>
                         <p className="text-center">+50</p>
                     </div>
