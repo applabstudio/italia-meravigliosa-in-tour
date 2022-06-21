@@ -30,7 +30,7 @@ class MainDocument extends Document {
 
           <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=G-NFPVBXG6S7`}
           />
           <script
             dangerouslySetInnerHTML={{
@@ -38,7 +38,7 @@ class MainDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}', {
+            gtag('config', 'G-NFPVBXG6S7', {
               page_path: window.location.pathname,
             });
           `,

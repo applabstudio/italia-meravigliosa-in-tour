@@ -12,11 +12,9 @@ import WishContext, {
 } from "../components/context/WishContext"
 import _ from "lodash"
 import { useState } from "react"
-import Script from "next/script"
-import PopupOptin from "../components/PopupOptin"
 import Link from "next/link"
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: { Component: any, pageProps: any }) {
   const [items, setItems] = useState<EventProps[]>([])
   const [homeHover, setHomeHover] = useState<any>("home")
   const [infoHover, setInfoHover] = useState<any>("info")
