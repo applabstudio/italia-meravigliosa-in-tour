@@ -19,7 +19,11 @@ export default function PopupOptin() {
   }
 
   const subscribeNow = async () => {
-    subscribeToConvertKit({ email });
+    const status = await subscribeToConvertKit({ email });
+
+    if (status) {
+      closeModal()
+    }
   }
 
   return (

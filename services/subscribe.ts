@@ -6,9 +6,7 @@ export const subscribeToConvertKit = async ({ email }: { email: string }) => {
   }
 
   try {
-    const FORM_ID = '3374938';
     const API_KEY = 'EyXsBSy19wUCVAoj3TKKJw';
-    const API_URL = 'https://app.convertkit.com/';
 
     //what do we want to send to CK?
     const data = { email, api_key: API_KEY };
@@ -27,7 +25,8 @@ export const subscribeToConvertKit = async ({ email }: { email: string }) => {
     }
 
 
-    return alert("Succesfully Subscribed")
+    alert("Succesfully Subscribed")
+    return 1;
   } catch (error: any) {
     alert(error.message || error.toString())
 

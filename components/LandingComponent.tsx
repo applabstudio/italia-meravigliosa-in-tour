@@ -511,12 +511,6 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
                 </ins>
 
-                {/* <AdSense.Google
-                  client={ADSENSE_PUBLISHER_KEY}
-                  slot={ADSENSE_SLOT}
-                /> */}
-
-
               </div>
 
               <Footer />
