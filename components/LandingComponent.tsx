@@ -27,6 +27,10 @@ import Newsletter from "./Newsletter"
 import FacebookSection from "./layout/FacebookSection"
 import Mission from "./layout/Mission"
 
+
+const ADSENSE_PUBLISHER_KEY = 'ca-pub-7292810486004926';
+const ADSENSE_SLOT = '7610040244';
+
 const regions = {
   "0": {
     states: ["ITA5418", "ITA5419", "ITA5420", "ITA5421"],
@@ -361,7 +365,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                     }
                   }
                 }}
-                className="w-full"/>
+                className="w-full" />
               <div
                 style={{
                   display: "flex",
@@ -437,14 +441,14 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 ))}
             </div>
           </div>
-         
-         {/* Welcome Section Component */}
-         <WelcomeSection/>
-         <FacebookSection/>
+
+          {/* Welcome Section Component */}
+          <WelcomeSection />
+          <FacebookSection />
         </main>
       </div>
-            
-         <Mission/>
+
+      <Mission />
 
       <div className="mx-auto max-w-7xl" id="work-with-us-section" >
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
@@ -488,11 +492,11 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             </h4>
             <Contatti />
           </div>
-            <Newsletter/>
+          <Newsletter />
           <div
             className="col-span-12 rounded-lg p-6"
             style={{ marginBottom: 20 }}></div>
-            <div
+          <div
             className="col-span-12"
             style={{
               width: "100%",
@@ -510,7 +514,28 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 alignItems: "center",
               }}
               className="text-center">
-              <Footer/>
+
+              <div style={{ minWidth: 300 }} >
+
+
+                <ins className="adsbygoogle"
+                  style={{ display: "block", textAlign: "center" }}
+                  data-ad-layout="in-article"
+                  data-ad-format="fluid"
+                  data-ad-client={ADSENSE_PUBLISHER_KEY}
+                  data-ad-slot={ADSENSE_SLOT}>
+
+                </ins>
+
+                {/* <AdSense.Google
+                  client={ADSENSE_PUBLISHER_KEY}
+                  slot={ADSENSE_SLOT}
+                /> */}
+
+
+              </div>
+
+              <Footer />
             </div>
           </div>
         </main>
