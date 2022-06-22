@@ -21,11 +21,13 @@ import Link from "next/link"
 import Input from "./common/Input"
 import PopupOptin from "./PopupOptin"
 import Script from "next/script"
+import Mission from "./layout/Mission"
 import Footer from './Footer'
 import WelcomeSection from "./layout/WelcomeSection"
 import Newsletter from "./Newsletter"
 import FacebookSection from "./layout/FacebookSection"
-import Mission from "./layout/Mission"
+
+
 
 
 const ADSENSE_PUBLISHER_KEY = 'ca-pub-7292810486004926';
@@ -337,9 +339,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
         <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="xl:col-span-3"></div>
           <div className="welcome-map col-span-12 box-border flex flex-col px-4 xl:col-span-6">
-            <h2 className="text-center text-4xl font-bold">
-              Il portale delle meraviglie
-            </h2>
+            <h2 className="text-center text-4xl font-bold text-gray-800">Il portale delle meraviglie</h2>
             <br />
             <br />
             <br />
@@ -388,18 +388,12 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           <div className="xl:col-span-3"></div>
           {listaEventi.filter((doc) => doc?.luogo === slug).length == 0 && (
             <div className="col-span-12 box-border flex flex-col px-4 xl:col-span-12">
-              <p
-                className="text-center"
-                style={{ fontWeight: "700", fontSize: 18 }}
-              >
+              <p className="text-center" style={{ fontWeight: "700", fontSize: 18 }}>
                 {/* TODO insert tooltip inside span region with this label: Divertiti a trovare luoghi meravigliosi */}
                 Clicca su una <span style={{ color: "red" }}>regione</span> che
                 vuoi esplorare
               </p>
-              <p
-                className="welcome-subtitle text-center"
-                style={{ fontWeight: "600", fontSize: 36 }}
-              >
+              <p className="welcome-subtitle text-center" style={{ fontWeight: "600", fontSize: 36 }}>
                 Guida alla scoperta del Bel Paese
               </p>
             </div>
@@ -416,7 +410,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             )}
           <div className="col-span-12 flex flex-col px-4">
             <h4 className="text-center text-4xl font-bold text-gray-800 md:text-center">
-              Categorie
+              CATEGORIE
             </h4>
 
             <br />
@@ -425,15 +419,13 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 categorie?.map((categoria) => (
                   <p
                     key={categoria?.titolo}
-                    className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200 iconWrapper"
-                  >
+                    className="w-full rounded-md bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200 iconWrapper">
                     <Link href={`/categoria/${categoria?.titolo}`}>
                       <span className="flex cursor-pointer items-center justify-center space-x-2">
                         <img
                           className="iconCategory"
                           src={categoria?.icona}
-                          alt=""
-                        />
+                          alt="" />
                         <p>{categoria?.titolo}</p>
                       </span>
                     </Link>
@@ -441,8 +433,6 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 ))}
             </div>
           </div>
-
-          {/* Welcome Section Component */}
           <WelcomeSection />
           <FacebookSection />
         </main>
@@ -459,8 +449,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 flexDirection: "column",
                 alignItems: "center",
               }}>
-              <p
-                className="workwithus text-center"
+              <p className="workwithus text-center"
                 style={{
                   fontSize: 55,
                   paddingTop: 50,
@@ -469,8 +458,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 }}>
                 VUOI COLLABORARE CON NOI?
               </p>
-              <p
-                className="infoGray text-center"
+              <p className="infoGray text-center"
                 style={{
                   width: "80%",
                   textAlign: "justify",
@@ -485,25 +473,21 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 coesa community
               </p>
             </div>
-            <h4
-              className="text-center text-4xl font-bold text-gray-800 md:text-left"
+            <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left"
               style={{ color: "black", fontStyle: "normal", marginTop: 20, paddingTop: 48 }}>
               Contatti
             </h4>
             <Contatti />
           </div>
           <Newsletter />
-          <div
-            className="col-span-12 rounded-lg p-6"
+          <div className="col-span-12 rounded-lg p-6"
             style={{ marginBottom: 20 }}></div>
-          <div
-            className="col-span-12"
+          <div className="col-span-12"
             style={{
               width: "100%",
               background: "white",
             }}>
-            <div
-              className="mx-auto max-w-7xl"
+            <div className="mx-auto max-w-7xl"
               style={{
                 width: "100%",
                 background: "white",
