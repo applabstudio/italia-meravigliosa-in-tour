@@ -2,8 +2,13 @@ import { Dialog, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
 import Input from "./common/Input"
 
+import { subscribeToConvertKit } from "../services/subscribe";
+
 export default function PopupOptin() {
   let [isOpen, setIsOpen] = useState(Math.random() < 0.5)
+
+
+  const [email, setEmail] = useState("");
 
   function closeModal() {
     setIsOpen(false)
@@ -11,6 +16,10 @@ export default function PopupOptin() {
 
   function openModal() {
     setIsOpen(true)
+  }
+
+  const subscribeNow = async () => {
+    subscribeToConvertKit({ email });
   }
 
   return (
@@ -68,6 +77,10 @@ export default function PopupOptin() {
                     placeholder="La tua email..."
                     showLabel={false}
                     className="w-full"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value)
+                    }}
                   />
 
                   <br />
@@ -82,6 +95,7 @@ export default function PopupOptin() {
                     </button>
 
                     <button
+                      onClick={subscribeNow}
                       type="button"
                       className="inline-flex w-full justify-center rounded-md border border-transparent bg-primary-100 px-4 py-2 text-sm font-medium text-primary-900 transition duration-200 hover:bg-primary-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
                     >

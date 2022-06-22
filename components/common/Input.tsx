@@ -7,6 +7,8 @@ interface InputProps {
   placeholder: string
   showLabel?: boolean
   className?: string
+  value: string,
+  onChange: (e: any) => void
 }
 
 const Input = ({
@@ -16,6 +18,8 @@ const Input = ({
   placeholder,
   showLabel = true,
   className,
+  value,
+  onChange
 }: InputProps) => {
   return (
     <div className={`flex flex-col ${className}`}>
@@ -30,6 +34,8 @@ const Input = ({
         id={id}
         name={id}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         className="form-input rounded-full border-0 bg-gray-100 px-4 py-3 text-gray-800 caret-primary-500 outline-none placeholder:text-gray-400 focus:border-0 focus:ring-0"
       />
     </div>
