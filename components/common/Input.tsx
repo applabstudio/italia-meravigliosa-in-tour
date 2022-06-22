@@ -7,8 +7,8 @@ interface InputProps {
   placeholder: string
   showLabel?: boolean
   className?: string
-  value: string,
-  onChange: (e: any) => void
+  value?: string,
+  onChange?: (e: any) => void
 }
 
 const Input = ({
