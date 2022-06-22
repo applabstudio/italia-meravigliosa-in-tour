@@ -1,19 +1,53 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from 'next/router'
 
 export default function Tabbar() {
 
+
+    const router = useRouter()
 
     const [homeHover, setHomeHover] = useState<any>("home")
     const [infoHover, setInfoHover] = useState<any>("info")
     const [workHover, setWorkHover] = useState<any>("work")
     const [heartHover, setHeartHover] = useState<any>("heart")
     const [searchHover, setSearchHover] = useState<any>("search")
+
+    const [selectedTab, setSelectedTab] = useState<string>("");
+
+
+    useEffect(() => {
+        setSelectedTab(router.asPath);
+    }, [router.asPath]);
+
+
+    let homeIcon: string = "";
+    let infoIcon: string = "";
+    let workIcon: string = "";
+    let heartIcon: string = "";
+    let searchIcon: string = "";
+
+    if (selectedTab == "home" || selectedTab == "/") {
+        homeIcon = "home_hover"
+    } else if (selectedTab == "/#who-we-are-section") {
+        infoIcon = "info_hover"
+    } else if (selectedTab == "/#work-with-us-section") {
+        workIcon = "work_hover"
+    } else if (selectedTab == "/#wish-list-section") {
+        heartIcon = "heart_hover"
+    } else if (selectedTab == "/#top-section") {
+        searchIcon = "search_hover"
+    }
+
+
     return (
 
 
         <div
+            onClick={() => {
+                setSelectedTab("home");
+            }}
             style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
@@ -40,7 +74,7 @@ export default function Tabbar() {
             >
 
                 <Image
-                    src={`/images/${homeHover}.png`}
+                    src={`/images/${homeIcon || homeHover}.png`}
                     objectFit="contain"
                     layout="intrinsic"
                     width={34}
@@ -68,7 +102,7 @@ export default function Tabbar() {
                         }
                     >
                         <Image
-                            src={`/images/${infoHover}.png`}
+                            src={`/images/${infoIcon || infoHover}.png`}
                             objectFit="contain"
                             layout="intrinsic"
                             width={34}
@@ -96,7 +130,7 @@ export default function Tabbar() {
                         }
                     >
                         <Image
-                            src={`/images/${workHover}.png`}
+                            src={`/images/${workIcon || workHover}.png`}
                             objectFit="contain"
                             layout="intrinsic"
                             width={34}
@@ -125,7 +159,7 @@ export default function Tabbar() {
                         }
                     >
                         <Image
-                            src={`/images/${heartHover}.png`}
+                            src={`/images/${heartIcon || heartHover}.png`}
                             objectFit="contain"
                             layout="intrinsic"
                             width={34}
@@ -153,7 +187,7 @@ export default function Tabbar() {
                         }
                     >
                         <Image
-                            src={`/images/${searchHover}.png`}
+                            src={`/images/${searchIcon || searchHover}.png`}
                             objectFit="contain"
                             layout="intrinsic"
                             width={34}
