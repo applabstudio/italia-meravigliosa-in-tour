@@ -16,7 +16,8 @@ import Script from "next/script"
 import PopupOptin from "../components/PopupOptin"
 import Link from "next/link"
 import './app.css'
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -27,6 +28,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [workHover, setWorkHover] = useState<any>("work")
   const [heartHover, setHeartHover] = useState<any>("heart")
   const [searchHover, setSearchHover] = useState<any>("search")
+
+const [whishlistcard, setwhishlistcard] = useState(false)
 
   const remove = (id: string) => {
     let i = _.reject(items, (item) => {
@@ -47,7 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <WishContext.Provider value={wishContext}>
+        <WishContext.Provider value={wishContext}>
       <NextSeo
         title="Italia Meravigliosa in tour"
         description="Trova eventi meravigliosi in tutta Italia alla portata di un click."
@@ -67,6 +70,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         strategy="lazyOnload"
         src={"https://www.googletagmanager.com/gtag/js?id=G-BZ2LLF0XHC"}
       />
+
 
       <Script strategy="lazyOnload">
         {`
@@ -90,6 +94,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
+  
+        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+          <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
       </Head>
 
       <div className="selection:bg-primary-400 selection:text-white">
@@ -204,10 +211,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             </a>
           </Link>
 
-          <Link href="#wish-list-section" >
+          <Link  href=""  >
             <a>
 
-              <div className="footer-grid xl:col-span-2"
+              <div   onClick={()=>{ setwhishlistcard(true)  }} className="footer-grid xl:col-span-2"
                 onMouseEnter={
                   () => {
                     setHeartHover("heart_hover")
@@ -227,14 +234,37 @@ function MyApp({ Component, pageProps }: AppProps) {
                   height={34}
                   alt="heart"
                   className="heartIcon"
+
                 />
-                <p className="text-center tabText">Wishlist</p>
+                <p className="text-center tabText"    >Wishlist  </p>
               </div>
 
             </a>
           </Link>
 
-          <Link href={"#top-section"}>
+                  {whishlistcard ?    
+                  <> 
+                <div className="background-dilog" > </div>
+          <div  className="block  overflow-y-auto   overflow-x-hidden fixed top-0 right-0 left-0 md:top-1/3  md:left-1/3   z-index-card  md:inset-0 h-modal md:h-full">
+    <div className="relative p-4 w-full max-w-md h-full md:h-auto  ">
+        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button"  onClick={()=>{ setwhishlistcard(false)  }} className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+            </button>
+            <div className="p-6 ">
+                    <h1 className="text-xl f-inter-sm pb-2 " > Wishlist </h1>
+                <h3 className="mb-5 text-sm text-grey-main ">Ecco gli eventi che hai aggiunto alla wishlist</h3>
+                <h3 className="mb-5 text-lg f-popins-m ">Non hai  aggiunto eventi alla Wishlist</h3>
+                <button className=" bg-pink-light px-8 py-3 rounded-lg  text-pink-main f-inter-b " > Fatto </button>
+            </div>
+        </div>
+    </div>
+</div>
+</>  : "" }
+
+     
+
+          <Link href={""}  >
             <a>
               <div className="footer-grid xl:col-span-2"
                 onMouseEnter={

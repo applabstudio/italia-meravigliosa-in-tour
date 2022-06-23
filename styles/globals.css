@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-div {
+/* div {
   overflow-x: hidden;
-}
+} */
 
 .containerCredits {
   box-shadow: 0px 3px 3px #e5e5e5;

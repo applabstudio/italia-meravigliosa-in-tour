@@ -5,6 +5,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    
   ],
   theme: {
     extend: {
@@ -28,13 +29,22 @@ module.exports = {
         },
         green:{
           main:"#C7FDE5",
+          dark:"#009D69",
         },
         grey:{
           main:"#656464",
           light:"#767E7E",
+          exlight:"#6B7280",
+        },
+        red:{
+          main:"#EF4444",
         },
         blue:{
           main:"#217BF4",
+        },
+        pink:{
+          main: "#F36A6A",
+          light:"#FEE2E2"
         },
       
       },
@@ -53,5 +63,5 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography") ],
 }
