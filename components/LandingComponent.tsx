@@ -402,7 +402,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             (doc) => doc?.luogo === slug || doc?.region === region
           ).length > 0 && (
               <Section
-                titolo={`Eventi a ${slug || region}`}
+                titolo={`Luoghi in: ${slug || region}`}
                 slug={slug}
                 region={region}
                 eventi={listaEventi}
