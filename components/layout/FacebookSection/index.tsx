@@ -13,11 +13,11 @@ const FacebookSection = () => {
 
     return (
         <>
-            <div className="col-span-12 facebook-mobile" style={{ width: "100%", display: "flex", flexWrap: "wrap" }}>
+            <div className="col-span-12 facebook-mobile" style={{ width: "100%", display: "flex", flexWrap: "wrap", padding: 15}}>
                 <div
                     className="facebook_text_grid_width"
                     style={alignSelf}>
-                    <p className="text facebook_text text-gray-800">SEGUICI SU FACEBOOK, SIAMO OLTRE 250 MILA</p>
+                    <p className="text facebook_text text-gray-800">SEGUICI SU FACEBOOK SIAMO OLTRE 250 MILA</p>
                     <div className='facebook-mobile-icon' >
                         <Image
                             src="/images/fb.png"
@@ -27,7 +27,7 @@ const FacebookSection = () => {
                             height={25}
                             alt="hand"/>
                         <Link href="https://www.facebook.com/istagram.paoloartista1/">
-                            <a style={{ fontSize: 16, color: "#217BF4", paddingLeft: 8 }} title='Pagina Facebook'>https://www.facebook.com/istagram.paoloartista1/</a>
+                            <a style={{ fontSize: 14, color: "#217BF4", paddingLeft: 8}} title='Pagina Facebook'>https://www.facebook.com/istagram.paoloartista1/</a>
                         </Link>
                     </div>
                     <ul style={{ color: "#217BF4", paddingLeft: 18, paddingBottom: 40 }} className="facebook_list">
