@@ -3,10 +3,14 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from 'next/router'
 
-export default function Tabbar() {
+
+import { useIsMounted } from "../../services/useIsMounted";
+
+export default function Tabbar({  }) {
 
 
     const router = useRouter()
+    const isMounted = useIsMounted();
 
     const [homeHover, setHomeHover] = useState<any>("home")
     const [infoHover, setInfoHover] = useState<any>("info")
@@ -45,9 +49,6 @@ export default function Tabbar() {
 
 
         <div
-            onClick={() => {
-                setSelectedTab("home");
-            }}
             style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
@@ -57,8 +58,12 @@ export default function Tabbar() {
                 right: 0,
                 backgroundColor: "#fff"
             }}
-            className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar">
+            className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar"
+        >
             <div
+                onClick={() => {
+                    setSelectedTab("home");
+                }}
                 className="footer-grid xl:col-span-2"
                 style={{ borderLeft: "none" }}
                 onMouseEnter={

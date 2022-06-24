@@ -5,6 +5,7 @@
 html,
 body {
   overflow-x: hidden !important;
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -236,7 +237,7 @@ textarea:hover {
 
 .facebook-mobile-icon {
   display: flex;
-  padding: 40px 0px
+  padding: 40px 0px;
 }
 
 /* Media Query */

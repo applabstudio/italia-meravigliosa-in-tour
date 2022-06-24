@@ -2,11 +2,16 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
-import {WelcomeSectionContainer, ParagraphWelcome, HeadingWelcome} from './styles'
+import { WelcomeSectionContainer, ParagraphWelcome, HeadingWelcome } from './styles'
 
 const WelcomeSection = () => {
+
   return (
-    <WelcomeSectionContainer className="col-span-12 box-border flex flex-col px-4 xl:col-span-12" id="who-we-are-section">
+    <WelcomeSectionContainer
+      className="col-span-12 box-border flex flex-col px-4 xl:col-span-12"
+      id="who-we-are-section"
+    >
+
       <HeadingWelcome className="welcome-section text-center text-gray-800">ITALIA MERAVIGLIOSA</HeadingWelcome>
       <ParagraphWelcome className="text-center">
         Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020, con
@@ -19,7 +24,8 @@ const WelcomeSection = () => {
         perchè possa guidarvi in <b>luoghi meravigliosi da esplorare</b>, buon
         viaggio a tutti voi.
       </ParagraphWelcome>
-  </WelcomeSectionContainer>
+
+    </WelcomeSectionContainer>
   )
 }
 

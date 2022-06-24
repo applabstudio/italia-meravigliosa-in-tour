@@ -1,6 +1,5 @@
 // @ts-nocheck
 import Image from "next/image"
-import type { NextPage } from "next"
 import { SearchBar } from "../components/common/SearchBar"
 import Event from "../components/Event"
 import React, { useEffect, useState } from "react"
@@ -13,6 +12,8 @@ import PerfectScrollbar from "react-perfect-scrollbar"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
 
+
+import { useIsMounted } from "../services/useIsMounted"
 
 import "swiper/css"
 import "swiper/css/pagination"
@@ -433,8 +434,14 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 ))}
             </div>
           </div>
+
           <WelcomeSection />
+
+
+
           <FacebookSection />
+
+
         </main>
       </div>
 
@@ -473,11 +480,20 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 coesa community
               </p>
             </div>
+
+
+
+
+
             <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left"
               style={{ color: "black", fontStyle: "normal", marginTop: 20, paddingTop: 48 }}>
               Contatti
             </h4>
             <Contatti />
+
+
+
+
           </div>
           <Newsletter />
           <div className="col-span-12 rounded-lg p-6"
@@ -523,19 +539,3 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 }
 
 export default LandingComponent
-
-
-
-const useIsMounted = () => {
-  const isMounted = React.useRef(false);
-
-  useEffect(() => {
-    isMounted.current = true
-
-    return () => {
-      isMounted.current = false
-    }
-  }, [])
-
-  return isMounted.current;
-}
