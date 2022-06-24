@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WelcomeSectionContainer = styled.div`
-    padding: 10px 0;
+    padding: 15px;
 `;
 
 export const ParagraphWelcome = styled.p`
