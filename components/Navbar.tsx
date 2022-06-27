@@ -19,9 +19,8 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
 
   return (
     <div
-      className={`relative z-10 flex w-full transform flex-col items-center space-y-4 p-4 transition-all ease-in-out ${
-        isOpen ? "translate-y-0" : "-mb-56 -translate-y-full"
-      }`}
+      className={`relative z-10 flex w-full transform flex-col items-center space-y-4 p-4 transition-all ease-in-out ${isOpen ? "translate-y-0" : "-mb-56 -translate-y-full"
+        }`}
     >
       <SearchBar />
       <div className="flex space-x-6">
@@ -65,7 +64,7 @@ const Navbar = () => {
           <div className="flex w-full items-center justify-center space-x-14 md:justify-between lg:w-fit lg:justify-start">
             <Link href="/" passHref>
               <a className="outline-none ring-primary-200 transition duration-200 focus:ring-2 ">
-                <div  style={{ display:'flex' }}>
+                <div style={{ display: 'flex' }}>
                   <Image
                     src="/images/logo.png"
                     objectFit="contain"
@@ -74,7 +73,7 @@ const Navbar = () => {
                     height={50}
                     alt="hand"
                   />
-                  <p style={{width:20}}></p>
+                  <p style={{ width: 20 }}></p>
                   <Image
                     src="/images/textlogo.png"
                     objectFit="contain"
@@ -83,7 +82,7 @@ const Navbar = () => {
                     height={50}
                     alt="hand"
                   />
-                  <p style={{width:20}}></p>
+                  <p style={{ width: 20 }}></p>
                   {/* TODO Insert beta label */}
                   <Image
                     src="/images/textlogo2.jpg"
@@ -115,14 +114,6 @@ const Navbar = () => {
 
           <div className="hidden w-[35%] items-center space-x-6 xl:flex">
             <SearchBar />
-
-            {/* <button
-              type="button"
-              onClick={() => setModalOpen(true)}
-              className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 ring-offset-4 transition duration-200 hover:bg-secondary-100 focus:ring-2"
-            >
-              <FaHeart className="text-secondary-500" size={20} />
-            </button> */}
           </div>
 
           <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
