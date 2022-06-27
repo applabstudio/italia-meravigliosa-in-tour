@@ -43,6 +43,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
 
+
+
+
   useEffect(() => {
     window.onresize = () => setIsOpen(false)
   }, [])

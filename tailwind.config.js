@@ -35,6 +35,7 @@ module.exports = {
           main:"#656464",
           light:"#767E7E",
           exlight:"#6B7280",
+          dark:"#EDF2F7",
         },
         red:{
           main:"#EF4444",

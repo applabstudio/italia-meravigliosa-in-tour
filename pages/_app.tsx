@@ -18,7 +18,8 @@ import Link from "next/link"
 import './app.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import "react-date-picker/dist/DatePicker.css";
+import "react-calendar/dist/Calendar.css";
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -95,7 +96,7 @@ const [whishlistcard, setwhishlistcard] = useState(false)
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
   
-        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+           <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
           <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
       </Head>
 
@@ -120,7 +121,6 @@ const [whishlistcard, setwhishlistcard] = useState(false)
             bottom: 0,
             left: 0,
             right: 0,
-
             backgroundColor: "#fff"
           }}
           className="col-span-12 box-border flex flex-col px-4 md:px-10 lg:px-14 xl:col-span-12 botton_navbar"
