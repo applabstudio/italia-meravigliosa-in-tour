@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 import { useIsMounted } from "../../services/useIsMounted";
 
-export default function Tabbar({  }) {
+export default function Tabbar({ }) {
 
 
     const router = useRouter()
@@ -60,37 +60,39 @@ export default function Tabbar({  }) {
             }}
             className="col-span-12 box-border flex flex-col px-4 xl:col-span-12 botton_navbar"
         >
-            <div
-                onClick={() => {
-                    setSelectedTab("home");
-                }}
-                className="footer-grid xl:col-span-2"
-                style={{ borderLeft: "none" }}
-                onMouseEnter={
-                    () => {
-                        setHomeHover("home_hover")
+            <Link href="/">
+                <div
+                    onClick={() => {
+                        setSelectedTab("home");
+                    }}
+                    className="footer-grid xl:col-span-2"
+                    style={{ borderLeft: "none" }}
+                    onMouseEnter={
+                        () => {
+                            setHomeHover("home_hover")
+                        }
                     }
-                }
-                onMouseLeave={
-                    () => {
-                        setHomeHover("home")
+                    onMouseLeave={
+                        () => {
+                            setHomeHover("home")
+                        }
                     }
-                }
-            >
+                >
 
-                <Image
-                    src={`/images/${homeIcon || homeHover}.png`}
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={34}
-                    height={34}
-                    alt="home"
-                    className="homeIcon"
-                />
-                <p className="text-center tabText">
-                    Home
-                </p>
-            </div>
+                    <Image
+                        src={`/images/tab-icons/${homeIcon || homeHover}.svg`}
+                        objectFit="contain"
+                        layout="intrinsic"
+                        width={34}
+                        height={34}
+                        alt="home"
+                        className="homeIcon svg-icon"
+                    />
+                    <p className="text-center tabText">
+                        Home
+                    </p>
+                </div>
+            </Link>
 
             <Link href="/#who-we-are-section">
                 <a>
@@ -107,13 +109,13 @@ export default function Tabbar({  }) {
                         }
                     >
                         <Image
-                            src={`/images/${infoIcon || infoHover}.png`}
+                            src={`/images/tab-icons/${infoIcon || infoHover}.svg`}
                             objectFit="contain"
                             layout="intrinsic"
                             width={34}
                             height={34}
                             alt="info"
-                            className="infoIcon"
+                            className="infoIcon svg-icon"
                         />
                         <p className="text-center tabText">Chi siamo</p>
                     </div>
@@ -135,13 +137,13 @@ export default function Tabbar({  }) {
                         }
                     >
                         <Image
-                            src={`/images/${workIcon || workHover}.png`}
+                            src={`/images/tab-icons/${workIcon || workHover}.svg`}
                             objectFit="contain"
                             layout="intrinsic"
                             width={34}
                             height={34}
                             alt="work"
-                            className="workIcon"
+                            className="workIcon svg-icon"
                         />
                         <p className="text-center tabText">Lavora con noi</p>
                     </div>
@@ -164,13 +166,13 @@ export default function Tabbar({  }) {
                         }
                     >
                         <Image
-                            src={`/images/${heartIcon || heartHover}.png`}
+                            src={`/images/tab-icons/${heartIcon || heartHover}.svg`}
                             objectFit="contain"
                             layout="intrinsic"
                             width={34}
                             height={34}
                             alt="heart"
-                            className="heartIcon"
+                            className="heartIcon svg-icon"
                         />
                         <p className="text-center tabText">Wishlist</p>
                     </div>
@@ -192,13 +194,13 @@ export default function Tabbar({  }) {
                         }
                     >
                         <Image
-                            src={`/images/${searchIcon || searchHover}.png`}
+                            src={`/images/tab-icons/${searchIcon || searchHover}.svg`}
                             objectFit="contain"
                             layout="intrinsic"
                             width={34}
                             height={34}
                             alt="search"
-                            className="searchIcon"
+                            className="searchIcon svg-icon"
                         />
                         <p className="text-center tabText">Cerca</p>
                     </div>
