@@ -123,7 +123,7 @@ const [whishlistcard, setwhishlistcard] = useState(false)
             right: 0,
             backgroundColor: "#fff"
           }}
-          className="col-span-12 box-border flex flex-col px-4 md:px-10 lg:px-14 xl:col-span-12 botton_navbar"
+          className="   sm:w-full  col-span-12 box-border flex flex-col px-4 md:px-10 lg:px-14 xl:col-span-12 botton_navbar"
         >
           <div
             className="footer-grid xl:col-span-2"
@@ -140,14 +140,13 @@ const [whishlistcard, setwhishlistcard] = useState(false)
             }
           >
 
-            <Image
+            <img
               src={`/images/${homeHover}.png`}
-              objectFit="contain"
-              layout="intrinsic"
-              width={34}
-              height={34}
+              // objectFit="contain"
+              // layout="intrinsic"
+             
               alt="home"
-              className="homeIcon"
+              className="homeIcon  h-5 w-5 sm:h-8 sm:w-8 object-contain "
             />
             <p className="text-center tabText" style={{ color: "#F56606" }}>
               Home
@@ -168,14 +167,13 @@ const [whishlistcard, setwhishlistcard] = useState(false)
                   }
                 }
               >
-                <Image
+                <img
                   src={`/images/${infoHover}.png`}
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={34}
-                  height={34}
+                  // objectFit="contain"
+                  // layout="intrinsic"
+          
                   alt="info"
-                  className="infoIcon"
+                  className="infoIcon h-5 w-5 sm:h-8 sm:w-8 object-contain"
                 />
                 <p className="text-center tabText">Chi siamo</p>
               </div>
@@ -197,14 +195,13 @@ const [whishlistcard, setwhishlistcard] = useState(false)
                   }
                 }
               >
-                <Image
+                <img
                   src={`/images/${workHover}.png`}
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={34}
-                  height={34}
+                  // objectFit="contain"
+                  // layout="intrinsic"
+          
                   alt="work"
-                  className="workIcon"
+                  className="workIcon h-5 w-5 sm:h-8 sm:w-8 object-contain"
                 />
                 <p className="text-center tabText">Lavora con noi</p>
               </div>
@@ -226,14 +223,13 @@ const [whishlistcard, setwhishlistcard] = useState(false)
                   }
                 }
               >
-                <Image
+                <img
                   src={`/images/${heartHover}.png`}
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={34}
-                  height={34}
+                  // objectFit="contain"
+                  // layout="intrinsic"
+          
                   alt="heart"
-                  className="heartIcon"
+                  className="heartIcon h-5 w-5 sm:h-8 sm:w-8 object-contain "
 
                 />
                 <p className="text-center tabText"    >Wishlist  </p>
@@ -245,7 +241,7 @@ const [whishlistcard, setwhishlistcard] = useState(false)
                   {whishlistcard ?    
                   <> 
                 <div className="background-dilog" > </div>
-          <div  className="block  overflow-y-auto   overflow-x-hidden fixed top-0 right-0 left-0 md:top-1/3  md:left-1/3   z-index-card  md:inset-0 h-modal md:h-full">
+          <div  className="block  overflow-y-auto   overflow-x-hidden fixed top-1/3  right-0 left-0 sm:left-32 md:top-1/3  md:left-1/3   z-index-card  md:inset-0 h-modal md:h-full">
     <div className="relative p-4 w-full max-w-md h-full md:h-auto  ">
         <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
             <button type="button"  onClick={()=>{ setwhishlistcard(false)  }} className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal">
@@ -278,14 +274,13 @@ const [whishlistcard, setwhishlistcard] = useState(false)
                   }
                 }
               >
-                <Image
+                <img
                   src={`/images/${searchHover}.png`}
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={34}
-                  height={34}
+                  // objectFit="contain"
+                  // layout="intrinsic"
+          
                   alt="search"
-                  className="searchIcon"
+                  className="searchIcon h-5 w-5 sm:h-8 sm:w-8 object-contain"
                 />
                 <p className="text-center tabText">Cerca</p>
               </div>

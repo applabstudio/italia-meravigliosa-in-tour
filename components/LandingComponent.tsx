@@ -462,8 +462,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
         </main>
         <div className="grid-row mt-8 grid  grid-cols-12  content-center  gap-4 md:mt-16  ">
           <div className="col-span-12  md:col-span-10  lg:col-span-6    ">
-            <div className="   overflow-y-hidden  lg:w-8/12 ">
-              <p className="   f-inter-b md:mt-18  mt-0 text-center text-xl text-3xl text-primary-dark  md:text-4xl lg:mt-24 lg:text-left  ">
+            <div className="   overflow-y-hidden   lg:w-8/12 ">
+              <p className="   f-inter-b md:mt-18  mt-0 text-center text-xl text-primary-dark sm:text-3xl  md:text-4xl lg:mt-24 lg:text-left  ">
                 SEGUICI SU FACEBOOK, SIAMO OLTRE 250 MILA
               </p>
             </div>
@@ -478,8 +478,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   alt="hand"
                 />{" "}
               </li>
-              <li className="pl-4 pt-3 ">
-                <p className="text-center text-grey-main md:text-left ">
+              <li className="pt-3 sm:pl-4  ">
+                <p className="text-center text-sm text-grey-main  md:text-left ">
                   https://www.facebook.com/istagram.paoloartista1/
                 </p>
               </li>
@@ -560,11 +560,9 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           </div>
         </div>
       </div>
-      <div   className=" bg-black  py-20    " >
-        <div className="ml-auto mr-auto w-10/12 lg:w-8/12  " >
-
-        
-          <p  className="text-white  f-popins-m text-4xl text-center " >
+      <div className=" bg-black  py-20    ">
+        <div className="ml-auto mr-auto w-10/12 lg:w-8/12  ">
+          <p className="f-popins-m  text-center text-4xl text-white ">
             MISSION
           </p>
           <p
@@ -572,21 +570,18 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             style={{
               fontStyle: "italic",
             }}
-          
           >
             “Guardare l'Italia con gli occhi dell'Artista, e trovare in ogni
             angolo del Bel Paese un luogo Meraviglioso. Guarda l'Italia con
             occhi nuovi con Italia Meravigliosa in Tour. ”
           </p>
-          <p  className=" f-lato-r text-2xl mt-8 mb-2 text-white  text-center " >
+          <p className=" f-lato-r mt-8 mb-2 text-center text-2xl  text-white ">
             Paolo Artista
           </p>
-          <p
-            className="infoGray  text-center "  
-          >
+          <p className="infoGray  text-center ">
             CEO & Founder Italia Meravigliosa
           </p>
-          </div>
+        </div>
       </div>
 
       <div className="mx-auto max-w-7xl" id="work-with-us-section">
@@ -599,20 +594,20 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 alignItems: "center",
               }}
             >
-              <p
-                className=" text-center f-bailjum-b text-3xl  sm:text-4xl lg:text-6xl text-black  mt-10 lg:mt-20 mb-8 lg:mb-10  ">
+              <p className=" f-bailjum-b mt-10 mb-8  text-center text-3xl text-black  sm:text-4xl lg:mt-20 lg:mb-10 lg:text-6xl  ">
                 VUOI COLLABORARE CON NOI?
               </p>
-              <div className="  w-11/12 sm:w-10/12 lg:w-7/12 ml-auto mr-auto " >
-              <p
-                className="text-center text-grey-light   Roboto-Regular ">
-                Italia Meravigliosa offre l’opportunità di collaborare con la
-                nostra redazione, se sei un fotografo, un videomaker oppure un
-                blogger di viaggio, contattaci ed entra a far parte del nostro
-                team, fai conoscere il tuo lavoro attraverso la nostra grande e
-                coesa community
-              </p>
-              <p className="text-center my-4 underline " >info@italiameravigliosaintour.it </p>
+              <div className="  ml-auto mr-auto w-11/12 sm:w-10/12 lg:w-7/12 ">
+                <p className="Roboto-Regular text-center   text-grey-light ">
+                  Italia Meravigliosa offre l’opportunità di collaborare con la
+                  nostra redazione, se sei un fotografo, un videomaker oppure un
+                  blogger di viaggio, contattaci ed entra a far parte del nostro
+                  team, fai conoscere il tuo lavoro attraverso la nostra grande
+                  e coesa community
+                </p>
+                <p className="my-4 text-center underline ">
+                  info@italiameravigliosaintour.it{" "}
+                </p>
               </div>
             </div>
 
@@ -666,7 +661,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 Vuoi ricevere piu’ informazioni?
               </p>
               <p
-                className="text-center  f-inter-r"
+                className="f-inter-r  text-center"
                 style={{
                   fontSize: 16,
                   fontWeight: "400",
@@ -675,130 +670,99 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               >
                 Iscriviti alla newsletter di italia meravigliosa
               </p>
-                <div
-                  // style={{
-                  //   display: "flex",
-                  //   alignItems: "center",
-                  //   background: "white",
-                  //   borderRadius: 50,
-                  //   height: 40,
-                  //   paddingLeft: 15,
-                  // }}
-                >
-                  <form className="w-6/12 ml-auto mr-auto my-4 text-center " >   
-    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
-    <div class="relative">
-        <div class="flex absolute inset-y-0 left-0 items-center pl-4 pointer-events-none">
-        <FaEnvelope color="gray" />{" "}
-        </div>
-        <input type="search" id="default-search"  placeholder="La tua email" class="block p-4 pl-10 w-full text-sm  text-gray-900 bg-gray-50 rounded-3xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500  "  required />
-    </div>
-    <button
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginTop: 20,
-                    background: "#231A36",
-                  }}
-                  className="buttonNewsletter rounded-full  py-3 ml-auto mr-auto px-10 font-bold text-white hover:bg-red-700"
-                >
-                  <span style={{ marginRight: 5 }}  className=" f-inter-r text-sm" >Iscriviti</span>{" "}
-                  <FaArrowCircleRight />
-                </button>
-</form>
-
-                  
-               
-                </div>
-             
-           
-            </div>
-          </div>
-          <div
-            className="col-span-12 rounded-lg p-6"
-            style={{ marginBottom: 20 }}
-          ></div>
-          <div
-            className="col-span-12"
-            style={{
-              width: "100%",
-              background: "white",
-            }}
-          >
-            <div
-              className="mx-auto max-w-7xl"
-              style={{
-                width: "100%",
-                background: "white",
-                height: 300,
-                maxWidth: "85rem",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-              className="text-center"
-            >
               <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexFlow: "column",
-                }}
+              // style={{
+              //   display: "flex",
+              //   alignItems: "center",
+              //   background: "white",
+              //   borderRadius: 50,
+              //   height: 40,
+              //   paddingLeft: 15,
+              // }}
               >
-                <Image
-                  src="/images/logo.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={80}
-                  height={80}
-                  alt="hand"
-                />
-                <Link href="https://www.facebook.com/istagram.paoloartista1/">
-                  <a>
-                    <Image
-                      src="/images/fblog.png"
-                      objectFit="contain"
-                      layout="intrinsic"
-                      width={170}
-                      height={170}
-                      alt="hand"
-                      className="fbicon"
+                <form className="my-4 ml-auto mr-auto w-6/12 text-center ">
+                  <label
+                    for="default-search"
+                    class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    Search
+                  </label>
+                  <div class="relative">
+                    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+                      <FaEnvelope color="gray" />{" "}
+                    </div>
+                    <input
+                      type="search"
+                      id="default-search"
+                      placeholder="La tua email"
+                      class="block w-full rounded-3xl border border-gray-300  bg-gray-50 p-4 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500  "
+                      required
                     />
-                  </a>
-                </Link>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  height: 50,
-                  width: "100%",
-                  justifyContent: "center",
-                }}
-              >
-                <div style={{ height: 50, width: "80%" }}>
-                  <p style={{ width: "100%", textAlign: "center" }}>
-                    Copyright © 2022 Italia Meravigliosa in Tour, Tutti i
-                    diritti sono riservati. | Powered by:
-                    <Link href="https://applabstudio.com/">
-                      <a>
-                        <Image
-                          src="/images/applab_logo.png"
-                          objectFit="contain"
-                          layout="intrinsic"
-                          width={80}
-                          height={20}
-                          alt="hand"
-                        />
-                        AppLab Studio
-                      </a>
-                    </Link>
-                  </p>
-                </div>
+                  </div>
+                  <button
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginTop: 20,
+                      background: "#231A36",
+                    }}
+                    className="buttonNewsletter ml-auto  mr-auto rounded-full py-3 px-10 font-bold text-white hover:bg-red-700"
+                  >
+                    <span
+                      style={{ marginRight: 5 }}
+                      className=" f-inter-r text-sm"
+                    >
+                      Iscriviti
+                    </span>{" "}
+                    <FaArrowCircleRight />
+                  </button>
+                </form>
               </div>
             </div>
-            {/* <Dilogbox/> */}
           </div>
         </main>
+      </div>
+
+      <div className="ml-auto mr-auto mt-10 mb-32 w-11/12  text-center   ">
+        <img
+          src="/images/logo.png"
+          // objectFit="contain"
+          // layout="intrinsic"
+          width={80}
+          height={80}
+          alt="hand"
+          className=" ml-auto mr-auto"
+        />
+        <Link href="https://www.facebook.com/istagram.paoloartista1/">
+          <a>
+            <Image
+              src="/images/fblog.png"
+              objectFit="contain"
+              layout="intrinsic"
+              width={170}
+              height={170}
+              alt="hand"
+              className="fbicon"
+            />
+          </a>
+        </Link>
+        <p>
+          Copyright © 2022 Italia Meravigliosa in Tour, Tutti i diritti sono
+          riservati. | Powered by:
+          <Link href="https://applabstudio.com/">
+            <a>
+              <Image
+                src="/images/applab_logo.png"
+                objectFit="contain"
+                layout="intrinsic"
+                width={80}
+                height={20}
+                alt="hand"
+              />
+              AppLab Studio
+            </a>
+          </Link>
+        </p>
       </div>
     </>
   )

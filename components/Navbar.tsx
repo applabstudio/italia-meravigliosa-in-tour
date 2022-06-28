@@ -65,7 +65,7 @@ const Navbar = () => {
             )}
           </button>
 
-          <div className="flex w-full items-center justify-center space-x-14 md:justify-between lg:w-fit lg:justify-start">
+          <div className="flex w-full items-center justify-center ml-10 sm:ml-0 space-x-14 md:justify-between lg:w-fit lg:justify-start">
             <Link href="/" passHref>
               <a className="outline-none ring-primary-200 transition duration-200 focus:ring-2 ">
                 <div  style={{ display:'flex' }}>
