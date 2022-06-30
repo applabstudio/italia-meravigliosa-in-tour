@@ -4,6 +4,7 @@ import type { AppProps } from "next/app"
 import Head from "next/head"
 import Image from "next/image"
 import Navbar from "../components/Navbar"
+import { SearchBar } from "../components/common/SearchBar";
 import NextNProgress from "nextjs-progressbar"
 import Footer from "../components/Footer"
 import { NextSeo } from "next-seo"
@@ -73,6 +74,13 @@ function MyApp({ Component, pageProps }: { Component: any, pageProps: any }) {
             paddingBottom: 90
           }}>
           <Navbar />
+
+
+          <div className="items-center space-x-8 search-bar w-full">
+            <SearchBar />
+          </div>
+
+
           <Component {...pageProps} />
 
         </div>

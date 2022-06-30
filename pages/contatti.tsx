@@ -14,7 +14,7 @@ const contatti = () => {
 
         <br />
         <br />
-        <div className="w-full bg-gray-100">
+        <div className="w-full bg-gray-100 mb-6">
           <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
 
           <ins
