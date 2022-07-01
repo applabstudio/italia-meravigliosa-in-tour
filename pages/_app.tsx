@@ -76,9 +76,9 @@ function MyApp({ Component, pageProps }: { Component: any, pageProps: any }) {
           <Navbar />
 
 
-          <div className="items-center space-x-8 search-bar w-full">
+          {/* <div className="items-center space-x-8 search-bar w-full">
             <SearchBar />
-          </div>
+          </div> */}
 
 
           <Component {...pageProps} />

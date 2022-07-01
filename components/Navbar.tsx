@@ -81,18 +81,10 @@ const Navbar = () => {
                     width={200}
                     height={50}
                     alt="hand"
+                    style={{marginTop: 7}}
                   />
                   <p style={{ width: 20 }}></p>
-                  {/* TODO Insert beta label */}
-                  <Image
-                    src="/images/textlogo2.jpg"
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={80}
-                    height={50}
-                    alt="hand"
-                  />
-                  <Image
+                  {/* <Image
                     src="/images/Beta.png"
                     objectFit="contain"
                     layout="intrinsic"
@@ -100,7 +92,7 @@ const Navbar = () => {
                     height={30}
                     alt="hand"
                     className="betaLabel"
-                  />
+                  /> */}
                 </div>
               </a>
             </Link>

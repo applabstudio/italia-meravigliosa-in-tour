@@ -14,12 +14,12 @@ body {
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
-  .search-bar {
+  /* .search-bar {
 
     position: relative;
     top: 80px;
     padding-top: 20px;
-  }
+  } */
 }
 
 img.betaLabel {
