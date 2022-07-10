@@ -5,6 +5,7 @@ import Event from "../../components/Event"
 import { firestore } from "../../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
+import BannerAds from "../../components/layout/BannerAds"
 
 const regions = {
   "0": {
@@ -244,6 +245,9 @@ const Regione = ({ slug }: { slug: string }) => {
 
   const eventi = listaEventi.filter((doc) => doc?.region === region)
 
+  const ADSENSE_PUBLISHER_KEY = "ca-pub-7292810486004926"
+  const ADSENSE_SLOT = "7610040244"
+
   return (
     <div className="mx-auto mt-28 max-w-6xl">
       <main className="flex w-full flex-col px-4">
@@ -293,17 +297,36 @@ const Regione = ({ slug }: { slug: string }) => {
         <br />
         <br />
 
-        <div className="w-full bg-gray-100">
-          <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
-
-          <ins
-            className="adsbygoogle"
-            style={{ display: "block" }}
-            data-ad-client="ca-pub-1708355893696705"
-            data-ad-slot="9487119343"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
+        <div
+          className="col-span-12 !m-0"
+          style={{
+            width: "100%",
+          }}
+        >
+          <div
+            className="mx-auto max-w-7xl"
+            style={{
+              width: "100%",
+              display: "flex",
+              paddingLeft: "1rem",
+              paddingRight: "1rem",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+            className="text-center"
+          >
+            <div>
+              <ins
+                className="adsbygoogle"
+                style={{ display: "block", textAlign: "center" }}
+                data-ad-layout="in-article"
+                data-ad-format="fluid"
+                data-ad-client={ADSENSE_PUBLISHER_KEY}
+                data-ad-slot={ADSENSE_SLOT}
+              ></ins>
+            </div>
+            <BannerAds />
+          </div>
         </div>
       </main>
     </div>

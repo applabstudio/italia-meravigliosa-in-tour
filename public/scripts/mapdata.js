@@ -63,7 +63,7 @@ var simplemaps_countrymap_mapdata={
     url_new_tab: "no",
     images_directory: "default",
     fade_time: 0.1,
-    link_text: "Esplora la Provincia",
+    link_text: "Entra",
     popups: "detect",
     state_image_url: "",
     state_image_position: "",
