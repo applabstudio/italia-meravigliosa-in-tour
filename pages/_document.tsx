@@ -68,9 +68,14 @@ class MainDocument extends Document {
               page_path: window.location.pathname,
             });
           `,
-            }}/>
+            }}
+          />
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2997320138881950"
+            crossOrigin="anonymous"
+          ></script>
 
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2997320138881950" crossorigin="anonymous"></script>
         </Head>
         <body>
           <Main />
