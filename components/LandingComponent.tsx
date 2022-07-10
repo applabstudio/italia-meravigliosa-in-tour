@@ -577,7 +577,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           ></div>
 
           <div
-            className="col-span-12"
+            className="col-span-12 !m-0"
             style={{
               width: "100%",
             }}

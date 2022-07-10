@@ -8,7 +8,7 @@ import {
   ThumbUpIcon,
   TicketIcon,
 } from "@heroicons/react/outline"
-import { FaComment, FaThumbsUp } from "react-icons/fa"
+import { FaComment, FaHeart, FaThumbsUp } from "react-icons/fa"
 
 const FacebookSection = () => {
   const alignSelf = {
@@ -56,6 +56,11 @@ const FacebookSection = () => {
             <li className="facebook-list">Community</li>
             <li className="facebook-list">Share</li>
           </ul>
+
+          <div className="flex w-fit items-center space-x-2 rounded-lg bg-blue-100 px-4 py-2 text-lg font-semibold text-blue-600">
+            <FaHeart />
+            <span>Milioni di utenti salvano luoghi meravigliosi</span>
+          </div>
         </div>
 
         <div className="facebook_text_grid_width hide_mobile">
