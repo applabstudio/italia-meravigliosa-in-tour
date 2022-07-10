@@ -8,7 +8,7 @@ const Footer = () => {
     <footer>
       <div
         style={{ display: "flex", alignItems: "center", flexFlow: "column" }}
-        className="rounded-xl bg-white py-6"
+        className="!m-0 rounded-xl bg-white py-6"
       >
         <Image
           src="/images/fullLogo.png"
