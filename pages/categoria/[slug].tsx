@@ -39,7 +39,7 @@ const Categoria = ({ slug }: { slug: string }) => {
       .includes(categoria?.id)
   )
 
-  const ADSENSE_PUBLISHER_KEY = "ca-pub-7292810486004926"
+  const ADSENSE_PUBLISHER_KEY = "ca-pub-2997320138881950"
   const ADSENSE_SLOT = "7610040244"
 
   return (
