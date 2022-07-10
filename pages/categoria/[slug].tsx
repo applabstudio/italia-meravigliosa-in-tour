@@ -45,7 +45,7 @@ const Categoria = ({ slug }: { slug: string }) => {
   return (
     <div className="mx-auto mt-32 max-w-6xl">
       <main className="flex w-full flex-col px-4">
-        <div className="w-full bg-gray-100">
+        {/* <div className="w-full bg-gray-100">
           <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
 
           <ins
@@ -56,12 +56,12 @@ const Categoria = ({ slug }: { slug: string }) => {
             data-ad-format="auto"
             data-full-width-responsive="true"
           ></ins>
-        </div>
+        </div> */}
 
         <br />
 
         <h4 className="text-center text-4xl font-bold leading-[3.5rem] md:text-left">
-          Eventi con categoria:{" "}
+          Luoghi con categoria:{" "}
           <span className="rounded-md bg-primary-100 px-2 text-primary-600">
             {slug}
           </span>

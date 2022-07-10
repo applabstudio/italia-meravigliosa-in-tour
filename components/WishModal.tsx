@@ -68,7 +68,7 @@ const WishModal = ({
                 </Dialog.Title>
                 <div className="mb-6 mt-2">
                   <p className="text-sm text-gray-500">
-                    Ecco gli eventi che hai aggiunto alla wishlist:
+                    Ecco i luoghi che hai aggiunto alla wishlist:
                   </p>
                 </div>
               </div>

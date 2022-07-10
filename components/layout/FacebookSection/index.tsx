@@ -35,8 +35,8 @@ const FacebookSection = () => {
               src="/images/fb.png"
               objectFit="contain"
               layout="intrinsic"
-              width={50}
-              height={50}
+              width={28}
+              height={28}
               alt="hand"
             />
             <Link href="https://www.facebook.com/istagram.paoloartista1/">

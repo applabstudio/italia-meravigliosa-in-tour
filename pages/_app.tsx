@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
     <WishContext.Provider value={wishContext}>
       <NextSeo
         title="Italia Meravigliosa in tour"
-        description="Trova eventi meravigliosi in tutta Italia alla portata di un click."
+        description="Trova luoghi meravigliosi in tutta Italia alla portata di un click."
       />
 
       {/* <Script

@@ -46,11 +46,10 @@ const Footer = () => {
                 src="/images/applab_logo2.png"
                 objectFit="contain"
                 layout="intrinsic"
-                width={150}
-                height={60}
+                width={80}
+                height={30}
                 alt="hand"
               />
-              AppLab Studio
             </a>
           </Link>
         </div>

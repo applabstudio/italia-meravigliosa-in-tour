@@ -161,10 +161,10 @@ var simplemaps_countrymap_mapdata={
       url: "/provincia/medio-campidano"
     },
     ITA5373: {
-      name: "Oristrano",
+      name: "Oristano",
       description: "Clicca per vedere gli eventi",
-      slug: "oristrano",
-      url: "/provincia/oristrano"
+      slug: "oristano",
+      url: "/provincia/oristano"
     },
     ITA5374: {
       name: "Sassari",
