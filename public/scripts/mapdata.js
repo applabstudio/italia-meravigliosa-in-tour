@@ -72,661 +72,661 @@ var simplemaps_countrymap_mapdata={
   state_specific: {
     ITA5358: {
       name: "Modena",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "modena",
       url: "/provincia/modena"
     },
     ITA5359: {
       name: "Reggio Emilia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "reggio-emilia",
       url: "/provincia/reggio-emilia"
     },
     ITA5360: {
       name: "Parma",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "parma",
       url: "/provincia/parma"
     },
     ITA5361: {
       name: "Piacenza",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "piacenza",
       url: "/provincia/piacenza"
     },
     ITA5362: {
       name: "Bologna",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "bologna",
       url: "/provincia/bologna"
     },
     ITA5363: {
       name: "Ferrara",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "ferrara",
       url: "/provincia/ferrara"
     },
     ITA5364: {
       name: "Ravenna",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "ravenna",
       url: "/provincia/ravenna"
     },
     ITA5365: {
       name: "Forlì-Cesena",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "forli-cesena",
       url: "/provincia/forli-cesena"
     },
     ITA5366: {
       name: "Rimini",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "rimini",
       url: "/provincia/rimini"
     },
     ITA5367: {
       name: "Genova",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "genova",
       url: "/provincia/genova"
     },
     ITA5368: {
       name: "Savona",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "savona",
       url: "/provincia/savona"
     },
     ITA5369: {
       name: "Imperia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "imperia",
       url: "/provincia/imperia"
     },
     ITA5370: {
       name: "La Spezia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "la-spezia",
       url: "/provincia/la-spezia"
     },
     ITA5371: {
       name: "Carbonia-Iglesias",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "carbonia-iglesias",
       url: "/provincia/carbonia-iglesias"
     },
     ITA5372: {
       name: "Medio Campidano",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "medio-campidano",
       url: "/provincia/medio-campidano"
     },
     ITA5373: {
       name: "Oristano",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "oristano",
       url: "/provincia/oristano"
     },
     ITA5374: {
       name: "Sassari",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "sassari",
       url: "/provincia/sassari"
     },
     ITA5375: {
       name: "Olbia-Tempio",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "olbia-tempio",
       url: "/provincia/olbia-tempio"
     },
     ITA5376: {
       name: "Nuoro",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "nuoro",
       url: "/provincia/nuoro"
     },
     ITA5377: {
       name: "Ogliastra",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "ogliastra",
       url: "/provincia/ogliastra"
     },
     ITA5378: {
       name: "Cagliari",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "cagliari",
       url: "/provincia/cagliari"
     },
     ITA5379: {
       name: "Grosseto",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "grosseto",
       url: "/provincia/grosseto"
     },
     ITA5380: {
       name: "Livorno",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "livorno",
       url: "/provincia/livorno"
     },
     ITA5381: {
       name: "Pisa",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "pisa",
       url: "/provincia/pisa"
     },
     ITA5382: {
       name: "Massa-Carrara",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "massa-carrara",
       url: "/provincia/massa-carrara"
     },
     ITA5383: {
       name: "Lucca",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "lucca",
       url: "/provincia/lucca"
     },
     ITA5384: {
       name: "Pistoia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "pistoia",
       url: "/provincia/pistoia"
     },
     ITA5385: {
       name: "Prato",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "prato",
       url: "/provincia/prato"
     },
     ITA5386: {
       name: "Firenze",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "firenze",
       url: "/provincia/firenze"
     },
     ITA5387: {
       name: "Arezzo",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "arezzo",
       url: "/provincia/arezzo"
     },
     ITA5388: {
       name: "Siena",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "siena",
       url: "/provincia/siena"
     },
     ITA5389: {
       name: "Matera",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "matera",
       url: "/provincia/matera"
     },
     ITA5390: {
       name: "Potenza",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "potenza",
       url: "/provincia/potenza"
     },
     ITA5391: {
       name: "Cosenza",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "cosenza",
       url: "/provincia/cosenza"
     },
     ITA5392: {
       name: "Crotone",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "crotone",
       url: "/provincia/crotone"
     },
     ITA5393: {
       name: "Catanzaro",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "catanzaro",
       url: "/provincia/catanzaro"
     },
     ITA5394: {
       name: "Vibo Valentia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "vibo-valentia",
       url: "/provincia/vibo-valentia"
     },
     ITA5395: {
       name: "Reggio Calabria",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "reggio-calabria",
       url: "/provincia/reggio-calabria"
     },
     ITA5396: {
       name: "Caserta",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "caserta",
       url: "/provincia/caserta"
     },
     ITA5397: {
       name: "Napoli",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "napoli",
       url: "/provincia/napoli"
     },
     ITA5398: {
       name: "Benevento",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "benevento",
       url: "/provincia/benevento"
     },
     ITA5399: {
       name: "Avellino",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "avellino",
       url: "/provincia/avellino"
     },
     ITA5400: {
       name: "Salerno",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "salerno",
       url: "/provincia/salerno"
     },
     ITA5401: {
       name: "Campobasso",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "campobasso",
       url: "/provincia/campobasso"
     },
     ITA5402: {
       name: "Isernia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "isernia",
       url: "/provincia/isernia"
     },
     ITA5403: {
       name: "Bari",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "bari",
       url: "/provincia/bari"
     },
     ITA5404: {
       name: "Foggia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "foggia",
       url: "/provincia/foggia"
     },
     ITA5405: {
       name: "Barletta-Andria Trani",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "barletta-andria-trani",
       url: "/provincia/barletta-andria-trani"
     },
     ITA5406: {
       name: "Brindisi",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "brindisi",
       url: "/provincia/brindisi"
     },
     ITA5407: {
       name: "Lecce",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "lecce",
       url: "/provincia/lecce"
     },
     ITA5408: {
       name: "Taranto",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "taranto",
       url: "/provincia/taranto"
     },
     ITA5409: {
       name: "Trapani",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "trapani",
       url: "/provincia/trapani"
     },
     ITA5410: {
       name: "Palermo",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "palermo",
       url: "/provincia/palermo"
     },
     ITA5411: {
       name: "Messina",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "messina",
       url: "/provincia/messina"
     },
     ITA5412: {
       name: "Enna",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "enna",
       url: "/provincia/enna"
     },
     ITA5413: {
       name: "Catania",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "catania",
       url: "/provincia/catania"
     },
     ITA5414: {
       name: "Siracusa",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "siracusa",
       url: "/provincia/siracusa"
     },
     ITA5415: {
       name: "Ragusa",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "ragusa",
       url: "/provincia/ragusa"
     },
     ITA5416: {
       name: "Caltanissetta",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "caltanissetta",
       url: "/provincia/caltanissetta"
     },
     ITA5417: {
       name: "Agrigento",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "agrigento",
       url: "/provincia/agrigento"
     },
     ITA5418: {
       name: "Pescara",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "pescara",
       url: "/provincia/pescara"
     },
     ITA5419: {
       name: "Teramo",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "teramo",
       url: "/provincia/teramo"
     },
     ITA5420: {
       name: "L'Aquila",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "l-aquila",
       url: "/provincia/l-aquila"
     },
     ITA5421: {
       name: "Chieti",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "chieti",
       url: "/provincia/chieti"
     },
     ITA5422: {
       name: "Roma",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "roma",
       url: "/provincia/roma"
     },
     ITA5423: {
       name: "Viterbo",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "viterbo",
       url: "/provincia/viterbo"
     },
     ITA5424: {
       name: "Rieti",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "rieti",
       url: "/provincia/rieti"
     },
     ITA5425: {
       name: "Frosinone",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "frosinone",
       url: "/provincia/frosinone"
     },
     ITA5426: {
       name: "Latina",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "latina",
       url: "/provincia/latina"
     },
     ITA5427: {
       name: "Ancona",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "ancona",
       url: "/provincia/ancona"
     },
     ITA5428: {
       name: "Pesaro e Urbino",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "pesaro-e-urbino",
       url: "/provincia/pesaro-e-urbino"
     },
     ITA5429: {
       name: "Macerata",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "macerata",
       url: "/provincia/macerata"
     },
     ITA5430: {
       name: "Fermo",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "fermo",
       url: "/provincia/fermo"
     },
     ITA5431: {
       name: "Ascoli Piceno",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "ascoli-piceno",
       url: "/provincia/ascoli-piceno"
     },
     ITA5432: {
       name: "Perugia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "perugia",
       url: "/provincia/perugia"
     },
     ITA5433: {
       name: "Terni",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "terni",
       url: "/provincia/terni"
     },
     ITA5434: {
       name: "Torino",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "torino",
       url: "/provincia/torino"
     },
     ITA5435: {
       name: "Biella",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "biella",
       url: "/provincia/biella"
     },
     ITA5436: {
       name: "Vercelli",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "vercelli",
       url: "/provincia/vercelli"
     },
     ITA5437: {
       name: "Verbano-Cusio-Ossola",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "verbano-cusio-ossola",
       url: "/provincia/verbano-cusio-ossola"
     },
     ITA5438: {
       name: "Novara",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "novara",
       url: "/provincia/novara"
     },
     ITA5439: {
       name: "Alessandria",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "alessandria",
       url: "/provincia/alessandria"
     },
     ITA5440: {
       name: "Asti",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "asti",
       url: "/provincia/asti"
     },
     ITA5441: {
       name: "Cuneo",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "cuneo",
       url: "/provincia/cuneo"
     },
     ITA5442: {
       name: "Aosta",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "aosta",
       url: "/provincia/aosta"
     },
     ITA5443: {
       name: "Bergamo",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "bergamo",
       url: "/provincia/bergamo"
     },
     ITA5444: {
       name: "Sondrio",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "sondrio",
       url: "/provincia/sondrio"
     },
     ITA5445: {
       name: "Brescia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "brescia",
       url: "/provincia/brescia"
     },
     ITA5446: {
       name: "Mantova",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "mantova",
       url: "/provincia/mantova"
     },
     ITA5447: {
       name: "Cremona",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "cremona",
       url: "/provincia/cremona"
     },
     ITA5448: {
       name: "Lodi",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "lodi",
       url: "/provincia/lodi"
     },
     ITA5449: {
       name: "Pavia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "pavia",
       url: "/provincia/pavia"
     },
     ITA5450: {
       name: "Milano",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "milano",
       url: "/provincia/milano"
     },
     ITA5451: {
       name: "Varese",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "varese",
       url: "/provincia/varese"
     },
     ITA5452: {
       name: "Como",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "como",
       url: "/provincia/como"
     },
     ITA5453: {
       name: "Lecco",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "lecco",
       url: "/provincia/lecco"
     },
     ITA5454: {
       name: "Monza e Brianza",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "monza-e-brianza",
       url: "/provincia/monza-e-brianza"
     },
     ITA5455: {
       name: "Udine",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "udine",
       url: "/provincia/udine"
     },
     ITA5456: {
       name: "Pordenone",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "pordenone",
       url: "/provincia/pordenone"
     },
     ITA5457: {
       name: "Gorizia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "gorizia",
       url: "/provincia/gorizia"
     },
     ITA5458: {
       name: "Trieste",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "trieste",
       url: "/provincia/trieste"
     },
     ITA5459: {
       name: "Bolzano",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "bolzano",
       url: "/provincia/bolzano"
     },
     ITA5460: {
       name: "Trento",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "trento",
       url: "/provincia/trento"
     },
     ITA5461: {
       name: "Venezia",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "venezia",
       url: "/provincia/venezia"
     },
     ITA5462: {
       name: "Rovigo",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "rovigo",
       url: "/provincia/rovigo"
     },
     ITA5463: {
       name: "Padova",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "padova",
       url: "/provincia/padova"
     },
     ITA5464: {
       name: "Verona",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "verona",
       url: "/provincia/verona"
     },
     ITA5465: {
       name: "Vicenza",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "vicenza",
       url: "/provincia/vicenza"
     },
     ITA5466: {
       name: "Treviso",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "treviso",
       url: "/provincia/treviso"
     },
     ITA5467: {
       name: "Belluno",
-      description: "Clicca per vedere gli eventi",
+      description: "Clicca per vedere i luoghi",
       slug: "belluno",
       url: "/provincia/belluno"
     }
