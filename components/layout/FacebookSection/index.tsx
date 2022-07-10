@@ -64,18 +64,6 @@ const FacebookSection = () => {
         </div>
 
         <div className="facebook_text_grid_width hide_mobile">
-          <div className="flex w-full justify-end space-x-4">
-            <div className="flex w-fit items-center space-x-2 rounded-lg bg-blue-100 px-4 py-2 text-lg font-semibold text-blue-600">
-              <FaThumbsUp />
-              <span>1M+ Like</span>
-            </div>
-
-            <div className="flex w-fit items-center space-x-2 rounded-lg bg-blue-100 px-4 py-2 text-lg font-semibold text-blue-600">
-              <FaComment />
-              <span>10k+ Commenti</span>
-            </div>
-          </div>
-
           <br />
 
           <div className="grid grid-cols-12">
@@ -115,18 +103,6 @@ const FacebookSection = () => {
         </div>
 
         <div className="facebook_text_grid_width view_mobile !space-y-8">
-          <div className="flex w-full justify-center space-x-4">
-            <div className="flex w-fit items-center space-x-2 rounded-lg bg-blue-100 px-4 py-2 text-lg font-semibold text-blue-600">
-              <FaThumbsUp />
-              <span>1M+ Like</span>
-            </div>
-
-            <div className="flex w-fit items-center space-x-2 rounded-lg bg-blue-100 px-4 py-2 text-lg font-semibold text-blue-600">
-              <FaComment />
-              <span>10k+ Commenti</span>
-            </div>
-          </div>
-
           <Image
             src="/images/card1.jpg"
             objectFit="cover"

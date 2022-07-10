@@ -586,15 +586,15 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               className="mx-auto max-w-7xl"
               style={{
                 width: "100%",
-                height: 300,
-                maxWidth: "85rem",
                 display: "flex",
+                paddingLeft: "1rem",
+                paddingRight: "1rem",
                 flexDirection: "column",
                 alignItems: "center",
               }}
               className="text-center"
             >
-              <div style={{ minWidth: 300 }}>
+              <div>
                 <ins
                   className="adsbygoogle"
                   style={{ display: "block", textAlign: "center" }}

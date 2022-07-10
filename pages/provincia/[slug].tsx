@@ -28,7 +28,7 @@ const Provincia = ({ slug }: { slug: string }) => {
       <main className="flex w-full flex-col px-4">
         <br />
         <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
-          Eventi a {slug}
+          Luoghi a {slug}
         </h4>
 
         <br />
