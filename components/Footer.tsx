@@ -18,6 +18,13 @@ const Footer = () => {
           height={80}
           alt="hand"
         />
+
+        <Link href="mailto:info@italiameravigliosaintour.it">
+          <a className="footer-email">info@italiameravigliosaintour.it</a>
+        </Link>
+
+        <br />
+
         <Link href="https://www.facebook.com/istagram.paoloartista1/">
           <a style={{ position: "relative", bottom: 35 }}>
             <Image
@@ -31,6 +38,8 @@ const Footer = () => {
             />
           </a>
         </Link>
+
+
 
         <div className="copyright-wrapper">
           <span>

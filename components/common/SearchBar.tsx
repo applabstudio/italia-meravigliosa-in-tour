@@ -419,7 +419,7 @@ export const SearchBar = () => {
                     image={evento?.copertina}
                     heading={evento?.titolo}
                     location={evento?.luogo}
-                    icon={evento?.categorie && evento?.categorie?.at(0)?.id}
+                    icon={evento?.categorie?.at(0)?.id}
                     btnText="Scopri di più"
                     to={`/eventi/${evento?.slug}`}
                   />
