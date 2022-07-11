@@ -128,7 +128,7 @@ const Signup = () => {
       <div className="mx-auto flex h-[74vh] w-full justify-center pr-8">
         <img
           className="h-full w-full rounded-xl object-cover"
-          src="https://static.nationalgeographic.it/files/styles/image_3200/public/gettyimages-660629130_1.jpg?w=1600&h=900"
+          src="https://scontent.fmxp6-1.fna.fbcdn.net/v/t1.6435-9/81275872_107549224099981_1527722306728624128_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=bsMXLWixlv0AX_YTTYx&_nc_ht=scontent.fmxp6-1.fna&oh=00_AT9paom8TKiVs5rOPNT_rS91wjIIWID8T_YwmnMS1H3o-w&oe=62F20210"
           alt=""
         />
       </div>
