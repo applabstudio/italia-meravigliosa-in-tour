@@ -442,7 +442,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 Clicca su una{" "}
                 <span className="text-secondary-500">regione</span> che vuoi
                 esplorare
-                <span style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <span style={{display: "flex", justifyContent: "center", alignItems: "center", fontSize: 12}}>
                   <br/>
                 <Image
                   src="/images/trovaluoghi.png"
@@ -453,7 +453,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   alt="hand"
                   className="trovaluoghi_icon"
                 />
-                 Ed esplora le province per scoprire <span className="text-secondary-500">&nbsp;luoghi&nbsp;</span> meravigliosi
+                 E scopri luoghi meravigliosi dentro le province
                 </span>
               </p>
             </div>
