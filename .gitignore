@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+#Backups
+/backup
+
 # production
 /build
 
