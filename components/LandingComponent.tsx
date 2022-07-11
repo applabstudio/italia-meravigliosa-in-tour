@@ -437,12 +437,24 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             <div className="col-span-12 !mt-4 box-border flex flex-col px-4 xl:col-span-12">
               <p
                 className="text-center"
-                style={{ fontWeight: "700", fontSize: 18 }}
+                style={{ fontWeight: "700", fontSize: 16 }}
               >
-                {/* TODO insert tooltip inside span region with this label: Divertiti a trovare luoghi meravigliosi */}
                 Clicca su una{" "}
                 <span className="text-secondary-500">regione</span> che vuoi
                 esplorare
+                <span style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <br/>
+                <Image
+                  src="/images/trovaluoghi.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={48}
+                  height={48}
+                  alt="hand"
+                  className="trovaluoghi_icon"
+                />
+                 Ed esplora le province per scoprire <span className="text-secondary-500">&nbsp;luoghi&nbsp;</span> meravigliosi
+                </span>
               </p>
             </div>
           )}
@@ -473,7 +485,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
           {slugProvincia && (
             <div className="col-span-12 px-4">
-              <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
+              <h4 className="text-center text-3xl font-bold text-gray-800 md:text-left">
                 Luoghi a: {nomeProvincia}
               </h4>
 

@@ -95,7 +95,7 @@ const WishModal = ({
                   ))
                 ) : (
                   <p className="mt-4 px-6 text-lg text-gray-800">
-                    Non hai aggiunto eventi alla Wishlist
+                    Non hai aggiunto luoghi alla Wishlist
                   </p>
                 )}
               </div>

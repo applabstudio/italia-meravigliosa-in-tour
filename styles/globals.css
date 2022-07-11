@@ -73,6 +73,7 @@ img.betaLabel {
 .first-title{
   font-family: 'Pacifico', cursive;
   color: #0A093D ;
+  margin-bottom: -26px;
 }
 
 .hand1 {
@@ -319,7 +320,7 @@ textarea:hover {
 
   .welcome-subtitle {
     font-size: 20px !important;
-    padding: 33px !important;
+    padding: 16px !important;
   }
 
   .workwithus {

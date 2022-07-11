@@ -151,7 +151,7 @@ const Evento = ({ slug }: { slug: string }) => {
                     marginLeft: 8,
                   }}
                 >
-                  Credit :
+                  Credit 
                 </span>{" "}
                 {" " + evento?.credit}
               </p>
@@ -175,7 +175,7 @@ const Evento = ({ slug }: { slug: string }) => {
                     marginLeft: 8,
                   }}
                 >
-                  Views :
+                  Views 
                 </span>{" "}
                 {" " + evento?.views}
               </p>
@@ -199,14 +199,14 @@ const Evento = ({ slug }: { slug: string }) => {
                     marginLeft: 8,
                   }}
                 >
-                  Likes :
+                  Likes 
                 </span>{" "}
                 {" " + evento?.likes}
               </p>
             </div>
-
+{/* 
             <br />
-            <br />
+            <br /> */}
             <div className="w-full bg-gray-100">
               {/* <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p> */}
 
@@ -219,8 +219,8 @@ const Evento = ({ slug }: { slug: string }) => {
                 data-full-width-responsive="true"
               ></ins> */}
             </div>
-            <br />
-            <br />
+            {/* <br />
+            <br /> */}
             <div className="flex flex-col items-center justify-between lg:flex-row lg:space-x-12">
               <h4 className="mb-3 text-center text-5xl font-bold text-secondary-500 md:text-left">
                 {evento?.titolo}
@@ -345,7 +345,7 @@ const Evento = ({ slug }: { slug: string }) => {
 
                 <div className="space-y-4">
                   <p className="text-sm font-semibold text-gray-500">
-                    Lascia un commento
+                    Cosa ne pensi di questo luogo? Lascia ora un commento
                   </p>
                   <form className="pb-20">
                     <input

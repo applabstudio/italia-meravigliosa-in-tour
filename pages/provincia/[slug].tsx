@@ -90,6 +90,8 @@ const Provincia = ({ slug }: { slug: string }) => {
               ></ins>
             </div>
             <BannerAds />
+            <br />
+            <br />
           </div>
         </div>
       </main>

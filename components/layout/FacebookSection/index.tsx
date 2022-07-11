@@ -59,7 +59,7 @@ const FacebookSection = () => {
 
           <div className="flex w-fit items-center space-x-2 rounded-lg bg-blue-100 px-4 py-2 text-lg font-semibold text-blue-600">
             <FaHeart />
-            <span>Milioni di utenti salvano luoghi meravigliosi</span>
+            <span style={{fontSize: 13}}>Milioni di utenti salvano luoghi meravigliosi</span>
           </div>
         </div>
 
