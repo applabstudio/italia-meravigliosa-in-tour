@@ -390,7 +390,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
         <main className="mt-10 grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="xl:col-span-3"></div>
           <div className="welcome-map col-span-12 box-border flex flex-col px-4 xl:col-span-6">
-            <h2 className="first-title text-center text-4xl font-bold">
+            <h2 className="first-title text-center text-3xl font-bold">
               Il portale delle meraviglie
             </h2>
             <br />
@@ -413,32 +413,25 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 }}
                 className="w-full"
               />
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginTop: -30,
-                }}
-              >
-                <Image
-                  src="/images/hand1.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={48}
-                  height={48}
-                  alt="hand"
-                  className="hand1"
-                />
-              </div>
+
             </div>
           </div>
           {listaEventi.filter((doc) => doc?.luogo === slug).length == 0 && (
             <div className="col-span-12 !mt-4 box-border flex flex-col px-4 xl:col-span-12">
+              
               <p
                 className="text-center"
                 style={{ fontWeight: "700", fontSize: 16 }}
               >
+                           <Image
+                  src="/images/hand1.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={46}
+                  height={46}
+                  alt="hand"
+                  className="hand1"
+                />
                 Clicca su una{" "}
                 <span className="text-secondary-500">regione</span> che vuoi
                 esplorare

@@ -73,11 +73,11 @@ img.betaLabel {
 .first-title{
   font-family: 'Pacifico', cursive;
   color: #0A093D ;
-  margin-bottom: -26px;
+  margin-bottom: -5px;
 }
 
 .hand1 {
-  border-radius: 20% !important;
+  top: 24px !important;
 }
 
 .hand1:hover {
@@ -358,6 +358,10 @@ textarea:hover {
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
+  .first-title {
+    margin-bottom: 38px;
+  }
+  
   .facebook_text_grid_width {
     width: 100%;
     text-align: center;
