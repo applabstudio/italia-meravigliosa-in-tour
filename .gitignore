@@ -13,7 +13,6 @@
 /out/
 
 #Backups
-/backup
 
 # production
 /build
