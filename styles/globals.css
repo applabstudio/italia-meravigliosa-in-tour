@@ -362,6 +362,10 @@ textarea:hover {
     font-size: 28px;
   }
   
+  .info_title {
+    font-size: 14px;
+  }
+
   .facebook_text_grid_width {
     width: 100%;
     text-align: center;

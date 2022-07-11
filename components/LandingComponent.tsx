@@ -420,7 +420,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             <div className="col-span-12 !mt-4 box-border flex flex-col px-4 xl:col-span-12">
               
               <p
-                className="text-center"
+                className="text-center info_title"
                 style={{ fontWeight: "700", fontSize: 16 }}
               >
                            <Image
