@@ -519,7 +519,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             </h4>
 
             <br />
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
               {categorie?.length > 0 &&
                 categorie?.map((categoria) => (
                   <div

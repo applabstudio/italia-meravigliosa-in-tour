@@ -253,12 +253,13 @@ textarea:hover {
 
 .footer-email {
   font-weight: 600;
+  padding-left: 6px;
 }
 
 .footer-email:hover {
   transition: 0.2s;
   color: #10b981;
-  transform: scale(1.1);
+  transform: scale(1.1) translateX(10px);
 }
 
 .facebook-list {

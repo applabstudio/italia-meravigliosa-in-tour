@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
 import React from "react"
+import { FaEnvelope } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -19,9 +20,14 @@ const Footer = () => {
           alt="hand"
         />
 
-        <Link href="mailto:info@italiameravigliosaintour.it">
-          <a className="footer-email">info@italiameravigliosaintour.it</a>
-        </Link>
+        <div style={{ display: "flex", alignItems: "center"}}>
+          <FaEnvelope color="gray" />{" "}
+          <Link href="mailto:info@italiameravigliosaintour.it">
+            
+            <a className="footer-email">info@italiameravigliosaintour.it</a>
+          </Link>
+        </div>
+
 
         <br />
 

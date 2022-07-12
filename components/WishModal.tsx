@@ -78,6 +78,7 @@ const WishModal = ({
                   items?.map((item) => (
                     <div className="flex items-center space-x-2 px-6">
                       <button
+                        title="wishlist"
                         onClick={() => removeFromWish(item.id)}
                         className="h-fit rounded-md bg-secondary-100 p-2 text-secondary-500 outline-none ring-secondary-200 ring-offset-2 transition duration-200 hover:bg-secondary-200 focus:ring-2"
                       >
