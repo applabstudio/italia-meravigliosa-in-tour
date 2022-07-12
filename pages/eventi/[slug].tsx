@@ -272,7 +272,7 @@ const Evento = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={`https://api.whatsapp.com/send?text=Questo Articolo di Italia Meravigliosa in Tour è maginfico!\n https://https://italiameravigliosaintour.herokuapp.com${router.asPath}`}
+                    href={`https://api.whatsapp.com/send?text=Questo Articolo di Italia Meravigliosa in Tour è maginfico!\n https://italiameravigliosaintour.herokuapp.com${router.asPath}`}
                   >
                     <FaWhatsapp className="text-green-500" size={30} />
                   </a>
