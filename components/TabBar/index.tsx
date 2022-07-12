@@ -63,8 +63,8 @@ export default function Tabbar({}) {
               src={`/images/${homeIcon || homeHover}.png`}
               objectFit="contain"
               layout="intrinsic"
-              width={34}
-              height={34}
+              width={30}
+              height={30}
               alt="home"
               className="homeIcon"
             />
@@ -101,8 +101,8 @@ export default function Tabbar({}) {
               src={`/images/${infoIcon || infoHover}.png`}
               objectFit="contain"
               layout="intrinsic"
-              width={34}
-              height={34}
+              width={30}
+              height={30}
               alt="info"
               className="infoIcon"
             />
@@ -139,8 +139,8 @@ export default function Tabbar({}) {
               src={`/images/${workIcon || workHover}.png`}
               objectFit="contain"
               layout="intrinsic"
-              width={34}
-              height={34}
+              width={30}
+              height={30}
               alt="work"
               className="workIcon"
             />
@@ -193,15 +193,15 @@ export default function Tabbar({}) {
         </a>
       </Link>
 
-      <Link href="/#top-section">
+      {/* <Link href="/#top-section">
         <a
           className={`flex flex-col justify-center border-t-4 ${
             searchIcon === "search_hover"
               ? "border-t-red-500"
               : "border-t-transparent"
           }`}
-        >
-          <div
+        > */}
+          {/* <div
             className="footer-grid xl:col-span-2"
             onMouseEnter={() => {
               setSearchHover("search_hover")
@@ -228,9 +228,9 @@ export default function Tabbar({}) {
             >
               Cerca
             </span>
-          </div>
-        </a>
-      </Link>
+          </div> */}
+        {/* </a>
+      </Link> */}
     </div>
   )
 }
