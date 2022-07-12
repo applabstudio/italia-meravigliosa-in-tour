@@ -513,7 +513,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             </div>
           )}
 
-          <div className="col-span-12 flex flex-col px-4" style={{marginLeft: 0}}>
+          <div className="col-span-12 flex flex-col px-4 categywrapper">
             <h4 className="my-4 text-center text-5xl font-semibold uppercase lg:text-7xl">
               Categorie
             </h4>
