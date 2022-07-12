@@ -86,7 +86,7 @@ const Categoria = ({ slug }: { slug: string }) => {
           </div>
         ) : (
           <p className="font-semibold text-gray-500">
-            Al momento non sono presenti eventi con questa categoria
+            Attendere... Al momento non sono presenti eventi con questa categoria
           </p>
         )}
 
