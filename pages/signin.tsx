@@ -1,13 +1,19 @@
 import React, { useRef, useState } from "react"
 import Input from "../components/common/Input"
 import toast, { Toaster } from "react-hot-toast"
-import { signInWithEmailAndPassword } from "firebase/auth"
+import {
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+} from "firebase/auth"
 import { auth } from "../firebase/clientApp"
 import { useRouter } from "next/router"
 
 const notifyFields = () => toast.error("Devi compilare tutti i campi")
 const notifyError = () => toast.error("Errore nel login")
+const notifyEmail = () => toast.error("Inserisci la tua email")
 const notifySuccess = () => toast.success("Login effettuato correttamente!")
+const notifyPasswordSent = () =>
+  toast.success("Una email è stata inviata al tuo indirizzo!")
 
 const Signin = () => {
   const [email, setEmail] = useState("")
@@ -98,6 +104,31 @@ const Signin = () => {
             </span>
             <span className="invisible relative">Invia</span>
           </button>
+
+          <br />
+          <br />
+
+          <p className="!mb-10">
+            Non ti ricordi la password?
+            <button
+              onClick={() => {
+                if (email) {
+                  sendPasswordResetEmail(auth, email)
+                    .then(() => {
+                      notifyPasswordSent()
+                    })
+                    .catch((error) => {
+                      console.log(error)
+                    })
+                } else {
+                  notifyEmail()
+                }
+              }}
+              className="cursor-pointer rounded-lg bg-red-100 py-1 px-2 font-medium text-red-500"
+            >
+              Richiedi un reset
+            </button>
+          </p>
         </div>
       </div>
     </div>

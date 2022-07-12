@@ -51,11 +51,11 @@ const Event = ({ image, heading, location, btnText, to, icon }: EventProps) => {
         </div>
         <br />
 
-        <Link href={to} passHref>
+        <a href={to}>
           <button className="w-fit rounded-full bg-red-500 py-2 px-6 font-bold text-white hover:bg-red-700">
             {btnText}
           </button>
-        </Link>
+        </a>
       </div>
     </div>
   )
