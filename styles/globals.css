@@ -256,6 +256,16 @@ textarea:hover {
   padding-left: 6px;
 }
 
+.iubenda {
+  color: #27272a;
+}
+
+.iubenda:hover {
+  transition: 0.2s;
+  color: #10b981;
+  transform: scale(1.1);
+}
+
 .footer-email:hover {
   transition: 0.2s;
   color: #10b981;

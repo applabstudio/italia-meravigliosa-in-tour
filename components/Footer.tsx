@@ -26,9 +26,20 @@ const Footer = () => {
             
             <a className="footer-email">info@italiameravigliosaintour.it</a>
           </Link>
+          
+
+
         </div>
 
+        <br />
 
+        <Link href="https://www.iubenda.com/privacy-policy/76997417" title="Privacy Policy">
+           <a className="iubenda">Privacy Policy</a>
+          </Link>
+
+          <Link href="https://www.iubenda.com/termini-e-condizioni/76997417">
+           <a className="iubenda">Termini e Condizioni</a>
+          </Link>
         <br />
 
         <Link href="https://www.facebook.com/istagram.paoloartista1/">

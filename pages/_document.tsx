@@ -86,6 +86,7 @@ class MainDocument extends Document {
           <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
 
           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          
         </body>
       </Html>
     )
