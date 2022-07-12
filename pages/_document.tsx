@@ -79,7 +79,7 @@ class MainDocument extends Document {
           ></script>
 
 
-        <meta property="og:image" content="url_image"/>
+        <meta property="og:image" content="/apple-touch-icon.png" />
         </Head>
         <body>
           <Main />
