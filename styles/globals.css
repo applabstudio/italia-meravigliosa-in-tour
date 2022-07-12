@@ -352,6 +352,10 @@ textarea:hover {
     width: 100px !important;
   }  
 
+  .w-full button.w-fit.rounded-full.bg-red-500.py-2.px-6.font-bold.text-white.hover\:bg-red-700 {
+    font-size: 10px;
+  }
+
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
