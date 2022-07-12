@@ -78,6 +78,8 @@ class MainDocument extends Document {
             crossOrigin="anonymous"
           ></script>
 
+
+        <meta property="og:image" content="url_image"/>
         </Head>
         <body>
           <Main />
