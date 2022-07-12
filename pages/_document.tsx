@@ -80,6 +80,8 @@ class MainDocument extends Document {
 
 
         <meta property="og:image" content="url_image"/>
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
         </Head>
         <body>
           <Main />
