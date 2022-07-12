@@ -1,5 +1,7 @@
 {
   "private": true,
+  "author": "APPLABSTUDIO",
+  "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
     "buildX": "next build && next export",
