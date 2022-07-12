@@ -15,9 +15,10 @@ import _ from "lodash"
 
 import TabBar from "../components/TabBar/"
 import Snd from "snd-lib"
+import useLocalStorage from "../services/useLocalStorage"
 
 function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
-  const [items, setItems] = useState<EventProps[]>([])
+  const [items, setItems] = useLocalStorage<EventProps[]>("wishlist", [])
 
   const remove = (id: string) => {
     let i = _.reject(items, (item) => {
@@ -87,7 +88,8 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
       </Head>
 
       <div className="selection:bg-primary-400 selection:text-white">
-        <div className="min-h-screen"
+        <div
+          className="min-h-screen"
           style={{
             minHeight: "calc(100vh - 90px)",
             maxHeight: "calc(100vh - 220px)",

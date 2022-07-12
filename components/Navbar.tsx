@@ -131,7 +131,15 @@ const Navbar = () => {
   const [userOpen, setUserOpen] = useState(false)
 
   useEffect(() => {
-    window.onresize = () => setIsOpen(false)
+    function onResize() {
+      var x = window.innerWidth
+
+      if (x > 768) {
+        setIsOpen(false)
+      }
+    }
+
+    window.addEventListener("resize", onResize)
   }, [])
 
   return (

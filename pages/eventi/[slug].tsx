@@ -24,7 +24,7 @@ import toast, { Toaster } from "react-hot-toast"
 
 const clipboard = () => toast.success("Testo copiato negli appunti!")
 
-const Evento = ({ slug }: { slug: string }) => {
+const Evento = () => {
   const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}
@@ -36,6 +36,8 @@ const Evento = ({ slug }: { slug: string }) => {
   const [categorie, setCategorie] = useState<any[]>([])
 
   const router = useRouter()
+
+  const slug = router.query.slug
 
   useEffect(() => {
     const allEvents = []
@@ -99,7 +101,6 @@ const Evento = ({ slug }: { slug: string }) => {
     }
   }
 
-  slug = router.query.slug
   console.log("This is props", router.query)
   console.log(
     "THis is the events",
