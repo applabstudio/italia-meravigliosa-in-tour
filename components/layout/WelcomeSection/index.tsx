@@ -12,8 +12,8 @@ const WelcomeSection = () => {
         l’intenzione di <b>mostrarvi le meraviglie nascoste del nostro paese</b>, Oggi
         con oltre 250 mila follower e tante foto di località pubblicate e
         milioni di visualizzazioni, abbiamo deciso di creare una redazione di
-        <i>“Italia Meravigliosa”</i> e di creare questo portale, perchè possa guidarvi
-        in luoghi meravigliosi da esplorare, buon viaggio a tutti voi.
+        <i>“Italia Meravigliosa”</i> e di creare questo portale, perchè <b>possa guidarvi
+        in luoghi meravigliosi da esplorare</b>, buon viaggio a tutti voi.
       </p>
     </section>
   )
