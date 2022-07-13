@@ -371,7 +371,7 @@ textarea:hover {
 @media only screen and (min-width: 0px) and (max-width: 700px) {
 
   .categywrapper {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 
   .facebook_text {

@@ -246,8 +246,7 @@ const Evento = () => {
                     )
                     clipboard()
                   }}
-                  className="ml-auto flex w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-blue-500 px-4 py-3 font-medium text-white"
-                >
+                  className="ml-auto flex w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-blue-500 px-4 py-3 font-medium text-white categoryContainer">
                   <FaShare />
                   <span>Condividi</span>
                 </div>
