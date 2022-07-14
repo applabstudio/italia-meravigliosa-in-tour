@@ -462,6 +462,11 @@ textarea:hover {
   display: none;
 }
 
+.wrapperUsername:hover  {
+  transition: 0.2s;
+  box-shadow: 3px 3px 2px #1e90ff;
+}
+
 /* Media Query */
 @media only screen and (min-width: 0px) and (max-width: 700px) {
   .wrapperUsername {
