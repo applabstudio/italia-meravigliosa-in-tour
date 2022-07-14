@@ -57,7 +57,7 @@ const FacebookSection = () => {
             <li className="facebook-list"><div className="markerList"></div>Share</li>
           </ul>
 
-          <div className="flex w-fit items-center space-x-2 rounded-lg bg-blue-100 px-4 py-2 text-lg font-semibold text-blue-600" style={{margin: "0 auto"}}>
+          <div className="flex w-fit items-center space-x-2 rounded-lg bg-blue-100 px-4 py-2 text-lg font-semibold text-blue-600 heartIconWrapper">
             <FaHeart />
             <span style={{fontSize: 12}}>Milioni di utenti salvano luoghi meravigliosi</span>
           </div>
