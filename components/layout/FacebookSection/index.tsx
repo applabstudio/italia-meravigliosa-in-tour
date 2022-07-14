@@ -30,7 +30,8 @@ const FacebookSection = () => {
           <h4 className="text facebook_text leading-10">
             SEGUICI SU FACEBOOK SIAMO OLTRE 250 MILA
           </h4>
-          <div className="facebook-mobile-icon flex flex-col space-y-4 py-10 lg:flex-row lg:items-center lg:space-y-0">
+          <div className="facebook-mobile-icon flex flex-col space-y-4  lg:flex-row lg:items-center lg:space-y-0">
+            <div style={{padding: "18px 0", display: "flex", alignItems: "center"}} className="wrapperUsername">
             <Image
               src="/images/fb.png"
               objectFit="contain"
@@ -38,15 +39,17 @@ const FacebookSection = () => {
               width={28}
               height={28}
               alt="hand"
-            />
+            /> 
             <Link href="https://www.facebook.com/istagram.paoloartista1/">
               <a
-                style={{ fontSize: 14, color: "#217BF4", paddingLeft: 8, display: "inline-flex", justifyContent: "center" }}
+                style={{margin: "0 !important", paddingLeft: 10, color: "#007aff"}}
                 title="Pagina Facebook"
               >
-                https://www.facebook.com/istagram.paoloartista1
+                @istagram.paoloartista1
               </a>
             </Link>
+            </div>
+            
           </div>
           <ul
             style={{paddingBottom: 40 }}
@@ -57,7 +60,7 @@ const FacebookSection = () => {
             <li className="facebook-list"><div className="markerList"></div>Share</li>
           </ul>
 
-          <div className="flex w-fit items-center space-x-2 rounded-lg bg-blue-100 px-4 py-2 text-lg font-semibold text-blue-600 heartIconWrapper">
+          <div className="flex w-fit items-center space-x-2 rounded-lg py-2 text-lg font-semibold text-blue-600 heartIconWrapper">
             <FaHeart />
             <span style={{fontSize: 12}}>Milioni di utenti salvano luoghi meravigliosi</span>
           </div>
@@ -99,10 +102,10 @@ const FacebookSection = () => {
                 alt="hand"
               />
             </div>
-          </div>
+          </div> 
         </div>
 
-        <div className="facebook_text_grid_width view_mobile !space-y-8">
+         <div className="facebook_text_grid_width view_mobile !space-y-8">
           <Image
             src="/images/card1.jpg"
             objectFit="cover"

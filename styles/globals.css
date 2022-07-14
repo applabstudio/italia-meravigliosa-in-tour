@@ -297,19 +297,7 @@ textarea:hover {
   }
 }
 
-.fbicon {
-  cursor: pointer;
-  margin-top: -20px;
-  width: 156px !important;
-  min-width: unset !important;
-  max-width: unset !important;
-  left: 9px !important;
-}
 
-.fbicon:hover {
-  transition: 0.2s all;
-  transform: rotate(5deg) scale(1.2);
-}
 
 /* Event Detail */
 .categoryContainer img {
@@ -438,6 +426,11 @@ textarea:hover {
     margin-left: 0px !important;
   }
 
+  .facebook-mobile-icon {
+    display: flex;
+    justify-content: flex-start;
+  }
+
   .adscustom {
    flex-flow: column;
    border-radius: 20px !important;
@@ -451,9 +444,15 @@ textarea:hover {
    .adscustom a {
     margin: 20px;
   }
+
+
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
+  .facebook-mobile-icon {
+    justify-content: center;
+  }
+
   .hide_mobile {
     display: none;
   }
@@ -465,14 +464,23 @@ textarea:hover {
 
 /* Media Query */
 @media only screen and (min-width: 0px) and (max-width: 700px) {
+  .wrapperUsername {
+    justify-content: center;
+  }
+
   .view_mobile {
     display: block;
     align-items: center;
     display: flex;
     flex-direction: column;
   }
+  
   .tabText {
     font-size: 12px;
+  }
+
+  .fbicon {
+    margin: auto;
   }
 
   /* Override Swiper */
@@ -524,4 +532,19 @@ textarea:hover {
   background: #08be82;
   border:1px solid #08be82;
   color: white;
+}
+
+.fbicon {
+  cursor: pointer;
+  margin-top: -20px;
+  width: 156px !important;
+  min-width: unset !important;
+  max-width: unset !important;
+  left: 9px !important;
+  margin: 0 !important;
+}
+
+.fbicon:hover {
+  transition: 0.2s all;
+  transform: scale(1.1);
 }

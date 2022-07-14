@@ -223,7 +223,7 @@ const Evento = () => {
             {/* <br />
             <br /> */}
             <div className="flex flex-col items-center justify-between lg:flex-row lg:space-x-12">
-              <h4 className="mb-3 text-center text-5xl font-bold text-secondary-500 md:text-left">
+              <h4 className="mb-3 text-center text-4xl font-bold text-secondary-500 md:text-left">
                 {evento?.titolo}
               </h4>
 
