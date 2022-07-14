@@ -8,7 +8,7 @@ import {
   ThumbUpIcon,
   TicketIcon,
 } from "@heroicons/react/outline"
-import { FaComment, FaHeart, FaThumbsUp } from "react-icons/fa"
+import { FaComment, FaHeart, FaThumbsUp, FaFacebook } from "react-icons/fa"
 
 const FacebookSection = () => {
   const alignSelf = {
@@ -32,14 +32,15 @@ const FacebookSection = () => {
           </h4>
           <div className="facebook-mobile-icon flex flex-col space-y-4  lg:flex-row lg:items-center lg:space-y-0">
             <div style={{padding: "18px 0", display: "flex", alignItems: "center", border: "1px solid #1e90ff", maxHeight: 43, borderRadius: 6, padding: 14, margin: "16px 0", maxWidth: 264, alignSelf: "center"}} className="wrapperUsername">
-            <Image
+            {/* <Image
               src="/images/fb.png"
               objectFit="contain"
               layout="intrinsic"
               width={28}
               height={28}
               alt="hand"
-            /> 
+            />  */}
+            <FaFacebook style={{color: "007aff", fontSize: 24}} />
             <Link href="https://www.facebook.com/istagram.paoloartista1/">
               <a
                 style={{margin: "0 !important", paddingLeft: 10, color: "#007aff"}}
