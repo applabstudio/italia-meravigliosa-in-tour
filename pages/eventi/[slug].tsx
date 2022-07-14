@@ -242,7 +242,7 @@ const Evento = () => {
                 <div
                   onClick={() => {
                     navigator.clipboard.writeText(
-                      `https://italiameravigliosaintour.herokuapp.com${router.asPath}`
+                      `https://italiameravigliosaintour.it${router.asPath}`
                     )
                     clipboard()
                   }}
@@ -255,13 +255,13 @@ const Evento = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={`https://twitter.com/intent/tweet?text=Questo Articolo di Italia Meravigliosa in Tour è maginfico!\n https://italiameravigliosaintour.herokuapp.com${router.asPath}`}
+                    href={`https://twitter.com/intent/tweet?text=Questo Articolo di Italia Meravigliosa in Tour è maginfico!\n https://italiameravigliosaintour.it${router.asPath}`}
                   >
                     <FaTwitter className="text-sky-500" size={30} />
                   </a>
 
                   <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=https://italiameravigliosaintour.herokuapp.com${router.asPath}`}
+                    href={`https://www.facebook.com/sharer/sharer.php?u=https://italiameravigliosaintour.it${router.asPath}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -271,7 +271,7 @@ const Evento = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={`https://api.whatsapp.com/send?text=Questo Articolo di Italia Meravigliosa in Tour è maginfico!\n https://italiameravigliosaintour.herokuapp.com${router.asPath}`}
+                    href={`https://api.whatsapp.com/send?text=Questo Articolo di Italia Meravigliosa in Tour è maginfico!\n https://italiameravigliosaintour.it${router.asPath}`}
                   >
                     <FaWhatsapp className="text-green-500" size={30} />
                   </a>
