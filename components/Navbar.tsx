@@ -79,6 +79,7 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
         {user && user?.email && (
           <MagicBell
             apiKey="97576655a4d3dd3e0a7ee53354b21e333fe580ed"
+            apiSecret
             userEmail={user.email}
             theme={theme}
             locale="en"
@@ -224,7 +225,7 @@ const Navbar = () => {
 
             {user && user?.email && (
               <MagicBell
-                apiKey="af2a8535c418ced0ee06b3fe67470bc14ecf5156"
+                apiKey="97576655a4d3dd3e0a7ee53354b21e333fe580ed"
                 userEmail={user.email}
                 theme={theme}
                 locale="en"
