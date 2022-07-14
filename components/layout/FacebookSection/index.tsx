@@ -41,20 +41,20 @@ const FacebookSection = () => {
             />
             <Link href="https://www.facebook.com/istagram.paoloartista1/">
               <a
-                style={{ fontSize: 14, color: "#217BF4", paddingLeft: 8 }}
+                style={{ fontSize: 14, color: "#217BF4", paddingLeft: 8, display: "inline-flex", justifyContent: "center" }}
                 title="Pagina Facebook"
               >
-                https://www.facebook.com/istagram.paoloartista1/
+                https://www.facebook.com/istagram.paoloartista1
               </a>
             </Link>
           </div>
           <ul
-            style={{ paddingLeft: 18, paddingBottom: 40 }}
+            style={{paddingBottom: 40 }}
             className="flex flex-row items-center justify-evenly space-y-1 font-semibold lg:flex-col lg:items-start"
           >
-            <li className="facebook-list">Post spettacolari e unici</li>
-            <li className="facebook-list">Community</li>
-            <li className="facebook-list">Share</li>
+            <li className="facebook-list"><div className="markerList"></div>Post spettacolari e unici</li>
+            <li className="facebook-list"><div className="markerList"></div>Community</li>
+            <li className="facebook-list"><div className="markerList"></div>Share</li>
           </ul>
 
           <div className="flex w-fit items-center space-x-2 rounded-lg bg-blue-100 px-4 py-2 text-lg font-semibold text-blue-600">

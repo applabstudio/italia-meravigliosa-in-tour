@@ -275,12 +275,26 @@ textarea:hover {
 .facebook-list {
   padding-left: 5px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 
-.facebook-list::marker {
-  content: "•" !important;
-  padding: 10px !important;
-  text-shadow: 0px 0px 5px #2196f3 !important;
+.markerList{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2196f3;
+  animation: pulse 1500ms infinite;
+  margin-right: 6px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: #2196f3 0 0 0 0;
+  }
+  75% {
+    box-shadow: #ff69b400 0 0 0 16px;
+  }
 }
 
 .fbicon {
@@ -406,6 +420,14 @@ textarea:hover {
   .facebook_text_grid_width {
     width: 100%;
     text-align: center;
+  }
+
+  .facebook_text_grid_width a {
+    font-size: 13px !important;
+  }
+
+  .facebook_text_grid_width ul {
+    flex-flow: column;
   }
 
   .facebook-mobile {
