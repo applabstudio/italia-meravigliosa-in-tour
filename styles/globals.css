@@ -467,10 +467,18 @@ textarea:hover {
   box-shadow: 3px 3px 2px #1e90ff;
 }
 
+.fbListWrapper {
+  display: flex;
+}
+
 /* Media Query */
 @media only screen and (min-width: 0px) and (max-width: 700px) {
   .wrapperUsername {
     justify-content: center;
+  }
+
+  .fbListWrapper {
+    justify-content: space-evenly;
   }
 
   .view_mobile {

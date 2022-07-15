@@ -43,7 +43,7 @@ const FacebookSection = () => {
             </div>
             
           </div>
-          <div style={{display: "flex", justifyCcontent: "space-evenly"}}>
+          <div className="fbListWrapper">
           <ul
             style={{paddingBottom: 40, alignItems: "flex-start" }}
             className="flex flex-row items-center justify-evenly space-y-1 font-semibold lg:flex-col lg:items-start"
