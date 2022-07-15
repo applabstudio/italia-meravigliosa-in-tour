@@ -13,8 +13,8 @@ import MagicBell, {
 import dynamic from "next/dynamic"
 import styled from "@emotion/styled"
 
-// const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
-//   ssr: false,
+//  const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
+//    ssr: false,
 // }) as any
 
 const theme = {
