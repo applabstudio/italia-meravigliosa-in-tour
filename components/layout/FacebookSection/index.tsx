@@ -43,14 +43,17 @@ const FacebookSection = () => {
             </div>
             
           </div>
+          <div style={{display: "flex", justifyCcontent: "space-evenly"}}>
           <ul
-            style={{paddingBottom: 40 }}
+            style={{paddingBottom: 40, alignItems: "flex-start" }}
             className="flex flex-row items-center justify-evenly space-y-1 font-semibold lg:flex-col lg:items-start"
           >
             <li className="facebook-list"><div className="markerList"></div>Post spettacolari e unici</li>
             <li className="facebook-list"><div className="markerList"></div>Community</li>
             <li className="facebook-list"><div className="markerList"></div>Share</li>
           </ul>
+          </div>
+
 
           <div className="flex w-fit items-center space-x-2 rounded-lg py-2 text-lg font-semibold text-blue-600 heartIconWrapper">
             <FaHeart />
