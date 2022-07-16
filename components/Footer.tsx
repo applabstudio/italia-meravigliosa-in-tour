@@ -9,16 +9,23 @@ const Footer = () => {
     <footer>
       <div
         style={{ display: "flex", alignItems: "center", flexFlow: "column" }}
-        className="!m-0 rounded-xl bg-white py-6"
+        className="!m-0 rounded-xl py-6 footerWrapper"
       >
-        <Image
-          src="/images/fullLogo.png"
-          objectFit="contain"
-          layout="intrinsic"
-          width={210}
-          height={80}
-          alt="hand"
-        />
+          <Link href="/" passHref>
+              <a className="rounded-xl bg-white p-2   outline-none ring-primary-200 transition duration-200 focus:ring-2" style={{margin: "20px 0"}}>
+                <div className="flex items-center">
+                  <Image
+                    src="/images/fullLogo.png"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={180}
+                    height={40}
+                    alt="hand"
+                    className="logo_navbar"
+                  />
+                </div>
+              </a>
+            </Link>
 
         <div style={{ display: "flex", alignItems: "center"}}>
           <FaEnvelope color="gray" />{" "}

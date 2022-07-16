@@ -16,10 +16,11 @@ body {
  body[data-theme="dark"] {
   --color-text-primary: #ffffff;
   --color-bg-input: #374151 !important;
-  --color-text-secondary: #d4d4d8;
+  --color-text-secondary: #808080;
   --color-bg-primary: #1f2937;
   --color-bg-toggle: #a9a9a9;
 } 
+
 
 body {
   background: var(--color-bg-primary) !important;
@@ -34,8 +35,13 @@ body {
 }
 
 p {
+  color: var(--color-text-secondary);
+}
+
+p.prose.prose-red span {
   color: var(--color-text-secondary) !important;
 }
+
 
 .eventIcon {
   background: var(--color-bg-primary) !important;
@@ -72,7 +78,6 @@ img.betaLabel {
 /* Map Section */
 .first-title{
   font-family: 'Pacifico', cursive;
-  color: #0A093D ;
   margin-bottom: -5px;
 }
 
@@ -254,10 +259,6 @@ textarea:hover {
 .footer-email {
   font-weight: 600;
   padding-left: 6px;
-}
-
-.iubenda {
-  color: #27272a;
 }
 
 .iubenda:hover {

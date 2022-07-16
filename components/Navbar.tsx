@@ -13,9 +13,9 @@ import MagicBell, {
 import dynamic from "next/dynamic"
 import styled from "@emotion/styled"
 
-//  const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
-//    ssr: false,
-// }) as any
+  const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
+    ssr: false,
+ }) as any
 
 const theme = {
   icon: { borderColor: "#ef4444", width: "24px" },
@@ -120,6 +120,7 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
         )}
       </div>
       <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      <ThemeToggle />
     </div>
   )
 }
@@ -158,9 +159,7 @@ const Navbar = () => {
           </button>
 
           <div className="flex w-full items-center justify-center space-x-8 md:justify-between lg:w-fit lg:justify-start">
-            {/* <div className="hidden xl:inline-flex">
-              <ThemeToggle />
-            </div> */}
+       
 
             <Link href="/" passHref>
               <a className="rounded-xl bg-white p-2 outline-none ring-primary-200 transition duration-200 focus:ring-2">
@@ -249,6 +248,10 @@ const Navbar = () => {
           </div>
 
           <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+          
+          <div className="hidden xl:inline-flex">
+              <ThemeToggle />
+            </div> 
         </nav>
       </header>
 

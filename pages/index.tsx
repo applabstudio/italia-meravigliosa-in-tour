@@ -31,7 +31,7 @@ const Section = ({
   eventi: any
 }) => (
   <div className="col-span-12 px-4">
-    <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
+    <h4 className="text-center text-4xl font-bold md:text-left">
       {titolo}
     </h4>
 

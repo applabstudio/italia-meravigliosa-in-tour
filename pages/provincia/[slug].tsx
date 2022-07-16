@@ -31,7 +31,7 @@ const Provincia = ({ slug }: { slug: string }) => {
     <div className="mx-auto mt-24 max-w-6xl">
       <main className="flex w-full flex-col px-4">
         <br />
-        <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
+        <h4 className="text-center text-4xl font-bold md:text-left">
           Luoghi a {slug}
         </h4>
 

@@ -267,7 +267,7 @@ const Regione = ({ slug }: { slug: string }) => {
         <br />
         <br />
 
-        <h4 className="text-center text-4xl font-bold text-gray-800 md:text-left">
+        <h4 className="text-center text-4xl font-bold md:text-left">
           Luoghi in {region}
         </h4>
 

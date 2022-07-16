@@ -68,14 +68,14 @@ export default function Tabbar({}) {
               alt="home"
               className="homeIcon"
             />
-            <span
+            <p
               className={`tabText text-center ${
                 (homeIcon === "home_hover" || homeHover === "home_hover") &&
                 "text-red-500"
               }`}
             >
               Home
-            </span>
+            </p>
           </div>
         </a>
       </Link>
@@ -106,14 +106,14 @@ export default function Tabbar({}) {
               alt="info"
               className="infoIcon"
             />
-            <span
+            <p
               className={`tabText text-center ${
                 (infoIcon === "info_hover" || infoHover === "info_hover") &&
                 "text-red-500"
               }`}
             >
               Chi siamo
-            </span>
+            </p>
           </div>
         </a>
       </Link>
@@ -144,14 +144,14 @@ export default function Tabbar({}) {
               alt="work"
               className="workIcon"
             />
-            <span
+            <p
               className={`tabText text-center ${
                 (workIcon === "work_hover" || workHover === "work_hover") &&
                 "text-red-500"
               }`}
             >
               Lavora con noi
-            </span>
+            </p>
           </div>
         </a>
       </Link>
@@ -181,14 +181,14 @@ export default function Tabbar({}) {
                   : "text-zinc-500"
               }`}
             />
-            <span
+            <p
               className={`tabText text-center ${
                 (heartIcon === "heart_hover" || heartHover === "heart_hover") &&
                 "text-red-500"
               }`}
             >
               Account
-            </span>
+            </p>
           </div>
         </a>
       </Link>
