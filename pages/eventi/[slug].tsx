@@ -22,6 +22,10 @@ import WishContext, { EventProps } from "../../components/context/WishContext"
 import DOMPurify from "isomorphic-dompurify"
 import toast, { Toaster } from "react-hot-toast"
 
+import Document, {
+  Head,
+} from "next/document"
+
 const clipboard = () => toast.success("Testo copiato negli appunti!")
 
 const Evento = () => {
