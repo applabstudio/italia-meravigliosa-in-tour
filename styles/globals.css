@@ -13,13 +13,13 @@ body {
   --color-bg-toggle: #1e90ff;
 }
 
-/* body[data-theme="dark"] {
+ body[data-theme="dark"] {
   --color-text-primary: #ffffff;
   --color-bg-input: #374151 !important;
   --color-text-secondary: #d4d4d8;
   --color-bg-primary: #1f2937;
   --color-bg-toggle: #a9a9a9;
-} */
+} 
 
 body {
   background: var(--color-bg-primary) !important;

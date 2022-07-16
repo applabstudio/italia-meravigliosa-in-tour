@@ -101,14 +101,26 @@ const Evento = () => {
     }
   }
 
-  console.log("This is props", router.query)
-  console.log(
-    "THis is the events",
-    eventi,
-    "This is evento",
-    eventi?.filter((doc) => doc.slug === slug)[0]
-  )
+  // console.log("This is props", router.query)
+  // console.log(
+  //   "THis is the events",
+  //   eventi,
+  //   "This is evento",
+  //   eventi?.filter((doc) => doc.slug === slug)[0]
+  // )
   return (
+    <Head>
+    <meta name="description" content={`${evento[0]?.excerpt}`} />
+    <meta property="og:title" content={evento[0]?.title} />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content={`${
+        evento[0]?.copertina?.descrizione?.copertina?.url ||
+        evento[0]?.copertina?.url
+      }`}
+    />
+    </Head>
     <div style={{ marginTop: 100 }}>
       <Toaster />
       <div className="mx-auto my-8 max-w-6xl">
