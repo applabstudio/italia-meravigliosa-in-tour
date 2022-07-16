@@ -408,3 +408,14 @@ const Evento = () => {
 }
 
 export default Evento
+export async function getServerSideProps(ctx) {
+  const { origin } = absoluteUrl(ctx.req);
+  const slug = ctx?.query?.slug[0] || "";
+  const post = await getSinglePost(slug);
+  return{
+     props: {
+        post : post,
+        fullUrl :  origin + "/eventi/" + slug
+     }
+   }
+}
