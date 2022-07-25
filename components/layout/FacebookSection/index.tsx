@@ -66,7 +66,7 @@ const FacebookSection = () => {
 
           <div className="grid grid-cols-12">
             <div
-              className="col-span-7 text-right"
+              className="col-span-7 text-right box"
               style={{ alignSelf: "center" }}
             >
               <Image

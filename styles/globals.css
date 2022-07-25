@@ -53,7 +53,6 @@ p.prose.prose-red span {
   background: var(--color-bg-primary) !important;
 }
 
-
 .userLogout {
   background: var(--color-bg-primary) !important;
 }
@@ -176,7 +175,7 @@ textarea:hover {
 
 .botton_navbar {
   box-shadow: 0 -3px 5px #0000001a;
-  /* background: white; */
+  background: white; 
 }
 
 .homeIcon:hover,
