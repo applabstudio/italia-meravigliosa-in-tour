@@ -114,6 +114,7 @@ const Contatti = () => {
         </span>
         <span className="invisible relative">Invia</span>
       </button>
+      <div className="divider"></div>
     </form>
   )
 }

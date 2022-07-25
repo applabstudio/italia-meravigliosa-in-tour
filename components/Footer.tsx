@@ -7,6 +7,7 @@ import { FaEnvelope, FaFacebook } from "react-icons/fa"
 const Footer = () => {
   return (
     <footer>
+       <div className="divider"></div>
       <div
         style={{ display: "flex", alignItems: "center", flexFlow: "column" }}
         className="!m-0 rounded-xl py-6 footerWrapper"
@@ -69,7 +70,7 @@ const Footer = () => {
           <br />
           <br />
 
-          <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+          <div className="credit-footer">
           Powered by:  
           <Link href="https://applabstudio.com/">
             <a>
