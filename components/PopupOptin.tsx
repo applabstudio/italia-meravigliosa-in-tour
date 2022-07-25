@@ -124,6 +124,9 @@ export default function PopupOptin() {
                       Iscriviti
                     </button>
                   </div>
+                  <div className="text-sm font-medium text-gray-500 dark:text-gray-300" style={{paddingTop: 12}}>
+                      Non sei registrato? <a href="/signup" className="text-blue-700 hover:underline dark:text-blue-500">Crea un account</a>
+                  </div>
                 </div>
               </div>
             </Transition.Child>
