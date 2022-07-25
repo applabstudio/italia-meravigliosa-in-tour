@@ -438,7 +438,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 Clicca su una{" "}
                 <span className="text-secondary-500">regione</span> che vuoi
                 esplorare
-                <span style={{display: "flex", justifyContent: "center", alignItems: "center", fontSize: 12}}>
+                <span style={{display: "flex", justifyContent: "center", alignItems: "center", fontSize: 12, padding:20,}} className="tutorialWrapper">
                   <br/>
                 <Image
                   src="/images/trovaluoghi.png"

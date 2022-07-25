@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
 import React from "react"
-import { FaEnvelope } from "react-icons/fa"
+import { FaEnvelope, FaFacebook } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -48,43 +48,42 @@ const Footer = () => {
            <a className="iubenda">Termini e Condizioni</a>
           </Link>
         <br />
-
-        <Link href="https://www.facebook.com/istagram.paoloartista1/">
-          <a style={{ position: "relative", bottom: 35 }}>
-            <Image
-              src="/images/fblog.png"
-              objectFit="contain"
-              layout="intrinsic"
-              width={200}
-              height={200}
-              alt="hand"
-              className="fbicon"
-            />
-          </a>
-        </Link>
-
-
-
+        <br />
+        <div style={{display: "flex", alignItems: "center", border: "1px solid #1e90ff", maxHeight: 43, borderRadius: 6, padding: 14, margin: "16px 0 44px 0", maxWidth: 264, alignSelf: "center", position: "relative", bottom: 35}} className="wrapperUsername">
+            <FaFacebook style={{color: "007aff", fontSize: 24}} />
+            <Link href="https://www.facebook.com/istagram.paoloartista1/">
+              <a
+                style={{margin: "0 !important", paddingLeft: 10, color: "#007aff"}}
+                title="Pagina Facebook">
+                @istagram.paoloartista1
+              </a>
+            </Link>
+            </div>
+        <br />
         <div className="copyright-wrapper">
           <span>
-            Copyright © 2022 Italia Meravigliosa in Tour, Tutti i diritti sono
-            riservati. | Powered by:
+            Copyright © 2022 Italia Meravigliosa in Tour | Tutti i diritti sono
+            riservati.
           </span>
 
           <br />
           <br />
+
+          <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+          Powered by:  
           <Link href="https://applabstudio.com/">
             <a>
               <Image
                 src="/images/applab_logo2.png"
                 objectFit="contain"
                 layout="intrinsic"
-                width={80}
+                width={60}
                 height={30}
                 alt="hand"
               />
             </a>
           </Link>
+          </div>
         </div>
       </div>
     </footer>
