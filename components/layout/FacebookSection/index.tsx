@@ -70,7 +70,7 @@ const FacebookSection = () => {
               style={{ alignSelf: "center" }}
             >
               <Image
-                src="/images/card1.jpg"
+                src="/images/card1.png"
                 objectFit="contain"
                 layout="intrinsic"
                 width={250}
@@ -79,50 +79,13 @@ const FacebookSection = () => {
                 className="cards"
               />
             </div>
-            <div className="col-span-5">
-              <Image
-                src="/images/image2.png"
-                objectFit="contain"
-                layout="intrinsic"
-                width={300}
-                height={300}
-                alt="hand"
-              />
-              <Image
-                src="/images/image3.png"
-                objectFit="contain"
-                layout="intrinsic"
-                width={300}
-                height={300}
-                alt="hand"
-              />
-            </div>
           </div> 
         </div>
 
          <div className="facebook_text_grid_width view_mobile !space-y-8">
           <Image
-            src="/images/card1.jpg"
-            objectFit="cover"
-            layout="intrinsic"
-            width={300}
-            height={300}
-            alt="hand"
-            className="rounded-2xl"
-          />
-
-          <Image
-            src="/images/image2.png"
-            objectFit="cover"
-            layout="intrinsic"
-            width={300}
-            height={300}
-            alt="hand"
-            className="rounded-2xl"
-          />
-          <Image
-            src="/images/image3.png"
-            objectFit="cover"
+            src="/images/card1.png"
+            objectFit="contain"
             layout="intrinsic"
             width={300}
             height={300}
