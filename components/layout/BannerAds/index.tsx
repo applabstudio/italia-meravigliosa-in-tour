@@ -15,7 +15,7 @@ const BannerAds = () => {
           height={100}
           alt="hand"
         />
-        <Link href="/#work-with-us-section">
+        <Link href="htts://mailto:info@italiameravigliosaintour.it">
           <a className="btn-bannerads"> Contattaci</a>
         </Link>
       </div>
