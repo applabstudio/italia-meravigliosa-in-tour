@@ -42,7 +42,7 @@ const Contatti = () => {
           placeholder="Il tuo nome..."
         />
 
-        <Input id="cv" label="cv" type="file" placeholder="File" />
+        <Input id="cv" label="Allega un file" type="file" placeholder="File" />
 
         <Input
           id="email"
