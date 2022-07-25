@@ -193,15 +193,15 @@ export default function Tabbar({}) {
         </a>
       </Link>
 
-      {/* <Link href="/#top-section">
+      <Link href="/#top-section">
         <a
           className={`flex flex-col justify-center border-t-4 ${
             searchIcon === "search_hover"
               ? "border-t-red-500"
               : "border-t-transparent"
           }`}
-        > */}
-          {/* <div
+        > 
+          <div
             className="footer-grid xl:col-span-2"
             onMouseEnter={() => {
               setSearchHover("search_hover")
@@ -226,11 +226,11 @@ export default function Tabbar({}) {
                 "text-red-500"
               }`}
             >
-              Cerca
+              Top
             </span>
-          </div> */}
-        {/* </a>
-      </Link> */}
+          </div>
+       </a>
+      </Link> 
     </div>
   )
 }
