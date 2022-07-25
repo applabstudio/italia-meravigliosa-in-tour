@@ -27,6 +27,9 @@ import Newsletter from "./Newsletter"
 import FacebookSection from "./layout/FacebookSection"
 import { useRouter } from "next/router"
 
+
+import Pixel from './Pixel'
+
 const ADSENSE_PUBLISHER_KEY = "ca-pub-7292810486004926"
 const ADSENSE_SLOT = "7610040244"
 
@@ -611,6 +614,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               </div>
               <BannerAds />
               <Footer />
+              <Pixel name='FACEBOOK_PIXEL_1' />
             </div>
           </div>
         </main>

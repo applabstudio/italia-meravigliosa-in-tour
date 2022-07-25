@@ -11,7 +11,7 @@ import BannerAds from "../../components/layout/BannerAds"
 const Categoria = ({ slug }: { slug: string }) => {
   const router = useRouter()
   slug = router.query.slug
-  console.log("This is props", router.query)
+  // console.log("This is props", router.query)
   const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}

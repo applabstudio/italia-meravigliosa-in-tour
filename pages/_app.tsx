@@ -56,6 +56,7 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
         links[i].addEventListener("click", onClick)
       }
     })
+    
   }, [])
 
   return (

@@ -29,7 +29,7 @@ const Evento = () => {
     collection(firestore, "fl_content"),
     {}
   )
-  console.log("This is the date", data)
+  // console.log("This is the date", data)
 
   const [eventi, setEventi] = useState<any[]>([])
   const [evento, setEvento] = useState<any>()
@@ -42,7 +42,7 @@ const Evento = () => {
   useEffect(() => {
     const allEvents = []
     data?.docs.forEach((d) => {
-      console.log("This is the fl scemal", d.data()._fl_meta_.schema)
+      // console.log("This is the fl scemal", d.data()._fl_meta_.schema)
       if (d.data()._fl_meta_.schema === "evento") {
         setEventi((eventi) => [...eventi, d.data()])
         allEvents.push(d.data())
@@ -108,6 +108,7 @@ const Evento = () => {
   //   "This is evento",
   //   eventi?.filter((doc) => doc.slug === slug)[0]
   // )
+  
   return (
     <div style={{ marginTop: 100 }}>
       <Toaster />
