@@ -56,7 +56,7 @@ const Footer = () => {
         <br />
         <div style={{display: "flex", alignItems: "center", border: "1px solid #1e90ff", maxHeight: 43, borderRadius: 6, padding: 14, margin: "16px 0 44px 0", maxWidth: 264, alignSelf: "center", position: "relative", bottom: 35}} className="wrapperUsername">
             <FaFacebook style={{color: "007aff", fontSize: 24}} />
-            <Link href="https://www.facebook.com/istagram.paoloartista1/">
+            <Link href="https://www.facebook.com/istagram.paoloartista1/" target="_blank">
               <a
                 style={{margin: "0 !important", paddingLeft: 10, color: "#007aff"}}
                 title="Pagina Facebook">

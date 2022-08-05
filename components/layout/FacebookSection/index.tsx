@@ -33,7 +33,7 @@ const FacebookSection = () => {
           <div className="facebook-mobile-icon flex flex-col space-y-4  lg:flex-row lg:items-center lg:space-y-0">
             <div style={{display: "flex", alignItems: "center", border: "1px solid #1e90ff", maxHeight: 43, borderRadius: 6, padding: 14, margin: "16px 0", maxWidth: 264, alignSelf: "center"}} className="wrapperUsername">
             <FaFacebook style={{color: "007aff", fontSize: 24}} />
-            <Link href="https://www.facebook.com/istagram.paoloartista1/">
+            <Link href="https://www.facebook.com/istagram.paoloartista1/" target="_blank">
               <a
                 style={{margin: "0 !important", paddingLeft: 10, color: "#007aff"}}
                 title="Pagina Facebook">
