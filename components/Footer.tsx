@@ -2,11 +2,15 @@ import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
 import React from "react"
-import { FaEnvelope, FaFacebook } from "react-icons/fa"
+import { FaEnvelope, FaFacebook, FaDownload } from "react-icons/fa"
 
 const Footer = () => {
   return (
     <footer>
+      <Link href='/servizi.pdf'  target="_blank" download>
+        <a className="wrapperUsername wrapperUsername2"><FaDownload/>Scarica ora i nostri servizi</a>
+      </Link>
+
        <div className="divider"></div>
       <div
         style={{ display: "flex", alignItems: "center", flexFlow: "column" }}

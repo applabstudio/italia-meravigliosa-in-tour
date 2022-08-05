@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
 
-import { FaBars, FaTimes, FaHeart, FaUser, FaDoorOpen } from "react-icons/fa"
+import { FaBars, FaTimes, FaHeart, FaUser, FaDoorOpen, FaDownload } from "react-icons/fa"
 import { SearchBar } from "./common/SearchBar"
 import WishModal from "./WishModal"
 import { useAuthState } from "react-firebase-hooks/auth"
@@ -119,8 +119,12 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
           </>
         )}
       </div>
+ 
       <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <ThemeToggle />
+      <Link href='/servizi.pdf'  target="_blank" download>
+        <a className="wrapperUsername wrapperUsername3"><FaDownload/>Servizi</a>
+      </Link>
     </div>
   )
 }
@@ -237,7 +241,9 @@ const Navbar = () => {
                 )}
               </MagicBell>
             )}
-
+            <Link href='/servizi.pdf'  target="_blank" download>
+        <a className="wrapperUsername wrapperUsername3"><FaDownload/>Servizi</a>
+      </Link>
             <button
               type="button"
               onClick={() => setModalOpen(true)}
