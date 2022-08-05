@@ -63,8 +63,8 @@ export default function Tabbar({}) {
               src={`/images/${homeIcon || homeHover}.png`}
               objectFit="contain"
               layout="intrinsic"
-              width={30}
-              height={30}
+              width={20}
+              height={20}
               alt="home"
               className="homeIcon"
             />
@@ -101,8 +101,8 @@ export default function Tabbar({}) {
               src={`/images/${infoIcon || infoHover}.png`}
               objectFit="contain"
               layout="intrinsic"
-              width={30}
-              height={30}
+              width={20}
+              height={20}
               alt="info"
               className="infoIcon"
             />
@@ -139,8 +139,8 @@ export default function Tabbar({}) {
               src={`/images/${workIcon || workHover}.png`}
               objectFit="contain"
               layout="intrinsic"
-              width={30}
-              height={30}
+              width={20}
+              height={20}
               alt="work"
               className="workIcon"
             />
@@ -174,7 +174,7 @@ export default function Tabbar({}) {
             }}
           >
             <FaUser
-              size={30}
+              size={20}
               className={`heartIcon my-1 ${
                 heartIcon === "heart_hover" || heartHover === "heart_hover"
                   ? "text-red-500"
@@ -214,8 +214,8 @@ export default function Tabbar({}) {
               src={`/images/${searchIcon || searchHover}.png`}
               objectFit="contain"
               layout="intrinsic"
-              width={34}
-              height={34}
+              width={20}
+              height={20}
               alt="search"
               className="searchIcon"
             />
