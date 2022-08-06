@@ -26,6 +26,7 @@ const Footer = () => {
                     width={180}
                     height={40}
                     alt="hand"
+                    title="italia meravigliosa in tour"
                     className="logo_navbar"
                   />
                 </div>
@@ -60,7 +61,7 @@ const Footer = () => {
               <a
                 style={{margin: "0 !important", paddingLeft: 10, color: "#007aff"}}
                 title="Pagina Facebook">
-                @istagram.paoloartista1
+                Seguici su Facebook
               </a>
             </Link>
             </div>
@@ -68,7 +69,7 @@ const Footer = () => {
         <div className="copyright-wrapper">
           <span>
             Copyright © 2022 Italia Meravigliosa in Tour | Tutti i diritti sono
-            riservati.
+            riservati. P.Iva: 04471240400
           </span>
 
           <br />

@@ -593,6 +593,20 @@ textarea:hover {
   color: white;
 }
 
+
+.title-bannerads {
+  padding: 10px 50px;
+  border-radius: 50px;
+  color: #08be82;
+  font-size: 1.5rem;
+}
+
+.title-bannerads:hover {
+  transition: 0.2s;
+  color: #048d5f;
+  text-shadow: 2px 2px 5px rgba(48, 48, 48, 0.233);
+}
+
 .adscustom .btn-bannerads:hover {
   transition: 0.2s;
   background: #08be82;

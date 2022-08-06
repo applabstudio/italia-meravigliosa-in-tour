@@ -6,7 +6,10 @@ const BannerAds = () => {
   return (
     <>
       <div className="adscustom">
-        <p>Vorresti la tua pubblicita' qui?</p>
+      <Link href="htts://mailto:info@italiameravigliosaintour.it">
+         <a className="title-bannerads">Vorresti la tua pubblicita' qui?</a>
+      </Link>
+      
         <Image
           src="/images/Bullhorn.png"
           objectFit="contain"

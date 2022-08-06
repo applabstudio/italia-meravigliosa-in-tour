@@ -185,7 +185,7 @@ export default function Tabbar({}) {
               className={`tabText text-center ${
                 (heartIcon === "heart_hover" || heartHover === "heart_hover") &&
                 "text-red-500"
-              }`}
+              }`} style={{marginTop: -8}}
             >
               Account
             </p>

@@ -283,7 +283,7 @@ const Evento = () => {
             <p className="luogoSpan mb-2 !mt-6 flex items-center space-x-1 text-sm text-gray-500 xl:!mt-0">
               <FaMapMarkerAlt /> <span>{evento?.luogo}</span>
             </p>
-            <p className="text-center text-lg font-semibold text-gray-800 md:text-left">
+            <p className="text-center text-lg  md:text-left">
               {evento?.data}
             </p>
 

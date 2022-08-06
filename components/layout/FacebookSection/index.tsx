@@ -35,7 +35,7 @@ const FacebookSection = () => {
             <FaFacebook style={{color: "007aff", fontSize: 24}} />
             <Link href="https://www.facebook.com/istagram.paoloartista1/" target="_blank">
               <a
-                style={{margin: "0 !important", paddingLeft: 10, color: "#007aff"}}
+                style={{margin: "0 !important", paddingLeft: 10, paddingTop: 20, paddingBottom: 20, color: "#007aff"}}
                 title="Pagina Facebook">
                 @istagram.paoloartista1
               </a>
