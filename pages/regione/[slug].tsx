@@ -290,7 +290,8 @@ const Regione = ({ slug }: { slug: string }) => {
           </div>
         ) : (
           <p className="font-semibold text-gray-500">
-            Attendere... Al momento non sono presenti luoghi in questa regione
+            {/* Attendere... Al momento non sono presenti luoghi in questa regione */}
+            Caricamento...
           </p>
         )}
 

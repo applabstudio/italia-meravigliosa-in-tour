@@ -54,7 +54,8 @@ const Provincia = ({ slug }: { slug: string }) => {
           </div>
         ) : (
           <p className="font-semibold text-gray-500">
-            Attendere... Al momento non sono presenti luoghi in questa provincia
+            {/* Attendere... Al momento non sono presenti luoghi in questa provincia */}
+            Caricamento...
           </p>
         )}
 

@@ -3,6 +3,7 @@ import Link from "next/link"
 import Script from "next/script"
 import React from "react"
 import { FaEnvelope, FaFacebook, FaDownload } from "react-icons/fa"
+import BuyMeCoffee from "./BuyMeCoffee"
 
 const Footer = () => {
   return (
@@ -40,10 +41,11 @@ const Footer = () => {
             <a className="footer-email">info@italiameravigliosaintour.it</a>
           </Link>
           
-
+      
 
         </div>
-
+        <br />
+        <BuyMeCoffee/>
         <br />
 
         <Link href="https://www.iubenda.com/privacy-policy/76997417" title="Privacy Policy">
