@@ -16,6 +16,7 @@ import _ from "lodash"
 import TabBar from "../components/TabBar/"
 import Snd from "snd-lib"
 import useLocalStorage from "../services/useLocalStorage"
+import SeoHead from "../components/Seo/SeoHead"
 
 function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
   const [items, setItems] = useLocalStorage<EventProps[]>("wishlist", [])
@@ -56,7 +57,6 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
         links[i].addEventListener("click", onClick)
       }
     })
-    
   }, [])
 
   return (
@@ -82,12 +82,8 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
         showOnShallow={true}
       />
 
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="/apple-touch-icon.png" />
-      </Head>
+      {/* Head Tag for SEO */}
+      <SeoHead />
 
       <div className="selection:bg-primary-400 selection:text-white">
         <div
