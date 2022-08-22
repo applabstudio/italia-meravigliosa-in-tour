@@ -5,6 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document"
+import Script from "next/script"
 
 const iubendaImplementation = `
 <script type="text/javascript">
@@ -81,6 +82,7 @@ class MainDocument extends Document {
         <body>
           <Main />
           <NextScript />
+
           <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
           <div dangerouslySetInnerHTML={{ __html: iubendaImplementation }} />
