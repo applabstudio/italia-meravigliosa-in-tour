@@ -30,11 +30,12 @@ class MainDocument extends Document {
     return (
       <Html lang="it" className="scroll-smooth">
         <Head>
+          <link rel="icon" href="/favicon.ico" />
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet"
           />
-                    <link
+          <link
             href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
             rel="stylesheet"
           />
@@ -71,15 +72,11 @@ class MainDocument extends Document {
             }}
           />
 
-          
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2997320138881950"
             crossOrigin="anonymous"
           ></script>
-
-
-        <meta property="og:image" content="/apple-touch-icon.png" />
         </Head>
         <body>
           <Main />
