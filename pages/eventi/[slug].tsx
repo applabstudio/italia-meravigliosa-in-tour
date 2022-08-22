@@ -21,6 +21,7 @@ import React, { useState, useContext, useEffect } from "react"
 import WishContext, { EventProps } from "../../components/context/WishContext"
 import DOMPurify from "isomorphic-dompurify"
 import toast, { Toaster } from "react-hot-toast"
+import SeoHead from "../../components/Seo/SeoHead"
 
 const clipboard = () => toast.success("Testo copiato negli appunti!")
 
@@ -108,9 +109,10 @@ const Evento = () => {
   //   "This is evento",
   //   eventi?.filter((doc) => doc.slug === slug)[0]
   // )
-  
+
   return (
     <div style={{ marginTop: 100 }}>
+      <SeoHead title={evento?.titolo} imageUrl={evento?.copertina} />
       <Toaster />
       <div className="mx-auto my-8 max-w-6xl">
         {console.log(listaCategorie)}
@@ -153,7 +155,7 @@ const Evento = () => {
                     marginLeft: 8,
                   }}
                 >
-                  Credit 
+                  Credit
                 </span>{" "}
                 {" " + evento?.credit}
               </p>
@@ -177,7 +179,7 @@ const Evento = () => {
                     marginLeft: 8,
                   }}
                 >
-                  Views 
+                  Views
                 </span>{" "}
                 {" " + evento?.views}
               </p>
@@ -201,12 +203,12 @@ const Evento = () => {
                     marginLeft: 8,
                   }}
                 >
-                  Likes 
+                  Likes
                 </span>{" "}
                 {" " + evento?.likes}
               </p>
             </div>
-{/* 
+            {/* 
             <br />
             <br /> */}
             <div className="w-full bg-gray-100">
@@ -247,7 +249,8 @@ const Evento = () => {
                     )
                     clipboard()
                   }}
-                  className="ml-auto flex w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-blue-500 px-4 py-3 font-medium text-white categoryContainer">
+                  className="categoryContainer ml-auto flex w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-blue-500 px-4 py-3 font-medium text-white"
+                >
                   <FaShare />
                   <span>Condividi</span>
                 </div>
@@ -283,9 +286,7 @@ const Evento = () => {
             <p className="luogoSpan mb-2 !mt-6 flex items-center space-x-1 text-sm text-gray-500 xl:!mt-0">
               <FaMapMarkerAlt /> <span>{evento?.luogo}</span>
             </p>
-            <p className="text-center text-lg  md:text-left">
-              {evento?.data}
-            </p>
+            <p className="text-center text-lg  md:text-left">{evento?.data}</p>
 
             <div className="mt-6 flex justify-center space-x-2 md:justify-start xl:mt-2">
               <button
