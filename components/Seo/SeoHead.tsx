@@ -1,6 +1,7 @@
 import { useRouter } from "next/router"
 import React from "react"
 import { NextSeo } from "next-seo"
+import { useState } from "react"
 
 interface Props {
   title?: string
@@ -13,6 +14,7 @@ const SeoHead: React.FC<Props> = ({
   description,
   imageUrl,
 }): JSX.Element => {
+  const [preview, setPreview] = useState()
   const router = useRouter()
   const Seo = {
     title: title ? title : "italia meravigliosa in tour",

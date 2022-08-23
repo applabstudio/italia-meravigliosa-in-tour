@@ -1,7 +1,7 @@
-import React from "react"
 import CVForm from "../components/CVForm"
+import { NextPage } from "next"
 
-const LavoraConNoi = () => {
+const LavoraConNoi: NextPage = () => {
   return (
     <div className="mx-auto mt-24 max-w-6xl">
       <main className="flex w-full flex-col px-4">

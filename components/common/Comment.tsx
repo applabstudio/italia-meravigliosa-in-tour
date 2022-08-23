@@ -1,6 +1,11 @@
 import React from "react"
 
-const Comment = ({ user, text }: { user: string; text: string }) => {
+interface Props {
+  user: string
+  text: string
+}
+
+const Comment: React.FC<Props> = ({ user, text }) => {
   return (
     <div className="my-4 flex w-full flex-col divide-y-2">
       <p className="text-lg font-medium text-gray-800">{user}</p>

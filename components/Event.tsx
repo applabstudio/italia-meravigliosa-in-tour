@@ -1,6 +1,5 @@
-import Link from "next/link"
 import React from "react"
-import { FaArrowRight, FaMapMarkerAlt } from "react-icons/fa"
+import { FaMapMarkerAlt } from "react-icons/fa"
 import { useDocument } from "react-firebase-hooks/firestore"
 import { doc, getFirestore } from "firebase/firestore"
 import { firebaseApp, firestore } from "../firebase/clientApp"

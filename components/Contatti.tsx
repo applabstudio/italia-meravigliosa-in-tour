@@ -1,12 +1,10 @@
 import React, { useRef, useState } from "react"
 import Input from "./common/Input"
 import emailjs from "@emailjs/browser"
-
 import Dropdown from "./UI/Dropdown"
 
 const Contatti = () => {
   const form = useRef(null)
-
   const [, setProfession] = useState("Photographer")
 
   return (

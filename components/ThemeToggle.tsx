@@ -5,6 +5,39 @@ interface Props {
   activeTheme: string | undefined
 }
 
+const ThemeToggle = (): JSX.Element => {
+  const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme)
+  const inactiveTheme = activeTheme === "light" ? "dark" : "light"
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem("theme")
+    savedTheme && setActiveTheme(savedTheme)
+  }, [])
+
+  useEffect(() => {
+    if (activeTheme) {
+      document.body.dataset.theme = activeTheme
+      window.localStorage.setItem("theme", activeTheme)
+    }
+  }, [activeTheme])
+
+  return (
+    <ToggleButton
+      aria-label={`Change to ${inactiveTheme} mode`}
+      title={`Change to ${inactiveTheme} mode`}
+      type="button"
+      onClick={() => setActiveTheme(inactiveTheme)}
+    >
+      <ToggleThumb activeTheme={activeTheme} />
+      <span aria-hidden={true}>☀️</span>
+      <span aria-hidden={true}>🌙</span>
+    </ToggleButton>
+  )
+}
+
+export default ThemeToggle
+
+// Css
 const ToggleButton = styled.button`
   --toggle-width: 80px;
   --toggle-height: 38px;
@@ -48,35 +81,3 @@ const ToggleThumb = styled.span`
       ? "translate3d(calc(var(--toggle-width) - var(--toggle-height)), 0, 0)"
       : "none"};
 `
-
-const ThemeToggle = () => {
-  const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme)
-  const inactiveTheme = activeTheme === "light" ? "dark" : "light"
-
-  useEffect(() => {
-    const savedTheme = window.localStorage.getItem("theme")
-    savedTheme && setActiveTheme(savedTheme)
-  }, [])
-
-  useEffect(() => {
-    if (activeTheme) {
-      document.body.dataset.theme = activeTheme
-      window.localStorage.setItem("theme", activeTheme)
-    }
-  }, [activeTheme])
-
-  return (
-    <ToggleButton
-      aria-label={`Change to ${inactiveTheme} mode`}
-      title={`Change to ${inactiveTheme} mode`}
-      type="button"
-      onClick={() => setActiveTheme(inactiveTheme)}
-    >
-      <ToggleThumb activeTheme={activeTheme} />
-      <span aria-hidden={true}>☀️</span>
-      <span aria-hidden={true}>🌙</span>
-    </ToggleButton>
-  )
-}
-
-export default ThemeToggle

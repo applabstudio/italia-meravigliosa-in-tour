@@ -4,15 +4,13 @@ import { FaTimes } from "react-icons/fa"
 import WishContext from "./context/WishContext"
 import Event from "./Event"
 
-const WishModal = ({
-  modalOpen,
-  setModalOpen,
-}: {
+interface Props {
   modalOpen: boolean
   setModalOpen: Function
-}) => {
-  const { items, remove } = useContext(WishContext)
+}
 
+const WishModal: React.FC<Props> = ({ modalOpen, setModalOpen }) => {
+  const { items, remove } = useContext(WishContext)
   const removeFromWish = (id: string) => {
     if (remove) {
       remove(id)

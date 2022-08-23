@@ -1,7 +1,7 @@
-import React from "react"
 import Contatti from "../components/Contatti"
+import { NextPage } from "next"
 
-const contatti = () => {
+const contatti: NextPage = () => {
   return (
     <div className="mx-auto mt-24 max-w-6xl">
       <main className="flex w-full flex-col px-4">

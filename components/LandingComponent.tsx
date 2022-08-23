@@ -27,8 +27,7 @@ import Newsletter from "./Newsletter"
 import FacebookSection from "./layout/FacebookSection"
 import { useRouter } from "next/router"
 
-
-import Pixel from './Pixel'
+import Pixel from "./Pixel"
 
 const ADSENSE_PUBLISHER_KEY = "ca-pub-7292810486004926"
 const ADSENSE_SLOT = "7610040244"
@@ -302,7 +301,7 @@ const Section = ({
     </div>
   )
 }
-const LandingComponent = ({ slug }: { slug: any }) => {
+const LandingComponent: React.FC<{ slug: string }> = ({ slug }) => {
   const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}
@@ -416,17 +415,15 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 }}
                 className="w-full"
               />
-
             </div>
           </div>
           {listaEventi.filter((doc) => doc?.luogo === slug).length == 0 && (
             <div className="col-span-12 !mt-4 box-border flex flex-col px-4 xl:col-span-12">
-              
               <p
-                className="text-center info_title"
+                className="info_title text-center"
                 style={{ fontWeight: "700", fontSize: 16 }}
               >
-                           <Image
+                <Image
                   src="/images/hand1.png"
                   objectFit="contain"
                   layout="intrinsic"
@@ -438,18 +435,27 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 Clicca su una{" "}
                 <span className="text-secondary-500">regione</span> che vuoi
                 esplorare
-                <span style={{display: "flex", justifyContent: "center", alignItems: "center", fontSize: 12, padding:20,}} className="tutorialWrapper">
-                  <br/>
-                <Image
-                  src="/images/trovaluoghi.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={48}
-                  height={48}
-                  alt="hand"
-                  className="trovaluoghi_icon"
-                />
-                 E scopri luoghi meravigliosi dentro le province
+                <span
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 12,
+                    padding: 20,
+                  }}
+                  className="tutorialWrapper"
+                >
+                  <br />
+                  <Image
+                    src="/images/trovaluoghi.png"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={48}
+                    height={48}
+                    alt="hand"
+                    className="trovaluoghi_icon"
+                  />
+                  E scopri luoghi meravigliosi dentro le province
                 </span>
               </p>
             </div>
@@ -516,7 +522,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             </div>
           )}
 
-          <div className="col-span-12 flex flex-col px-4 categywrapper">
+          <div className="categywrapper col-span-12 flex flex-col px-4">
             <h4 className="my-4 text-center text-5xl font-semibold uppercase lg:text-7xl">
               Categorie
             </h4>
@@ -543,8 +549,6 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 ))}
             </div>
           </div>
-
-         
 
           <WelcomeSection />
 
@@ -616,7 +620,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               </div>
               <BannerAds />
               <Footer />
-              <Pixel name='FACEBOOK_PIXEL_1' />
+              <Pixel name="FACEBOOK_PIXEL_1" />
             </div>
           </div>
         </main>

@@ -1,26 +1,44 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import Input from "../components/common/Input"
-import toast, { Toaster } from "react-hot-toast"
+import { Toaster } from "react-hot-toast"
+import { auth } from "../firebase/clientApp"
+import { useRouter } from "next/router"
+import { NextPage } from "next"
 import {
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
 } from "firebase/auth"
-import { auth } from "../firebase/clientApp"
-import { useRouter } from "next/router"
 
-const notifyFields = () => toast.error("Devi compilare tutti i campi")
-const notifyError = () => toast.error("Errore nel login")
-const notifyEmail = () => toast.error("Inserisci la tua email")
-const notifySuccess = () => toast.success("Login effettuato correttamente!")
-const notifyPasswordSent = () =>
-  toast.success("Una email è stata inviata al tuo indirizzo!")
+import {
+  notifyEmail,
+  notifyError,
+  notifyFields,
+  notifyPasswordSent,
+  notifySuccess,
+} from "../components/common/NotifyToaster"
 
-const Signin = () => {
+const SignIn: NextPage = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-
   const router = useRouter()
 
+  const SubmitHandle = (e: { preventDefault: () => void }) => {
+    e.preventDefault()
+    if (!email || !password) {
+      notifyFields()
+    } else {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((cred) => {
+          notifySuccess()
+          setEmail("")
+          setPassword("")
+          router.push("/")
+        })
+        .catch((err) => {
+          notifyError()
+        })
+    }
+  }
   return (
     <div className="mx-auto mt-32 flex max-w-7xl flex-col items-center space-x-10 space-y-20 px-4">
       <div className="w-full">
@@ -64,23 +82,7 @@ const Signin = () => {
           <br />
 
           <button
-            onClick={() => {
-              if (!email || !password) {
-                notifyFields()
-              } else {
-                signInWithEmailAndPassword(auth, email, password)
-                  .then((cred) => {
-                    notifySuccess()
-                    setEmail("")
-                    setPassword("")
-                    router.push("/")
-                    // console.log("User Logged In:", cred.user);
-                  })
-                  .catch((err) => {
-                    notifyError()
-                  })
-              }
-            }}
+            onClick={SubmitHandle}
             className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full border-2 border-secondary-500 p-4 px-6 py-3 font-medium text-secondary-600 shadow-md outline-none ring-secondary-500 ring-offset-4 transition duration-300 ease-out focus:ring-2"
           >
             <span className="ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-secondary-500 text-white duration-300 group-hover:translate-x-0">
@@ -103,7 +105,6 @@ const Signin = () => {
               Invia
             </span>
             <span className="invisible relative">Invia</span>
-       
           </button>
 
           <br />
@@ -132,11 +133,11 @@ const Signin = () => {
           </p>
         </div>
         <br />
-            <br />
-            <br />
+        <br />
+        <br />
       </div>
     </div>
   )
 }
 
-export default Signin
+export default SignIn

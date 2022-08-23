@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { FaArrowCircleRight, FaEnvelope } from "react-icons/fa"
-
 import { subscribeToConvertKit } from "../../services/subscribe"
 
 const Newsletter = () => {

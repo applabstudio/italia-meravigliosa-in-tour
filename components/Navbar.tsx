@@ -1,8 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
-
-import { FaBars, FaTimes, FaHeart, FaUser, FaDoorOpen, FaDownload } from "react-icons/fa"
+import {
+  FaBars,
+  FaTimes,
+  FaHeart,
+  FaUser,
+  FaDoorOpen,
+  FaDownload,
+} from "react-icons/fa"
 import { SearchBar } from "./common/SearchBar"
 import WishModal from "./WishModal"
 import { useAuthState } from "react-firebase-hooks/auth"
@@ -13,9 +19,9 @@ import MagicBell, {
 import dynamic from "next/dynamic"
 import styled from "@emotion/styled"
 
-  const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
-    ssr: false,
- }) as any
+const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
+  ssr: false,
+}) as any
 
 const theme = {
   icon: { borderColor: "#ef4444", width: "24px" },
@@ -54,7 +60,7 @@ const theme = {
   },
 }
 
-const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
+const MobileMenu: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const [user, loading, error] = useAuthState(auth)
   const [userOpen, setUserOpen] = useState(false)
@@ -119,11 +125,14 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
           </>
         )}
       </div>
- 
+
       <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <ThemeToggle />
-      <Link href='/servizi.pdf'  target="_blank" download>
-        <a className="wrapperUsername wrapperUsername3"><FaDownload/>Servizi</a>
+      <Link href="/servizi.pdf" target="_blank" download>
+        <a className="wrapperUsername wrapperUsername3">
+          <FaDownload />
+          Servizi
+        </a>
       </Link>
     </div>
   )
@@ -163,8 +172,6 @@ const Navbar = () => {
           </button>
 
           <div className="flex w-full items-center justify-center space-x-8 md:justify-between lg:w-fit lg:justify-start">
-       
-
             <Link href="/" passHref>
               <a className="rounded-xl bg-white p-2 outline-none ring-primary-200 transition duration-200 focus:ring-2">
                 <div className="flex items-center">
@@ -241,9 +248,12 @@ const Navbar = () => {
                 )}
               </MagicBell>
             )}
-            <Link href='/servizi.pdf'  target="_blank" download>
-        <a className="wrapperUsername wrapperUsername3"><FaDownload/>Servizi</a>
-      </Link>
+            <Link href="/servizi.pdf" target="_blank" download>
+              <a className="wrapperUsername wrapperUsername3">
+                <FaDownload />
+                Servizi
+              </a>
+            </Link>
             <button
               type="button"
               onClick={() => setModalOpen(true)}
@@ -254,10 +264,10 @@ const Navbar = () => {
           </div>
 
           <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
-          
+
           <div className="hidden xl:inline-flex">
-              <ThemeToggle />
-            </div> 
+            <ThemeToggle />
+          </div>
         </nav>
       </header>
 

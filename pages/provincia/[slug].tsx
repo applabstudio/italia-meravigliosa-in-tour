@@ -1,13 +1,13 @@
 // @ts-nocheck
-
 import React, { useEffect, useState } from "react"
 import Event from "../../components/Event"
 import { firestore } from "../../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import BannerAds from "../../components/layout/BannerAds"
+import { NextPage } from "next"
 
-const Provincia = ({ slug }: { slug: string }) => {
+const Provincia: NextPage = ({ slug }: { slug: string }) => {
   const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}
@@ -23,7 +23,6 @@ const Provincia = ({ slug }: { slug: string }) => {
   }, [data])
 
   const eventi = listaEventi.filter((doc) => doc?.luogo === slug)
-
   const ADSENSE_PUBLISHER_KEY = "ca-pub-7292810486004926"
   const ADSENSE_SLOT = "7610040244"
 

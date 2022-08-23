@@ -1,16 +1,8 @@
 // @ts-nocheck
-
 import { collection } from "firebase/firestore"
-import Link from "next/link"
 import React, { useEffect, useRef, useState } from "react"
 import { useCollection } from "react-firebase-hooks/firestore"
-import {
-  FaAngleDown,
-  FaAngleUp,
-  FaFilter,
-  FaSearch,
-  FaTimes,
-} from "react-icons/fa"
+import { FaAngleDown, FaAngleUp, FaSearch, FaTimes } from "react-icons/fa"
 import { firestore } from "../../firebase/clientApp"
 import Event from "../Event"
 import { GoSettings } from "react-icons/go"
@@ -140,12 +132,12 @@ const regions = [
 ]
 
 // TODO finish modal button picker filter
-
-const useOutsideAlerter = (
-  ref: any,
-  setFocused: Function,
+interface Props {
+  ref: any
+  setFocused: Function
   setFiltered: Function
-) => {
+}
+const useOutsideAlerter: React.FC<Props> = (ref, setFocused, setFiltered) => {
   useEffect(() => {
     const handleClickOutside = (event: any) => {
       if (ref.current && !ref.current.contains(event.target)) {

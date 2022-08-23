@@ -22,10 +22,11 @@ import WishContext, { EventProps } from "../../components/context/WishContext"
 import DOMPurify from "isomorphic-dompurify"
 import toast, { Toaster } from "react-hot-toast"
 import SeoHead from "../../components/Seo/SeoHead"
+import { NextPage } from "next"
 
 const clipboard = () => toast.success("Testo copiato negli appunti!")
 
-const Evento = () => {
+const Evento: NextPage = () => {
   const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}
@@ -37,7 +38,6 @@ const Evento = () => {
   const [categorie, setCategorie] = useState<any[]>([])
 
   const router = useRouter()
-
   const slug = router.query.slug
 
   useEffect(() => {

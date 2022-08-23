@@ -1,12 +1,12 @@
 // @ts-nocheck
-
 import React, { useEffect, useState } from "react"
 import { firestore } from "../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import Link from "next/link"
+import { NextPage } from "next"
 
-const Categorie = () => {
+const Categorie: NextPage = () => {
   const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}

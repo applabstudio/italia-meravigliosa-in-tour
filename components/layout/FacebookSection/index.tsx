@@ -1,16 +1,14 @@
-import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import {
-  CursorClickIcon,
   PhotographIcon,
   StarIcon,
   ThumbUpIcon,
   TicketIcon,
 } from "@heroicons/react/outline"
-import { FaComment, FaHeart, FaThumbsUp, FaFacebook } from "react-icons/fa"
+import { FaHeart, FaFacebook } from "react-icons/fa"
 
-const FacebookSection = () => {
+const FacebookSection = (): JSX.Element => {
   const alignSelf = {
     alignSelf: "center",
   }
@@ -31,33 +29,62 @@ const FacebookSection = () => {
             SEGUICI SU FACEBOOK SIAMO OLTRE 250 MILA
           </h4>
           <div className="facebook-mobile-icon flex flex-col space-y-4  lg:flex-row lg:items-center lg:space-y-0">
-            <div style={{display: "flex", alignItems: "center", border: "1px solid #1e90ff", maxHeight: 43, borderRadius: 6, padding: 14, margin: "16px 0", maxWidth: 264, alignSelf: "center"}} className="wrapperUsername">
-            <FaFacebook style={{color: "007aff", fontSize: 24}} />
-            <Link href="https://www.facebook.com/istagram.paoloartista1/" target="_blank">
-              <a
-                style={{margin: "0 !important", paddingLeft: 10, paddingTop: 20, paddingBottom: 20, color: "#007aff"}}
-                title="Pagina Facebook">
-                @istagram.paoloartista1
-              </a>
-            </Link>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                border: "1px solid #1e90ff",
+                maxHeight: 43,
+                borderRadius: 6,
+                padding: 14,
+                margin: "16px 0",
+                maxWidth: 264,
+                alignSelf: "center",
+              }}
+              className="wrapperUsername"
+            >
+              <FaFacebook style={{ color: "007aff", fontSize: 24 }} />
+              <Link
+                href="https://www.facebook.com/istagram.paoloartista1/"
+                target="_blank"
+              >
+                <a
+                  style={{
+                    margin: "0 !important",
+                    paddingLeft: 10,
+                    paddingTop: 20,
+                    paddingBottom: 20,
+                    color: "#007aff",
+                  }}
+                  title="Pagina Facebook"
+                >
+                  @istagram.paoloartista1
+                </a>
+              </Link>
             </div>
-            
           </div>
           <div className="fbListWrapper">
-          <ul
-            style={{paddingBottom: 40, alignItems: "flex-start" }}
-            className="flex flex-row items-center justify-evenly space-y-1 font-semibold lg:flex-col lg:items-start"
-          >
-            <li className="facebook-list"><div className="markerList"></div>Post spettacolari e unici</li>
-            <li className="facebook-list"><div className="markerList"></div>Community</li>
-            <li className="facebook-list"><div className="markerList"></div>Share</li>
-          </ul>
+            <ul
+              style={{ paddingBottom: 40, alignItems: "flex-start" }}
+              className="flex flex-row items-center justify-evenly space-y-1 font-semibold lg:flex-col lg:items-start"
+            >
+              <li className="facebook-list">
+                <div className="markerList"></div>Post spettacolari e unici
+              </li>
+              <li className="facebook-list">
+                <div className="markerList"></div>Community
+              </li>
+              <li className="facebook-list">
+                <div className="markerList"></div>Share
+              </li>
+            </ul>
           </div>
 
-
-          <div className="flex w-fit items-center space-x-2 rounded-lg py-2 text-lg font-semibold text-blue-600 heartIconWrapper">
+          <div className="heartIconWrapper flex w-fit items-center space-x-2 rounded-lg py-2 text-lg font-semibold text-blue-600">
             <FaHeart />
-            <span style={{fontSize: 12}}>Milioni di utenti salvano luoghi meravigliosi</span>
+            <span style={{ fontSize: 12 }}>
+              Milioni di utenti salvano luoghi meravigliosi
+            </span>
           </div>
         </div>
 
@@ -66,7 +93,7 @@ const FacebookSection = () => {
 
           <div className="grid grid-cols-12">
             <div
-              className="col-span-7 text-right box"
+              className="box col-span-7 text-right"
               style={{ alignSelf: "center" }}
             >
               <Image
@@ -79,10 +106,10 @@ const FacebookSection = () => {
                 className="cards"
               />
             </div>
-          </div> 
+          </div>
         </div>
 
-         <div className="facebook_text_grid_width view_mobile !space-y-8">
+        <div className="facebook_text_grid_width view_mobile !space-y-8">
           <Image
             src="/images/card1.png"
             objectFit="contain"

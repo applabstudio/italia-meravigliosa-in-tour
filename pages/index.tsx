@@ -1,24 +1,16 @@
 // @ts-nocheck
-
-import Image from "next/image"
 import type { NextPage } from "next"
-import { SearchBar } from "../components/common/SearchBar"
-import Event from "../components/Event"
 import React, { useEffect, useState } from "react"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import { firestore } from "../firebase/clientApp"
-import Contatti from "../components/Contatti"
-import { FaAngleDown } from "react-icons/fa"
-import PerfectScrollbar from "react-perfect-scrollbar"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
 
 import "swiper/css"
 import "swiper/css/pagination"
 import "react-perfect-scrollbar/dist/css/styles.css"
-import Script from "next/script"
-import Snd from "snd-lib"
+import Event from "../components/Event"
 import LandingComponent from "../components/LandingComponent"
 
 const Section = ({
@@ -31,10 +23,7 @@ const Section = ({
   eventi: any
 }) => (
   <div className="col-span-12 px-4">
-    <h4 className="text-center text-4xl font-bold md:text-left">
-      {titolo}
-    </h4>
-
+    <h4 className="text-center text-4xl font-bold md:text-left">{titolo}</h4>
     <br />
 
     <Swiper
@@ -71,7 +60,6 @@ const Home: NextPage = () => {
     collection(firestore, "fl_content"),
     {}
   )
-
   const [listaEventi, setListaEventi] = useState<any[]>([])
   const [categorie, setCategorie] = useState<any[]>([])
 
@@ -111,18 +99,7 @@ const Home: NextPage = () => {
     }
   }, [])
 
-  // console.log("These are the events ", listaEventi)
-
-  return (
-    <>
-      <div>
-        <LandingComponent
-          eventi={listaEventi}
-          categorie={categorie}
-        ></LandingComponent>
-      </div>
-    </>
-  )
+  return <LandingComponent eventi={listaEventi} categorie={categorie} />
 }
 
 export default Home

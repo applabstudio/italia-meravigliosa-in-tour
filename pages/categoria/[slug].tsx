@@ -1,5 +1,4 @@
 // @ts-nocheck
-
 import React, { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import Event from "../../components/Event"
@@ -7,8 +6,9 @@ import { firestore } from "../../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import BannerAds from "../../components/layout/BannerAds"
+import { NextPage } from "next"
 
-const Categoria = ({ slug }: { slug: string }) => {
+const Categoria: NextPage = ({ slug }: { slug: string }) => {
   const router = useRouter()
   slug = router.query.slug
   // console.log("This is props", router.query)

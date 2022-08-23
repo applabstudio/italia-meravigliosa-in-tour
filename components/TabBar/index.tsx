@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-
 import { useIsMounted } from "../../services/useIsMounted"
 import { FaUser } from "react-icons/fa"
 
@@ -185,7 +184,8 @@ export default function Tabbar({}) {
               className={`tabText text-center ${
                 (heartIcon === "heart_hover" || heartHover === "heart_hover") &&
                 "text-red-500"
-              }`} style={{marginTop: -8}}
+              }`}
+              style={{ marginTop: -8 }}
             >
               Account
             </p>
@@ -200,7 +200,7 @@ export default function Tabbar({}) {
               ? "border-t-red-500"
               : "border-t-transparent"
           }`}
-        > 
+        >
           <div
             className="footer-grid xl:col-span-2"
             onMouseEnter={() => {
@@ -229,8 +229,8 @@ export default function Tabbar({}) {
               Top
             </span>
           </div>
-       </a>
-      </Link> 
+        </a>
+      </Link>
     </div>
   )
 }

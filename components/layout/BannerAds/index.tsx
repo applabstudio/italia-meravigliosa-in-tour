@@ -1,15 +1,14 @@
-import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
 
-const BannerAds = () => {
+const BannerAds = (): JSX.Element => {
   return (
     <>
       <div className="adscustom">
-      <Link href="htts://mailto:info@italiameravigliosaintour.it">
-         <a className="title-bannerads">Vorresti la tua pubblicita' qui?</a>
-      </Link>
-      
+        <Link href="htts://mailto:info@italiameravigliosaintour.it">
+          <a className="title-bannerads">Vorresti la tua pubblicita' qui?</a>
+        </Link>
+
         <Image
           src="/images/Bullhorn.png"
           objectFit="contain"

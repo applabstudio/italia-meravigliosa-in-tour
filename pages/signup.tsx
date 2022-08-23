@@ -1,25 +1,43 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import Input from "../components/common/Input"
 import { signupUser } from "../firebase/clientApp"
-import toast, { Toaster } from "react-hot-toast"
+import { Toaster } from "react-hot-toast"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { NextPage } from "next"
+import {
+  emailError,
+  notifyFields,
+  passwordError,
+  notifySuccess,
+} from "../components/common/NotifyToaster"
 
-const notifyFields = () => toast.error("Devi compilare tutti i campi")
-const emailError = () => toast.error("L'email inserita non è valida")
-const passwordError = () =>
-  toast.error("La password deve essere di almeno 6 caratteri")
-const notifySuccess = () => toast.success("L'account è stato creato!")
-
-const Signup = () => {
+const SignUp: NextPage = () => {
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-
   const router = useRouter()
 
   function isValidEmail(email: string) {
     return /\S+@\S+\.\S+/.test(email)
+  }
+
+  const SubmitHandle = (e: { preventDefault: () => void }) => {
+    e.preventDefault()
+    if (!username || !email || !password) {
+      notifyFields()
+    } else if (!isValidEmail(email)) {
+      emailError()
+    } else if (password.length < 6) {
+      passwordError()
+    } else {
+      signupUser(username, email, password)
+      notifySuccess("signup")
+      setUsername("")
+      setEmail("")
+      setPassword("")
+      router.push("/signin")
+    }
   }
 
   return (
@@ -83,22 +101,7 @@ const Signup = () => {
           </div>
 
           <button
-            onClick={() => {
-              if (!username || !email || !password) {
-                notifyFields()
-              } else if (!isValidEmail(email)) {
-                emailError()
-              } else if (password.length < 6) {
-                passwordError()
-              } else {
-                signupUser(username, email, password)
-                notifySuccess()
-                setUsername("")
-                setEmail("")
-                setPassword("")
-                router.push("/signin")
-              }
-            }}
+            onClick={SubmitHandle}
             className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full border-2 border-secondary-500 p-4 px-6 py-3 font-medium text-secondary-600 shadow-md outline-none ring-secondary-500 ring-offset-4 transition duration-300 ease-out focus:ring-2 lg:w-fit"
           >
             <span className="ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-secondary-500 text-white duration-300 group-hover:translate-x-0">
@@ -125,16 +128,19 @@ const Signup = () => {
         </div>
       </div>
 
-      <div className="mx-auto flex h-[74vh] w-full justify-center pr-8" style={{alignItems: "center"}}>
+      <div
+        className="mx-auto flex h-[74vh] w-full justify-center pr-8"
+        style={{ alignItems: "center" }}
+      >
         <img
           className="h-full w-full object-cover"
           src="https://scontent.fmxp6-1.fna.fbcdn.net/v/t1.6435-9/81275872_107549224099981_1527722306728624128_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=bsMXLWixlv0AX_YTTYx&_nc_ht=scontent.fmxp6-1.fna&oh=00_AT9paom8TKiVs5rOPNT_rS91wjIIWID8T_YwmnMS1H3o-w&oe=62F20210"
           alt=""
-          style={{maxWidth: 300, maxHeight: 300, borderRadius: 50}}
+          style={{ maxWidth: 300, maxHeight: 300, borderRadius: 50 }}
         />
       </div>
     </div>
   )
 }
 
-export default Signup
+export default SignUp
