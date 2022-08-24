@@ -9,11 +9,7 @@ interface Props {
   imageUrl?: string
 }
 
-const SeoHead: React.FC<Props> = ({
-  title,
-  description,
-  imageUrl,
-}): JSX.Element => {
+const SeoHead: React.FC<Props> = ({ title, description, imageUrl }) => {
   const [preview, setPreview] = useState()
   const router = useRouter()
   const Seo = {
