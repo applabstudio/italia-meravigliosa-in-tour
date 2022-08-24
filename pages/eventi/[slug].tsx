@@ -1,14 +1,10 @@
 //@ts-nocheck
-
 import {
   FaHeart,
   FaMapMarkerAlt,
-  FaPlus,
-  FaEye,
   FaShare,
   FaTwitter,
   FaFacebook,
-  FaInstagram,
   FaWhatsapp,
 } from "react-icons/fa"
 import Image from "next/image"
@@ -23,7 +19,7 @@ import DOMPurify from "isomorphic-dompurify"
 import toast, { Toaster } from "react-hot-toast"
 import SeoHead from "../../components/Seo/SeoHead"
 import { NextPage } from "next"
-
+import styled from "styled-components"
 const clipboard = () => toast.success("Testo copiato negli appunti!")
 
 const Evento: NextPage = () => {
@@ -32,13 +28,14 @@ const Evento: NextPage = () => {
     {}
   )
   // console.log("This is the date", data)
-
+  const [text, setText] = useState("")
   const [eventi, setEventi] = useState<any[]>([])
   const [evento, setEvento] = useState<any>()
   const [categorie, setCategorie] = useState<any[]>([])
-
   const router = useRouter()
   const slug = router.query.slug
+
+  const emoji = ["😄", "🥲", "👍", "❤️️", "😁", "🌟", "🤣", "😉", "✅"]
 
   useEffect(() => {
     const allEvents = []
@@ -115,7 +112,6 @@ const Evento: NextPage = () => {
       <SeoHead title={evento?.titolo} imageUrl={evento?.copertina} />
       <Toaster />
       <div className="mx-auto my-8 max-w-6xl">
-        {console.log(listaCategorie)}
         <main className="flex w-full flex-col xl:flex-row">
           <div className="flex w-full flex-col px-4">
             <div className="relative h-40 w-full">
@@ -360,11 +356,21 @@ const Evento: NextPage = () => {
 
                     <textarea
                       rows={4}
-                      className="form-textarea mb-4 w-full rounded-lg border-gray-400 py-1 caret-secondary-500 outline-none placeholder:text-gray-400 focus:border-secondary-500 focus:ring-0"
+                      className="form-textarea mb-0 w-full rounded-lg border-gray-400 py-1 caret-secondary-500 outline-none placeholder:text-gray-400 focus:border-secondary-500 focus:ring-0"
                       placeholder="commento..."
                       value={commento}
                       onChange={(e) => setCommento(e.target.value)}
                     />
+                    <div className=" flex items-center justify-end">
+                      {emoji.map((e) => (
+                        <span
+                          className="cursor-pointer"
+                          onClick={() => setCommento((pre) => pre + e)}
+                        >
+                          {e}
+                        </span>
+                      ))}
+                    </div>
 
                     <button
                       onClick={uploadComment}
