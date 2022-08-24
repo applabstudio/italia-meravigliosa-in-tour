@@ -9,7 +9,7 @@ import {
   FaDoorOpen,
   FaDownload,
 } from "react-icons/fa"
-import { SearchBar } from "./common/SearchBar"
+// import { SearchBar } from "./common/SearchBar"
 import WishModal from "./WishModal"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth, logout } from "../firebase/clientApp"
@@ -18,6 +18,7 @@ import MagicBell, {
 } from "@magicbell/magicbell-react"
 import dynamic from "next/dynamic"
 import styled from "@emotion/styled"
+import SearchBar from "./common/SearchBar"
 
 const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
   ssr: false,
@@ -72,6 +73,7 @@ const MobileMenu: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
       }`}
     >
       <SearchBar />
+
       <div className="relative flex items-center space-x-6">
         <button
           type="button"

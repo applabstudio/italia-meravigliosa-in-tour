@@ -13,8 +13,8 @@ const BannerAds = (): JSX.Element => {
           src="/images/Bullhorn.png"
           objectFit="contain"
           layout="intrinsic"
-          width={100}
-          height={100}
+          width={80}
+          height={80}
           alt="hand"
         />
         <Link href="htts://mailto:info@italiameravigliosaintour.it">
