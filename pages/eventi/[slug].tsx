@@ -35,7 +35,7 @@ const Evento: NextPage = () => {
   const router = useRouter()
   const slug = router.query.slug
 
-  const emoji = ["😄", "🥲", "👍", "❤️️", "😁", "🌟", "🤣", "😉", "✅"]
+  const emoji = ["👍🏻", "😍", "❤️", "🤩", "🥲", "⭐️"]
 
   useEffect(() => {
     const allEvents = []
