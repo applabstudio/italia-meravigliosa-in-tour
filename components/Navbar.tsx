@@ -17,8 +17,8 @@ import MagicBell, {
   FloatingNotificationInbox,
 } from "@magicbell/magicbell-react"
 import dynamic from "next/dynamic"
-import styled from "@emotion/styled"
 import SearchBar from "./common/SearchBar"
+import MobileMenu from "./MobileMenu"
 
 const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
   ssr: false,
@@ -61,84 +61,84 @@ const theme = {
   },
 }
 
-const MobileMenu: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
-  const [modalOpen, setModalOpen] = useState(false)
-  const [user, loading, error] = useAuthState(auth)
-  const [userOpen, setUserOpen] = useState(false)
+// const MobileMenu: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
+//   const [modalOpen, setModalOpen] = useState(false)
+//   const [user, loading, error] = useAuthState(auth)
+//   const [userOpen, setUserOpen] = useState(false)
 
-  return (
-    <div
-      className={`relative z-10 flex w-full transform flex-col items-center space-y-4 p-4 transition-all ease-in-out ${
-        isOpen ? "translate-y-0" : "-mb-56 -translate-y-full"
-      }`}
-    >
-      <SearchBar />
+//   return (
+//     <div
+//       className={`transition-left relative z-10 flex w-full transform flex-col items-center space-y-4 p-4 transition-all delay-[800] ease-in-out ease-in-out ${
+//         isOpen ? "left-0" : "left-[-100%]"
+//       }`}
+//     >
+//       <SearchBar />
 
-      <div className="relative flex items-center space-x-6">
-        <button
-          type="button"
-          aria-hidden="true"
-          onClick={() => setModalOpen(true)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 transition duration-200 hover:bg-secondary-100 focus:ring-2"
-        >
-          <FaHeart className="text-secondary-500" size={20} />
-        </button>
+//       <div className="relative flex items-center space-x-6">
+//         <button
+//           type="button"
+//           aria-hidden="true"
+//           onClick={() => setModalOpen(true)}
+//           className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 transition duration-200 hover:bg-secondary-100 focus:ring-2"
+//         >
+//           <FaHeart className="text-secondary-500" size={20} />
+//         </button>
 
-        {user && user?.email && (
-          <MagicBell
-            apiKey="97576655a4d3dd3e0a7ee53354b21e333fe580ed"
-            userEmail={user.email}
-            theme={theme}
-            locale="en"
-          >
-            {(props) => (
-              <FloatingNotificationInbox width={400} height={500} {...props} />
-            )}
-          </MagicBell>
-        )}
+//         {user && user?.email && (
+//           <MagicBell
+//             apiKey="97576655a4d3dd3e0a7ee53354b21e333fe580ed"
+//             userEmail={user.email}
+//             theme={theme}
+//             locale="en"
+//           >
+//             {(props) => (
+//               <FloatingNotificationInbox width={400} height={500} {...props} />
+//             )}
+//           </MagicBell>
+//         )}
 
-        {user && (
-          <>
-            <div
-              onClick={() => setUserOpen(!userOpen)}
-              className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 py-3 px-4 font-medium text-primary-700"
-            >
-              <FaUser />
-              <span>{user?.displayName}</span>
-            </div>
+//         {user && (
+//           <>
+//             <div
+//               onClick={() => setUserOpen(!userOpen)}
+//               className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 py-3 px-4 font-medium text-primary-700"
+//             >
+//               <FaUser />
+//               <span>{user?.displayName}</span>
+//             </div>
 
-            {userOpen && (
-              <div className="userLogout absolute right-0 top-20 !z-50 rounded-xl p-8 shadow-xl">
-                <p className="text-lg font-medium">{user?.email}</p>
+//             {userOpen && (
+//               <div className="userLogout absolute right-0 top-20 !z-50 rounded-xl p-8 shadow-xl">
+//                 <p className="text-lg font-medium">{user?.email}</p>
 
-                <br />
+//                 <br />
 
-                <div
-                  onClick={() => {
-                    logout()
-                  }}
-                  className="flex cursor-pointer items-center justify-center space-x-4 rounded-full bg-secondary-100 px-4 py-3 text-lg font-medium text-secondary-500"
-                >
-                  <FaDoorOpen />
-                  <span>Logout</span>
-                </div>
-              </div>
-            )}
-          </>
-        )}
-      </div>
+//                 <div
+//                   onClick={() => {
+//                     logout()
+//                   }}
+//                   className="flex cursor-pointer items-center justify-center space-x-4 rounded-full bg-secondary-100 px-4 py-3 text-lg font-medium text-secondary-500"
+//                 >
+//                   <FaDoorOpen />
+//                   <span>Logout</span>
+//                 </div>
+//               </div>
+//             )}
+//           </>
+//         )}
+//       </div>
 
-      <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      <ThemeToggle />
-      <Link href="/servizi.pdf" target="_blank" download>
-        <a className="wrapperUsername wrapperUsername3">
-          <FaDownload />
-          Servizi
-        </a>
-      </Link>
-    </div>
-  )
-}
+//       <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+//       <ThemeToggle />
+//       <Link href="/servizi.pdf" target="_blank" download>
+//         <a className="wrapperUsername wrapperUsername3">
+//           <FaDownload />
+//           Servizi
+//         </a>
+//       </Link>
+//     </div>
+//   )
+// }
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -149,7 +149,6 @@ const Navbar = () => {
   useEffect(() => {
     function onResize() {
       var x = window.innerWidth
-
       if (x > 768) {
         setIsOpen(false)
       }
@@ -164,7 +163,7 @@ const Navbar = () => {
         <nav className="flex h-full w-full max-w-[90rem] items-center justify-between px-6 md:space-x-10">
           <button
             className="absolute rounded-sm outline-none ring-primary-200 ring-offset-4 transition duration-200 focus:ring-2 md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
           >
             {isOpen ? (
               <FaTimes className="text-gray-500" size={24} />

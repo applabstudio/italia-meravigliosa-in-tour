@@ -221,6 +221,7 @@ const Evento: NextPage = () => {
             </div>
             {/* <br />
             <br /> */}
+
             <div className="flex flex-col items-center justify-between lg:flex-row lg:space-x-12">
               <h4 className="mb-3 text-center text-4xl font-bold text-secondary-500 md:text-left">
                 {evento?.titolo}
@@ -238,43 +239,45 @@ const Evento: NextPage = () => {
                   ))}
                 </div>
 
-                <div
-                  onClick={() => {
-                    navigator.clipboard.writeText(
-                      `https://italiameravigliosaintour.it${router.asPath}`
-                    )
-                    clipboard()
-                  }}
-                  className="categoryContainer ml-auto flex w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-blue-500 px-4 py-3 font-medium text-white"
-                >
-                  <FaShare />
-                  <span>Condividi</span>
-                </div>
-
-                <div className="flex flex-row items-center justify-center space-x-6">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`https://twitter.com/intent/tweet?text=Questo Articolo di Italia Meravigliosa in Tour è maginfico!\n https://italiameravigliosaintour.it${router.asPath}`}
+                <div className="flex flex-wrap gap-5 md:flex-col">
+                  <div
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        `https://www.italiameravigliosaintour.it${router.asPath}`
+                      )
+                      clipboard()
+                    }}
+                    className="categoryContainer ml-auto flex w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-blue-500 px-4 py-3 font-medium text-white"
                   >
-                    <FaTwitter className="text-sky-500" size={30} />
-                  </a>
+                    <FaShare />
+                    <span>Condividi</span>
+                  </div>
 
-                  <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=https://italiameravigliosaintour.it${router.asPath}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaFacebook className="text-blue-500" size={30} />
-                  </a>
+                  <div className="flex flex-row items-center justify-center space-x-6">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={`https://twitter.com/intent/tweet?text=Questo Articolo di Italia Meravigliosa in Tour è maginfico!\n https://italiameravigliosaintour.it${router.asPath}`}
+                    >
+                      <FaTwitter className="text-sky-500" size={30} />
+                    </a>
 
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`https://api.whatsapp.com/send?text=Questo Articolo di Italia Meravigliosa in Tour è maginfico!\n https://italiameravigliosaintour.it${router.asPath}`}
-                  >
-                    <FaWhatsapp className="text-green-500" size={30} />
-                  </a>
+                    <a
+                      href={`https://www.facebook.com/sharer/sharer.php?u=https://italiameravigliosaintour.it${router.asPath}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaFacebook className="text-blue-500" size={30} />
+                    </a>
+
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={`https://api.whatsapp.com/send?text=Questo Articolo di Italia Meravigliosa in Tour è maginfico!\n https://italiameravigliosaintour.it${router.asPath}`}
+                    >
+                      <FaWhatsapp className="text-green-500" size={30} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
