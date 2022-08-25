@@ -5,10 +5,11 @@ import React, { useEffect, useState } from "react"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import { firestore } from "../firebase/clientApp"
-
+import Contatti from "./Contatti"
 import { FaEye } from "react-icons/fa"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
+import BannerAds from "./layout/BannerAds"
 
 import { useIsMounted } from "../services/useIsMounted"
 
@@ -16,12 +17,20 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "react-perfect-scrollbar/dist/css/styles.css"
 import Link from "next/link"
-
+import Input from "./common/Input"
 import PopupOptin from "./PopupOptin"
-
+import Script from "next/script"
+import Mission from "./layout/Mission"
+import Footer from "./Footer"
 import WelcomeSection from "./layout/WelcomeSection"
-
+import Newsletter from "./Newsletter"
+import FacebookSection from "./layout/FacebookSection"
 import { useRouter } from "next/router"
+
+import Pixel from "./Pixel"
+
+const ADSENSE_PUBLISHER_KEY = "ca-pub-7292810486004926"
+const ADSENSE_SLOT = "7610040244"
 
 const regions = {
   "0": {
@@ -292,7 +301,7 @@ const Section = ({
     </div>
   )
 }
-const LandingComponent: React.FC<{ slug: string }> = ({ slug }) => {
+const LandingComponent = ({ slug }: { slug: any }) => {
   const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
     {}
@@ -351,69 +360,42 @@ const LandingComponent: React.FC<{ slug: string }> = ({ slug }) => {
     <>
       <PopupOptin />
 
+      {/* <script>
+        {typeof simplemaps_countrymap !== "undefined" &&
+          (simplemaps_countrymap.hooks.zoomable_click_region = function (id) {
+            console.log(simplemaps_countrymap_mapdata.regions[id].name)
+            setSlugProvincia("")
+            setNomeProvincia("")
+            setRegion(simplemaps_countrymap_mapdata.regions[id].name)
+            setRegionSlug(simplemaps_countrymap_mapdata.regions[id].slug)
+          })}
+      </script>
+
+      <script>
+        {typeof simplemaps_countrymap !== "undefined" &&
+          (simplemaps_countrymap.hooks.click_state = function (id) {
+            setSlugProvincia(
+              simplemaps_countrymap_mapdata.state_specific[id].slug
+            )
+            setNomeProvincia(
+              simplemaps_countrymap_mapdata.state_specific[id].name
+            )
+            // router.push("/#luoghi")
+            // router.push(
+            //   `/provincia/${simplemaps_countrymap_mapdata.state_specific[id].slug}`
+            // )
+            console.log(simplemaps_countrymap_mapdata.state_specific[id].slug)
+          })}
+      </script> */}
+
       <div className="mx-auto max-w-6xl" id="top-section">
-        <main className="mt-0 grid w-full grid-cols-12 space-y-12 space-x-4">
+        <main className="mt-10 grid w-full grid-cols-12 space-y-12 space-x-4">
           <div className="xl:col-span-3"></div>
           <div className="welcome-map col-span-12 box-border flex flex-col px-4 xl:col-span-6">
             <h2 className="first-title text-center text-3xl font-bold">
               Il portale delle meraviglie
             </h2>
-
-            {listaEventi.filter((doc) => doc?.luogo === slug).length == 0 && (
-              <div className="col-span-12 !mt-4 box-border flex flex-col px-4 xl:col-span-12">
-                <p
-                  className="info_title text-center"
-                  style={{ fontWeight: "700", fontSize: 16 }}
-                >
-                  <Image
-                    src="/images/hand1.png"
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={46}
-                    height={46}
-                    alt="hand"
-                    className="hand1"
-                  />
-                  Clicca su una{" "}
-                  <span className="text-secondary-500">regione</span> che vuoi
-                  esplorare
-                  <span
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      fontSize: 12,
-                      padding: 20,
-                    }}
-                    className="tutorialWrapper"
-                  >
-                    <br />
-                    <Image
-                      src="/images/trovaluoghi.png"
-                      objectFit="contain"
-                      layout="intrinsic"
-                      width={48}
-                      height={48}
-                      alt="hand"
-                      className="trovaluoghi_icon"
-                    />
-                    E scopri luoghi meravigliosi dentro le province
-                  </span>
-                </p>
-              </div>
-            )}
-            {listaEventi.filter(
-              (doc) => doc?.luogo === slug || doc?.region === region
-            ).length > 0 && (
-              <Section
-                titolo={`Luoghi in: ${slug || region}`}
-                slug={slug}
-                region={region}
-                eventi={listaEventi}
-                id="luoghi"
-              />
-            )}
-
+            <br />
             <div className="col-span-12 space-y-10 xl:col-span-6">
               <div
                 id="map"
@@ -435,6 +417,60 @@ const LandingComponent: React.FC<{ slug: string }> = ({ slug }) => {
               />
             </div>
           </div>
+          {listaEventi.filter((doc) => doc?.luogo === slug).length == 0 && (
+            <div className="col-span-12 !mt-4 box-border flex flex-col px-4 xl:col-span-12">
+              <p
+                className="info_title text-center"
+                style={{ fontWeight: "700", fontSize: 16 }}
+              >
+                <Image
+                  src="/images/hand1.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={46}
+                  height={46}
+                  alt="hand"
+                  className="hand1"
+                />
+                Clicca su una{" "}
+                <span className="text-secondary-500">regione</span> che vuoi
+                esplorare
+                <span
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 12,
+                    padding: 20,
+                  }}
+                  className="tutorialWrapper"
+                >
+                  <br />
+                  <Image
+                    src="/images/trovaluoghi.png"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={48}
+                    height={48}
+                    alt="hand"
+                    className="trovaluoghi_icon"
+                  />
+                  E scopri luoghi meravigliosi dentro le province
+                </span>
+              </p>
+            </div>
+          )}
+          {listaEventi.filter(
+            (doc) => doc?.luogo === slug || doc?.region === region
+          ).length > 0 && (
+            <Section
+              titolo={`Luoghi in: ${slug || region}`}
+              slug={slug}
+              region={region}
+              eventi={listaEventi}
+              id="luoghi"
+            />
+          )}
 
           {region && (
             <div className="col-span-12 flex justify-center">
@@ -486,7 +522,6 @@ const LandingComponent: React.FC<{ slug: string }> = ({ slug }) => {
             </div>
           )}
 
-          {/* CATEGORIE */}
           <div className="categywrapper col-span-12 flex flex-col px-4">
             <h4 className="my-4 text-center text-5xl font-semibold uppercase lg:text-7xl">
               Categorie
@@ -495,7 +530,7 @@ const LandingComponent: React.FC<{ slug: string }> = ({ slug }) => {
             <br />
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
               {categorie?.length > 0 &&
-                categorie?.slice(0, 6).map((categoria) => (
+                categorie?.map((categoria) => (
                   <div
                     key={categoria?.titolo}
                     className="iconWrapper w-full !rounded-full bg-primary-100 px-2 text-center text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
@@ -516,6 +551,78 @@ const LandingComponent: React.FC<{ slug: string }> = ({ slug }) => {
           </div>
 
           <WelcomeSection />
+
+          <FacebookSection />
+        </main>
+      </div>
+
+      <br />
+      <br />
+
+      <Mission />
+
+      <br />
+
+      <div className="mx-auto max-w-7xl" id="work-with-us-section">
+        <main className="grid w-full grid-cols-12 space-y-12 space-x-4">
+          <div className="col-span-12 px-4">
+            <div className="flex flex-col items-center">
+              <h1 className="workwithus pt-20 pb-14 text-center text-6xl font-bold">
+                VUOI COLLABORARE CON NOI?
+              </h1>
+              <p className="infoGray w-[80%] text-center text-lg font-medium text-gray-500">
+                Italia Meravigliosa offre l’opportunità di collaborare con la
+                nostra redazione, se sei un fotografo, un videomaker oppure un
+                blogger di viaggio, contattaci ed entra a far parte del nostro
+                team, fai conoscere il tuo lavoro attraverso la nostra grande e
+                coesa community
+              </p>
+            </div>
+
+            <h4 className="mt-24 pb-10 text-center text-4xl font-bold md:text-left">
+              Contatti
+            </h4>
+            <Contatti />
+          </div>
+          <Newsletter />
+          <div
+            className="col-span-12 rounded-lg p-6"
+            style={{ marginBottom: 20 }}
+          ></div>
+
+          <div
+            className="col-span-12 !m-0"
+            style={{
+              width: "100%",
+            }}
+          >
+            <div
+              className="mx-auto max-w-7xl"
+              style={{
+                width: "100%",
+                display: "flex",
+                paddingLeft: "1rem",
+                paddingRight: "1rem",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+              className="text-center"
+            >
+              <div>
+                <ins
+                  className="adsbygoogle"
+                  style={{ display: "block", textAlign: "center" }}
+                  data-ad-layout="in-article"
+                  data-ad-format="fluid"
+                  data-ad-client={ADSENSE_PUBLISHER_KEY}
+                  data-ad-slot={ADSENSE_SLOT}
+                ></ins>
+              </div>
+              <BannerAds />
+              <Footer />
+              <Pixel name="FACEBOOK_PIXEL_1" />
+            </div>
+          </div>
         </main>
       </div>
     </>
