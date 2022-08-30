@@ -597,7 +597,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               }}
               className="text-center"
             >
-              <div>
+              {/* <div>
                 <ins
                   className="adsbygoogle"
                   style={{ display: "block", textAlign: "center" }}
@@ -606,7 +606,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                   data-ad-client={ADSENSE_PUBLISHER_KEY}
                   data-ad-slot={ADSENSE_SLOT}
                 ></ins>
-              </div>
+              </div> */}
               <BannerAds />
               <Footer />
               <Pixel name="FACEBOOK_PIXEL_1" />
