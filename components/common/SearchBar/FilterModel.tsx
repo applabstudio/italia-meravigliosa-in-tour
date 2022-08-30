@@ -67,7 +67,7 @@ const FilterModel: React.FC<Props> = ({
     <>
       {whishlistcard && (
         <FilterContainer>
-          <div className="relative w-full rounded-lg bg-white shadow dark:bg-gray-700">
+          <div className="relative w-full rounded-lg bg-white shadow">
             {/* close Btn */}
             <button
               type="button"
@@ -125,7 +125,7 @@ const FilterModel: React.FC<Props> = ({
                           : "hidden"
                       }`}
                     >
-                      <div className="dataFields border border-b-0 border-gray-200 py-2 px-1 dark:border-gray-700 dark:bg-gray-900">
+                      <div className="dataFields border border-b-0 border-gray-200 py-2">
                         {collapseData.map(
                           (value: any, index: Key | null | undefined) => (
                             <button

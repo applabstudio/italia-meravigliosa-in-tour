@@ -37,7 +37,7 @@ const SearchCard = ({
   return (
     <Container>
       <div className="image" style={{ backgroundImage: `url("${image}")` }}>
-        <img src={value?.data()?.icona} alt="" className="eventIcon" />
+        {/* <img src={value?.data()?.icona} alt="" className="eventIcon" /> */}
       </div>
 
       <div className="content text-black">
@@ -79,12 +79,12 @@ const Container = styled.div`
     border-radius: 5px;
     backdrop-filter: blur(5px);
     img {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       position: absolute;
-      right: 2px;
-      bottom: 2px;
+      right: -9px;
+      bottom: -2px;
     }
   }
   .content {

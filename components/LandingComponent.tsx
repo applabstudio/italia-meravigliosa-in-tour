@@ -389,11 +389,38 @@ const LandingComponent = ({ slug }: { slug: any }) => {
       </script> */}
 
       <div className="mx-auto max-w-6xl" id="top-section">
-        <main className="mt-10 grid w-full grid-cols-12 space-y-12 space-x-4">
+        <main className="mt-10 grid w-full grid-cols-12 space-y-12 space-x-4 welcomemapWrapper">
           <div className="xl:col-span-3"></div>
           <div className="welcome-map col-span-12 box-border flex flex-col px-4 xl:col-span-6">
             <h2 className="first-title text-center text-3xl font-bold">
               Il portale delle meraviglie
+              <p
+                className="info_title text-center"
+                style={{ fontWeight: "500", fontSize: 16 }}
+              >
+                <Image
+                  src="/images/hand1.png"
+                  objectFit="contain"
+                  layout="intrinsic"
+                  width={46}
+                  height={46}
+                  alt="hand"
+                  className="hand1"
+                />
+                Fai un tap su una regione che vuoi esplorare e trova luoghi meravigliosi
+     
+                  {/* <br /> */}
+                  {/* <Image
+                    src="/images/trovaluoghi.png"
+                    objectFit="contain"
+                    layout="intrinsic"
+                    width={48}
+                    height={48}
+                    alt="hand"
+                    className="trovaluoghi_icon"
+                  /> */}
+                
+              </p>
             </h2>
             <br />
             <div className="col-span-12 space-y-10 xl:col-span-6">
@@ -419,45 +446,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
           </div>
           {listaEventi.filter((doc) => doc?.luogo === slug).length == 0 && (
             <div className="col-span-12 !mt-4 box-border flex flex-col px-4 xl:col-span-12">
-              <p
-                className="info_title text-center"
-                style={{ fontWeight: "700", fontSize: 16 }}
-              >
-                <Image
-                  src="/images/hand1.png"
-                  objectFit="contain"
-                  layout="intrinsic"
-                  width={46}
-                  height={46}
-                  alt="hand"
-                  className="hand1"
-                />
-                Clicca su una{" "}
-                <span className="text-secondary-500">regione</span> che vuoi
-                esplorare
-                <span
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    fontSize: 12,
-                    padding: 20,
-                  }}
-                  className="tutorialWrapper"
-                >
-                  <br />
-                  <Image
-                    src="/images/trovaluoghi.png"
-                    objectFit="contain"
-                    layout="intrinsic"
-                    width={48}
-                    height={48}
-                    alt="hand"
-                    className="trovaluoghi_icon"
-                  />
-                  E scopri luoghi meravigliosi dentro le province
-                </span>
-              </p>
+
             </div>
           )}
           {listaEventi.filter(
@@ -474,14 +463,14 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
           {region && (
             <div className="col-span-12 flex justify-center">
-              <Link href={`/regione/${regionSlug}`} passHref>
+              {/* <Link href={`/regione/${regionSlug}`} passHref>
                 <a>
                   <button className="flex items-center space-x-2 rounded-full bg-red-500 py-3 px-8 font-bold text-white hover:bg-red-700">
                     <FaEye size={20} />
                     <span>Esplora la Regione</span>
                   </button>
                 </a>
-              </Link>
+              </Link> */}
             </div>
           )}
 

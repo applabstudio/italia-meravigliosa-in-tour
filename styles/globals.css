@@ -182,9 +182,18 @@ textarea:hover {
   transition: 0.2s;
 }
 
+.welcomemapWrapper {
+  margin-top: 0 !important;
+}
+
 .welcome-map {
-  padding-top: 22px;
+  margin-top: 16px !important;
   margin-left: 0 !important;
+  margin-bottom: -8px !important;
+}
+
+#luoghi {
+  margin-top: 0 !important;
 }
 
 .eventImage {
@@ -435,6 +444,10 @@ textarea:hover {
     display: flex;
     flex-flow: column;
   }
+}
+
+.info_title {
+  margin-bottom: -8px;
 }
 
 .info_title span:first-child {
