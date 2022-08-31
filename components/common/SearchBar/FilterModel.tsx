@@ -3,14 +3,14 @@ import styled from "styled-components"
 import { regions } from "./RegionsData"
 
 interface Props {
-  provience: []
+  province: []
   categorie: []
   whishlistcard: Boolean
   setwhishlistcard: (arg: Boolean) => void
 }
 
 const FilterModel: React.FC<Props> = ({
-  provience,
+  province,
   categorie,
   whishlistcard,
   setwhishlistcard,
@@ -22,10 +22,6 @@ const FilterModel: React.FC<Props> = ({
     {
       title: "Regioni",
       collapseData: regions,
-    },
-    {
-      title: "Province",
-      collapseData: provience,
     },
     {
       title: "Categorie",
