@@ -396,7 +396,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               Il portale delle meraviglie
               <p
                 className="info_title text-center"
-                style={{ fontWeight: "500", fontSize: 16 }}
+                style={{ fontWeight: "500", fontSize: 15, fontFamily: "Arial" }}
               >
                 <Image
                   src="/images/hand1.png"
