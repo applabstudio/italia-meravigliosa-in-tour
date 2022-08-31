@@ -6,7 +6,7 @@ import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import { firestore } from "../firebase/clientApp"
 import Contatti from "./Contatti"
-import { FaEye } from "react-icons/fa"
+import { FaEnvelope, FaEye} from "react-icons/fa"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
 import BannerAds from "./layout/BannerAds"
@@ -569,9 +569,22 @@ const LandingComponent = ({ slug }: { slug: any }) => {
             </div>
 
             <h4 className="mt-24 pb-10 text-center text-4xl font-bold md:text-left">
+            <span style={{fontSize: 14, display: "flex", justifyContent: "center"}}> contattaci direttamente </span> 
+            <br />
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+             
+                <Link href="mailto:romagnameravigliosa@gmail.com">
+                  <a className="footer-email">romagnameravigliosa@gmail.com</a>
+                </Link>
+              </div>
+            </h4>
+
+
+            {/* <h4 className="mt-24 pb-10 text-center text-4xl font-bold md:text-left">
               Contatti
             </h4>
-            <Contatti />
+            <Contatti /> */}
+
           </div>
           <Newsletter />
           <div
