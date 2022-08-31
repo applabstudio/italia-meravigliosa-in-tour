@@ -16,8 +16,8 @@ const Contatti = () => {
 
         emailjs
           .sendForm(
-            "service_se2mvo3",
-            "template_pcksqbv",
+            "service_ymj3ef9",
+            "template_sayv3ff",
             e.target,
             "B13JDwX1LmZ1SU1aE"
           )

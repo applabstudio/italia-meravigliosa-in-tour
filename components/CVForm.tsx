@@ -47,7 +47,7 @@ const CVForm = () => {
         />
       </div>
 
-      <Input id="cv" label="CV" type="text" placeholder="Link al CV..." />
+      {/* <Input id="cv" label="CV" type="text" placeholder="Link al CV..." /> */}
 
       <br />
 
