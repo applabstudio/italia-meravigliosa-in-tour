@@ -25,7 +25,7 @@ const LavoraConNoi: NextPage = () => {
             data-ad-format="auto"
             data-full-width-responsive="true"
          ></ins> */}
-       </div>
+       {/* </div> */}
       </main>
     </div>
   )
