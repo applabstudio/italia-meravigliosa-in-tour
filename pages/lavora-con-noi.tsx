@@ -14,18 +14,18 @@ const LavoraConNoi: NextPage = () => {
         <br />
         <br />
 
-        <div className="w-full bg-gray-100">
-          <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>
+        {/* <div className="w-full bg-gray-100">
+          <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p> */}
 
-          <ins
+          {/* <ins
             className="adsbygoogle"
             style={{ display: "block" }}
             data-ad-client="ca-pub-1708355893696705"
             data-ad-slot="9487119343"
             data-ad-format="auto"
             data-full-width-responsive="true"
-          ></ins>
-        </div>
+         ></ins> */}
+       </div>
       </main>
     </div>
   )
