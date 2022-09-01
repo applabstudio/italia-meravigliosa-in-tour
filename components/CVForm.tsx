@@ -37,6 +37,7 @@ const CVForm = () => {
           label="Nome"
           type="text"
           placeholder="Il tuo nome..."
+          name2="nome"
         />
 
         <Input
@@ -44,6 +45,7 @@ const CVForm = () => {
           label="Email"
           type="email"
           placeholder="La tua email..."
+          name2="email"
         />
       </div>
 
