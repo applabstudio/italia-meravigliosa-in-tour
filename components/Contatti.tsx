@@ -38,7 +38,6 @@ const Contatti = () => {
           label="Nome"
           type="text"
           placeholder="Il tuo nome..."
-          name="nome"
         />
 
         <Input
