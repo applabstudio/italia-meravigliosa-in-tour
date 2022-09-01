@@ -9,6 +9,7 @@ interface InputProps {
   className?: string
   value?: string
   onChange?: (e: any) => void
+  name: string
 }
 
 const Input = ({

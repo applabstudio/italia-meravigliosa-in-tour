@@ -3,19 +3,9 @@ import Input from "./common/Input"
 import emailjs from "@emailjs/browser"
 import Dropdown from "./UI/Dropdown"
 
-
-
-const Contatti = ({ nome, email, oggetto, message }: ContactProps) => {
+const Contatti = () => {
   const form = useRef(null)
   const [, setProfession] = useState("Photographer")
-
-
-  interface ContactProps {
-    nome: string,
-    email: string,
-    oggetto: string,
-    message: string
-  }
 
   return (
     <form
