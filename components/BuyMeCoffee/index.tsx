@@ -2,28 +2,7 @@ import Link from "next/link"
 import styled from "styled-components"
 import Image from "next/image"
 
-const BuyMeCoffee = (): JSX.Element => {
-  return (
-    <Button>
-      <Link href="https://www.buymeacoffee.com/italiamera">
-        <a target="_blank">
-          <div>
-            <Image
-              src="/images/coffee-cap.svg"
-              alt="Buy me a coffee"
-              width={34}
-              height={35}
-              className="img"
-            />
-            <span>Buy me a coffee</span>
-          </div>
-        </a>
-      </Link>
-    </Button>
-  )
-}
 
-export default BuyMeCoffee
 
 // CSS for Buy Me Coffee
 const Button = styled.div`
@@ -72,3 +51,28 @@ const Button = styled.div`
     }
   }
 `
+
+
+
+const BuyMeCoffee = (): JSX.Element => {
+  return (
+    <Button>
+      <Link href="https://www.buymeacoffee.com/italiamera">
+        <a target="_blank">
+          <div>
+            <Image
+              src="/images/coffee-cap.svg"
+              alt="Buy me a coffee"
+              width={34}
+              height={35}
+              className="img"
+            />
+            <span>Buy me a coffee</span>
+          </div>
+        </a>
+      </Link>
+    </Button>
+  )
+}
+
+export default BuyMeCoffee
