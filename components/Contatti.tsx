@@ -38,7 +38,7 @@ const Contatti = () => {
           label="Nome"
           type="text"
           placeholder="Il tuo nome..."
-          name="nome"
+          name2="nome"
         />
 
         <Input
@@ -46,7 +46,7 @@ const Contatti = () => {
           label="Email"
           type="email"
           placeholder="La tua email..."
-          name="email"
+          name2="email"
         />
 
         <div className="skillsWrapper">
