@@ -41,8 +41,8 @@ const Footer = () => {
 
         <div style={{ display: "flex", alignItems: "center" }}>
           <FaEnvelope color="gray" />{" "}
-          <Link href="mailto:romagnameravigliosa@gmail.com">
-            <a className="footer-email">romagnameravigliosa@gmail.com</a>
+          <Link href="mailto:info@italiameravigliosaintour.it">
+            <a className="footer-email">info@italiameravigliosaintour.it</a>
           </Link>
         </div>
         <br />

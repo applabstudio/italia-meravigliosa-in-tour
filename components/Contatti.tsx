@@ -27,7 +27,7 @@ const Contatti = () => {
             },
             (error) => {
               alert(error.text)
-              // console.log(error.text)
+              console.log(error.text)
             }
           )
       }}
@@ -38,15 +38,17 @@ const Contatti = () => {
           label="Nome"
           type="text"
           placeholder="Il tuo nome..."
+          name="name"
         />
 
-        {/* <Input id="cv" label="Allega un file" type="file" placeholder="File" /> */}
+        {/* <Input id="cv" label="Allega un file" type="file" placeholder="File" />  */}
 
         <Input
           id="email"
           label="Email"
           type="email"
           placeholder="La tua email..."
+          name="email"
         />
 
         <div className="skillsWrapper">
@@ -67,6 +69,7 @@ const Contatti = () => {
           label="Oggetto"
           type="text"
           placeholder="Oggetto..."
+          name="oggetto"
         />
 
         <div className="flex flex-col">
@@ -78,7 +81,7 @@ const Contatti = () => {
           </label>
 
           <textarea
-            name="messaggio"
+            name="message"
             id="messaggio"
             placeholder="Messaggio..."
             rows={6}

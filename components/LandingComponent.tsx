@@ -568,22 +568,19 @@ const LandingComponent = ({ slug }: { slug: any }) => {
               </p>
             </div>
 
-            <h4 className="mt-24 pb-10 text-center text-4xl font-bold md:text-left">
-            <span style={{fontSize: 14, display: "flex", justifyContent: "center"}}> contattaci direttamente </span> 
-            <br />
+            {/* <h4 className="mt-24 pb-10 text-center text-4xl font-bold md:text-left">
               <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
-             
-                <Link href="mailto:romagnameravigliosa@gmail.com">
-                  <a className="footer-email">romagnameravigliosa@gmail.com</a>
+                <Link href="mailto:info@italiameravigliosaintour.it">
+                  <a className="footer-email">info@italiameravigliosaintour.it</a>
                 </Link>
               </div>
-            </h4>
+            </h4> */}
 
 
-            {/* <h4 className="mt-24 pb-10 text-center text-4xl font-bold md:text-left">
+          <h4 className="mt-24 pb-10 text-center text-4xl font-bold md:text-left">
               Contatti
             </h4>
-            <Contatti /> */}
+            <Contatti /> 
 
           </div>
           <Newsletter />
