@@ -9,7 +9,6 @@ interface InputProps {
   className?: string
   value?: string
   onChange?: (e: any) => void
-  name2: string
 }
 
 const Input = ({
@@ -21,7 +20,6 @@ const Input = ({
   className,
   value,
   onChange,
-  name2,
 }: InputProps) => {
   return (
     <div className={`flex flex-col ${className}`}>
@@ -34,14 +32,12 @@ const Input = ({
         </label>
       )}
       <input
-        required
         type={type}
         id={id}
         name={id}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        name2={name2}
         className="searchInput form-input rounded-full border-0
         px-4 py-3 caret-primary-500
         outline-none file:mr-4
