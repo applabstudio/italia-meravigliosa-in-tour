@@ -103,6 +103,7 @@ export default function PopupOptin() {
                     onChange={(e) => {
                       setEmail(e.target.value)
                     }}
+                    name2="newsletter"
                   />
 
                   <br />

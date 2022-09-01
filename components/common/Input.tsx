@@ -21,7 +21,7 @@ const Input = ({
   className,
   value,
   onChange,
-  name2
+  name2,
 }: InputProps) => {
   return (
     <div className={`flex flex-col ${className}`}>
