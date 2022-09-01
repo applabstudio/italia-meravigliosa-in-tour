@@ -38,7 +38,6 @@ const Contatti = () => {
           label="Nome"
           type="text"
           placeholder="Il tuo nome..."
-          name="nome"
         />
 
         <Input
@@ -46,7 +45,6 @@ const Contatti = () => {
           label="Email"
           type="email"
           placeholder="La tua email..."
-          name="email"
         />
 
         <div className="skillsWrapper">
@@ -67,7 +65,6 @@ const Contatti = () => {
           label="Oggetto"
           type="text"
           placeholder="Oggetto..."
-          name="oggetto"
         />
 
         <div className="flex flex-col">
@@ -79,7 +76,6 @@ const Contatti = () => {
           </label>
 
           <textarea
-            name="message"
             id="messaggio"
             placeholder="Messaggio..."
             rows={6}
