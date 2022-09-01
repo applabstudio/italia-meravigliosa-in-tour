@@ -67,7 +67,7 @@ const Contatti = () => {
           label="Oggetto"
           type="text"
           placeholder="Oggetto..."
-          name="oggetto"
+          name2="oggetto"
         />
 
         <div className="flex flex-col">
