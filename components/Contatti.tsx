@@ -38,10 +38,8 @@ const Contatti = () => {
           label="Nome"
           type="text"
           placeholder="Il tuo nome..."
-          name="name"
+          name="nome"
         />
-
-        {/* <Input id="cv" label="Allega un file" type="file" placeholder="File" />  */}
 
         <Input
           id="email"
