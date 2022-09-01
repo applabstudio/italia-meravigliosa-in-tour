@@ -76,7 +76,7 @@ const Contatti = () => {
           </label>
 
           <textarea
-            id="messaggio"
+            id="message"
             placeholder="Messaggio..."
             rows={6}
             className="searchInput form-input rounded-2xl border-0 px-4 py-3 caret-primary-500 outline-none placeholder:text-gray-400 focus:border-0 focus:ring-0"
