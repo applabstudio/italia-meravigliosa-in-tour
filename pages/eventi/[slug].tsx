@@ -35,7 +35,7 @@ const Evento: NextPage = () => {
   const router = useRouter()
   const slug = router.query.slug
 
-  const emoji = ["👍🏻", "😍", "❤️", "🤩", "🥲", "⭐️"]
+  const emoji = ["👍🏻", "😍", "❤️", "🤩", "⭐️"]
 
   useEffect(() => {
     const allEvents = []
@@ -108,7 +108,7 @@ const Evento: NextPage = () => {
   // )
 
   return (
-    <div style={{ marginTop: 100 }}>
+    <div style={{ marginTop: 50 }}>
       <SeoHead title={evento?.titolo} imageUrl={evento?.copertina} />
       <Toaster />
       <div className="mx-auto my-8 max-w-6xl">
@@ -228,7 +228,7 @@ const Evento: NextPage = () => {
               </h4>
 
               <div className="flex flex-col space-y-4">
-                <div className="flex flex-row space-x-4">
+                <div className="flex flex-row space-x-4 justify-center">
                   {listaCategorie.map((categoria) => (
                     <div className="categoryContainer rounded-sm bg-primary-100 px-2 font-medium text-primary-600">
                       <span className="flex cursor-pointer items-center justify-center space-x-2">
@@ -239,7 +239,7 @@ const Evento: NextPage = () => {
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-5 md:flex-col">
+                <div className="flex gap-5 md:flex-col">
                   <div
                     onClick={() => {
                       navigator.clipboard.writeText(
@@ -300,7 +300,7 @@ const Evento: NextPage = () => {
                 }
                 className="flex items-center space-x-1 rounded-md bg-secondary-100 px-4 py-2 font-semibold text-secondary-500 outline-none ring-secondary-200 ring-offset-2 transition duration-200 hover:bg-secondary-200 focus:ring-2"
               >
-                <FaHeart /> <span>Wishlist</span>
+                <FaHeart /> <span>Aggiungi nei preferiti</span>
               </button>
             </div>
             <br />
