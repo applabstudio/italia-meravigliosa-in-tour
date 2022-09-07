@@ -636,3 +636,9 @@ textarea:hover {
   transition: 0.2s all;
   transform: scale(1.1);
 }
+
+
+/* WHATSAPP */
+.styles-module_whatsappButton__IWx9V {
+  bottom: 100px !important;
+}

@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { useIsMounted } from "../../services/useIsMounted"
 import { FaUser } from "react-icons/fa"
+import FloatingWhatsApp from 'react-floating-whatsapp'
 
 export default function Tabbar({}) {
   const router = useRouter()
@@ -40,7 +41,22 @@ export default function Tabbar({}) {
   }
 
   return (
-    <div className="botton_navbar fixed bottom-0 left-0 right-0 !z-50 box-border flex h-20 flex-row items-stretch justify-between px-4 lg:justify-evenly">
+
+
+    <>
+    
+    
+    <FloatingWhatsApp 
+        phoneNumber="+393476863616"
+        accountName="Italia Meravigliosa"
+        chatMessage="Ciao! 🤝 come possiamo eserti utile?"
+        avatar="/images/logo.png"
+        statusMessage="Rispondiamo entro pochi minuti"
+        placeholder="Scrivi un messaggio"
+      />
+    
+        <div className="botton_navbar fixed bottom-0 left-0 right-0 !z-50 box-border flex h-20 flex-row items-stretch justify-between px-4 lg:justify-evenly">
+
       <Link href="/">
         <a
           className={`flex flex-col justify-center border-t-4 ${
@@ -232,5 +248,9 @@ export default function Tabbar({}) {
         </a>
       </Link>
     </div>
+    
+    
+    </>
+
   )
 }
