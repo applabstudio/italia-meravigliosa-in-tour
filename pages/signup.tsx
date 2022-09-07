@@ -41,11 +41,11 @@ const SignUp: NextPage = () => {
   }
 
   return (
-    <div className="mx-auto mt-32 flex max-w-7xl flex-col items-center space-x-10 space-y-20 px-4 xl:flex-row xl:items-start xl:space-y-0">
+    <div className="mx-auto  flex max-w-7xl flex-col items-center space-x-10 space-y-20 px-4 xl:flex-row xl:items-start xl:space-y-0" style={{marginTop: 50}}>
       <div className="w-full">
         <Toaster />
 
-        <h2 className="text-4xl font-bold">
+        <h2 className="text-3xl font-bold">
           Entra nella Community di Italia Meravigliosa
         </h2>
 
@@ -125,6 +125,8 @@ const SignUp: NextPage = () => {
             </span>
             <span className="invisible relative">Invia</span>
           </button>
+          <br />
+          <br />
         </div>
       </div>
 
