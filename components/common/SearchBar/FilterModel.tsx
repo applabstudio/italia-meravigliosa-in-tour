@@ -65,7 +65,7 @@ const FilterModel: React.FC<Props> = ({
         <FilterContainer>
           <div className="relative w-full rounded-lg bg-white shadow">
             {/* close Btn */}
-            <button
+            <button 
               type="button"
               onClick={() =>
                 whishlistcard ? setwhishlistcard(false) : setwhishlistcard(true)

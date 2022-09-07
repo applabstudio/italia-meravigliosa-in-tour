@@ -128,7 +128,7 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
       </div>
 
       <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
       <Link href="/servizi.pdf" target="_blank" download>
         <a className="wrapperUsername wrapperUsername3">
           <FaDownload />
@@ -266,9 +266,9 @@ const Navbar = () => {
 
           <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
-          <div className="hidden xl:inline-flex">
+          {/* <div className="hidden xl:inline-flex">
             <ThemeToggle />
-          </div>
+          </div> */}
         </nav>
       </header>
 

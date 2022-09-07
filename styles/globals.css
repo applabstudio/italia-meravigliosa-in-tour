@@ -187,7 +187,7 @@ textarea:hover {
 }
 
 .welcome-map {
-  margin-top: 16px !important;
+  margin-top: 62px !important;
   margin-left: 0 !important;
   margin-bottom: -8px !important;
 }
@@ -233,6 +233,7 @@ textarea:hover {
   position: relative;
   bottom: 85px;
   padding-top: 20px;
+  font-size: 13px;
 }
 
 .copyright-wrapper a {
@@ -259,6 +260,7 @@ textarea:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 13px;
 }
 
 .credit-footer a {
