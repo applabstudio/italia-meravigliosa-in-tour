@@ -565,8 +565,8 @@ const LandingComponent = ({ slug }: { slug: any }) => {
                 blogger di viaggio, contattaci ed entra a far parte del nostro
                 team, fai conoscere il tuo lavoro attraverso la nostra grande e
                 coesa community
-                <br/>
-                Compila il modulo oppure contattaci tramite <b>whatsapp</b> in basso a destra
+                <br/><br/>
+                Compila il modulo oppure contattaci tramite <b style={{color: "#25d366"}}>whatsapp</b> in basso a destra
               </p>
             </div>
 
