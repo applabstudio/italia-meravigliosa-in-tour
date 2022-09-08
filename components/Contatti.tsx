@@ -69,7 +69,7 @@ const Contatti = () => {
 
         <div className="flex flex-col">
           <label
-            htmlFor="messaggio"
+            htmlFor="message"
             className="text-md mb-1 font-medium text-gray-500"
           >
             Messaggio
