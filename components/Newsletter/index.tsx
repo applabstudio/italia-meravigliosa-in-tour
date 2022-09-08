@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 import { FaArrowCircleRight, FaEnvelope } from "react-icons/fa"
 import { subscribeToConvertKit } from "../../services/subscribe"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Newsletter = () => {
   const [email, setEmail] = useState("")
@@ -10,6 +13,12 @@ const Newsletter = () => {
     if (status) {
       setEmail("")
     }
+
+    const showToastMessage = () => {
+      toast.success('Iscritto con successo!', {
+          position: toast.POSITION.TOP_RIGHT
+      });
+  };
   }
 
   return (
@@ -89,6 +98,7 @@ const Newsletter = () => {
               className="text-gray-800 outline-none"
             ></input>
           </div>
+          <ToastContainer />
           <button
             style={{
               display: "flex",

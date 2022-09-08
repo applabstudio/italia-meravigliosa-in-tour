@@ -49,6 +49,7 @@
     "react-lazyload": "^3.2.0",
     "react-perfect-scrollbar": "^1.5.8",
     "react-responsive": "^9.0.0-beta.6",
+    "react-toastify": "^9.0.8",
     "snd-lib": "^1.0.2",
     "styled-components": "^5.3.5",
     "swiper": "^8.1.4"

@@ -3,9 +3,20 @@ import Input from "./common/Input"
 import emailjs from "@emailjs/browser"
 import Dropdown from "./UI/Dropdown"
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Contatti = () => {
   const form = useRef(null)
   const [, setProfession] = useState("Photographer")
+
+
+  const showToastMessage = () => {
+    toast.success('Messaggio inviato con successo', {
+        position: toast.POSITION.TOP_RIGHT
+    });
+};
 
   return (
     <form
@@ -85,10 +96,15 @@ const Contatti = () => {
         </div> */}
       </div>
 
+
+      
+      <ToastContainer />
+
       <button
         type="submit"
         className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full border-2 border-secondary-500 p-4 px-6 py-3 font-medium text-secondary-600 shadow-md outline-none ring-secondary-500 ring-offset-4 transition duration-300 ease-out focus:ring-2 lg:w-fit"
-      >
+        onClick={showToastMessage}>
+          
         <span className="ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-secondary-500 text-white duration-300 group-hover:translate-x-0">
           <svg
             className="h-6 w-6"
