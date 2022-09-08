@@ -62,26 +62,27 @@ const Contatti = () => {
       <div className="grid grid-cols-1 gap-4">
         <Input
           id="oggetto"
-          label="Oggetto"
+          label="Messaggio"
           type="text"
-          placeholder="Oggetto..."
+          placeholder="Messaggio..."
         />
 
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <label
-            htmlFor="message"
+            htmlFor="messaggio"
             className="text-md mb-1 font-medium text-gray-500"
           >
             Messaggio
           </label>
 
-          <textarea
-            id="message"
+          <input
+            id="messaggio"
+            type="text"
             placeholder="Messaggio..."
             rows={6}
             className="searchInput form-input rounded-2xl border-0 px-4 py-3 caret-primary-500 outline-none placeholder:text-gray-400 focus:border-0 focus:ring-0"
           />
-        </div>
+        </div> */}
       </div>
 
       <button
