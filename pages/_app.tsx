@@ -40,6 +40,7 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
   }
 
   useEffect(() => {
+
     const snd = new Snd()
 
     // Get all anchor elements.

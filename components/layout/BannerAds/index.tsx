@@ -17,7 +17,7 @@ const BannerAds = (): JSX.Element => {
           height={80}
           alt="hand"
         />
-        <Link href="htts://mailto:info@italiameravigliosaintour.it">
+        <Link href="https://mailto:info@italiameravigliosaintour.it">
           <a className="btn-bannerads"> Contattaci</a>
         </Link>
       </div>
