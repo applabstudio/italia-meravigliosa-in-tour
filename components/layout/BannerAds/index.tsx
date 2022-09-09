@@ -5,7 +5,7 @@ const BannerAds = (): JSX.Element => {
   return (
     <>
       <div className="adscustom">
-        <Link href="htts://mailto:info@italiameravigliosaintour.it">
+        <Link href="mailto:info@italiameravigliosaintour.it">
           <a className="title-bannerads">Vorresti la tua pubblicita' qui?</a>
         </Link>
 
