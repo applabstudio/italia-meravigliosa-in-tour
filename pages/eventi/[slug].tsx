@@ -250,7 +250,7 @@ const Evento: NextPage = () => {
                     className="categoryContainer ml-auto flex w-full cursor-pointer items-center justify-center space-x-2 rounded-lg bg-blue-500 px-4 py-3 font-medium text-white"
                   >
                     <FaShare />
-                    <span>Condividi</span>
+                    <span>Copia Link</span>
                   </div>
 
                   <div className="flex flex-row items-center justify-center space-x-6">
