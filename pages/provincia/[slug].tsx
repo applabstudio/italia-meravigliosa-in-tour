@@ -30,7 +30,7 @@ const Provincia: NextPage = ({ slug }: { slug: string }) => {
     <div className="mx-auto mt-24 max-w-6xl">
       <main className="flex w-full flex-col px-4">
         <br />
-        <h4 className="text-center text-4xl font-bold md:text-left">
+        <h4 className="text-center text-4xl font-bold md:text-left uppercase ">
           Luoghi a {slug}
         </h4>
 

@@ -476,7 +476,7 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
           {slugProvincia && (
             <div className="col-span-12 px-4">
-              <h4 className="text-center text-3xl font-bold md:text-left">
+              <h4 className="text-center text-3xl font-bold md:text-left uppercase ">
                 Luoghi a: {nomeProvincia}
               </h4>
 
