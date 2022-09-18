@@ -44,6 +44,8 @@ const ToggleButton = styled.button`
   --toggle-padding: 4px;
   position: relative;
   display: flex;
+  margin: auto;
+  margin-right: 20px;
   align-items: center;
   justify-content: space-around;
   font-size: 1.5rem;

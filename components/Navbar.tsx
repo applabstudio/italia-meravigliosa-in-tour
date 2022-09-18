@@ -68,73 +68,77 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
 
   return (
     <div
-      className={`relative z-10 flex w-full transform flex-col items-center space-y-4 p-4 transition-all ease-in-out ${
-        isOpen ? "translate-y-0" : "-mb-56 -translate-y-full"
+      className={`header relative z-10 flex w-full transform flex-col items-center space-y-4 p-4 transition-all ease-in-out ${
+        isOpen ? "translate-y-0" : "-mb-44 -translate-y-full"
       }`}
     >
       <SearchBar />
-      <div className="relative flex items-center space-x-6">
-        <button
-          type="button"
-          aria-hidden="true"
-          onClick={() => setModalOpen(true)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 transition duration-200 hover:bg-secondary-100 focus:ring-2"
-        >
-          <FaHeart className="text-secondary-500" size={20} />
-        </button>
-
-        {user && user?.email && (
-          <MagicBell
-            apiKey="97576655a4d3dd3e0a7ee53354b21e333fe580ed"
-            userEmail={user.email}
-            theme={theme}
-            locale="en"
+      <div className="relative items-center sm:flex">
+        <div className="flex items-center space-x-6 mr-4 mb-4 sm:mb-0">
+          <button
+            type="button"
+            aria-hidden="true"
+            onClick={() => setModalOpen(true)}
+            className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 transition duration-200 hover:bg-secondary-100 focus:ring-2"
           >
-            {(props) => (
-              <FloatingNotificationInbox width={400} height={500} {...props} />
-            )}
-          </MagicBell>
-        )}
+            <FaHeart className="text-secondary-500" size={20} />
+          </button>
 
-        {user && (
-          <>
-            <div
-              onClick={() => setUserOpen(!userOpen)}
-              className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 py-3 px-4 font-medium text-primary-700"
+          {user && user?.email && (
+            <MagicBell
+              apiKey="97576655a4d3dd3e0a7ee53354b21e333fe580ed" 
+              userEmail={user.email}
+              theme={theme}
+              locale="en"
             >
-              <FaUser />
-              <span>{user?.displayName}</span>
-            </div>
+              {(props) => (
+                <FloatingNotificationInbox width={400} height={500} {...props} />
+              )}
+            </MagicBell>
+          )}
 
-            {userOpen && (
-              <div className="userLogout absolute right-0 top-20 !z-50 rounded-xl p-8 shadow-xl">
-                <p className="text-lg font-medium">{user?.email}</p>
+          <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+          <Link href="/servizi.pdf" target="_blank" download>
+            <a className="wrapperUsername wrapperUsername3">
+              <FaDownload />
+              Servizi
+            </a>
+          </Link>
+        </div>
 
-                <br />
-
-                <div
-                  onClick={() => {
-                    logout()
-                  }}
-                  className="flex cursor-pointer items-center justify-center space-x-4 rounded-full bg-secondary-100 px-4 py-3 text-lg font-medium text-secondary-500"
-                >
-                  <FaDoorOpen />
-                  <span>Logout</span>
-                </div>
+        <div className="flex items-center space-x-5">
+          <ThemeToggle /> 
+          {user && (
+            <>
+              <div
+                onClick={() => setUserOpen(!userOpen)}
+                className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 py-3 px-4 font-medium text-primary-700"
+              >
+                <FaUser />
+                <span>{user?.displayName}</span>
               </div>
-            )}
-          </>
-        )}
-      </div>
 
-      <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
-     <ThemeToggle /> 
-      <Link href="/servizi.pdf" target="_blank" download>
-        <a className="wrapperUsername wrapperUsername3">
-          <FaDownload />
-          Servizi
-        </a>
-      </Link>
+              {userOpen && (
+                <div className="userLogout absolute right-0 top-20 !z-50 rounded-xl p-8 shadow-xl">
+                  <p className="text-lg font-medium">{user?.email}</p>
+
+                  <br />
+
+                  <div
+                    onClick={() => {
+                      logout()
+                    }}
+                    className="flex cursor-pointer items-center justify-center space-x-4 rounded-full bg-secondary-100 px-4 py-3 text-lg font-medium text-secondary-500"
+                  >
+                    <FaDoorOpen />
+                    <span>Logout</span>
+                  </div>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
@@ -149,7 +153,7 @@ const Navbar = () => {
     function onResize() {
       var x = window.innerWidth
 
-      if (x > 768) {
+      if (x > 1024) {
         setIsOpen(false)
       }
     }
@@ -162,7 +166,7 @@ const Navbar = () => {
       <header className="header relative z-50 flex h-20 flex-col items-center">
         <nav className="flex h-full w-full max-w-[90rem] items-center justify-between px-6 md:space-x-10">
           <button
-            className="absolute rounded-sm outline-none ring-primary-200 ring-offset-4 transition duration-200 focus:ring-2 md:hidden"
+            className="absolute rounded-sm outline-none ring-primary-200 ring-offset-4 transition duration-200 focus:ring-2 lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
@@ -172,7 +176,7 @@ const Navbar = () => {
             )}
           </button>
 
-          <div className="flex w-full items-center justify-center space-x-8 md:justify-between lg:w-fit lg:justify-start">
+          <div className="flex w-full items-center justify-center space-x-8 lg:justify-between xl:w-fit xl:justify-start">
             <Link href="/" passHref>
               <a className="rounded-xl bg-white p-2 outline-none ring-primary-200 transition duration-200 focus:ring-2">
                 <div className="flex items-center">
@@ -198,41 +202,10 @@ const Navbar = () => {
 
           <div
             className={`relative hidden ${
-              user ? "w-[50%]" : "w-[40%]"
-            } items-center space-x-6 xl:flex`}
+              user ? "w-[40%]" : "w-[50%]"
+            } items-center space-x-6 lg:inline-flex`}
           >
             <SearchBar />
-
-            {user && (
-              <>
-                <div
-                  onClick={() => setUserOpen(!userOpen)}
-                  className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 py-3 px-4 font-medium text-primary-700"
-                >
-                  <FaUser />
-                  <span>{user?.displayName}</span>
-                </div>
-
-                {userOpen && (
-                  <div className="userLogout absolute right-0 top-20 !z-50 rounded-xl p-8 shadow-xl">
-                    <p className="text-lg font-medium">{user?.email}</p>
-
-                    <br />
-
-                    <div
-                      onClick={() => {
-                        logout()
-                      }}
-                      className="flex cursor-pointer items-center justify-center space-x-4 rounded-full bg-secondary-100 px-4 py-3 text-lg font-medium text-secondary-500"
-                    >
-                      <FaDoorOpen />
-                      <span>Logout</span>
-                    </div>
-                  </div>
-                )}
-              </>
-            )}
-
             {user && user?.email && (
               <MagicBell
                 apiKey="97576655a4d3dd3e0a7ee53354b21e333fe580ed"
@@ -266,8 +239,35 @@ const Navbar = () => {
 
           <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
-        <div className="hidden xl:inline-flex">
+          <div className="hidden lg:inline-flex">
             <ThemeToggle />
+            {user && (
+              <>
+                <div
+                  onClick={() => setUserOpen(!userOpen)}
+                  className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 hover:bg-primary-200 active:bg-primary-300 py-3 px-4 font-medium text-primary-700"
+                >
+                  <FaUser />
+                  <span>{user?.displayName}</span>
+                </div>
+
+                {userOpen && (
+                  <div className="userLogout absolute right-0 top-20 !z-50 rounded-xl p-8 shadow-xl">
+                    <p className="text-lg font-medium">{user?.email}</p>
+                    <br />
+                    <div
+                      onClick={() => {
+                        logout()
+                      }}
+                      className="flex cursor-pointer items-center justify-center space-x-4 rounded-full bg-secondary-100 px-4 py-3 text-lg font-medium text-secondary-500"
+                    >
+                      <FaDoorOpen />
+                      <span>Logout</span>
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
           </div> 
         </nav>
       </header>
