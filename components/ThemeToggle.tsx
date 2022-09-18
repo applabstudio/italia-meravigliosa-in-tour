@@ -41,7 +41,7 @@ export default ThemeToggle
 const ToggleButton = styled.button`
   --toggle-width: 80px;
   --toggle-height: 38px;
-  --toggle-padding: 4px;
+  --toggle-padding: 2px;
   position: relative;
   display: flex;
   margin: auto;

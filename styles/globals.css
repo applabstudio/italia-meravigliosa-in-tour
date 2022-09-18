@@ -44,7 +44,7 @@ p.prose.prose-red span {
 
 /* Header */
 .header {
-  box-shadow: 0 6px 5px #0000001a;
+  box-shadow: 0 3px 5px #0000001a;
   background: var(--color-bg-primary) !important;
 }
 
@@ -520,7 +520,7 @@ textarea:hover {
 
 .wrapperUsername:hover {
   transition: 0.2s;
-  box-shadow: 3px 3px 2px #1e90ff;
+  box-shadow: 2px 2px 2px #1e90ff;
 }
 
 .fbListWrapper {
@@ -528,6 +528,19 @@ textarea:hover {
 }
 
 /* Media Query */
+
+@media screen and (min-width: 1024px) {
+  .lg:inline-flex {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+  .mobileMenu {
+    display: flex;
+  }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 700px) {
   .wrapperUsername {
     justify-content: center;

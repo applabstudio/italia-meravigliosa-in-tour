@@ -16,13 +16,15 @@ import SearchCard from "./SearchCard"
 const useOutsideAlerter = (
   ref: any,
   setFocused: Function,
-  setFiltered: Function
+  setFiltered: Function,
+  setwhishlistcard: Function
 ) => {
   useEffect(() => {
     const handleClickOutside = (event: any) => {
       if (ref.current && !ref.current.contains(event.target)) {
         setFocused(false)
         setFiltered(false)
+        setwhishlistcard(false)
       }
     }
     document.addEventListener("mousedown", handleClickOutside)
@@ -67,13 +69,15 @@ const SearchBar = () => {
   const [categoria, setCategoria] = useState("")
 
   const inputRef = useRef(null)
-  useOutsideAlerter(inputRef, setFocused, setFiltered)
+  useOutsideAlerter(inputRef, setFocused, setFiltered, setwhishlistcard)
 
   return (
     <div ref={inputRef} className="relative z-40 w-full">
       <div className="group flex w-full items-center rounded-full bg-gray-100">
         <button
-          onClick={() => focused && setFiltered(!filtered)}
+          onClick={() => {
+            focused && setFiltered(!filtered)
+          }}
           className={`flex h-12 w-16 items-center justify-center ${
             filtered ? "text-primary-400" : "text-gray-400"
           }`}
@@ -83,6 +87,7 @@ const SearchBar = () => {
             style={{ transform: "rotate(90deg)" }}
             onClick={() => {
               whishlistcard ? setwhishlistcard(false) : setwhishlistcard(true)
+              setFocused(true)
             }}
           />
         </button>
@@ -118,7 +123,7 @@ const SearchBar = () => {
 
       <SearchModel
         className={`${
-          (!searchValue || !focused) && "hidden"
+          (!searchValue || !focused || whishlistcard) && "hidden"
         } absolute top-16 left-0 z-50 max-h-96 w-full overflow-y-scroll rounded-md bg-white py-4 px-4 shadow-md transition-all`}
       >
         <div className="grid grid-cols-2 gap-2">
@@ -183,7 +188,7 @@ const SearchBar = () => {
 
       <FilterModel
         provience={provience}
-        whishlistcard={whishlistcard}
+        whishlistcard={whishlistcard && focused}
         setwhishlistcard={setwhishlistcard}
         categorie={categorie}
       />
