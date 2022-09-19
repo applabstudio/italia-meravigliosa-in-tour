@@ -127,7 +127,6 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
         </div>
 
         <div className="flex items-center space-x-5">
-          <ThemeToggle /> 
           {user && (
             <>
               <div
@@ -262,7 +261,6 @@ const Navbar = () => {
           <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
           <div className="hidden lg:inline-flex">
-            <ThemeToggle />
             {user && (
               <>
                 <div
