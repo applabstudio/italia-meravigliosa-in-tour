@@ -85,7 +85,7 @@ img.betaLabel {
 }
 
 .cards {
-  border-radius: 8%;
+  box-shadow: 0px 5px 10px #333;
 }
 
 .iconCategory {
@@ -116,8 +116,12 @@ input#newsletter:hover {
 /* Facebook Section */
 .facebook_text {
   font-weight: 600;
-  font-size: 33px;
-  width: 60%;
+  font-size: 26px;
+  width: 70%;
+}
+
+.facebook-mobile {
+  display: flex;
 }
 
 .facebook_text_grid_width {
@@ -425,7 +429,7 @@ textarea:hover {
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (min-width: 0px) and (max-width: 768px) {
   .heartIconWrapper {
     margin: 0 auto;
   }
@@ -436,7 +440,7 @@ textarea:hover {
 
   .facebook_text {
     font-weight: 600;
-    font-size: 33px;
+    font-size: 26px;
     width: 100%;
   }
   .luogoSpan {
@@ -458,7 +462,7 @@ textarea:hover {
   left: 5px;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (min-width: 0px) and (max-width: 768px) {
   .first-title {
     font-size: 28px;
   }
@@ -482,10 +486,10 @@ textarea:hover {
 
   .facebook-mobile {
     margin-left: 0px !important;
+    display: block;
   }
 
   .facebook-mobile-icon {
-    display: flex;
     justify-content: flex-start;
   }
 
@@ -504,7 +508,7 @@ textarea:hover {
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (min-width: 0px) and (max-width: 768px) {
   .facebook-mobile-icon {
     justify-content: center;
   }
@@ -541,7 +545,7 @@ textarea:hover {
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (min-width: 0px) and (max-width: 768px) {
   .wrapperUsername {
     justify-content: center;
   }

@@ -14,7 +14,7 @@ const WelcomeSection = (): JSX.Element => {
       <p className="mt-8 text-center font-medium">
         Siamo partiti dalla nostra pagina Facebook a Gennaio del 2020, con
         l’intenzione di <b>mostrarvi le meraviglie nascoste del nostro paese</b>
-        , Oggi con oltre 250 mila follower e tante foto di località pubblicate e
+        , Oggi con oltre 300 mila follower e tante foto di località pubblicate e
         milioni di visualizzazioni, abbiamo deciso di creare una redazione di
         <i>“Italia Meravigliosa”</i> e di creare questo portale, perchè{" "}
         <b>possa guidarvi in luoghi meravigliosi da esplorare</b>, buon viaggio

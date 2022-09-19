@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 
 import {
   FaBars,
@@ -61,10 +61,30 @@ const theme = {
   },
 }
 
+const useOutsideUser = (
+  ref: any,
+  setUserOpen: Function
+) => {
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setUserOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [ref])
+}
+
 const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const [user, loading, error] = useAuthState(auth)
   const [userOpen, setUserOpen] = useState(false)
+
+  const inputRef = useRef(null)
+  useOutsideUser(inputRef, setUserOpen)
 
   return (
     <div
@@ -111,8 +131,9 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
           {user && (
             <>
               <div
+                ref={inputRef} 
                 onClick={() => setUserOpen(!userOpen)}
-                className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 py-3 px-4 font-medium text-primary-700"
+                className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 hover:bg-primary-200 active:bg-primary-300 py-3 px-4 font-medium text-primary-700"
               >
                 <FaUser />
                 <span>{user?.displayName}</span>
@@ -121,9 +142,7 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
               {userOpen && (
                 <div className="userLogout absolute right-0 top-20 !z-50 rounded-xl p-8 shadow-xl">
                   <p className="text-lg font-medium">{user?.email}</p>
-
                   <br />
-
                   <div
                     onClick={() => {
                       logout()
@@ -148,6 +167,9 @@ const Navbar = () => {
   const [modalOpen, setModalOpen] = useState(false)
   const [user, loading, error] = useAuthState(auth)
   const [userOpen, setUserOpen] = useState(false)
+
+  const inputRef = useRef(null)
+  useOutsideUser(inputRef, setUserOpen)
 
   useEffect(() => {
     function onResize() {
@@ -244,6 +266,7 @@ const Navbar = () => {
             {user && (
               <>
                 <div
+                  ref={inputRef}
                   onClick={() => setUserOpen(!userOpen)}
                   className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 hover:bg-primary-200 active:bg-primary-300 py-3 px-4 font-medium text-primary-700"
                 >

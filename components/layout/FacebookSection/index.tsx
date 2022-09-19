@@ -18,19 +18,22 @@ const FacebookSection = () => {
   return (
     <>
       <div
-        className="facebook-mobile col-span-12"
+        className="facebook-mobile col-span-12" 
         style={{
           width: "100%",
           display: "flex",
           flexWrap: "wrap",
-          padding: 15,
+          padding: 25,
         }}
       >
         <div className="facebook_text_grid_width mb-10" style={alignSelf}>
+          <h2 className="text text-4xl font-semibold uppercase lg:text-5xl leading-10 mb-5">
+            QUANTI CI SEGUONO?
+          </h2>
           <h4 className="text facebook_text leading-10">
-            SEGUICI SU FACEBOOK SIAMO OLTRE 250 MILA
+            SEGUICI SU FACEBOOK SIAMO OLTRE 300 MILA
           </h4>
-          <div className="facebook-mobile-icon flex flex-col space-y-4  lg:flex-row lg:items-center lg:space-y-0">
+          <div className="facebook-mobile-icon flex space-y-4 lg:flex-row lg:items-center md:space-y-0">
             <div
               style={{
                 display: "flex",
@@ -68,7 +71,7 @@ const FacebookSection = () => {
           <div className="fbListWrapper">
             <ul
               style={{ paddingBottom: 40, alignItems: "flex-start" }}
-              className="flex flex-row items-center justify-evenly space-y-1 font-semibold lg:flex-col lg:items-start"
+              className="flex flex-row items-center justify-evenly space-y-1 font-semibold flex-col lg:items-start"
             >
               <li className="facebook-list">
                 <div className="markerList"></div>Post spettacolari e unici
@@ -90,28 +93,34 @@ const FacebookSection = () => {
           </div>
         </div>
 
-        <div className="facebook_text_grid_width hide_mobile">
-          <br />
-
-          <div className="grid grid-cols-12">
-            <div
-              className="box col-span-7 text-right"
-              style={{ alignSelf: "center" }}
-            >
-              <Image
-                src="/images/card1.png"
-                objectFit="contain"
-                layout="intrinsic"
-                width={250}
-                height={300}
-                alt="hand"
-                className="cards"
-              />
-            </div>
+        <div className="facebook_text_grid_width relative">
+          <div
+            className="shadow-lg shadow-slate-800 w-full pt-[57.6923%] relative"
+            style={{ alignSelf: "center" }}
+          >
+            <Image
+              src="/images/approach1.jpg"
+              objectFit="contain"
+              layout="fill"
+              alt="approach1"
+              className="cards"
+            />
+          </div>
+          <div
+            className="float-right absolute right-0 shadow-lg shadow-slate-800 w-full pt-[71.25%] md:w-[70%] md:pt-[49.875%] md:mr-[20px] xl:-mr-[30px] 2xl:-mr-[100px] mt-4 md:-mt-[30px] lg:-mt-[50px] relative"
+            style={{ alignSelf: "center" }}
+          >
+            <Image
+              src="/images/approach2.jpg"
+              objectFit="contain"
+              layout="fill"
+              alt="approach2"
+              className="cards"
+            />
           </div>
         </div>
 
-        <div className="facebook_text_grid_width view_mobile !space-y-8">
+        {/* <div className="facebook_text_grid_width view_mobile !space-y-8">
           <Image
             src="/images/card1.png"
             objectFit="contain"
@@ -121,7 +130,7 @@ const FacebookSection = () => {
             alt="hand"
             className="rounded-2xl"
           />
-        </div>
+        </div> */}
       </div>
       <div className="col-span-12 box-border flex flex-col xl:col-span-12">
         <div

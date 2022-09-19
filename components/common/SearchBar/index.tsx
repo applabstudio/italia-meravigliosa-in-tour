@@ -17,14 +17,14 @@ const useOutsideAlerter = (
   ref: any,
   setFocused: Function,
   setFiltered: Function,
-  setwhishlistcard: Function
+  setWhishlistcard: Function
 ) => {
   useEffect(() => {
     const handleClickOutside = (event: any) => {
       if (ref.current && !ref.current.contains(event.target)) {
         setFocused(false)
         setFiltered(false)
-        setwhishlistcard(false)
+        setWhishlistcard(false)
       }
     }
     document.addEventListener("mousedown", handleClickOutside)
@@ -39,7 +39,7 @@ const SearchBar = () => {
     collection(firestore, "fl_content"),
     {}
   )
-  const [whishlistcard, setwhishlistcard] = useState(false)
+  const [whishlistcard, setWhishlistcard] = useState(false)
   const [provience, setprovience] = useState([])
   const [listaEventi, setListaEventi] = useState<any[]>([])
   const [categorie, setCategorie] = useState<any[]>([])
@@ -69,7 +69,7 @@ const SearchBar = () => {
   const [categoria, setCategoria] = useState("")
 
   const inputRef = useRef(null)
-  useOutsideAlerter(inputRef, setFocused, setFiltered, setwhishlistcard)
+  useOutsideAlerter(inputRef, setFocused, setFiltered, setWhishlistcard)
 
   return (
     <div ref={inputRef} className="relative z-40 w-full">
@@ -86,7 +86,7 @@ const SearchBar = () => {
             size={20}
             style={{ transform: "rotate(90deg)" }}
             onClick={() => {
-              whishlistcard ? setwhishlistcard(false) : setwhishlistcard(true)
+              whishlistcard ? setWhishlistcard(false) : setWhishlistcard(true)
               setFocused(true)
             }}
           />
@@ -112,7 +112,7 @@ const SearchBar = () => {
           }}
           onFocus={() => {
             setFocused(true)
-            setwhishlistcard(false)
+            setWhishlistcard(false)
           }}
         />
 
@@ -189,7 +189,7 @@ const SearchBar = () => {
       <FilterModel
         provience={provience}
         whishlistcard={whishlistcard && focused}
-        setwhishlistcard={setwhishlistcard}
+        setWhishlistcard={setWhishlistcard}
         categorie={categorie}
       />
     </div>

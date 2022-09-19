@@ -6,14 +6,14 @@ interface Props {
   province: []
   categorie: []
   whishlistcard: Boolean
-  setwhishlistcard: (arg: Boolean) => void
+  setWhishlistcard: (arg: Boolean) => void
 }
 
 const FilterModel: React.FC<Props> = ({
   province,
   categorie,
   whishlistcard,
-  setwhishlistcard,
+  setWhishlistcard,
 }) => {
   const [CollapseSetting, setCollapseSetting] = useState("")
   const [open, setOpen] = useState(false)
@@ -68,7 +68,7 @@ const FilterModel: React.FC<Props> = ({
             <button 
               type="button"
               onClick={() =>
-                whishlistcard ? setwhishlistcard(false) : setwhishlistcard(true)
+                whishlistcard ? setWhishlistcard(false) : setWhishlistcard(true)
               }
               className="absolute top-0 right-0 ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white"
               data-modal-toggle="popup-modal"
