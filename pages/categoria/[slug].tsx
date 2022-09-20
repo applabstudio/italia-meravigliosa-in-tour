@@ -45,6 +45,7 @@ const Categoria: NextPage = ({ slug }: { slug: string }) => {
 
   return (
     <div className="mx-auto mt-32 max-w-6xl">
+      <meta name="description" content="this is categoria page." />
       <SeoHead title="categoria" imageUrl="/apple-touch-icon.png" />
       <main className="flex w-full flex-col px-4">
         {/* <div className="w-full bg-gray-100">

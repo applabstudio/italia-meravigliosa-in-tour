@@ -15,11 +15,12 @@ const SeoHead: React.FC<Props> = ({ title, description, imageUrl }) => {
   const Seo = {
     title: title ? title : "italia meravigliosa in tour",
     siteName: "italia meravigliosa in tour",
+    type: "article",
     siteUrl:
       router.asPath === "/"
         ? "https://www.italiameravigliosaintour.it"
         : `https://www.italiameravigliosaintour.it${router.asPath}`,
-    description: description ? description : "",
+    description: description ? description : "atalia meravigliosain tour",
     imageUrl: imageUrl ? imageUrl : "/apple-touch-icon.png",
   }
 
@@ -32,6 +33,7 @@ const SeoHead: React.FC<Props> = ({ title, description, imageUrl }) => {
         url: `${Seo.siteUrl}`,
         title: `${Seo.title}`,
         description: `${Seo.description}`,
+        type: `${Seo.type}`,
         images: [
           {
             url: `${Seo.imageUrl}`,
