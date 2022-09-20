@@ -1,10 +1,11 @@
 import Contatti from "../components/Contatti"
+import SeoHead from "../components/Seo/SeoHead"
 import { NextPage } from "next"
 
 const contatti: NextPage = () => {
   return (
     <div className="mx-auto mt-24 max-w-6xl">
-      <meta property="og:image" content="/public/images/fotopopup.jpg" />
+      <SeoHead title="Contatti" imageUrl="/public/apple-touch-icon.png" />
       <main className="flex w-full flex-col px-4">
         <h4 className="text-center text-4xl font-bold md:text-left">
           Contatti

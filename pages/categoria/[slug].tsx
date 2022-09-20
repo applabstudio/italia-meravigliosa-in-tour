@@ -1,12 +1,13 @@
 // @ts-nocheck
 import React, { useEffect, useState } from "react"
 import { useRouter } from "next/router"
-import Event from "../../components/Event"
-import { firestore } from "../../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
-import BannerAds from "../../components/layout/BannerAds"
 import { NextPage } from "next"
+import Event from "../../components/Event"
+import { firestore } from "../../firebase/clientApp"
+import BannerAds from "../../components/layout/BannerAds"
+import SeoHead from "../../components/Seo/SeoHead"
 
 const Categoria: NextPage = ({ slug }: { slug: string }) => {
   const router = useRouter()
@@ -44,7 +45,7 @@ const Categoria: NextPage = ({ slug }: { slug: string }) => {
 
   return (
     <div className="mx-auto mt-32 max-w-6xl">
-      <meta property="og:image" content="/public/images/fotopopup.jpg" />
+      <SeoHead title="categoria" imageUrl="/public/apple-touch-icon.png" />
       <main className="flex w-full flex-col px-4">
         {/* <div className="w-full bg-gray-100">
           <p className="mt-2 ml-2 rounded-lg text-gray-500">Pubblicità</p>

@@ -1,11 +1,12 @@
 // @ts-nocheck
 import React, { useEffect, useState } from "react"
+import { collection } from "firebase/firestore"
+import { NextPage } from "next"
 import Event from "../../components/Event"
 import { firestore } from "../../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
-import { collection } from "firebase/firestore"
 import BannerAds from "../../components/layout/BannerAds"
-import { NextPage } from "next"
+import SeoHead from "../../components/Seo/SeoHead"
 
 const Provincia: NextPage = ({ slug }: { slug: string }) => {
   const [data, dataLoading, dataError] = useCollection(
@@ -28,7 +29,7 @@ const Provincia: NextPage = ({ slug }: { slug: string }) => {
 
   return (
     <div className="mx-auto mt-24 max-w-6xl">
-      <meta property="og:image" content="/public/images/fotopopup.jpg" />
+      <SeoHead title="Provincia" imageUrl="/public/apple-touch-icon.png" />
       <main className="flex w-full flex-col px-4">
         <br />
         <h4 className="text-center text-4xl font-bold md:text-left uppercase ">

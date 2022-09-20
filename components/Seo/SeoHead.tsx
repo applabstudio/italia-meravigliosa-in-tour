@@ -20,7 +20,7 @@ const SeoHead: React.FC<Props> = ({ title, description, imageUrl }) => {
         ? "https://www.italiameravigliosaintour.it"
         : `https://www.italiameravigliosaintour.it${router.asPath}`,
     description: description ? description : "",
-    imageUrl: imageUrl ? imageUrl : "",
+    imageUrl: imageUrl ? imageUrl : "/public/apple-touch-icon.png",
   }
 
   return (
