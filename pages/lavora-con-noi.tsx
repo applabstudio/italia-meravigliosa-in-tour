@@ -5,7 +5,7 @@ import { NextPage } from "next"
 const LavoraConNoi: NextPage = () => {
   return (
     <div className="mx-auto mt-24 max-w-6xl">
-      <SeoHead title="Contatti" imageUrl="/public/apple-touch-icon.png" />
+      <SeoHead title="Contatti" imageUrl="/apple-touch-icon.png" />
       <main className="flex w-full flex-col px-4">
         <h4 className="text-center text-4xl font-bold md:text-left">
           Lavora con Noi

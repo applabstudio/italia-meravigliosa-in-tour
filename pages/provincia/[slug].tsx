@@ -29,7 +29,7 @@ const Provincia: NextPage = ({ slug }: { slug: string }) => {
 
   return (
     <div className="mx-auto mt-24 max-w-6xl">
-      <SeoHead title="Provincia" imageUrl="/public/apple-touch-icon.png" />
+      <SeoHead title="Provincia" imageUrl="/apple-touch-icon.png" />
       <main className="flex w-full flex-col px-4">
         <br />
         <h4 className="text-center text-4xl font-bold md:text-left uppercase ">
