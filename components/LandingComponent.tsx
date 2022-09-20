@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
 import { firestore } from "../firebase/clientApp"
-import Contatti from "./Contatti"
 import { FaEnvelope, FaEye} from "react-icons/fa"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
@@ -20,12 +19,11 @@ import Link from "next/link"
 import Input from "./common/Input"
 import PopupOptin from "./PopupOptin"
 import Script from "next/script"
-import Mission from "./layout/Mission"
 import Footer from "./Footer"
 import WelcomeSection from "./layout/WelcomeSection"
 import Newsletter from "./Newsletter"
-import FacebookSection from "./layout/FacebookSection"
 import { useRouter } from "next/router"
+import dynamic from 'next/dynamic'
 
 import Pixel from "./Pixel"
 
@@ -246,6 +244,18 @@ const regions = {
   },
 }
 
+const FacebookSection = dynamic(() => import("./layout/FacebookSection"), {
+  ssr: true,
+}) as any
+
+const Mission = dynamic(() => import("./layout/Mission"), {
+  ssr: true,
+}) as any
+
+const Contatti = dynamic(() => import("./Contatti"), {
+  ssr: false,
+})
+
 const Section = ({
   titolo,
   slug,
@@ -301,6 +311,7 @@ const Section = ({
     </div>
   )
 }
+
 const LandingComponent = ({ slug }: { slug: any }) => {
   const [data, dataLoading, dataError] = useCollection(
     collection(firestore, "fl_content"),
@@ -580,9 +591,9 @@ const LandingComponent = ({ slug }: { slug: any }) => {
 
 
           <h4 className="mt-24 pb-10 text-center text-4xl font-bold md:text-left">
-              Contatti
-            </h4>
-            <Contatti /> 
+            Contatti
+          </h4>
+          <Contatti /> 
 
           </div>
           <Newsletter />

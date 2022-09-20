@@ -109,6 +109,7 @@ const Evento: NextPage = () => {
 
   return (
     <div style={{ marginTop: 50 }}>
+      <meta property="og:image" content={evento?.copertina} />
       <SeoHead title={evento?.titolo} imageUrl={evento?.copertina} />
       <Toaster />
       <div className="mx-auto my-8 max-w-6xl">

@@ -55,6 +55,11 @@ class MainDocument extends Document {
             href="/favicon-16x16.png"
           />
           <meta name="theme-color" content="#EF4444" />
+          <meta property="og:title" content="italia meravigliosain tour" />
+          <meta property="og:image" content="/public/images/approach2.jpg" />
+          <meta property="og:image:url" content="/public/images/approach2.jpg" />
+          <meta property="og:image:type" content="image/jpg" />
+          <meta property="og:description" content="Italia Meravigliosa offre l’opportunità di collaborare con la nostra redazione, se sei un fotografo, un videomaker oppure un blogger di viaggio, contattaci ed entra a far parte del nostro team, fai conoscere il tuo lavoro attraverso la nostra grande e coesa community" />
 
           <script
             async
