@@ -6,7 +6,7 @@ interface Props {
 }
 
 const ThemeToggle = (): JSX.Element => {
-  const [activeTheme, setActiveTheme] = useState("")
+  const [activeTheme, setActiveTheme] = useState("light")
   const inactiveTheme = activeTheme === "light" ? "dark" : "light"
 
   useEffect(() => {

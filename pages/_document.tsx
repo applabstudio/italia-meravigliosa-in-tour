@@ -22,7 +22,7 @@ class MainDocument extends Document {
         return window.localStorage.getItem('theme')
       }
       return window.matchMedia('(prefers-color-scheme: light)').matches
-                ? 'dark'
+                ? 'light'
                 : 'light'
     }
     document.body.dataset.theme = getUserPreference();
