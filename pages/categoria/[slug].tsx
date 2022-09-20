@@ -45,12 +45,13 @@ const Categoria: NextPage = ({ slug }: { slug: string }) => {
   return (
     <div className="mx-auto mt-32 max-w-6xl">
       <meta name="description" content="this is categoria page." />
-      <meta property="og:image" itemprop="image" content="/apple-touch-icon.png" />
+      <meta property="og:image" itemProp="image" content="/apple-touch-icon.png" />
 
       <meta property="og:type" content="website" />
       <meta property="og:image:type" content="image/png" />
 
       <meta property="og:url" content="https://www.italiameravigliosaintour.it" />
+      <SeoHead title="categoria" imageUrl="/apple-touch-icon.png" />
 
       
       <main className="flex w-full flex-col px-4">

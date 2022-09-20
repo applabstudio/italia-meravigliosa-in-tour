@@ -29,12 +29,18 @@ const Provincia: NextPage = ({ slug }: { slug: string }) => {
 
   return (
     <div className="mx-auto mt-24 max-w-6xl">
-      
-      <link itemprop="thumbnailUrl" href="https://www.italiameravigliosaintour.it/apple-touch-icon.png" /> 
-      <span itemprop="thumbnail" itemscope itemtype="https://www.italiameravigliosaintour.it"> 
-        <link itemprop="url" href="/apple-touch-icon.png" /> 
-      </span>
-      
+
+      <meta name="description" content="this is categoria page." />
+      <meta property="og:image" itemProp="image" content="https://www.italiameravigliosaintour.it/apple-touch-icon.png" />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:image:type" content="image/png" />
+
+      <meta property="og:url" content="https://www.italiameravigliosaintour.it" />
+
+      <SeoHead title="Provincia" imageUrl="/apple-touch-icon.png" />
+
+
       <main className="flex w-full flex-col px-4">
         <br />
         <h4 className="text-center text-4xl font-bold md:text-left uppercase ">
