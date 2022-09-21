@@ -124,14 +124,14 @@ const SearchBar = () => {
       <SearchModel
         className={`${
           (!searchValue || !focused || whishlistcard) && "hidden"
-        } absolute top-16 left-0 z-50 max-h-96 w-full overflow-y-scroll rounded-md bg-white py-4 px-4 shadow-md transition-all`}
+        } py-4 px-4 shadow-md transition-all`}
       >
         <div className="grid grid-cols-2 gap-2">
           {categorie?.length > 0 &&
             filtered &&
-            categorie?.map((cat) => (
+            categorie?.map((cat, index) => (
               <button
-                key={cat?.titolo}
+                key={index}
                 onClick={() => setCategoria(cat?.titolo)}
                 className="w-full rounded-md bg-primary-100 px-2 text-lg font-medium text-primary-600 transition duration-200 hover:bg-primary-200"
               >
@@ -199,6 +199,16 @@ const SearchBar = () => {
 export default SearchBar
 
 const SearchModel = styled.div`
+  position: absolute;
+  top: 4rem;
+  left: 0px;
+  z-index: 50;
+  max-height: 24rem;
+  width: 100%;
+  overflow-y: scroll;
+  border-radius: 6px;
+  background-color: white;
+
   &::-webkit-scrollbar {
     width: 4px;
     height: 5px;

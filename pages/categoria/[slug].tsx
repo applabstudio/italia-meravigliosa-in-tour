@@ -50,6 +50,9 @@ const Categoria: NextPage = ({ slug }: { slug: string }) => {
       <meta property="og:type" content="website" />
       <meta property="og:image:type" content="image/png" />
 
+      <meta property="og:image:width" content="300" />
+      <meta property="og:image:height" content="300" />
+
       <meta property="og:url" content="https://www.italiameravigliosaintour.it" />
       <SeoHead title="categoria" imageUrl="/apple-touch-icon.png" />
 
