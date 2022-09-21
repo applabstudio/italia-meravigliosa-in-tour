@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa"
 import Image from "next/image"
 import { useRouter } from "next/router"
+import Head from 'next/head'
 import Comment from "../../components/common/Comment"
 import { firestore } from "../../firebase/clientApp"
 import { useCollection } from "react-firebase-hooks/firestore"
@@ -99,7 +100,7 @@ const Evento: NextPage = () => {
     }
   }
 
-  // console.log("This is props", router.query)
+  // console.log("This is props", evento)
   // console.log(
   //   "THis is the events",
   //   eventi,
@@ -109,12 +110,19 @@ const Evento: NextPage = () => {
 
   return (
     <div style={{ marginTop: 50 }}>
-      <meta property="og:image" itemProp="image" content={evento?.copertina} />
-      <meta property="og:type" content="website" />
-      <meta property="og:image:type" content="image/png" />
-      <meta property="og:url" content="https://www.italiameravigliosaintour.it" />
+      <Head>
+        <meta property="og:title" content="Trova luoghi meravigliosi in tutta Italia alla portata di un click" />
+        <meta property="og:image" itemProp="image" content={evento?.copertina} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:url" content="https://www.italiameravigliosaintour.it" />
+      </Head>
 
-      <SeoHead title={evento?.titolo} imageUrl={evento?.copertina} />
+      <link itemProp="thumbnailUrl" href={`https://www.italiameravigliosaintour.it/${evento?.copertina}`} /> 
+      <span itemProp="thumbnail" itemScope itemType="https://www.italiameravigliosaintour.it/"> 
+        <link itemProp="url" href="https://www.italiameravigliosaintour.it/" /> 
+      </span>
+
       <Toaster />
       <div className="mx-auto my-8 max-w-6xl">
         <main className="flex w-full flex-col xl:flex-row">

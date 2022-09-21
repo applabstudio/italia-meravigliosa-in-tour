@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
 
   return (
     <WishContext.Provider value={wishContext}>
-      <NextSeo
+      <SeoHead
         title="Italia Meravigliosa in tour"
         description="Trova luoghi meravigliosi in tutta Italia alla portata di un click."
       />
@@ -82,9 +82,6 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
         height={2}
         showOnShallow={true}
       />
-
-      {/* Head Tag for SEO */}
-      <SeoHead />
 
       <div className="selection:bg-primary-400 selection:text-white">
         <div

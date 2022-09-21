@@ -10,47 +10,61 @@ interface Props {
 }
 
 const SeoHead: React.FC<Props> = ({ title, description, imageUrl }) => {
-  const [preview, setPreview] = useState()
   const router = useRouter()
+  const [preview, setPreview] = useState()
+  const isEventi = router.pathname.includes('eventi')
+
   const Seo = {
-    title: title ? title : "italia meravigliosa in tour",
+    title: title ? title : "Italia Meravigliosa in tour",
     siteName: "italia meravigliosa in tour",
     type: "article",
     siteUrl:
       router.asPath === "/"
         ? "https://www.italiameravigliosaintour.it"
         : `https://www.italiameravigliosaintour.it${router.asPath}`,
-    description: description ? description : "atalia meravigliosain tour",
+    description: description ? description : "Trova luoghi meravigliosi in tutta Italia alla portata di un click.",
     imageUrl: imageUrl ? imageUrl : "/apple-touch-icon.png",
   }
 
   return (
-    <NextSeo
-      title={Seo.title}
-      description={Seo.description}
-      canonical={Seo.siteUrl}
-      openGraph={{
-        url: `${Seo.siteUrl}`,
-        title: `${Seo.title}`,
-        description: `${Seo.description}`,
-        type: `${Seo.type}`,
-        images: [
-          {
-            url: `${Seo.imageUrl}`,
-            width: 800,
-            height: 600,
-            alt: `${Seo.title}`,
-            type: "image/jpeg",
-          },
-        ],
-        site_name: `${Seo.siteName}`,
-      }}
-      twitter={{
-        handle: "@handle",
-        site: "@site",
-        cardType: "summary_large_image",
-      }}
-    />
+    <>
+      {
+        !isEventi ?
+          (
+            <NextSeo
+              title={Seo.title}
+              description={Seo.description}
+              canonical={Seo.siteUrl}
+              openGraph={{
+                url: `${Seo.siteUrl}`,
+                title: `${Seo.title}`,
+                description: `${Seo.description}`,
+                type: `${Seo.type}`,
+                images: [
+                  {
+                    url: `${Seo.imageUrl}`,
+                    width: 800,
+                    height: 600,
+                    alt: `${Seo.title}`,
+                    type: "image/jpeg",
+                  },
+                ],
+                site_name: `${Seo.siteName}`,
+              }}
+              twitter={{
+                handle: "@handle",
+                site: "@site",
+                cardType: "summary_large_image",
+              }}
+            />) : (
+            <NextSeo twitter={{
+              handle: "@handle",
+              site: "@site",
+              cardType: "summary_large_image",
+            }}></NextSeo>
+          )
+      }
+    </>
   )
 }
 
