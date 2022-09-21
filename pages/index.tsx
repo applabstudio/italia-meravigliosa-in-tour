@@ -3,7 +3,6 @@ import type { NextPage } from "next"
 import React, { useEffect, useState } from "react"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { collection } from "firebase/firestore"
-import { firestore } from "../firebase/clientApp"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
 
@@ -11,6 +10,8 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "react-perfect-scrollbar/dist/css/styles.css"
 import Event from "../components/Event"
+import { firestore } from "../firebase/clientApp"
+import SeoHead from "../components/Seo/SeoHead"
 import LandingComponent from "../components/LandingComponent"
 
 const Section = ({
@@ -99,7 +100,15 @@ const Home: NextPage = () => {
     }
   }, [])
 
-  return <LandingComponent eventi={listaEventi} categorie={categorie} />
+  return (
+    <>
+      <SeoHead
+        title="Italia Meravigliosa in tour"
+        description="Trova luoghi meravigliosi in tutta Italia alla portata di un click."
+      />
+      <LandingComponent eventi={listaEventi} categorie={categorie} />
+    </>
+  )
 }
 
 export default Home

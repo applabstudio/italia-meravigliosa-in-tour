@@ -44,18 +44,11 @@ const Categoria: NextPage = ({ slug }: { slug: string }) => {
 
   return (
     <div className="mx-auto mt-32 max-w-6xl">
-      <meta name="description" content="this is categoria page." />
-      <meta property="og:image" itemProp="image" content="/apple-touch-icon.png" />
-
-      <meta property="og:type" content="website" />
-      <meta property="og:image:type" content="image/png" />
-
-      <meta property="og:image:width" content="300" />
-      <meta property="og:image:height" content="300" />
-
-      <meta property="og:url" content="https://www.italiameravigliosaintour.it" />
-      <SeoHead title="categoria" imageUrl="/apple-touch-icon.png" />
-
+      <SeoHead
+        title="Italia Meravigliosa in tour"
+        description="Trova luoghi meravigliosi in tutta Italia alla portata di un click."
+        imageUrl="/apple-touch-icon.png" 
+      />
       
       <main className="flex w-full flex-col px-4">
         {/* <div className="w-full bg-gray-100">

@@ -24,7 +24,14 @@ const Categorie: NextPage = () => {
 
   return (
     <div className="mx-auto mt-24 max-w-6xl">
-      <SeoHead title="Categorie" imageUrl={categorie?.icona} />
+      <Head>
+        <meta property="og:title" content="Trova luoghi meravigliosi in tutta Italia alla portata di un click" />
+        <meta property="og:image" itemProp="image" content={evento?.icona} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:url" content="https://www.italiameravigliosaintour.it" />
+      </Head>
+      
       <main className="flex w-full flex-col px-4">
         <h4 className="text-center text-4xl font-bold md:text-left">
           Lista delle categorie

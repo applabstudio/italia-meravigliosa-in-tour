@@ -62,10 +62,6 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
 
   return (
     <WishContext.Provider value={wishContext}>
-      <SeoHead
-        title="Italia Meravigliosa in tour"
-        description="Trova luoghi meravigliosi in tutta Italia alla portata di un click."
-      />
 
       {/* <Script
         id="Adsense-id"
