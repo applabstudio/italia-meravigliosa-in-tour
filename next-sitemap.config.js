@@ -1,12 +1,11 @@
 /** @type {import('next-sitemap').IConfig} */
 
-
 module.exports = {
   siteUrl: process.env.siteUrl || 'https://www.italiameravigliosaintour.it',
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ['/server-sitemap-index.xml', '/server-sitemap.xml'],
+  exclude: ['/sitemap.xml', '/server-sitemap.xml'],
   generateRobotsTxt: true,
   transform: async (config, path) => {
     return {
@@ -36,7 +35,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://www.italiameravigliosaintour.it/server-sitemap-index.xml',
+      'https://www.italiameravigliosaintour.it/sitemap.xml',
       'https://www.italiameravigliosaintour.it/server-sitemap.xml',
     ],
   },

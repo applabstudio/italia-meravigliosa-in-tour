@@ -15,7 +15,7 @@ export const GetPost = async () => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const siteUrl = "http://localhost:3000/server-sitemap.xml";
+  const siteUrl = "http://italiameravigliosaintour.it/server-sitemap.xml";
   const data: any = await GetPost();
   const fields: ISitemapField[] = data?.map((data: any) => ({
     loc: `${siteUrl}/${data.id}`,
