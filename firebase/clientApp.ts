@@ -1,7 +1,7 @@
 //@ts-nocheck
 
 import { FirebaseApp, initializeApp } from "firebase/app"
-import { initializeFirestore } from "firebase/firestore"
+import { Firestore, initializeFirestore } from "firebase/firestore"
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -19,8 +19,6 @@ const clientCredentials = {
 }
 
 export const firebaseApp = initializeApp(clientCredentials)
-
-// export const auth = getAuth()
 
 export const signupUser = (
   username: string,
@@ -52,7 +50,7 @@ export const logout = () => {
 }
 
 export const auth = getAuth()
-export const firestore: FirebaseApp = initializeFirestore(firebaseApp, {
+export const firestore: Firestore = initializeFirestore(firebaseApp, {
   experimentalForceLongPolling: true,
   useFetchStreams: false,
 })
