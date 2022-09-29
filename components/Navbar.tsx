@@ -62,44 +62,67 @@ const theme = {
 }
 
 const useOutsideUser = (
-  ref: any,
+  ref: React.RefObject<any>,
   setUserOpen: Function
 ) => {
   useEffect(() => {
-    const handleClickOutside = (event: any) => {
-      if (ref.current && !ref.current.contains(event.target)) {
-        setUserOpen(false)
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return
       }
+      setUserOpen(false)
     }
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener("mouseup", handleClickOutside)
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("mouseup", handleClickOutside)
     }
   }, [ref])
 }
 
-const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
+const useOutsidebar = (
+  ref: React.RefObject<any>,
+  setIsOpen: Function
+) => {
+  useEffect(() => {
+    const handleClickOutsidebar = (event: MouseEvent | TouchEvent) => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return
+      }
+      setIsOpen(false)
+    }
+    document.addEventListener("mouseup", handleClickOutsidebar)
+    return () => {
+      document.removeEventListener("mouseup", handleClickOutsidebar)
+    }
+  }, [ref])
+}
+
+const MobileMenu = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Function }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const [user, loading, error] = useAuthState(auth)
   const [userOpen, setUserOpen] = useState(false)
 
-  const inputRef = useRef(null)
-  useOutsideUser(inputRef, setUserOpen)
+  const userRef = useRef(null)
+  useOutsideUser(userRef, setUserOpen)
+  const sidebarRef = useRef(null)
+  useOutsidebar(sidebarRef, setIsOpen)
 
   return (
-    <div
-      className={`header relative z-10 flex w-full transform flex-col items-center space-y-4 p-4 transition-all ease-in-out ${
-        isOpen ? "translate-y-0" : "-mb-44 -translate-y-full"
-      }`}
-    >
-      <SearchBar />
-      <div className="relative items-center sm:flex">
-        <div className="flex items-center space-x-6 mr-4 mb-4 sm:mb-0">
+    <>
+      <div className={`${isOpen && "sidebar-back"}`}></div>
+      <div
+        id="sidebar"
+        className={`header flex w-[300px] h-full fixed transform flex-col items-center space-y-4 p-4 transition-all duration-200 ease-in-out ${
+          isOpen ? "translate-x-0 mobile-menu" : "-mb-100 -translate-x-full"
+        }`}
+      >
+        <SearchBar />
+        <div className="relative items-center flex flex-col align-center">
           <button
             type="button"
             aria-hidden="true"
             onClick={() => setModalOpen(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 transition duration-200 hover:bg-secondary-100 focus:ring-2"
+            className="flex h-10 mb-4 w-10 items-center justify-center rounded-lg border-2 border-secondary-500 outline-none ring-secondary-200 transition duration-200 hover:bg-secondary-100 focus:ring-2"
           >
             <FaHeart className="text-secondary-500" size={20} />
           </button>
@@ -119,27 +142,23 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
 
           <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
           <Link href="/servizi.pdf" target="_blank" download>
-            <a className="wrapperUsername wrapperUsername3">
+            <a className="wrapperUsername wrapperUsername3 mt-4 mb-4">
               <FaDownload />
               Servizi
             </a>
           </Link>
-        </div>
-
-        <div className="flex items-center space-x-5">
           {user && (
             <>
               <div
-                ref={inputRef} 
                 onClick={() => setUserOpen(!userOpen)}
-                className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 hover:bg-primary-200 active:bg-primary-300 py-3 px-4 font-medium text-primary-700"
+                className="flex mt-3 cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 hover:bg-primary-200 active:bg-primary-300 py-3 px-4 font-medium text-primary-700"
               >
                 <FaUser />
                 <span>{user?.displayName}</span>
               </div>
 
               {userOpen && (
-                <div className="userLogout absolute right-0 top-20 !z-50 rounded-xl p-8 shadow-xl">
+                <div ref={userRef} className="userLogout right-0 !z-50 rounded-xl p-5 shadow-xl">
                   <p className="text-lg font-medium">{user?.email}</p>
                   <br />
                   <div
@@ -157,7 +176,7 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
           )}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
@@ -168,6 +187,7 @@ const Navbar = () => {
   const [userOpen, setUserOpen] = useState(false)
 
   const inputRef = useRef(null)
+
   useOutsideUser(inputRef, setUserOpen)
 
   useEffect(() => {
@@ -260,11 +280,10 @@ const Navbar = () => {
 
           <WishModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
-          <div className="hidden lg:inline-flex">
+          <div ref={inputRef} className="hidden lg:inline-flex">
             {user && (
               <>
                 <div
-                  ref={inputRef}
                   onClick={() => setUserOpen(!userOpen)}
                   className="flex cursor-pointer items-center space-x-2 whitespace-nowrap rounded-full bg-primary-100 hover:bg-primary-200 active:bg-primary-300 py-3 px-4 font-medium text-primary-700"
                 >
@@ -293,7 +312,7 @@ const Navbar = () => {
         </nav>
       </header>
 
-      <MobileMenu isOpen={isOpen} />
+      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen}/>
     </>
   )
 }
