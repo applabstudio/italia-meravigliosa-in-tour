@@ -101,9 +101,10 @@ const Categoria: NextPage = ({ slug }: { slug: string }) => {
         <br />
 
         <div className="mx-auto flex space-x-2">
-          {Array.from(Array(Math.round(eventi.length / 9)).keys()).map((el) => (
+          {Array.from(Array(Math.round(eventi.length / 9)).keys()).map((el, index) => (
             <div
               onClick={() => setPage(el + 1)}
+              key={index}
               className={`${
                 page === el + 1
                   ? "border-primary-500 text-primary-500"
